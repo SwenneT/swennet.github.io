@@ -8,12 +8,6 @@ $accent: #24c6e3;
 
 @import 'reset.scss';
 
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-
 body {
 	background: linear-gradient($spaceDark, $spaceLight 200vh);
 }
@@ -25,6 +19,8 @@ body {
 	top: 0;
 	left: 0;
 	right: 0;
+
+	z-index: -1;
 
 	canvas {
 		width: 100%;
@@ -40,16 +36,35 @@ main {
 	height: 100vh;
 }
 
+.island {
+	height: 100vh;
+	overflow: hidden;
+
+	display: flex;
+	
+	justify-content: center;
+
+	.image {
+
+		align-self: flex-end;
+
+		img {
+			width: 75vw;
+			max-width: 1128px;
+		}
+	}
+}
+
 .gradient-bottom {
 	width: 100%;
-	height: 200px;
+	height: 300px;
 
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	
-	background: linear-gradient(transparent, $gradientStart 200px);
+	background: linear-gradient(transparent, $gradientStart 300px);
 
 	&:after {
 		content: '';
