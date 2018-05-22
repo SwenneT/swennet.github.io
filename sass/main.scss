@@ -28,6 +28,19 @@ body {
 	}
 }
 
+header {
+	width: 100%;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	padding: 8px 24px;
+
+	z-index: 1000;
+}
+
 main {
 	min-height: 2000px;
 }

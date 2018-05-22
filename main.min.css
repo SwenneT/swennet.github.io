@@ -9,6 +9,7 @@ table{border-collapse:collapse;border-spacing:0}
 body{background:-webkit-gradient(linear,left top,left bottom,from(#1e253f),color-stop(200vh,#5d2452));background:-webkit-linear-gradient(#1e253f,#5d2452 200vh);background:linear-gradient(#1e253f,#5d2452 200vh)}
 #particles-js{height:100vh;position:absolute;top:0;left:0;right:0;z-index:-1}
 #particles-js canvas{width:100%;height:100%}
+header{width:100%;position:fixed;top:0;left:0;right:0;padding:8px 24px;z-index:1000}
 main{min-height:2000px}
 .drawing{height:100vh}
 .island{height:100vh;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
