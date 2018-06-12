@@ -58,10 +58,10 @@ main {
 	justify-content: center;
 
 	.image {
-
 		align-self: flex-end;
 
-		img {
+		img,
+		svg {
 			height: 80vh;
 			max-height: 1000px;
 		}
@@ -91,5 +91,33 @@ main {
 		right: 0;
 
 		background: $accent;
+	}
+}
+
+#floating-island {
+
+	#waterfall {
+
+		#stream {
+			.st44 {
+				animation: waterfall 1s infinite;
+			}
+		}
+		
+	}
+
+}
+
+@keyframes waterfall {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(50px);
+	}
+
+	100% {
+		transform: translateY(0);
 	}
 }
