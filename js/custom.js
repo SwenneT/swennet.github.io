@@ -1,31 +1,48 @@
-/*
- * Replace all SVG images with inline SVG
- */
-jQuery('img.svg').each(function(){
-    var $img = jQuery(this);
-    var imgID = $img.attr('id');
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
+( function( $ ) {
 
-    jQuery.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = jQuery(data).find('svg');
+	/*
+	* Replace all SVG images with inline SVG
+	*/
+	$('img.svg').each(function(){
+		var $img = jQuery(this);
+		var imgID = $img.attr('id');
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
 
-        // Add replaced image's ID to the new SVG
-        if(typeof imgID !== 'undefined') {
-            $svg = $svg.attr('id', imgID);
-        }
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-            $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
+		jQuery.get(imgURL, function(data) {
+			// Get the SVG tag, ignore the rest
+			var $svg = jQuery(data).find('svg');
 
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
+			// Add replaced image's ID to the new SVG
+			if(typeof imgID !== 'undefined') {
+				$svg = $svg.attr('id', imgID);
+			}
+			// Add replaced image's classes to the new SVG
+			if(typeof imgClass !== 'undefined') {
+				$svg = $svg.attr('class', imgClass+' replaced-svg');
+			}
 
-        // Replace image with new SVG
-        $img.replaceWith($svg);
+			// Remove any invalid XML tags as per http://validator.w3.org
+			$svg = $svg.removeAttr('xmlns:a');
 
-    }, 'xml');
+			// Replace image with new SVG
+			$img.replaceWith($svg);
 
-});
+		}, 'xml');
+
+	});
+
+	$(document).ready( function() {
+
+		setInterval( function() {
+			$('#floating-island').removeClass('shake');
+		}, 6000);
+
+		setInterval( function() {		
+			$('#floating-island').addClass('shake');		
+		}, 18000);
+
+	});
+
+
+} )( jQuery );

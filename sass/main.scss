@@ -4,7 +4,7 @@ $spaceLight: #5d2452;
 
 $gradientStart: #3d2448;
 
-$accent: #24c6e3;
+$accent: #59c2e0;
 
 @import 'reset.scss';
 
@@ -94,30 +94,51 @@ main {
 	}
 }
 
-#floating-island {
+svg#floating-island {
 
-	#waterfall {
+	transition: filter 2s;
 
-		#stream {
-			.st44 {
-				animation: waterfall 1s infinite;
-			}
+	[id^=circuit] {
+		transition: opacity 2s;
+
+		* {
+			fill: white;
 		}
-		
 	}
 
+	&.shake {
+		filter: drop-shadow(0px 0px 50px rgba(white, 0.1));
+
+		[id^=circuit] {
+			animation: circuitBoard 2s linear infinite;
+		}
+	}
 }
 
-@keyframes waterfall {
+.shake {
+	animation: shake 0.1s infinite;
+}
+
+@keyframes shake {
+	from {
+		transform: translate(-0.5px);
+	}
+
+	to {
+		transform: translate(0.5px);
+	}
+}
+
+@keyframes circuitBoard {
 	0% {
-		transform: translateY(0);
+		opacity: 0;
 	}
 
 	50% {
-		transform: translateY(50px);
+		opacity: 0.08;
 	}
 
 	100% {
-		transform: translateY(0);
+		opacity: 0;
 	}
 }
