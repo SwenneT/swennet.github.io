@@ -1294,20 +1294,20 @@
 		<circle class="st29" cx="917" cy="868" r="3.5"/>
 	</g>
 	<g id="foam">
-		<circle id="foam1" class="st30" cx="900" cy="465" r="9"/>
-		<circle id="foam2" class="st30" cx="909" cy="464" r="8"/>
-		<circle id="foam3" class="st30" cx="919" cy="466" r="7"/>
-		<circle id="foam4" class="st30" cx="927" cy="464" r="7"/>
-		<circle id="foam5" class="st30" cx="933" cy="466" r="7"/>
-		<circle id="foam6" class="st30" cx="941" cy="465" r="8"/>
-		<circle id="foam7" class="st30" cx="949" cy="466" r="7"/>
-		<circle id="foam8" class="st30" cx="959" cy="466" r="8"/>
-		<circle id="foam9" class="st30" cx="967" cy="466" r="7"/>
-		<circle id="foam10" class="st30" cx="977" cy="464" r="7"/>
-		<circle id="foam11" class="st30" cx="987" cy="465" r="7"/>
-		<circle id="foam12" class="st30" cx="994" cy="465" r="9"/>
+		<circle id="foam1" class="st30" cx="900" cy="466" r="9"/>
+		<circle id="foam2" class="st30" cx="909" cy="465" r="8"/>
+		<circle id="foam3" class="st30" cx="919" cy="467" r="7"/>
+		<circle id="foam4" class="st30" cx="927" cy="465" r="7"/>
+		<circle id="foam5" class="st30" cx="933" cy="467" r="7"/>
+		<circle id="foam6" class="st30" cx="941" cy="466" r="8"/>
+		<circle id="foam7" class="st30" cx="949" cy="467" r="7"/>
+		<circle id="foam8" class="st30" cx="959" cy="467" r="8"/>
+		<circle id="foam9" class="st30" cx="967" cy="467" r="7"/>
+		<circle id="foam10" class="st30" cx="977" cy="465" r="7"/>
+		<circle id="foam11" class="st30" cx="987" cy="466" r="7"/>
+		<circle id="foam12" class="st30" cx="994" cy="466" r="9"/>
 	</g>
-	<path class="st30" d="M998.1,460H895.9c-2.2,0-3.9,1.8-3.9,3.9v4.1c0,2.2,1.8,3.9,3.9,3.9h102.1c2.2,0,3.9-1.8,3.9-3.9v-4.1
-		C1002,461.8,1000.2,460,998.1,460z"/>
+	<path class="st30" d="M998.1,461H895.9c-2.2,0-3.9,1.8-3.9,3.9v4.1c0,2.2,1.8,3.9,3.9,3.9h102.1c2.2,0,3.9-1.8,3.9-3.9v-4.1
+		C1002,462.8,1000.2,461,998.1,461z"/>
 </g>
 </svg>
