@@ -34,6 +34,8 @@
 
 	$(document).ready( function() {
 
+		/*
+
 		setInterval( function() {
 			$('#floating-island').removeClass('shake');
 		}, 6000);
@@ -41,6 +43,8 @@
 		setInterval( function() {		
 			$('#floating-island').addClass('shake');		
 		}, 18000);
+
+		*/
 
 	});
 
