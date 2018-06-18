@@ -6,31 +6,52 @@ ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
-body{background:-webkit-gradient(linear,left top,left bottom,from(#1e253f),color-stop(200vh,#5d2452));background:-webkit-linear-gradient(#1e253f,#5d2452 200vh);background:linear-gradient(#1e253f,#5d2452 200vh)}
-#particles-js{height:100vh;position:absolute;top:0;left:0;right:0;z-index:-1}
+.svg-icon{fill:white}
+body{font-family:'Ubuntu',sans-serif;font-size:16px;background:-webkit-gradient(linear,left top,left bottom,from(#1e253f),color-stop(200vh,#5d2452));background:-webkit-linear-gradient(#1e253f,#5d2452 200vh);background:linear-gradient(#1e253f,#5d2452 200vh)}
+#particles-js{height:200vh;position:absolute;top:0;left:0;right:0;z-index:-1}
 #particles-js canvas{width:100%;height:100%}
-header{width:100%;position:fixed;top:0;left:0;right:0;padding:8px 24px;z-index:1000}
+header{width:100%;height:70px;padding:0 24px;position:fixed;top:0;left:0;right:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;z-index:1000}
+.navigation{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
+.navigation a{height:36px;margin:0 12px;padding:0 1px;line-height:36px;position:relative;display:inline-block;color:rgba(255,255,255,0.8);font-size:.7rem;letter-spacing:.1rem;text-decoration:none;text-transform:uppercase;border-bottom:3px solid transparent;-webkit-transition:border-color .2s;transition:border-color .2s}
+.navigation a:hover{color:#fff;border-color:#59c2e0}
+.navigation a.github-icon{width:36px;height:36px;border-bottom:0}
+.navigation a.github-icon svg{position:absolute;top:50%;left:50%;fill:rgba(255,255,255,0.8);-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition:fill .2s;transition:fill .2s}
+.navigation a.github-icon:hover svg{fill:#fff}
 main{min-height:2000px}
 .drawing{height:100vh}
 .island{height:100vh;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .island .image{-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
 .island .image img,.island .image svg{height:80vh;max-height:1000px}
 .gradient-bottom{width:100%;height:35vh;position:absolute;bottom:0;left:0;right:0;background:-webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(35vh,#3d2448));background:-webkit-linear-gradient(transparent,#3d2448 35vh);background:linear-gradient(transparent,#3d2448 35vh)}
-.gradient-bottom:after{content:'';width:100%;height:6px;position:absolute;bottom:0;left:0;right:0;background:#59c2e0}
 #waterfall #foam [id^=foam]{-webkit-animation-name:foam1;animation-name:foam1;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-duration:.8s;animation-duration:.8s}
 #waterfall #foam2,#waterfall #foam5,#waterfall #foam8,#waterfall #foam11{-webkit-animation-delay:.3s;animation-delay:.3s}
 #waterfall #foam3,#waterfall #foam6,#waterfall #foam9,#waterfall #foam12{-webkit-animation-delay:.6s;animation-delay:.6s}
-#waterfall #foam1,#waterfall #foam2,#waterfall #foam3{-webkit-transform-origin:77% 44%;-ms-transform-origin:77% 44%;transform-origin:77% 44%}
-#waterfall #foam4,#waterfall #foam5,#waterfall #foam6{-webkit-transform-origin:79% 44%;-ms-transform-origin:79% 44%;transform-origin:79% 44%}
-#waterfall #foam7,#waterfall #foam8,#waterfall #foam9{-webkit-transform-origin:82% 44%;-ms-transform-origin:82% 44%;transform-origin:82% 44%}
-#waterfall #foam10,#waterfall #foam11,#waterfall #foam12{-webkit-transform-origin:85% 44%;-ms-transform-origin:85% 44%;transform-origin:85% 44%}
+#waterfall #foam1{-webkit-transform-origin:77% 44%;-ms-transform-origin:77% 44%;transform-origin:77% 44%}
+#waterfall #foam2{-webkit-transform-origin:77.5% 44%;-ms-transform-origin:77.5% 44%;transform-origin:77.5% 44%}
+#waterfall #foam3{-webkit-transform-origin:78% 44%;-ms-transform-origin:78% 44%;transform-origin:78% 44%}
+#waterfall #foam4{-webkit-transform-origin:78.5% 44%;-ms-transform-origin:78.5% 44%;transform-origin:78.5% 44%}
+#waterfall #foam5{-webkit-transform-origin:79% 44%;-ms-transform-origin:79% 44%;transform-origin:79% 44%}
+#waterfall #foam6{-webkit-transform-origin:79.5% 44%;-ms-transform-origin:79.5% 44%;transform-origin:79.5% 44%}
+#waterfall #foam7{-webkit-transform-origin:80% 44%;-ms-transform-origin:80% 44%;transform-origin:80% 44%}
+#waterfall #foam8{-webkit-transform-origin:80.5% 44%;-ms-transform-origin:80.5% 44%;transform-origin:80.5% 44%}
+#waterfall #foam9{-webkit-transform-origin:81% 44%;-ms-transform-origin:81% 44%;transform-origin:81% 44%}
+#waterfall #foam10{-webkit-transform-origin:82.5% 44%;-ms-transform-origin:82.5% 44%;transform-origin:82.5% 44%}
+#waterfall #foam11{-webkit-transform-origin:83% 44%;-ms-transform-origin:83% 44%;transform-origin:83% 44%}
+#waterfall #foam12{-webkit-transform-origin:85.5% 44%;-ms-transform-origin:85.5% 44%;transform-origin:85.5% 44%}
+#waterfall #stream-block_1_{-webkit-animation-name:streamblock;animation-name:streamblock;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-duration:3s;animation-duration:3s;-webkit-animation-delay:.2s;animation-delay:.2s;-webkit-transform-origin:0 460px;-ms-transform-origin:0 460px;transform-origin:0 460px}
 #waterfall #stream1_1_{-webkit-animation:waterfall1 3s infinite;animation:waterfall1 3s infinite}
-#waterfall #stream2_1_{-webkit-animation:waterfall2 3s infinite;animation:waterfall2 3s infinite;-webkit-animation-delay:.3s;animation-delay:.3s}
-#waterfall #stream3_1_{-webkit-animation:waterfall2 3s infinite;animation:waterfall2 3s infinite;-webkit-animation-delay:.4s;animation-delay:.4s}
-#waterfall #stream4_1_{-webkit-animation:waterfall1 3s infinite;animation:waterfall1 3s infinite;-webkit-animation-delay:.2s;animation-delay:.2s}
+#waterfall #stream2_1_{-webkit-animation:waterfall2 3s infinite;animation:waterfall2 3s infinite;-webkit-animation-delay:.1s;animation-delay:.1s}
+#waterfall #stream3_1_{-webkit-animation:waterfall2 3s infinite;animation:waterfall2 3s infinite;-webkit-animation-delay:.2s;animation-delay:.2s}
+#waterfall #stream4_1_{-webkit-animation:waterfall1 3s infinite;animation:waterfall1 3s infinite;-webkit-animation-delay:.3s;animation-delay:.3s}
 #waterfall #water1_1_{-webkit-animation:water1 3s infinite;animation:water1 3s infinite;-webkit-animation-delay:.2s;animation-delay:.2s}
 #waterfall #water2_1_{-webkit-animation:water1 3s infinite;animation:water1 3s infinite;-webkit-animation-delay:.6s;animation-delay:.6s}
 #waterfall #water3_1_{-webkit-animation:water1 3s infinite;animation:water1 3s infinite;-webkit-animation-delay:.4s;animation-delay:.4s}
+svg#floating-island{-webkit-transition:-webkit-filter 2s;transition:-webkit-filter 2s;transition:filter 2s;transition:filter 2s,-webkit-filter 2s}
+svg#floating-island [id^=circuit]{-webkit-transition:opacity 2s;transition:opacity 2s}
+svg#floating-island [id^=circuit] *{fill:white}
+svg#floating-island.shake{-webkit-filter:drop-shadow(0 0 50px rgba(255,255,255,0.1));filter:drop-shadow(0 0 50px rgba(255,255,255,0.1))}
+svg#floating-island.shake [id^=circuit]{-webkit-animation:circuitBoard 2s linear infinite;animation:circuitBoard 2s linear infinite}
+.shake{-webkit-animation:shake .1s infinite;animation:shake .1s infinite}
 .island{position:relative}
 #splatters{position:absolute;width:10vw;height:44vh;top:56%;left:71.5vw}
 @-webkit-keyframes foam1{0%{-webkit-transform:scale(1);transform:scale(1)}
@@ -39,6 +60,12 @@ main{min-height:2000px}
 }@keyframes foam1{0%{-webkit-transform:scale(1);transform:scale(1)}
 50%{-webkit-transform:scale(1.2);transform:scale(1.2)}
 100%{-webkit-transform:scale(1);transform:scale(1)}
+}@-webkit-keyframes streamblock{0%{-webkit-transform:scaleY(1);transform:scaleY(1)}
+50%{-webkit-transform:scaleY(1.4);transform:scaleY(1.4)}
+100%{-webkit-transform:scaleY(1);transform:scaleY(1)}
+}@keyframes streamblock{0%{-webkit-transform:scaleY(1);transform:scaleY(1)}
+50%{-webkit-transform:scaleY(1.4);transform:scaleY(1.4)}
+100%{-webkit-transform:scaleY(1);transform:scaleY(1)}
 }@-webkit-keyframes waterfall1{0%{-webkit-transform:translateY(0);transform:translateY(0)}
 50%{-webkit-transform:translateY(70px);transform:translateY(70px)}
 100%{-webkit-transform:translateY(0);transform:translateY(0)}
@@ -57,4 +84,14 @@ main{min-height:2000px}
 }@keyframes water1{0%{-webkit-transform:translateY(0);transform:translateY(0)}
 50%{-webkit-transform:translateY(25px);transform:translateY(25px)}
 100%{-webkit-transform:translateY(0);transform:translateY(0)}
+}@-webkit-keyframes shake{from{-webkit-transform:translate(-0.5px);transform:translate(-0.5px)}
+to{-webkit-transform:translate(0.5px);transform:translate(0.5px)}
+}@keyframes shake{from{-webkit-transform:translate(-0.5px);transform:translate(-0.5px)}
+to{-webkit-transform:translate(0.5px);transform:translate(0.5px)}
+}@-webkit-keyframes circuitBoard{0%{opacity:0}
+50%{opacity:.08}
+100%{opacity:0}
+}@keyframes circuitBoard{0%{opacity:0}
+50%{opacity:.08}
+100%{opacity:0}
 }

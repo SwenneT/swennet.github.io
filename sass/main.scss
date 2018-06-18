@@ -8,12 +8,19 @@ $accent: #59c2e0;
 
 @import 'reset.scss';
 
+.svg-icon {
+	fill: white;
+}
+
 body {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+
 	background: linear-gradient($spaceDark, $spaceLight 200vh);
 }
 
 #particles-js {
-	height: 100vh;
+	height: 200vh;
 
 	position: absolute;
 	top: 0;
@@ -30,15 +37,83 @@ body {
 
 header {
 	width: 100%;
+	height: 70px;
+
+	padding: 0 24px;
 
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 
-	padding: 8px 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
 	z-index: 1000;
+}
+
+.logo {
+
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		height: 36px;
+		margin: 0 12px;
+
+		padding: 0 1px;
+
+		line-height: 36px;
+
+		position: relative;
+
+		display: inline-block;
+
+		color: rgba(#FFFFFF, 0.8);
+		font-size: 0.7rem;
+		letter-spacing: 0.1rem;
+
+		text-decoration: none;
+		text-transform: uppercase;
+
+		border-bottom: 3px solid transparent;
+
+		transition: border-color 0.2s;
+
+		&:hover {
+			color: #FFFFFF;
+			border-color: $accent;
+		}
+	}
+
+	a.github-icon {
+		width: 36px;
+		height: 36px;
+
+		border-bottom: 0;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			fill: rgba(#FFFFFF, 0.8);
+
+			transform: translate(-50%, -50%);
+
+			transition: fill 0.2s;
+		}
+
+		&:hover {
+			svg {
+				fill: #FFFFFF;
+			}
+		}
+	}
 }
 
 main {
@@ -78,20 +153,6 @@ main {
 	right: 0;
 	
 	background: linear-gradient(transparent, $gradientStart 35vh);
-
-	&:after {
-		content: '';
-		
-		width: 100%;
-		height: 6px;
-
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-
-		background: $accent;
-	}
 }
 
 
@@ -102,8 +163,6 @@ main {
 	[id^=stream] {
 
 	}
-
-
 	
 	#foam {
 		[id^=foam] {
@@ -125,33 +184,68 @@ main {
 	#foam3,
 	#foam6,
 	#foam9,
-	#foam12 {		
+	#foam12 {
 		animation-delay: 0.6s;
 	}
 
 	// Waterfoam foam origin
-	#foam1,
-	#foam2,
-	#foam3 {
+	#foam1 {
 		transform-origin: 77% 44%;
 	}
 
-	#foam4,
-	#foam5,
-	#foam6 {
+	#foam2 {
+		transform-origin: 77.5% 44%;
+	}
+
+	#foam3 {
+		transform-origin: 78% 44%;
+	}
+
+	#foam4 {
+		transform-origin: 78.5% 44%;
+	}
+
+	#foam5 {
 		transform-origin: 79% 44%;
 	}
 
-	#foam7,
-	#foam8,
-	#foam9 {
-		transform-origin: 82% 44%;
+	#foam6 {
+		transform-origin: 79.5% 44%;
 	}
 
-	#foam10,
-	#foam11,
+	#foam7 {
+		transform-origin: 80% 44%;
+	}
+
+	#foam8 {
+		transform-origin: 80.5% 44%;
+	}
+
+	#foam9 {
+		transform-origin: 81% 44%;
+	}
+
+	#foam10 {
+		transform-origin: 82.5% 44%;
+	}
+
+	#foam11 {
+		transform-origin: 83% 44%;
+	}
+
 	#foam12 {
-		transform-origin: 85% 44%;
+		transform-origin: 85.5% 44%;
+	}
+
+	#stream-block_1_ {
+		animation-name: streamblock;
+		animation-iteration-count: infinite;
+
+		animation-duration: 3s;
+
+		animation-delay: 0.2s;
+
+		transform-origin: 0 460px;
 	}
 
 	// Waterfall Stream
@@ -161,17 +255,17 @@ main {
 
 	#stream2_1_ {
 		animation: waterfall2 3s infinite;
-		animation-delay: 0.3s;
+		animation-delay: 0.1s;
 	}
 
 	#stream3_1_ {
 		animation: waterfall2 3s infinite;
-		animation-delay: 0.4s;
+		animation-delay: 0.2s;
 	}
 
 	#stream4_1_ {
 		animation: waterfall1 3s infinite;
-		animation-delay: 0.2s;
+		animation-delay: 0.3s;
 	}
 
 	#water1_1_ {
@@ -201,6 +295,20 @@ main {
 
 	100% {
 		transform: scale(1);
+	}
+}
+
+@keyframes streamblock {
+	0% {
+		transform: scaleY(1);
+	}
+
+	50% {
+		transform: scaleY(1.4);
+	}
+
+	100% {
+		transform: scaleY(1);
 	}
 }
 
@@ -247,7 +355,7 @@ main {
 	}
 }
 
-/*
+///*
 
 svg#floating-island {
 	transition: filter 2s;
@@ -297,7 +405,7 @@ svg#floating-island {
 	}
 }
 
-*/
+//*/
 
 .island {
 	position: relative;
