@@ -28,7 +28,7 @@ main{min-height:2000px}
 .skewed-button.active{color:#fff;background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.15);pointer-events:none}
 .skewed-button:hover{color:#fff;background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.15)}
 .skewed-button:hover:before{left:120%}
-.skewed-button:before{content:'';height:155px;width:50px;position:absolute;left:-75px;top:-50px;background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(#fff));background:-webkit-linear-gradient(transparent,#fff);background:linear-gradient(transparent,#fff);opacity:.1;-webkit-transform:rotate(35deg);-ms-transform:rotate(35deg);transform:rotate(35deg);-webkit-transition:all .5s cubic-bezier(0.19,1,0.22,1);transition:all .5s cubic-bezier(0.19,1,0.22,1);z-index:-10}
+.skewed-button:before{content:'';height:155px;width:50px;position:absolute;left:-75px;top:-50px;background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(#fff));background:-webkit-linear-gradient(transparent,#fff);background:linear-gradient(transparent,#fff);opacity:.1;-webkit-transform:rotate(35deg);-ms-transform:rotate(35deg);transform:rotate(35deg);-webkit-transition:all .7s cubic-bezier(0.19,1,0.22,1);transition:all .7s cubic-bezier(0.19,1,0.22,1);z-index:-10}
 .github-button{padding-left:16px;padding-right:24px;margin-right:-14px;border-right-color:transparent}
 .github-button+div{width:1px;height:34px;position:relative;top:-1px;display:inline-block;background:rgba(255,255,255,0.1)}
 .github-button:hover{border-right-color:transparent}
