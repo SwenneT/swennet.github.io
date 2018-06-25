@@ -1,0 +1,51 @@
+#floating-island {
+	transition: filter 2s;
+
+	[id^=circuit] {
+		transition: opacity 2s;
+
+		* {
+			fill: white;
+		}
+	}
+
+	&.shake {
+		filter: drop-shadow(0px 0px 50px rgba(white, 0.1));
+
+		[id^=circuit] {
+			animation: circuitBoard 2s linear infinite;
+		}
+	}
+}
+
+.shake {
+	animation: shake 0.1s infinite;
+}
+
+@keyframes shake {
+	from {
+		transform: translate(-0.5px);
+	}
+
+	to {
+		transform: translate(0.5px);
+	}
+}
+
+@keyframes circuitBoard {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.08;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.island {
+	position: relative;
+}

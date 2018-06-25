@@ -1,0 +1,143 @@
+.button {
+	height: 36px;
+	line-height: 36px;
+
+	position: relative;
+}
+
+
+.skewed-button, {
+	line-height: 34px;
+
+	padding: 0 16px;
+
+	display: inline-block;
+
+	color: rgba(#FFFFFF, 0.8);
+	font-size: 0.7rem;
+	letter-spacing: 0.1rem;
+
+	text-decoration: none;
+	text-transform: uppercase;
+
+	border: 1px solid rgba(#FFFFFF, 0.1);
+	border-radius: 1px;
+
+	transform: skew(-20deg);
+	transition: color 0.2s, border 0.2s, background 0.1s;
+
+	overflow: hidden;
+
+	span {
+		width: 100%;
+		height: 100%;
+
+		display: inline-block;
+
+		transform: skew(20deg);
+		background-visibiliy: hidden;
+	}
+
+	&.icon-button {
+		padding-left: 48px;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 14px;
+
+			fill: rgba(#FFFFFF, 0.8);
+
+			transform: translateY(-50%) skew(20deg);
+
+			transition: fill 0.2s;
+		}
+
+		&:hover {
+			svg {
+				fill: #FFFFFF;
+			}
+		}
+	}
+
+	&.active {
+		color: #FFFFFF;
+
+		background: rgba(#FFFFFF, 0.05);
+		border-color: rgba(#FFFFFF, 0.15);
+
+		pointer-events: none;
+	}
+
+	&:hover {
+		color: #FFFFFF;
+
+		background: rgba(#FFFFFF, 0.05);
+		border-color: rgba(#FFFFFF, 0.15);
+		
+		&:before {
+		  left: 120%;
+		}
+	}
+		
+	&:before {
+		content: '';
+
+		height: 155px;
+		width: 50px;
+
+		position: absolute;
+		left: -75px;
+		top: -50px;
+
+		background: linear-gradient(transparent, #FFFFFF);
+
+		opacity: 0.1;
+
+		transform: rotate(35deg);
+		transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+		z-index: -10;
+	}
+}
+
+.github-button {
+	padding-left: 16px;
+	padding-right: 24px;
+
+	margin-right: -14px;
+
+	border-right-color: transparent;
+
+	+ div {
+		width: 1px;
+		height: 34px;
+
+		position: relative;
+		top: -1px;
+
+		display: inline-block;
+
+		background: rgba(#FFFFFF, 0.1);
+	}
+
+	&:hover {
+		border-right-color: transparent;
+		
+		&:before {
+			left: 110%;
+		}
+
+		+ div {
+			background: rgba(#FFFFFF, 0.15);
+		}
+	}
+}
+
+.github-button-container {
+	height: 36px;
+
+	position: relative;
+
+	overflow: hidden;
+}

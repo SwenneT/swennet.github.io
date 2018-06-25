@@ -31,15 +31,7 @@ header { width: 100%; height: 70px; padding: 0 24px; position: fixed; top: 0; le
 
 .navigation { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
 
-.navigation a { height: 36px; margin: 0 12px; padding: 0 1px; line-height: 36px; position: relative; display: inline-block; color: rgba(255, 255, 255, 0.8); font-size: 0.7rem; letter-spacing: 0.1rem; text-decoration: none; text-transform: uppercase; border-bottom: 3px solid transparent; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; }
-
-.navigation a:hover { color: #FFFFFF; border-color: #59c2e0; }
-
-.navigation a.github-icon { width: 36px; height: 36px; border-bottom: 0; }
-
-.navigation a.github-icon svg { position: absolute; top: 50%; left: 50%; fill: rgba(255, 255, 255, 0.8); -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); -webkit-transition: fill 0.2s; transition: fill 0.2s; }
-
-.navigation a.github-icon:hover svg { fill: #FFFFFF; }
+.navigation .button { margin-left: 8px; }
 
 main { min-height: 2000px; }
 
@@ -52,6 +44,66 @@ main { min-height: 2000px; }
 .island .image img, .island .image svg { height: 80vh; max-height: 1000px; }
 
 .gradient-bottom { width: 100%; height: 35vh; position: absolute; bottom: 0; left: 0; right: 0; background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(35vh, #3d2448)); background: -webkit-linear-gradient(transparent, #3d2448 35vh); background: linear-gradient(transparent, #3d2448 35vh); }
+
+.button { height: 36px; line-height: 36px; position: relative; }
+
+.skewed-button { line-height: 34px; padding: 0 16px; display: inline-block; color: rgba(255, 255, 255, 0.8); font-size: 0.7rem; letter-spacing: 0.1rem; text-decoration: none; text-transform: uppercase; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1px; -webkit-transform: skew(-20deg); -ms-transform: skew(-20deg); transform: skew(-20deg); -webkit-transition: color 0.2s, border 0.2s, background 0.1s; transition: color 0.2s, border 0.2s, background 0.1s; overflow: hidden; }
+
+.skewed-button span { width: 100%; height: 100%; display: inline-block; -webkit-transform: skew(20deg); -ms-transform: skew(20deg); transform: skew(20deg); background-visibiliy: hidden; }
+
+.skewed-button.icon-button { padding-left: 48px; }
+
+.skewed-button.icon-button svg { position: absolute; top: 50%; left: 14px; fill: rgba(255, 255, 255, 0.8); -webkit-transform: translateY(-50%) skew(20deg); -ms-transform: translateY(-50%) skew(20deg); transform: translateY(-50%) skew(20deg); -webkit-transition: fill 0.2s; transition: fill 0.2s; }
+
+.skewed-button.icon-button:hover svg { fill: #FFFFFF; }
+
+.skewed-button.active { color: #FFFFFF; background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.15); pointer-events: none; }
+
+.skewed-button:hover { color: #FFFFFF; background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.15); }
+
+.skewed-button:hover:before { left: 120%; }
+
+.skewed-button:before { content: ''; height: 155px; width: 50px; position: absolute; left: -75px; top: -50px; background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FFFFFF)); background: -webkit-linear-gradient(transparent, #FFFFFF); background: linear-gradient(transparent, #FFFFFF); opacity: 0.1; -webkit-transform: rotate(35deg); -ms-transform: rotate(35deg); transform: rotate(35deg); -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); z-index: -10; }
+
+.github-button { padding-left: 16px; padding-right: 24px; margin-right: -14px; border-right-color: transparent; }
+
+.github-button + div { width: 1px; height: 34px; position: relative; top: -1px; display: inline-block; background: rgba(255, 255, 255, 0.1); }
+
+.github-button:hover { border-right-color: transparent; }
+
+.github-button:hover:before { left: 110%; }
+
+.github-button:hover + div { background: rgba(255, 255, 255, 0.15); }
+
+.github-button-container { height: 36px; position: relative; overflow: hidden; }
+
+#floating-island { -webkit-transition: -webkit-filter 2s; transition: -webkit-filter 2s; transition: filter 2s; transition: filter 2s, -webkit-filter 2s; }
+
+#floating-island [id^=circuit] { -webkit-transition: opacity 2s; transition: opacity 2s; }
+
+#floating-island [id^=circuit] * { fill: white; }
+
+#floating-island.shake { -webkit-filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.1)); filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.1)); }
+
+#floating-island.shake [id^=circuit] { -webkit-animation: circuitBoard 2s linear infinite; animation: circuitBoard 2s linear infinite; }
+
+.shake { -webkit-animation: shake 0.1s infinite; animation: shake 0.1s infinite; }
+
+@-webkit-keyframes shake { from { -webkit-transform: translate(-0.5px); transform: translate(-0.5px); }
+  to { -webkit-transform: translate(0.5px); transform: translate(0.5px); } }
+
+@keyframes shake { from { -webkit-transform: translate(-0.5px); transform: translate(-0.5px); }
+  to { -webkit-transform: translate(0.5px); transform: translate(0.5px); } }
+
+@-webkit-keyframes circuitBoard { 0% { opacity: 0; }
+  50% { opacity: 0.08; }
+  100% { opacity: 0; } }
+
+@keyframes circuitBoard { 0% { opacity: 0; }
+  50% { opacity: 0.08; }
+  100% { opacity: 0; } }
+
+.island { position: relative; }
 
 #waterfall #foam [id^=foam] { -webkit-animation-name: foam1; animation-name: foam1; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-duration: 0.8s; animation-duration: 0.8s; }
 
@@ -138,33 +190,3 @@ main { min-height: 2000px; }
 @keyframes water1 { 0% { -webkit-transform: translateY(0px); transform: translateY(0px); }
   50% { -webkit-transform: translateY(25px); transform: translateY(25px); }
   100% { -webkit-transform: translateY(0px); transform: translateY(0px); } }
-
-svg#floating-island { -webkit-transition: -webkit-filter 2s; transition: -webkit-filter 2s; transition: filter 2s; transition: filter 2s, -webkit-filter 2s; }
-
-svg#floating-island [id^=circuit] { -webkit-transition: opacity 2s; transition: opacity 2s; }
-
-svg#floating-island [id^=circuit] * { fill: white; }
-
-svg#floating-island.shake { -webkit-filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.1)); filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.1)); }
-
-svg#floating-island.shake [id^=circuit] { -webkit-animation: circuitBoard 2s linear infinite; animation: circuitBoard 2s linear infinite; }
-
-.shake { -webkit-animation: shake 0.1s infinite; animation: shake 0.1s infinite; }
-
-@-webkit-keyframes shake { from { -webkit-transform: translate(-0.5px); transform: translate(-0.5px); }
-  to { -webkit-transform: translate(0.5px); transform: translate(0.5px); } }
-
-@keyframes shake { from { -webkit-transform: translate(-0.5px); transform: translate(-0.5px); }
-  to { -webkit-transform: translate(0.5px); transform: translate(0.5px); } }
-
-@-webkit-keyframes circuitBoard { 0% { opacity: 0; }
-  50% { opacity: 0.08; }
-  100% { opacity: 0; } }
-
-@keyframes circuitBoard { 0% { opacity: 0; }
-  50% { opacity: 0.08; }
-  100% { opacity: 0; } }
-
-.island { position: relative; }
-
-#splatters { position: absolute; width: 10vw; height: 44vh; top: 56%; left: 71.5vw; }

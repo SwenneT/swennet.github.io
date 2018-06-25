@@ -6,7 +6,7 @@
 	<title>SWEN ♦ NET</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="main.min.css" />	
+	<link rel="stylesheet" type="text/css" media="screen" href="style.min.css" />	
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 
@@ -18,16 +18,21 @@
 			<a href="#" class="logo"><img src="images/swennet.png"></a>
 
 			<nav id="navigation" class="navigation">
-				<a href="#home">Home</a>
-				<a href="#skills">Skills</a>
-				<a href="#portfolio">Portfolio</a>
-				<a href="#about">About</a>
-				<a href="#contact">Contact</a>
-				<a href="https://github.com/Swennet/swennet.github.io" class="github-icon" title="Github">
-					<svg class="svg-icon" role="img" width="28" height="28">
-						<use xlink:href="images/svg-sprite.svg#github"></use>
-					</svg>
-				</a>
+				<a class="button skewed-button active" href="#home"><span>Home</span></a>
+				<a class="button skewed-button" href="#skills"><span>Skills</span></a>
+				<a class="button skewed-button" href="#portfolio"><span>Portfolio</span></a>
+				<a class="button skewed-button" href="#about"><span>About</span></a>
+				<a class="button skewed-button" href="#contact"><span>Contact</span></a>
+
+				<div class="github-button-container">		
+					<a class="button skewed-button icon-button github-button" href="https://github.com/Swennet/swennet.github.io" class="github-icon" title="Github" target="_blank">
+						<svg class="svg-icon" role="img" width="22" height="22">
+							<use xlink:href="images/svg-sprite.svg#github"></use>
+						</svg>
+						<span>Github</span>
+					</a>
+					<div></div>
+				</div>
 			</nav>
 		</header>
 
