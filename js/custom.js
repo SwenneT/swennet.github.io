@@ -34,6 +34,14 @@
 
 	$(document).ready( function() {
 
+		$(window).on('scroll', function() {
+			if ( $(window).scrollTop() > 0 ) {
+				$('body').addClass('scrolled');
+			} else {
+				$('body').removeClass('scrolled');
+			}
+		});
+
 		///*
 
 		setInterval( function() {

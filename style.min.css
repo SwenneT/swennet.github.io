@@ -8,29 +8,31 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
 .svg-icon{fill:white}
 body{font-family:'Ubuntu',sans-serif;font-size:16px;background:-webkit-gradient(linear,left top,left bottom,from(#1e253f),color-stop(200vh,#5d2452));background:-webkit-linear-gradient(#1e253f,#5d2452 200vh);background:linear-gradient(#1e253f,#5d2452 200vh)}
-#particles-js{height:200vh;position:absolute;top:0;left:0;right:0;z-index:-1}
+#particles-js{height:150vh;position:absolute;top:0;left:0;right:0;z-index:-1}
 #particles-js canvas{width:100%;height:100%}
-header{width:100%;height:70px;padding:0 24px;position:fixed;top:0;left:0;right:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;z-index:1000}
-.navigation{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
-.navigation .button{margin-left:8px}
 main{min-height:2000px}
 .drawing{height:100vh}
-.island{height:100vh;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.island{height:100vh;margin-right:5%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}
 .island .image{-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
-.island .image img,.island .image svg{height:80vh;max-height:1000px}
+.island .image img,.island .image svg{width:60vw;max-height:80vh}
 .gradient-bottom{width:100%;height:35vh;position:absolute;bottom:0;left:0;right:0;background:-webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(35vh,#3d2448));background:-webkit-linear-gradient(transparent,#3d2448 35vh);background:linear-gradient(transparent,#3d2448 35vh)}
+header{width:100%;height:60px;padding:0 24px;position:fixed;top:0;left:0;right:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;z-index:1000}
+header:before{content:'';width:0;height:100%;position:absolute;top:0;left:0;right:0;bottom:0;background:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0.05)),to(rgba(30,37,63,0.1)));background:-webkit-linear-gradient(left,rgba(255,255,255,0.05),rgba(30,37,63,0.1));background:linear-gradient(to right,rgba(255,255,255,0.05),rgba(30,37,63,0.1));border-bottom:1px solid rgba(255,255,255,0.1);opacity:0;-webkit-transition:width .6s,opacity .6s;transition:width .6s,opacity .6s;z-index:-1}
+.navigation{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
+.navigation .button{margin-left:8px}
+body.scrolled header:before{width:100%;opacity:1}
 .button{height:36px;line-height:36px;position:relative}
-.skewed-button{line-height:34px;padding:0 16px;display:inline-block;color:rgba(255,255,255,0.8);font-size:.7rem;letter-spacing:.1rem;text-decoration:none;text-transform:uppercase;border:1px solid rgba(255,255,255,0.1);border-radius:1px;-webkit-transform:skew(-20deg);-ms-transform:skew(-20deg);transform:skew(-20deg);-webkit-transition:color .2s,border .2s,background .1s;transition:color .2s,border .2s,background .1s;overflow:hidden}
-.skewed-button span{width:100%;height:100%;display:inline-block;-webkit-transform:skew(20deg);-ms-transform:skew(20deg);transform:skew(20deg);background-visibiliy:hidden}
+.skewed-button{line-height:34px;padding:0 16px;display:inline-block;color:rgba(255,255,255,0.9);font-size:.7rem;letter-spacing:.1rem;text-decoration:none;text-transform:uppercase;border:1px solid rgba(255,255,255,0.1);border-right-width:4px;border-left-width:4px;border-radius:1px;-webkit-transform:skew(-22.5deg);-ms-transform:skew(-22.5deg);transform:skew(-22.5deg);-webkit-transition:color .2s,border .2s,background .1s;transition:color .2s,border .2s,background .1s;overflow:hidden}
+.skewed-button span{width:100%;height:100%;display:inline-block;-webkit-transform:skew(22.5deg);-ms-transform:skew(22.5deg);transform:skew(22.5deg);background-visibiliy:hidden}
 .skewed-button.icon-button{padding-left:48px}
-.skewed-button.icon-button svg{position:absolute;top:50%;left:14px;fill:rgba(255,255,255,0.8);-webkit-transform:translateY(-50%) skew(20deg);-ms-transform:translateY(-50%) skew(20deg);transform:translateY(-50%) skew(20deg);-webkit-transition:fill .2s;transition:fill .2s}
+.skewed-button.icon-button svg{position:absolute;top:50%;left:14px;fill:rgba(255,255,255,0.8);-webkit-transform:translateY(-50%) skew(22.5deg);-ms-transform:translateY(-50%) skew(22.5deg);transform:translateY(-50%) skew(22.5deg);-webkit-transition:fill .2s;transition:fill .2s}
 .skewed-button.icon-button:hover svg{fill:#fff}
 .skewed-button.active{color:#fff;background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.15);pointer-events:none}
 .skewed-button:hover{color:#fff;background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.15)}
 .skewed-button:hover:before{left:120%}
 .skewed-button:before{content:'';height:155px;width:50px;position:absolute;left:-75px;top:-50px;background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(#fff));background:-webkit-linear-gradient(transparent,#fff);background:linear-gradient(transparent,#fff);opacity:.1;-webkit-transform:rotate(35deg);-ms-transform:rotate(35deg);transform:rotate(35deg);-webkit-transition:all .7s cubic-bezier(0.19,1,0.22,1);transition:all .7s cubic-bezier(0.19,1,0.22,1);z-index:-10}
 .github-button{padding-left:16px;padding-right:24px;margin-right:-14px;border-right-color:transparent}
-.github-button+div{width:1px;height:34px;position:relative;top:-1px;display:inline-block;background:rgba(255,255,255,0.1)}
+.github-button+div{width:3px;height:34px;position:relative;top:-1px;display:inline-block;background:rgba(255,255,255,0.1)}
 .github-button:hover{border-right-color:transparent}
 .github-button:hover:before{left:110%}
 .github-button:hover+div{background:rgba(255,255,255,0.15)}
@@ -42,6 +44,7 @@ main{min-height:2000px}
 #floating-island.shake [id^=circuit]{-webkit-animation:circuitBoard 2s linear infinite;animation:circuitBoard 2s linear infinite}
 .shake{-webkit-animation:shake .1s infinite;animation:shake .1s infinite}
 .island{position:relative}
+#inside-house *{-webkit-animation:insideHouse 6s infinite linear;animation:insideHouse 6s infinite linear}
 #waterfall #foam [id^=foam]{-webkit-animation-name:foam1;animation-name:foam1;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-duration:.8s;animation-duration:.8s}
 #waterfall #foam2,#waterfall #foam5,#waterfall #foam8,#waterfall #foam11{-webkit-animation-delay:.3s;animation-delay:.3s}
 #waterfall #foam3,#waterfall #foam6,#waterfall #foam9,#waterfall #foam12{-webkit-animation-delay:.6s;animation-delay:.6s}
@@ -75,6 +78,12 @@ to{-webkit-transform:translate(0.5px);transform:translate(0.5px)}
 }@keyframes circuitBoard{0%{opacity:0}
 50%{opacity:.08}
 100%{opacity:0}
+}@-webkit-keyframes insideHouse{0%{fill:#091122}
+5%{fill:#1b0c25}
+10%{fill:#091122}
+}@keyframes insideHouse{0%{fill:#091122}
+5%{fill:#1b0c25}
+10%{fill:#091122}
 }@-webkit-keyframes foam1{0%{-webkit-transform:scale(1);transform:scale(1)}
 50%{-webkit-transform:scale(1.2);transform:scale(1.2)}
 100%{-webkit-transform:scale(1);transform:scale(1)}

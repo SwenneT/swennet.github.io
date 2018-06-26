@@ -10,7 +10,7 @@ body {
 }
 
 #particles-js {
-	height: 200vh;
+	height: 150vh;
 
 	position: absolute;
 	top: 0;
@@ -25,36 +25,7 @@ body {
 	}
 }
 
-header {
-	width: 100%;
-	height: 70px;
 
-	padding: 0 24px;
-
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
-	z-index: 1000;
-}
-
-.logo {
-
-}
-
-.navigation {
-	display: flex;
-	justify-content: space-between;
-
-	.button {
-		margin-left: 8px;
-	}
-}
 
 main {
 	min-height: 2000px;
@@ -66,19 +37,19 @@ main {
 
 .island {
 	height: 100vh;
-	overflow: hidden;
+	margin-right: 5%;
 
 	display: flex;
 	
-	justify-content: center;
+	justify-content: flex-end;
 
 	.image {
 		align-self: flex-end;
 
 		img,
 		svg {
-			height: 80vh;
-			max-height: 1000px;
+			width: 60vw;
+			max-height: 80vh;
 		}
 	}
 }
