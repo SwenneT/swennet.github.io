@@ -25,7 +25,7 @@
 				<a class="button skewed-button" href="#contact"><span>Contact</span></a>
 
 				<div class="github-button-container">		
-					<a class="button skewed-button icon-button github-button" href="https://github.com/Swennet/swennet.github.io" class="github-icon" title="View this project on Github" target="_blank" rel="noopener noreferrer">
+					<a class="button skewed-button icon-button icon-button-left github-button" href="https://github.com/Swennet/swennet.github.io" class="github-icon" title="View this project on Github" target="_blank" rel="noopener noreferrer">
 						<svg class="svg-icon" role="img" width="22" height="22">
 							<use xlink:href="images/svg-sprite.svg#github"></use>
 						</svg>
@@ -38,7 +38,7 @@
 
 		<main>
 
-			<section id="#home" class="home">
+			<section id="home" class="page-section home">
 
 				<div class="introduction">
 					<div class="text">
@@ -47,7 +47,13 @@
 							<small>Full-stack web developer</small>
 						</h1>
 						
-						<a class="button skewed-button large" href="#skills"><span>View my work</span></a>
+						<a class="button skewed-button icon-button icon-button-right large view-my-work-button" href="#skills">
+							<span>View my work</span>
+
+							<svg class="svg-icon" role="img" width="20" height="20">
+								<use xlink:href="images/svg-sprite.svg#arrow"></use>
+							</svg>
+						</a>
 					</div>
 				</div>
 				
@@ -59,7 +65,19 @@
 
 			</section>
 
-			<section id="skills" class="skills">
+			<section id="skills" class="page-section skills">
+
+			</section>
+
+			<section id="portfolio" class="page-section portfolio">
+
+			</section>
+
+			<section id="about" class="page-section about">
+
+			</section>
+
+			<section id="contact" class="page-section contact">
 
 			</section>
 
@@ -73,7 +91,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="js/particles.js"></script>
-	<script src="js/stars.js"></script>
+
+	<script>
+		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+		particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {
+			console.log('callback - particles.js config loaded');
+		});
+	</script>
 
 	</body>
 

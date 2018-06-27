@@ -5,10 +5,10 @@ particlesJS("particles-js", {
   "particles": {
 	"fps_limit": fps,
     "number": {
-      "value": 60,
+      "value": 700,
       "density": {
         "enable": true,
-        "value_area": 800
+        "value_area": 1000
       }
     },
     "color": {
@@ -25,22 +25,22 @@ particlesJS("particles-js", {
       }
     },
     "opacity": {
-      "value": 0.5,
-      "random": true,
+      "value": 0.3,
+      "random": false,
       "anim": {
-        "enable": false,
-        "speed": 1 * fpsAdjust,
-        "opacity_min": 0.1,
+        "enable": true,
+        "speed": 0.3 * fpsAdjust,
+        "opacity_min": 0,
         "sync": false
       }
     },
     "size": {
-      "value": 5,
+      "value": 1.5,
       "random": true,
       "anim": {
-        "enable": false,
-        "speed": 40 * fpsAdjust,
-        "size_min": 3,
+        "enable": true,
+        "speed": 0.5 * fpsAdjust,
+        "size_min": 0,
         "sync": false
       }
     },
@@ -70,8 +70,8 @@ particlesJS("particles-js", {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false,
-        "mode": "repulse"
+        "enable": true,
+        "mode": "bubble"
       },
       "onclick": {
         "enable": false,
@@ -87,18 +87,17 @@ particlesJS("particles-js", {
         }
       },
       "bubble": {
-        "distance": 400,
-        "size": 40,
-        "opacity": 8,
-		"duration": 2 * fpsAdjust,
-		"speed": 3 * fpsAdjust
+        "distance": 150,
+        "size": 1,
+        "opacity": 0.15,
+        "duration": 10 * fpsAdjust
       },
       "repulse": {
         "distance": 200,
         "duration": 0.4 * fpsAdjust
       },
       "remove": {
-        "particles_nb": 4
+        "particles_nb": 2
       }
     }
   },

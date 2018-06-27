@@ -34,6 +34,11 @@
 
 	$(document).ready( function() {
 
+		$('.navigation').on('click', 'a', function(event) {
+			$('.navigation a.active').removeClass('active');
+			$(this).addClass('active');
+		});
+
 		$(window).on('scroll', function() {
 			if ( $(window).scrollTop() > 0 ) {
 				$('body').addClass('scrolled');
@@ -42,18 +47,16 @@
 			}
 		});
 
-		///*
+	});
 
-		setInterval( function() {
-			$('#floating-island').removeClass('shake');
-		}, 6000);
-
-		setInterval( function() {		
-			$('#floating-island').addClass('shake');		
-		}, 18000);
-
-		//*/
-
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+	
+			document.querySelector(this.getAttribute('href')).scrollIntoView({
+				behavior: 'smooth'
+			});
+		});
 	});
 
 

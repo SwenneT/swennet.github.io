@@ -6,16 +6,17 @@ ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
-body{font-family:'Orbitron',sans-serif;font-size:16px;background:-webkit-gradient(linear,left top,left bottom,from(#1e253f),color-stop(200vh,#3d2448));background:-webkit-linear-gradient(#1e253f,#3d2448 200vh);background:linear-gradient(#1e253f,#3d2448 200vh)}
+body{font-family:'Orbitron',sans-serif;font-size:16px;background:#3d2448;background:-webkit-gradient(linear,left top,left bottom,from(#1e253f),color-stop(200vh,#3d2448));background:-webkit-linear-gradient(#1e253f,#3d2448 200vh);background:linear-gradient(#1e253f,#3d2448 200vh)}
 .svg-icon{fill:white}
 .text{color:rgba(255,255,255,0.9)}
 .text h1{font-size:2.4rem;line-height:2.8rem;margin-bottom:1.4rem}
 .text h1 span{color:#ff417b;text-shadow:0 0 15px rgba(255,65,123,0.3)}
 .text h1 small{font-size:1.8rem}
-#particles-js{height:150vh;position:absolute;top:0;left:0;right:0;z-index:-1}
-#particles-js canvas{width:100%;height:100%}
+#particles-js{height:150vh;position:absolute;top:0;left:0;right:0;z-index:-1;background:transparent}
+#particles-js canvas{width:100%;height:100%;background:transparent}
 main{min-height:2000px}
-.home{height:100vh;width:100%;padding-top:60px;position:relative}
+.page-section{height:100vh;width:100%;position:relative}
+.home{padding-top:60px}
 .introduction{height:100%;width:50%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:12%}
 .introduction .text{padding-bottom:20vh}
 .introduction .text .button{float:right;margin-right:34px}
@@ -28,12 +29,16 @@ header:before{content:'';width:0;height:100%;position:absolute;top:0;left:0;righ
 .navigation .button{margin-left:8px}
 body.scrolled header:before{width:100%;opacity:1}
 .button{height:36px;line-height:36px;position:relative}
-.skewed-button{line-height:34px;padding:0 16px;display:inline-block;color:rgba(255,255,255,0.9);font-size:.7rem;letter-spacing:.1rem;text-decoration:none;text-transform:uppercase;border:1px solid rgba(255,255,255,0.1);border-right-width:4px;border-left-width:4px;border-radius:1px;-webkit-transform:skew(-22.5deg);-ms-transform:skew(-22.5deg);transform:skew(-22.5deg);-webkit-transition:color .3s,border .3s,background .2s,-webkit-box-shadow .3s;transition:color .3s,border .3s,background .2s,-webkit-box-shadow .3s;transition:color .3s,border .3s,background .2s,box-shadow .3s;transition:color .3s,border .3s,background .2s,box-shadow .3s,-webkit-box-shadow .3s;overflow:hidden}
+.skewed-button{line-height:34px;padding:0 16px;display:inline-block;color:rgba(255,255,255,0.9);font-size:.6rem;letter-spacing:.1rem;text-decoration:none;text-transform:uppercase;border:1px solid rgba(255,255,255,0.1);border-right-width:4px;border-left-width:4px;border-radius:1px;-webkit-transform:skew(-22.5deg);-ms-transform:skew(-22.5deg);transform:skew(-22.5deg);-webkit-transition:color .3s,border .3s,background .2s,-webkit-box-shadow .3s;transition:color .3s,border .3s,background .2s,-webkit-box-shadow .3s;transition:color .3s,border .3s,background .2s,box-shadow .3s;transition:color .3s,border .3s,background .2s,box-shadow .3s,-webkit-box-shadow .3s;overflow:hidden}
 .skewed-button span{width:100%;height:100%;display:inline-block;-webkit-transform:skew(22.5deg);-ms-transform:skew(22.5deg);transform:skew(22.5deg);background-visibiliy:hidden}
-.skewed-button.icon-button{padding-left:48px}
-.skewed-button.icon-button svg{position:absolute;top:50%;left:14px;fill:rgba(255,255,255,0.8);-webkit-transform:translateY(-50%) skew(22.5deg);-ms-transform:translateY(-50%) skew(22.5deg);transform:translateY(-50%) skew(22.5deg);-webkit-transition:fill .2s;transition:fill .2s}
+.skewed-button.icon-button svg{position:absolute;top:50%;fill:rgba(255,255,255,0.8);-webkit-transform:translateY(-50%) skew(22.5deg);-ms-transform:translateY(-50%) skew(22.5deg);transform:translateY(-50%) skew(22.5deg);-webkit-transition:fill .3s;transition:fill .3s}
 .skewed-button.icon-button:hover svg{fill:#fff}
-.skewed-button.large{height:48px;line-height:48px;padding:0 20px;font-size:.8rem}
+.skewed-button.icon-button-left{padding-left:48px !important}
+.skewed-button.icon-button-left svg{left:14px}
+.skewed-button.icon-button-right{padding-right:48px !important}
+.skewed-button.icon-button-right svg{right:18px}
+.skewed-button.icon-button-right.large{padding-right:48px !important}
+.skewed-button.large{height:48px;line-height:48px;padding:0 20px}
 .skewed-button.active{color:#fff;background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.15);pointer-events:none}
 .skewed-button:hover{color:#fff;background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.15);-webkit-box-shadow:0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);box-shadow:0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23)}
 .skewed-button:hover:before{left:120%}
@@ -44,6 +49,9 @@ body.scrolled header:before{width:100%;opacity:1}
 .github-button:hover:before{left:110%}
 .github-button:hover+div{background:rgba(255,255,255,0.15)}
 .github-button-container{height:36px;position:relative;overflow:hidden}
+.view-my-work-button{font-size:.7rem}
+.view-my-work-button use{-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;-webkit-transform-origin:10px 10px;-ms-transform-origin:10px 10px;transform-origin:10px 10px}
+.view-my-work-button:hover use{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}
 #floating-island{-webkit-transition:-webkit-filter 2s;transition:-webkit-filter 2s;transition:filter 2s;transition:filter 2s,-webkit-filter 2s}
 #floating-island [id^=circuit]{-webkit-transition:opacity 2s;transition:opacity 2s}
 #floating-island [id^=circuit] *{fill:white}

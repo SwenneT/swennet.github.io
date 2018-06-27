@@ -1,5 +1,6 @@
 {
   "particles": {
+	"fps_limit": 30,
     "number": {
       "value": 60,
       "density": {
@@ -14,7 +15,7 @@
       "type": "circle",
       "stroke": {
         "width": 0,
-        "color": "#000000"
+        "color": "#ffffff"
       },
       "polygon": {
         "nb_sides": 5
@@ -25,7 +26,7 @@
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 1,
+        "speed": 2,
         "opacity_min": 0.1,
         "sync": false
       }
@@ -35,7 +36,7 @@
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 40,
+        "speed": 80,
         "size_min": 3,
         "sync": true
       }
@@ -49,7 +50,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 0.3,
+      "speed": 0.8,
       "direction": "none",
       "random": true,
       "straight": false,
@@ -87,7 +88,7 @@
         "size": 40,
         "duration": 2,
         "opacity": 8,
-        "speed": 3
+        "speed": 6
       },
       "repulse": {
         "distance": 200,
