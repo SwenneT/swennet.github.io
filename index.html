@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="style.min.css" />	
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 </head>
 
 <body>
@@ -38,16 +38,30 @@
 
 		<main>
 
-			<div class="drawing">
+			<section id="#home" class="home">
+
+				<div class="introduction">
+					<div class="text">
+						<h1>
+							Hey, I'm <span>Swen</span><br>
+							<small>Full-stack web developer</small>
+						</h1>
+						
+						<a class="button skewed-button large" href="#skills"><span>View my work</span></a>
+					</div>
+				</div>
 				
 				<div class="island">
-					<div class="image">
-						<img id="floating-island" class="svg" src="images/island.svg">
-					</div>
+					<img id="floating-island" class="svg" src="images/island.svg">
 				</div>
 
 				<div class="gradient-bottom"></div>
-			</div>
+
+			</section>
+
+			<section id="skills" class="skills">
+
+			</section>
 
 		</main>
 
@@ -58,14 +72,8 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="js/particles.min.js"></script>
-
-	<script>
-		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-		particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {
-			console.log('callback - particles.js config loaded');
-		});
-	</script>
+	<script src="js/particles.js"></script>
+	<script src="js/stars.js"></script>
 
 	</body>
 

@@ -26,7 +26,7 @@
 	border-radius: 1px;
 
 	transform: skew(-22.5deg);
-	transition: color 0.2s, border 0.2s, background 0.1s;
+	transition: color 0.3s, border 0.3s, background 0.2s, box-shadow 0.3s;
 
 	overflow: hidden;
 
@@ -62,6 +62,15 @@
 		}
 	}
 
+	&.large {
+		height: 48px;
+		line-height: 48px;
+
+		padding: 0 20px;
+
+		font-size: 0.8rem;
+	}
+
 	&.active {
 		color: #FFFFFF;
 
@@ -76,6 +85,8 @@
 
 		background: rgba(#FFFFFF, 0.05);
 		border-color: rgba(#FFFFFF, 0.15);
+
+		@include box_shadow(2);
 		
 		&:before {
 		  left: 120%;
@@ -96,7 +107,7 @@
 
 		opacity: 0.1;
 
-		transform: rotate(35deg);
+		transform: rotate(22.5deg);
 		transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 
 		z-index: -10;

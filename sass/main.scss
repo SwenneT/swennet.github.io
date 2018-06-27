@@ -1,12 +1,32 @@
+body {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 16px;
+
+	background: linear-gradient($spaceDark, $spaceLight 200vh);
+}
+
 .svg-icon {
 	fill: white;
 }
 
-body {
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 16px;
+.text {
+	color: rgba(#FFFFFF, 0.9);
 
-	background: linear-gradient($spaceDark, $spaceLight 200vh);
+	h1 {
+		font-size: 2.4rem;
+		line-height: 2.8rem;
+
+		margin-bottom: 1.4rem;
+
+		span {
+			color: $textAccent;
+			text-shadow: 0px 0px 15px rgba($textAccent, 0.3);
+		}
+
+		small {
+			font-size: 1.8rem;
+		}
+	}
 }
 
 #particles-js {
@@ -25,32 +45,49 @@ body {
 	}
 }
 
-
-
 main {
 	min-height: 2000px;
 }
 
-.drawing {
+.home {
 	height: 100vh;
+	width: 100%;
+
+	padding-top: 60px;
+
+	position: relative;
+}
+
+.introduction {
+	height: 100%;
+	width: 50%;
+
+	display: flex;
+	align-items: center;
+
+	position: absolute;
+	top: 0;
+	left: 12%;
+
+	.text {
+		padding-bottom: 20vh;
+
+		.button {
+			float: right;
+			margin-right: 34px;
+		}
+	}
 }
 
 .island {
-	height: 100vh;
-	margin-right: 5%;
+	position: absolute;
+	bottom: 0;
+	right: 8%;
 
-	display: flex;
-	
-	justify-content: flex-end;
-
-	.image {
-		align-self: flex-end;
-
-		img,
-		svg {
-			width: 60vw;
-			max-height: 80vh;
-		}
+	img,
+	svg {
+		width: 50vw;
+		max-height: 80vh;
 	}
 }
 
@@ -65,3 +102,5 @@ main {
 	
 	background: linear-gradient(transparent, $gradientStart 35vh);
 }
+
+

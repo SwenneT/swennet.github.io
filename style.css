@@ -19,9 +19,17 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 
 table { border-collapse: collapse; border-spacing: 0; }
 
+body { font-family: 'Orbitron', sans-serif; font-size: 16px; background: -webkit-gradient(linear, left top, left bottom, from(#1e253f), color-stop(200vh, #3d2448)); background: -webkit-linear-gradient(#1e253f, #3d2448 200vh); background: linear-gradient(#1e253f, #3d2448 200vh); }
+
 .svg-icon { fill: white; }
 
-body { font-family: 'Ubuntu', sans-serif; font-size: 16px; background: -webkit-gradient(linear, left top, left bottom, from(#1e253f), color-stop(200vh, #5d2452)); background: -webkit-linear-gradient(#1e253f, #5d2452 200vh); background: linear-gradient(#1e253f, #5d2452 200vh); }
+.text { color: rgba(255, 255, 255, 0.9); }
+
+.text h1 { font-size: 2.4rem; line-height: 2.8rem; margin-bottom: 1.4rem; }
+
+.text h1 span { color: #ff417b; text-shadow: 0px 0px 15px rgba(255, 65, 123, 0.3); }
+
+.text h1 small { font-size: 1.8rem; }
 
 #particles-js { height: 150vh; position: absolute; top: 0; left: 0; right: 0; z-index: -1; }
 
@@ -29,19 +37,23 @@ body { font-family: 'Ubuntu', sans-serif; font-size: 16px; background: -webkit-g
 
 main { min-height: 2000px; }
 
-.drawing { height: 100vh; }
+.home { height: 100vh; width: 100%; padding-top: 60px; position: relative; }
 
-.island { height: 100vh; margin-right: 5%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; }
+.introduction { height: 100%; width: 50%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; position: absolute; top: 0; left: 12%; }
 
-.island .image { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; }
+.introduction .text { padding-bottom: 20vh; }
 
-.island .image img, .island .image svg { width: 60vw; max-height: 80vh; }
+.introduction .text .button { float: right; margin-right: 34px; }
+
+.island { position: absolute; bottom: 0; right: 8%; }
+
+.island img, .island svg { width: 50vw; max-height: 80vh; }
 
 .gradient-bottom { width: 100%; height: 35vh; position: absolute; bottom: 0; left: 0; right: 0; background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(35vh, #3d2448)); background: -webkit-linear-gradient(transparent, #3d2448 35vh); background: linear-gradient(transparent, #3d2448 35vh); }
 
 header { width: 100%; height: 60px; padding: 0 24px; position: fixed; top: 0; left: 0; right: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; z-index: 1000; }
 
-header:before { content: ''; width: 0%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.05)), to(rgba(30, 37, 63, 0.1))); background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.05), rgba(30, 37, 63, 0.1)); background: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(30, 37, 63, 0.1)); border-bottom: 1px solid rgba(255, 255, 255, 0.1); opacity: 0; -webkit-transition: width 1s, opacity 1s; transition: width 1s, opacity 1s; z-index: -1; }
+header:before { content: ''; width: 0%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.05)), to(rgba(30, 37, 63, 0.1))); background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.05), rgba(30, 37, 63, 0.1)); background: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(30, 37, 63, 0.1)); border-bottom: 1px solid rgba(255, 255, 255, 0.1); opacity: 0; -webkit-transition: width 0.6s, opacity 1s; transition: width 0.6s, opacity 1s; z-index: -1; }
 
 .navigation { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
 
@@ -51,7 +63,7 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 .button { height: 36px; line-height: 36px; position: relative; }
 
-.skewed-button { line-height: 34px; padding: 0 16px; display: inline-block; color: rgba(255, 255, 255, 0.9); font-size: 0.7rem; letter-spacing: 0.1rem; text-decoration: none; text-transform: uppercase; border: 1px solid rgba(255, 255, 255, 0.1); border-right-width: 4px; border-left-width: 4px; border-radius: 1px; -webkit-transform: skew(-22.5deg); -ms-transform: skew(-22.5deg); transform: skew(-22.5deg); -webkit-transition: color 0.2s, border 0.2s, background 0.1s; transition: color 0.2s, border 0.2s, background 0.1s; overflow: hidden; }
+.skewed-button { line-height: 34px; padding: 0 16px; display: inline-block; color: rgba(255, 255, 255, 0.9); font-size: 0.7rem; letter-spacing: 0.1rem; text-decoration: none; text-transform: uppercase; border: 1px solid rgba(255, 255, 255, 0.1); border-right-width: 4px; border-left-width: 4px; border-radius: 1px; -webkit-transform: skew(-22.5deg); -ms-transform: skew(-22.5deg); transform: skew(-22.5deg); -webkit-transition: color 0.3s, border 0.3s, background 0.2s, -webkit-box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, -webkit-box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, box-shadow 0.3s, -webkit-box-shadow 0.3s; overflow: hidden; }
 
 .skewed-button span { width: 100%; height: 100%; display: inline-block; -webkit-transform: skew(22.5deg); -ms-transform: skew(22.5deg); transform: skew(22.5deg); background-visibiliy: hidden; }
 
@@ -61,13 +73,15 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 .skewed-button.icon-button:hover svg { fill: #FFFFFF; }
 
+.skewed-button.large { height: 48px; line-height: 48px; padding: 0 20px; font-size: 0.8rem; }
+
 .skewed-button.active { color: #FFFFFF; background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.15); pointer-events: none; }
 
-.skewed-button:hover { color: #FFFFFF; background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.15); }
+.skewed-button:hover { color: #FFFFFF; background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.15); -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
 .skewed-button:hover:before { left: 120%; }
 
-.skewed-button:before { content: ''; height: 155px; width: 50px; position: absolute; left: -75px; top: -50px; background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FFFFFF)); background: -webkit-linear-gradient(transparent, #FFFFFF); background: linear-gradient(transparent, #FFFFFF); opacity: 0.1; -webkit-transform: rotate(35deg); -ms-transform: rotate(35deg); transform: rotate(35deg); -webkit-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); z-index: -10; }
+.skewed-button:before { content: ''; height: 155px; width: 50px; position: absolute; left: -75px; top: -50px; background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FFFFFF)); background: -webkit-linear-gradient(transparent, #FFFFFF); background: linear-gradient(transparent, #FFFFFF); opacity: 0.1; -webkit-transform: rotate(22.5deg); -ms-transform: rotate(22.5deg); transform: rotate(22.5deg); -webkit-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); z-index: -10; }
 
 .github-button { padding-left: 16px; padding-right: 24px; margin-right: -14px; border-right-color: transparent; }
 
@@ -89,10 +103,6 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 #floating-island.shake { -webkit-filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.1)); filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.1)); }
 
-#floating-island.shake [id^=circuit] { -webkit-animation: circuitBoard 2s linear infinite; animation: circuitBoard 2s linear infinite; }
-
-.shake { -webkit-animation: shake 0.1s infinite; animation: shake 0.1s infinite; }
-
 @-webkit-keyframes shake { from { -webkit-transform: translate(-0.5px); transform: translate(-0.5px); }
   to { -webkit-transform: translate(0.5px); transform: translate(0.5px); } }
 
@@ -106,8 +116,6 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 @keyframes circuitBoard { 0% { opacity: 0; }
   50% { opacity: 0.08; }
   100% { opacity: 0; } }
-
-.island { position: relative; }
 
 #inside-house * { -webkit-animation: insideHouse 6s infinite linear; animation: insideHouse 6s infinite linear; }
 
