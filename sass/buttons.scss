@@ -101,7 +101,7 @@
 		background: rgba(#FFFFFF, 0.05);
 		border-color: rgba(#FFFFFF, 0.15);
 
-		@include box_shadow(2);
+		@include box_shadow(1);
 		
 		&:before {
 		  left: 120%;
