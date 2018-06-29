@@ -39,9 +39,7 @@ body { font-family: 'Orbitron', sans-serif; font-size: 16px; background: #3d2448
 
 main { min-height: 2000px; }
 
-.page-section { height: 100vh; width: 100%; position: relative; }
-
-.home { padding-top: 60px; }
+.page-section { height: 100vh; width: 100%; padding-top: 60px !important; position: relative; }
 
 .introduction { height: 100%; width: 50%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; position: absolute; top: 0; left: 12%; }
 
@@ -49,11 +47,7 @@ main { min-height: 2000px; }
 
 .introduction .text .button { float: right; margin-right: 34px; }
 
-.island { position: absolute; bottom: 0; right: 8%; }
-
-.island img, .island svg { width: 50vw; max-height: 80vh; }
-
-.gradient-bottom { width: 100%; height: 35vh; position: absolute; bottom: 0; left: 0; right: 0; background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(35vh, #3d2448)); background: -webkit-linear-gradient(transparent, #3d2448 35vh); background: linear-gradient(transparent, #3d2448 35vh); }
+.portfolio { padding: 0 8%; }
 
 header { width: 100%; height: 60px; padding: 0 24px; position: fixed; top: 0; left: 0; right: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; z-index: 1000; }
 
@@ -112,6 +106,12 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 .view-my-work-button use { -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; -webkit-transform-origin: 10px 10px; -ms-transform-origin: 10px 10px; transform-origin: 10px 10px; }
 
 .view-my-work-button:hover use { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
+
+.island { position: absolute; bottom: 0; right: 4%; }
+
+.island img, .island svg { width: 60vw; max-height: 80vh; }
+
+.gradient-bottom { width: 100%; height: 35vh; position: absolute; bottom: 0; left: 0; right: 0; background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(35vh, #3d2448)); background: -webkit-linear-gradient(transparent, #3d2448 35vh); background: linear-gradient(transparent, #3d2448 35vh); }
 
 #floating-island { -webkit-transition: -webkit-filter 2s; transition: -webkit-filter 2s; transition: filter 2s; transition: filter 2s, -webkit-filter 2s; }
 
@@ -231,70 +231,32 @@ body.scrolled header:before { width: 100%; opacity: 1; }
   50% { -webkit-transform: translateY(25px); transform: translateY(25px); }
   100% { -webkit-transform: translateY(0px); transform: translateY(0px); } }
 
-.portal { width: 400px; height: 400px; position: relative; -webkit-transform: scale3d(0.6, 0.6, 0.6); transform: scale3d(0.6, 0.6, 0.6); -webkit-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; cursor: pointer; }
+.portal { width: 400px; height: 400px; position: relative; display: inline-block; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; -webkit-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; }
 
-.portal:active { -webkit-transform: scale3d(0.5, 0.5, 0.5); transform: scale3d(0.5, 0.5, 0.5); }
+.portal:hover .portal-outer { -webkit-filter: hue-rotate(-20deg); filter: hue-rotate(-20deg); }
 
-.portal.opening { -webkit-animation: portalOpen 0.3s forwards; animation: portalOpen 0.3s forwards; }
+.portal:hover .portal-outer-2 { -webkit-filter: drop-shadow(0px 0px 16px rgba(223, 46, 143, 0.6)) hue-rotate(-20deg); filter: drop-shadow(0px 0px 16px rgba(223, 46, 143, 0.6)) hue-rotate(-20deg); }
 
-.portal.opened { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+.portal:hover .portal-inner img { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
 
-.portal.opened:active { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); }
+.portal-outer { width: 400px; height: 400px; position: absolute; -webkit-transition: -webkit-filter 0.6s; transition: -webkit-filter 0.6s; transition: filter 0.6s; transition: filter 0.6s, -webkit-filter 0.6s; }
 
-.portal.opening .portal-inner, .portal.opened .portal-inner { opacity: 0.9 !important; }
+.portal-outer-1 { fill: rgba(223, 46, 143, 0.1); -webkit-animation: portalAnim1 16s linear infinite; animation: portalAnim1 16s linear infinite; }
 
-.portal.opening .portal-inner img, .portal.opened .portal-inner img { -webkit-transform: scale3d(1, 1, 1) !important; transform: scale3d(1, 1, 1) !important; }
+.portal-outer-2 { fill: #df2e8f; -webkit-animation: portalAnim2 12s linear infinite; animation: portalAnim2 12s linear infinite; -webkit-filter: drop-shadow(0px 0px 16px rgba(223, 46, 143, 0.6)); filter: drop-shadow(0px 0px 16px rgba(223, 46, 143, 0.6)); }
 
-.portal.closing { -webkit-animation: portalClose 0.3s forwards; animation: portalClose 0.3s forwards; }
+.portal-inner { width: 600px; height: 600px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%) scale(0.48); -ms-transform: translate(-50%, -50%) scale(0.48); transform: translate(-50%, -50%) scale(0.48); -webkit-clip-path: url(#portal-clip); clip-path: url(#portal-clip); opacity: 0.9; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
 
-.portal.closing .portal-inner { opacity: 0.7; }
-
-.portal.closed { -webkit-transform: scale3d(0.4, 0.4, 0.4); transform: scale3d(0.4, 0.4, 0.4); }
-
-.portal.closed:active { -webkit-transform: scale3d(0.4, 0.4, 0.4) !important; transform: scale3d(0.4, 0.4, 0.4) !important; }
-
-.portal.closed:hover { -webkit-transform: scale3d(0.5, 0.5, 0.5); transform: scale3d(0.5, 0.5, 0.5); }
-
-.portal.closing:hover .portal-inner, .portal.closed:hover .portal-inner { opacity: 0.8; }
-
-.portal-outer { width: 400px; height: 400px; position: absolute; -webkit-transition: -webkit-filter 0.3s; transition: -webkit-filter 0.3s; transition: filter 0.3s; transition: filter 0.3s, -webkit-filter 0.3s; }
-
-.portal-outer-1 { fill: rgba(221, 21, 131, 0.1); -webkit-animation: portalAnim1 16s linear infinite; animation: portalAnim1 16s linear infinite; }
-
-.portal-outer-2 { fill: #dd1583; -webkit-animation: portalAnim2 12s linear infinite; animation: portalAnim2 12s linear infinite; -webkit-filter: drop-shadow(0px 0px 16px rgba(221, 21, 131, 0.6)); filter: drop-shadow(0px 0px 16px rgba(221, 21, 131, 0.6)); }
-
-.portal-outer-3 { fill: #ad1167; -webkit-animation: portalAnim3 8s linear infinite; animation: portalAnim3 8s linear infinite; }
-
-.portal-inner { width: 600px; height: 600px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%) scale3d(0.5, 0.5, 0.5); transform: translate(-50%, -50%) scale3d(0.5, 0.5, 0.5); -webkit-clip-path: url(#portal-clip); clip-path: url(#portal-clip); opacity: 0.7; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
-
-.portal-inner img { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; pointer-events: none; }
+.portal-inner img { -webkit-transform: scale(1.3); -ms-transform: scale(1.3); transform: scale(1.3); -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; pointer-events: none; }
 
 @-webkit-keyframes portalAnim1 { from { -webkit-transform: rotate(0); transform: rotate(0); }
-  to { -webkit-transform: rotate(-360deg); transform: rotate(-360deg); } }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 
 @keyframes portalAnim1 { from { -webkit-transform: rotate(0); transform: rotate(0); }
-  to { -webkit-transform: rotate(-360deg); transform: rotate(-360deg); } }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 
-@-webkit-keyframes portalAnim2 { from { -webkit-transform: rotate(50deg) scale3d(0.85, 0.85, 0.85); transform: rotate(50deg) scale3d(0.85, 0.85, 0.85); }
-  to { -webkit-transform: rotate(410deg) scale3d(0.85, 0.85, 0.85); transform: rotate(410deg) scale3d(0.85, 0.85, 0.85); } }
+@-webkit-keyframes portalAnim2 { from { -webkit-transform: rotate(50deg) scale(0.85); transform: rotate(50deg) scale(0.85); }
+  to { -webkit-transform: rotate(410deg) scale(0.85); transform: rotate(410deg) scale(0.85); } }
 
-@keyframes portalAnim2 { from { -webkit-transform: rotate(50deg) scale3d(0.85, 0.85, 0.85); transform: rotate(50deg) scale3d(0.85, 0.85, 0.85); }
-  to { -webkit-transform: rotate(410deg) scale3d(0.85, 0.85, 0.85); transform: rotate(410deg) scale3d(0.85, 0.85, 0.85); } }
-
-@-webkit-keyframes portalAnim3 { from { -webkit-transform: rotate(0deg) scale3d(0.65, 0.65, 0.65); transform: rotate(0deg) scale3d(0.65, 0.65, 0.65); }
-  to { -webkit-transform: rotate(360deg) scale3d(0.65, 0.65, 0.65); transform: rotate(360deg) scale3d(0.65, 0.65, 0.65); } }
-
-@keyframes portalAnim3 { from { -webkit-transform: rotate(0deg) scale3d(0.65, 0.65, 0.65); transform: rotate(0deg) scale3d(0.65, 0.65, 0.65); }
-  to { -webkit-transform: rotate(360deg) scale3d(0.65, 0.65, 0.65); transform: rotate(360deg) scale3d(0.65, 0.65, 0.65); } }
-
-@-webkit-keyframes portalOpen { 0% { -webkit-transform: scale3d(0.5, 0.5, 0.5); transform: scale3d(0.5, 0.5, 0.5); }
-  100% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } }
-
-@keyframes portalOpen { 0% { -webkit-transform: scale3d(0.5, 0.5, 0.5); transform: scale3d(0.5, 0.5, 0.5); }
-  100% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } }
-
-@-webkit-keyframes portalClose { 0% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); }
-  100% { -webkit-transform: scale3D(0.5, 0.5, 0.5); transform: scale3D(0.5, 0.5, 0.5); } }
-
-@keyframes portalClose { 0% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); }
-  100% { -webkit-transform: scale3D(0.5, 0.5, 0.5); transform: scale3D(0.5, 0.5, 0.5); } }
+@keyframes portalAnim2 { from { -webkit-transform: rotate(50deg) scale(0.85); transform: rotate(50deg) scale(0.85); }
+  to { -webkit-transform: rotate(410deg) scale(0.85); transform: rotate(410deg) scale(0.85); } }
