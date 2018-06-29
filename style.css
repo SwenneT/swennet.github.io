@@ -267,7 +267,7 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 .portal-inner { width: 600px; height: 600px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%) scale3d(0.5, 0.5, 0.5); transform: translate(-50%, -50%) scale3d(0.5, 0.5, 0.5); -webkit-clip-path: url(#portal-clip); clip-path: url(#portal-clip); opacity: 0.7; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
 
-.portal-inner img { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; }
+.portal-inner img { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; pointer-events: none; }
 
 @-webkit-keyframes portalAnim1 { from { -webkit-transform: rotate(0); transform: rotate(0); }
   to { -webkit-transform: rotate(-360deg); transform: rotate(-360deg); } }

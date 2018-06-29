@@ -99,7 +99,7 @@ body.scrolled header:before{width:100%;opacity:1}
 .portal-outer-2{fill:#dd1583;-webkit-animation:portalAnim2 12s linear infinite;animation:portalAnim2 12s linear infinite;-webkit-filter:drop-shadow(0 0 16px rgba(221,21,131,0.6));filter:drop-shadow(0 0 16px rgba(221,21,131,0.6))}
 .portal-outer-3{fill:#ad1167;-webkit-animation:portalAnim3 8s linear infinite;animation:portalAnim3 8s linear infinite}
 .portal-inner{width:600px;height:600px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale3d(0.5,0.5,0.5);transform:translate(-50%,-50%) scale3d(0.5,0.5,0.5);-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip);opacity:.7;-webkit-transition:opacity .3s;transition:opacity .3s}
-.portal-inner img{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s}
+.portal-inner img{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
 @-webkit-keyframes shake{from{-webkit-transform:translate(-0.5px);transform:translate(-0.5px)}
 to{-webkit-transform:translate(0.5px);transform:translate(0.5px)}
 }@keyframes shake{from{-webkit-transform:translate(-0.5px);transform:translate(-0.5px)}
