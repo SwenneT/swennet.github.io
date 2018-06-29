@@ -25,13 +25,20 @@ body {
 		}
 
 		small {
+			position: relative;
 			font-size: 1.8rem;
+		}
+
+		div {
+			font-size: 1.2rem;
+
+			padding-right: 16px;
 		}
 	}
 }
 
 #particles-js {
-	height: 150vh;
+	height: 500vh;
 
 	position: absolute;
 	top: 0;

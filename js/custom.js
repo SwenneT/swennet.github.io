@@ -47,6 +47,30 @@
 			}
 		});
 
+		$('.portal').on('click', function() {
+			var thisPortal = $(this);
+
+			if ( thisPortal.hasClass('closed') ) {
+				thisPortal.addClass('opening');
+
+				setTimeout( function() {
+					thisPortal.removeClass('opening');
+				}, 300);
+
+			} else {
+				thisPortal.addClass('closing');
+
+				setTimeout( function() {
+					thisPortal.removeClass('closing');
+				}, 300);
+
+			}
+
+			setTimeout( function() {
+				thisPortal.toggleClass('opened closed');
+			}, 300);
+		});
+
 	});
 
 	document.querySelectorAll('a[href^="#"]').forEach(anchor => {

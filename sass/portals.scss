@@ -1,0 +1,171 @@
+.portal {
+	width: 400px;
+	height: 400px;
+
+	position: relative;
+
+	transform: scale3d(0.6, 0.6, 0.6);
+	transform-origin: 50% 50%;
+
+	transition: transform 0.3s;
+
+	cursor: pointer;
+
+	&:active {
+		transform: scale3d(0.5, 0.5, 0.5);
+	}
+
+	&.opening {
+		animation: portalOpen 0.3s forwards;
+	}
+
+	&.opened {
+		transform: scale3d(1, 1, 1);
+
+		&:active {
+			transform: scale3d(1.1, 1.1, 1.1);
+		}
+	}
+
+	&.opening,
+	&.opened {
+		.portal-inner {
+			opacity: 0.9 !important;
+
+			img {
+				transform: scale3d(1, 1, 1) !important;
+			}
+		}
+	}
+
+	&.closing {
+		animation: portalClose 0.3s forwards;
+
+		.portal-inner {
+			opacity: 0.7;
+		}
+	}
+
+	&.closed {
+		transform: scale3d(0.4, 0.4, 0.4);
+
+		&:active {
+			transform: scale3d(0.4, 0.4, 0.4) !important;
+		}
+
+		&:hover {
+			transform: scale3d(0.5, 0.5, 0.5);
+		}
+	}
+
+	&.closing,
+	&.closed {
+		&:hover {
+			.portal-inner {
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
+.portal-outer {
+	width: 400px;
+	height: 400px;
+
+	position: absolute;
+
+	transition: filter 0.3s;
+}
+
+.portal-outer-1 {
+	fill: rgba(221, 21, 131, 0.1);
+
+	animation: portalAnim1 16s linear infinite;
+}
+
+.portal-outer-2 {
+	fill: rgb(221, 21, 131);
+
+	animation: portalAnim2 12s linear infinite;
+
+	filter: drop-shadow(0px 0px 16px rgba(221, 21, 131, 0.6));
+}
+
+.portal-outer-3 {
+	fill: rgb(173, 17, 103);
+
+	animation: portalAnim3 8s linear infinite;
+}
+
+.portal-inner {
+	width: 600px;
+	height: 600px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%) scale3d(0.5, 0.5, 0.5);
+
+	clip-path: url(#portal-clip);
+
+	opacity: 0.7;
+
+	transition: opacity 0.3s;
+
+	img {
+		transform: scale3d(1, 1, 1);
+		transition: transform 0.3s;
+	}
+}
+
+@keyframes portalAnim1 {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes portalAnim2 {
+	from {
+		transform: rotate(50deg) scale3d(0.85, 0.85, 0.85);
+	}
+
+	to {
+		transform: rotate(410deg) scale3d(0.85, 0.85, 0.85);
+	}
+}
+
+@keyframes portalAnim3 {
+	from {
+		transform: rotate(0deg) scale3d(0.65, 0.65, 0.65);
+	}
+
+	to {
+		transform: rotate(360deg) scale3d(0.65, 0.65, 0.65);
+	}
+}
+
+@keyframes portalOpen {
+	0% {
+		transform: scale3d(0.5, 0.5, 0.5);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes portalClose {
+	0% {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+
+	100% {
+		transform: scale3D(0.5, 0.5, 0.5);
+	}
+
+}
