@@ -44,8 +44,9 @@ main {
 	position: relative;
 
 	h1 {
-		font-size: 2.8rem;
 		color: white;
+		font-size: 2.4rem;
+		text-transform: uppercase;
 
 		margin: 6rem 0;
 	}
@@ -63,6 +64,10 @@ main {
 	left: 12%;
 
 	z-index: 1;
+
+	h1 {
+		text-transform: none;
+	}
 
 	> div {
 		padding-bottom: 20vh;
