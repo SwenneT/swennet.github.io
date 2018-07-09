@@ -23,31 +23,77 @@ body { font-family: 'Orbitron', sans-serif; font-size: 16px; background: #3d2448
 
 .svg-icon { fill: white; }
 
-.text { color: rgba(255, 255, 255, 0.9); }
-
-.text h1 { font-size: 2.4rem; line-height: 2.8rem; margin-bottom: 1.4rem; }
-
-.text h1 span { color: #ff417b; text-shadow: 0px 0px 15px rgba(255, 65, 123, 0.3); }
-
-.text h1 small { position: relative; font-size: 1.8rem; }
-
-.text h1 div { font-size: 1.2rem; padding-right: 16px; }
-
 #particles-js { height: 500vh; position: absolute; top: 0; left: 0; right: 0; z-index: -1; background: transparent; }
 
 #particles-js canvas { width: 100%; height: 100%; background: transparent; }
 
 main { min-height: 2000px; }
 
-.page-section { height: 100vh; width: 100%; padding-top: 60px !important; position: relative; }
+.page-section { min-height: 100vh; width: 100%; padding: 0 8%; padding-top: 60px !important; position: relative; }
 
-.introduction { height: 100%; width: 50%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; position: absolute; top: 0; left: 12%; }
+.page-section h1 { font-size: 2.8rem; color: white; margin: 6rem 0; }
 
-.introduction .text { padding-bottom: 20vh; }
+.introduction { height: 100%; width: 50%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; position: absolute; top: 0; left: 12%; z-index: 1; }
 
-.introduction .text .button { float: right; margin-right: 34px; }
+.introduction > div { padding-bottom: 20vh; }
 
-.portfolio { padding: 0 8%; }
+.introduction > div .button { float: right; margin-right: 34px; }
+
+.portfolio { padding-left: 0; padding-right: 0; }
+
+.portfolio h1 { padding: 0 8%; }
+
+.portfolio-list li { width: 100%; margin-bottom: 120px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; overflow: hidden; }
+
+.portfolio-list li:nth-child(odd) { padding: 0 8% 0 4%; }
+
+.portfolio-list li:nth-child(even) { padding: 0 4% 0 8%; }
+
+.portfolio-list li > div:first-child { margin-right: 5vw; }
+
+.project-info { position: relative; font-size: 0.8rem; }
+
+.project-description { margin-bottom: 1.2rem; color: rgba(255, 255, 255, 0.75); }
+
+.project-tech { color: rgba(255, 255, 255, 0.75); font-size: 0.6rem; }
+
+.project-tech span { color: white; }
+
+#astronaut { width: 200px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); -webkit-animation: rotateAstro 30s linear infinite; animation: rotateAstro 30s linear infinite; }
+
+@-webkit-keyframes rotateAstro { 0% { -webkit-transform: translate(-50%, -50%) rotate(0deg); transform: translate(-50%, -50%) rotate(0deg); }
+  25% { -webkit-transform: translate(-50%, -50%) rotate(35deg); transform: translate(-50%, -50%) rotate(35deg); }
+  75% { -webkit-transform: translate(-50%, -50%) rotate(-35deg); transform: translate(-50%, -50%) rotate(-35deg); }
+  100% { -webkit-transform: translate(-50%, -50%) rotate(0deg); transform: translate(-50%, -50%) rotate(0deg); } }
+
+@keyframes rotateAstro { 0% { -webkit-transform: translate(-50%, -50%) rotate(0deg); transform: translate(-50%, -50%) rotate(0deg); }
+  25% { -webkit-transform: translate(-50%, -50%) rotate(35deg); transform: translate(-50%, -50%) rotate(35deg); }
+  75% { -webkit-transform: translate(-50%, -50%) rotate(-35deg); transform: translate(-50%, -50%) rotate(-35deg); }
+  100% { -webkit-transform: translate(-50%, -50%) rotate(0deg); transform: translate(-50%, -50%) rotate(0deg); } }
+
+.text { color: rgba(255, 255, 255, 0.9); }
+
+.text a { color: #ff417b; text-shadow: 0px 0px 6px rgba(255, 65, 123, 0.3); -webkit-transition: text-shadow 0.3s, -webkit-filter 0.3s; transition: text-shadow 0.3s, -webkit-filter 0.3s; transition: text-shadow 0.3s, filter 0.3s; transition: text-shadow 0.3s, filter 0.3s, -webkit-filter 0.3s; }
+
+.text a:hover, .text a:focus { -webkit-filter: hue-rotate(-20deg); filter: hue-rotate(-20deg); text-shadow: 0px 0px 6px rgba(255, 65, 123, 0.6); }
+
+.text h1 .highlight, .text h2 .highlight, .text h3 .highlight { color: #ff417b; text-shadow: 0px 0px 15px rgba(255, 65, 123, 0.3); }
+
+.text h1 .subtitle, .text h2 .subtitle, .text h3 .subtitle { position: relative; font-size: 1.8rem; }
+
+.text h1 .separator, .text h2 .separator, .text h3 .separator { margin: 0 12px; }
+
+.text h1 small, .text h2 small, .text h3 small { font-size: 1.2rem; top: -5px; position: relative; }
+
+.text h1 div, .text h2 div, .text h3 div { font-size: 1.2rem; padding-right: 16px; }
+
+.text h1 { font-size: 2.4rem; line-height: 2.8rem; margin-bottom: 1.4rem; }
+
+.text h2 { font-size: 2.0rem; line-height: 2.4rem; margin-bottom: 1rem; }
+
+.text h3 { font-size: 1.8rem; line-height: 2.2rem; margin-bottom: 0.8rem; }
+
+.text p { line-height: 1.5rem; letter-spacing: 1.5px; }
 
 header { width: 100%; height: 60px; padding: 0 24px; position: fixed; top: 0; left: 0; right: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; z-index: 1000; }
 
@@ -237,17 +283,17 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 .portal:hover .portal-outer-2 { -webkit-filter: drop-shadow(0px 0px 16px rgba(223, 46, 143, 0.6)) hue-rotate(-20deg); filter: drop-shadow(0px 0px 16px rgba(223, 46, 143, 0.6)) hue-rotate(-20deg); }
 
-.portal:hover .portal-inner img { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
+.portal:hover .portal-inner img { -webkit-transform: scale(1.3); -ms-transform: scale(1.3); transform: scale(1.3); }
 
 .portal-outer { width: 400px; height: 400px; position: absolute; -webkit-transition: -webkit-filter 0.6s; transition: -webkit-filter 0.6s; transition: filter 0.6s; transition: filter 0.6s, -webkit-filter 0.6s; }
 
-.portal-outer-1 { fill: rgba(223, 46, 143, 0.1); -webkit-animation: portalAnim1 16s linear infinite; animation: portalAnim1 16s linear infinite; }
+.portal-outer-1 { fill: rgba(223, 46, 143, 0.1); -webkit-animation: portalAnim1 24s linear infinite; animation: portalAnim1 24s linear infinite; }
 
-.portal-outer-2 { fill: #df2e8f; -webkit-animation: portalAnim2 12s linear infinite; animation: portalAnim2 12s linear infinite; -webkit-filter: drop-shadow(0px 0px 16px rgba(223, 46, 143, 0.6)); filter: drop-shadow(0px 0px 16px rgba(223, 46, 143, 0.6)); }
+.portal-outer-2 { fill: #df2e8f; -webkit-animation: portalAnim2 18s linear infinite; animation: portalAnim2 18s linear infinite; -webkit-filter: drop-shadow(0px 0px 16px rgba(223, 46, 143, 0.6)); filter: drop-shadow(0px 0px 16px rgba(223, 46, 143, 0.6)); }
 
 .portal-inner { width: 600px; height: 600px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%) scale(0.48); -ms-transform: translate(-50%, -50%) scale(0.48); transform: translate(-50%, -50%) scale(0.48); -webkit-clip-path: url(#portal-clip); clip-path: url(#portal-clip); opacity: 0.9; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
 
-.portal-inner img { -webkit-transform: scale(1.3); -ms-transform: scale(1.3); transform: scale(1.3); -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; pointer-events: none; }
+.portal-inner img { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; pointer-events: none; }
 
 @-webkit-keyframes portalAnim1 { from { -webkit-transform: rotate(0); transform: rotate(0); }
   to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }

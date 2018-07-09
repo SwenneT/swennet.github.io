@@ -8,7 +8,9 @@ $spaceLighter: #5d2452;
 
 $textAccent: #ff417b;
 
-$accent: #59c2e0;
+$accent: #ff417b;
+
+$link: #ff417b;
 
 @mixin box_shadow ($level) {
 
@@ -29,6 +31,8 @@ $accent: #59c2e0;
 @import 'reset.scss';
 
 @import 'main.scss';
+
+@import 'text.scss';
 
 @import 'header.scss';
 

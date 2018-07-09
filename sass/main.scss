@@ -10,33 +10,6 @@ body {
 	fill: white;
 }
 
-.text {
-	color: rgba(#FFFFFF, 0.9);
-
-	h1 {
-		font-size: 2.4rem;
-		line-height: 2.8rem;
-
-		margin-bottom: 1.4rem;
-
-		span {
-			color: $textAccent;
-			text-shadow: 0px 0px 15px rgba($textAccent, 0.3);
-		}
-
-		small {
-			position: relative;
-			font-size: 1.8rem;
-		}
-
-		div {
-			font-size: 1.2rem;
-
-			padding-right: 16px;
-		}
-	}
-}
-
 #particles-js {
 	height: 500vh;
 
@@ -62,12 +35,20 @@ main {
 }
 
 .page-section {
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 
+	padding: 0 8%;
 	padding-top: 60px !important;
 
 	position: relative;
+
+	h1 {
+		font-size: 2.8rem;
+		color: white;
+
+		margin: 6rem 0;
+	}
 }
 
 .introduction {
@@ -81,7 +62,9 @@ main {
 	top: 0;
 	left: 12%;
 
-	.text {
+	z-index: 1;
+
+	> div {
 		padding-bottom: 20vh;
 
 		.button {
@@ -92,6 +75,87 @@ main {
 }
 
 .portfolio {
-	padding: 0 8%;
+	padding-left: 0;
+	padding-right: 0;
+
+	h1 {
+		padding: 0 8%;
+	}
 }
 
+.portfolio-list {
+	li {
+		width: 100%;
+		margin-bottom: 120px;
+
+		display: flex;
+		align-items: center;
+
+		overflow: hidden;
+
+		&:nth-child(odd) {
+			padding: 0 8% 0 4%;
+		}
+
+		&:nth-child(even) {
+			padding: 0 4% 0 8%;
+		}
+
+		> div:first-child {
+			margin-right: 5vw;
+		}
+	}
+}
+
+.project-info {
+	position: relative;
+
+	font-size: 0.8rem;
+}
+
+.project-description {
+	margin-bottom: 1.2rem;
+
+	color: rgba(white, 0.75);
+}
+
+.project-tech {
+	span {
+		color: white;
+	}
+	
+	color: rgba(white, 0.75);
+	
+	font-size: 0.6rem;			
+}
+
+
+#astronaut {
+	width: 200px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+
+	animation: rotateAstro 30s linear infinite;
+}
+
+@keyframes rotateAstro {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+
+	25% {
+		transform: translate(-50%, -50%) rotate(35deg);
+	}
+
+	75% {
+		transform: translate(-50%, -50%) rotate(-35deg);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+}

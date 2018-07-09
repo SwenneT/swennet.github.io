@@ -18,7 +18,7 @@
 				$svg = $svg.attr('id', imgID);
 			}
 			// Add replaced image's classes to the new SVG
-			if(typeof imgClass !== 'undefined') {
+			if ( typeof imgClass !== 'undefined' ) {
 				$svg = $svg.attr('class', imgClass+' replaced-svg');
 			}
 
@@ -54,7 +54,8 @@
 			e.preventDefault();
 	
 			document.querySelector(this.getAttribute('href')).scrollIntoView({
-				behavior: 'smooth'
+				behavior: 'smooth',
+				block: 'start'
 			});
 		});
 	});

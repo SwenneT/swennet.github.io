@@ -1,0 +1,73 @@
+
+
+.text {
+	color: rgba(#FFFFFF, 0.9);
+
+	a {
+		color: $link;
+		text-shadow: 0px 0px 6px rgba($link, 0.3);
+
+		transition: text-shadow 0.3s, filter 0.3s;
+
+		&:hover,
+		&:focus {
+			filter: hue-rotate(-20deg);
+			text-shadow: 0px 0px 6px rgba($link, 0.6);
+		}
+	}
+
+	h1, h2, h3 {
+
+		.highlight {
+			color: $textAccent;
+			text-shadow: 0px 0px 15px rgba($textAccent, 0.3);
+		}
+
+		.subtitle {
+			position: relative;
+			font-size: 1.8rem;
+		}
+
+		.separator {
+			margin: 0 12px;
+		}
+
+		small {
+			font-size: 1.2rem;
+			top: -5px;
+			position: relative;
+		}
+
+		div {
+			font-size: 1.2rem;
+
+			padding-right: 16px;
+		}
+	}
+
+	h1 {
+		font-size: 2.4rem;
+		line-height: 2.8rem;
+
+		margin-bottom: 1.4rem;
+	}
+
+	h2 {
+		font-size: 2.0rem;
+		line-height: 2.4rem;
+
+		margin-bottom: 1rem;
+	}
+
+	h3 {
+		font-size: 1.8rem;
+		line-height: 2.2rem;
+
+		margin-bottom: 0.8rem;
+	}
+
+	p {
+		line-height: 1.5rem;
+		letter-spacing: 1.5px;
+	}
+}
