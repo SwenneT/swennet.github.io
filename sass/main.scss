@@ -2,12 +2,20 @@ body {
 	font-family: 'Orbitron', sans-serif;
 	font-size: 16px;
 
+	color: rgba(white, 0.9);
+
+	text-shadow: 2px 2px 0px rgba(black, 0.2);
+
 	background: $spaceLight;
 	background: linear-gradient($spaceDark, $spaceLight 200vh);
 }
 
 .svg-icon {
 	fill: white;
+}
+
+.separator {
+	margin: 0 12px;
 }
 
 #particles-js {
@@ -62,8 +70,9 @@ main {
 		color: white;
 		font-size: 2.4rem;
 		text-transform: uppercase;
+		position: relative;
 
-		margin: 6rem 0;
+		margin: 4rem 0;
 	}
 }
 
@@ -94,6 +103,88 @@ main {
 	}
 }
 
+.skills-categories {
+	width: 100%;
+
+	display: flex;
+	align-content: space-between;
+}
+
+.skill-category {
+	flex: 0 50%;
+
+	max-width: 700px;
+
+	margin-left: auto;
+	margin-right: auto;
+	
+	letter-spacing: 1.5px;
+
+	&:nth-child(odd) {
+		padding-right: 15vw;
+	}
+
+	&:nth-child(even) {
+		padding-left: 15vw;
+	}
+
+	h2 {
+		font-size: 2rem;
+		margin-bottom: 1.6rem;
+	}
+}
+
+.skill-container {
+	margin-bottom: 2.4rem;
+
+	h3 {
+		margin-bottom: 0.8rem;
+
+		position: relative;
+
+		font-size: 1rem;
+		color: white;
+
+		small {
+			position: absolute;
+			top: 50%;
+			right: 0;
+
+			transform: translateY(-50%);
+
+			color: rgba(white, 0.75);
+
+			font-size: 0.8rem;
+		}
+	}
+}
+
+.skill-bar {
+	width: 100%;
+	height: 24px;
+
+	border: 1px solid rgba(white, 0.1);
+	border-left-width: 4px;
+	border-right-width: 4px;
+
+	transform: skew(-20deg);
+
+	.percent {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%) skew(20deg);
+
+		font-size: 0.8rem;
+	}
+
+	.level {
+		font-size: 0.6rem;
+	}
+}
+
+
 .portfolio {
 	padding-left: 0;
 	padding-right: 0;
@@ -103,27 +194,27 @@ main {
 	}
 }
 
-.portfolio-list {
-	li {
-		width: 100%;
-		margin-bottom: 120px;
+.project {
+	width: 100%;
+	margin-bottom: 120px;
 
-		display: flex;
-		align-items: center;
+	display: flex;
+	align-items: top;
 
-		overflow: hidden;
+	position: relative;
 
-		&:nth-child(odd) {
-			padding: 0 8% 0 4%;
-		}
+	overflow: hidden;
 
-		&:nth-child(even) {
-			padding: 0 4% 0 8%;
-		}
+	&:nth-child(odd) {
+		padding: 0 8% 0 4%;
+	}
 
-		> div:first-child {
-			margin-right: 5vw;
-		}
+	&:nth-child(even) {
+		padding: 0 4% 0 8%;
+	}
+
+	> div:first-child {
+		margin-right: 5vw;
 	}
 }
 
@@ -131,24 +222,111 @@ main {
 	position: relative;
 
 	font-size: 0.8rem;
+
+	h2 {
+		margin-top: 0.4rem;
+		margin-bottom: 2.4rem !important;
+	}
 }
 
 .project-description {
-	margin-bottom: 1.2rem;
+	margin-bottom: 2rem;
 
 	color: rgba(white, 0.75);
 }
 
-.project-tech {
-	span {
-		color: white;
+.project-footer {
+	width: 100%;
+
+	display: flex;
+	align-content: space-between;
+	align-items: flex-end;
+
+	.project-links {
+		.button {
+			margin-right: 24px;
+		}
 	}
+
+	.project-tech {
+		margin-right: auto;
+
+		h4 {			
+			margin-bottom: 1rem;
+
+			letter-spacing: 1.5px;
+			color: white;
+			font-size: 0.6rem;
+		}
+
+		.logos {
+			display: flex;
+			align-items: flex-end;
+
+			svg {
+				display: inline-block;
+				
+				margin-right: 12px;
 	
-	color: rgba(white, 0.75);
+				opacity: 0.8;
 	
-	font-size: 0.6rem;			
+				transition: opacity 0.3s;
+	
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
 }
 
+.line {
+	width: calc(88% - 200px - 144px);
+	height: 2px;
+
+	position: absolute;
+	top: 55px;
+
+	background: white;
+
+	opacity: 0.1;
+
+	pointer-events: none;
+
+	&:before {
+		content: '';
+		width: 180px;
+		height: 2px;
+
+		position: absolute;
+		top: 0;
+		
+		background: white;
+	}
+
+	&.left {
+		right: 8%;
+
+		&:before {			
+			left: -180px;
+
+			transform: rotate(-45deg);
+			transform-origin: top right;
+		}
+	}
+
+	&.right {
+		left: 8%;
+
+
+		&:before {			
+			right: -180px;
+
+			transform: rotate(45deg);
+			transform-origin: top left;
+		}
+	}
+}
 
 #astronaut {
 	width: 200px;
