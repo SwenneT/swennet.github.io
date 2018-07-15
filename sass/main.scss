@@ -212,7 +212,7 @@ main {
 	&:nth-child(even) {
 		padding: 0 4% 0 8%;
 	}
-
+	
 	> div:first-child {
 		margin-right: 5vw;
 	}
@@ -355,5 +355,139 @@ main {
 
 	100% {
 		transform: translate(-50%, -50%) rotate(0deg);
+	}
+}
+
+.purple-planet {
+	width: 100%;
+	height: 160vh;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	overflow: hidden;
+
+	.sun-inner {
+		width: 80vh;
+		height: 80vh;
+
+		position: absolute;
+		bottom: 40vh;
+		right: -20vh;
+
+		filter: drop-shadow(0px 0px 10vh rgba(#ff417b, 0.6));
+
+		animation: sunGlow1 3s infinite;
+	}
+
+	.sun-border {
+		width: calc(80vh + 8px);
+		height: calc(80vh + 8px);
+
+		border-radius: 9999px;
+
+		position: absolute;
+		bottom: calc(40vh - 4px);
+		right: calc(-20vh - 4px);
+
+		background: white;
+
+		filter: drop-shadow(0px 0px 5vh rgba(#ca003d, 0.3));
+	}
+
+	.sun-shape-1 {
+		width: calc(80vh + 12vh);
+		height: calc(80vh + 12vh);
+
+		position: absolute;
+		bottom: calc(40vh - 6vh);
+		right: calc(-20vh - 6vh);
+
+		opacity: 0.05;
+
+		fill: red !important;
+
+		animation: sunAnim1 40s linear infinite;
+
+		filter: drop-shadow(0px 0px 5vh rgba(#ff0752, 1));
+	}
+
+	.sun-shape-2 {
+		width: calc(80vh + 24vh);
+		height: calc(80vh + 24vh);
+
+		position: absolute;
+		bottom: calc(40vh - 12vh);
+		right: calc(-20vh - 12vh);
+
+		opacity: 0.04;
+
+		fill: white;
+
+		filter: drop-shadow(0px 0px 5vh rgba(#ff0752, 1));
+
+		transform: rotate(40deg);
+		animation: sunAnim2 55s linear infinite;
+	}
+
+	.sun-shape-3 {		
+		width: calc(80vh + 36vh);
+		height: calc(80vh + 36vh);
+
+		position: absolute;
+		bottom: calc(40vh - 18vh);
+		right: calc(-20vh - 18vh);
+
+		opacity: 0.02;
+
+		fill: white;
+
+		transform: rotate(70deg);
+		animation: sunAnim3 70s linear infinite;
+	}
+}
+
+@keyframes sunGlow1 {
+	0% {
+		filter: drop-shadow(0px 0px 10vh rgba(#ff417b, 0.6));
+	}
+
+	50% {
+		filter: drop-shadow(0px 0px 15vh rgba(#ff417b, 0.4));
+	}
+
+	100% {
+		filter: drop-shadow(0px 0px 10vh rgba(#ff417b, 0.6));
+	}
+}
+
+@keyframes sunAnim1 {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes sunAnim2 {
+	from {
+		transform: rotate(40deg);
+	}
+
+	to {
+		transform: rotate(400deg);
+	}
+}
+
+@keyframes sunAnim3 {
+	from {
+		transform: rotate(70deg);
+	}
+
+	to {
+		transform: rotate(430deg);
 	}
 }
