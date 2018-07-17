@@ -48,7 +48,6 @@ body {
 		right: 0;
 		bottom: 0;
 
-
 		background: linear-gradient(transparent, $spaceLight);
 	}
 }
@@ -73,6 +72,25 @@ main {
 		position: relative;
 
 		margin: 4rem 0;
+
+		&:before {
+			content: '';
+
+			width: 16px;
+			height: 28px;
+
+			display: inline-block;
+
+			border: 4px solid white;
+			border-top: 0;
+			border-bottom: 0;
+
+			transform: skew(-22.5deg);
+		}
+
+		&:before {
+			margin-right: 16px;
+		}
 	}
 }
 
@@ -91,6 +109,11 @@ main {
 
 	h1 {
 		text-transform: none;
+
+		&:before,
+		&:after {
+			display: none;
+		}
 	}
 
 	> div {
@@ -224,6 +247,8 @@ main {
 	font-size: 0.8rem;
 
 	h2 {
+		font-size: 1.8rem !important;
+
 		margin-top: 0.4rem;
 		margin-bottom: 2.4rem !important;
 	}
@@ -376,24 +401,24 @@ main {
 		bottom: 40vh;
 		right: -20vh;
 
-		filter: drop-shadow(0px 0px 10vh rgba(#ff417b, 0.6));
+		filter: drop-shadow(0px 0px 10vh rgba(#FE004D, 0.6));
 
 		animation: sunGlow1 3s infinite;
 	}
 
 	.sun-border {
-		width: calc(80vh + 8px);
-		height: calc(80vh + 8px);
+		width: calc(80vh + 40px);
+		height: calc(80vh + 40px);
 
 		border-radius: 9999px;
 
 		position: absolute;
-		bottom: calc(40vh - 4px);
-		right: calc(-20vh - 4px);
+		bottom: calc(40vh - 20px);
+		right: calc(-20vh - 20px);
 
-		background: white;
+		background: rgb(156, 0, 47);
 
-		filter: drop-shadow(0px 0px 5vh rgba(#ca003d, 0.3));
+		filter: drop-shadow(0px 0px 5vh rgba(#FE004D, 0.3));
 	}
 
 	.sun-shape-1 {
@@ -410,7 +435,7 @@ main {
 
 		animation: sunAnim1 40s linear infinite;
 
-		filter: drop-shadow(0px 0px 5vh rgba(#ff0752, 1));
+		filter: drop-shadow(0px 0px 5vh rgba(#FE004D, 1));
 	}
 
 	.sun-shape-2 {
@@ -425,7 +450,7 @@ main {
 
 		fill: white;
 
-		filter: drop-shadow(0px 0px 5vh rgba(#ff0752, 1));
+		filter: drop-shadow(0px 0px 5vh rgba(#FE004D, 1));
 
 		transform: rotate(40deg);
 		animation: sunAnim2 55s linear infinite;
@@ -450,15 +475,15 @@ main {
 
 @keyframes sunGlow1 {
 	0% {
-		filter: drop-shadow(0px 0px 10vh rgba(#ff417b, 0.6));
+		filter: drop-shadow(0px 0px 10vh rgba(#FE004D, 0.6));
 	}
 
 	50% {
-		filter: drop-shadow(0px 0px 15vh rgba(#ff417b, 0.4));
+		filter: drop-shadow(0px 0px 15vh rgba(#FE004D, 0.4));
 	}
 
 	100% {
-		filter: drop-shadow(0px 0px 10vh rgba(#ff417b, 0.6));
+		filter: drop-shadow(0px 0px 10vh rgba(#FE004D, 0.6));
 	}
 }
 

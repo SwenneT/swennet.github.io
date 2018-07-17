@@ -6,11 +6,9 @@ $gradientStart: #322445;
 
 $spaceLighter: #5d2452;
 
-$textAccent: #ff417b;
-
 $accent: #ff417b;
-
-$link: #ff417b;
+$textAccent: $accent;
+$link: $textAccent;
 
 @mixin box_shadow ($level) {
 

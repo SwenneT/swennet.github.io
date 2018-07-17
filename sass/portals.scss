@@ -15,11 +15,11 @@
 
 	&:hover {
 		.portal-outer {
-			filter: hue-rotate(-20deg);
+			filter: hue-rotate(-30deg);
 		}
 
 		.portal-outer-2 {
-			filter: drop-shadow(0px 0px 16px rgba(#df2e8f, 0.6)) hue-rotate(-20deg);
+			filter: drop-shadow(0px 0px 16px rgba($accent, 0.6)) hue-rotate(-30deg);
 		}
 
 		.portal-inner {
@@ -37,20 +37,22 @@
 	position: absolute;
 
 	transition: filter 0.6s;
+	
+	filter: hue-rotate(-30deg);
 }
 
 .portal-outer-1 {
-	fill: rgba(#df2e8f, 0.1);
+	fill: rgba($accent, 0.1);
 
 	animation: portalAnim1 24s linear infinite;
 }
 
 .portal-outer-2 {
-	fill: rgba(#df2e8f, 1);
+	fill: rgba($accent, 1);
 
 	animation: portalAnim2 18s linear infinite;
 
-	filter: drop-shadow(0px 0px 16px rgba(#df2e8f, 0.6));
+	filter: drop-shadow(0px 0px 16px rgba($accent, 0.6));
 }
 
 .portal-inner {

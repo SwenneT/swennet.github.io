@@ -1,19 +1,5 @@
-
-
 .text {
 	color: rgba(#FFFFFF, 0.9);
-
-	a:not(.button) {
-		color: $link;
-
-		transition: text-shadow 0.3s, filter 0.3s;
-
-		&:hover,
-		&:focus {
-			filter: hue-rotate(-20deg);
-			text-shadow: 0px 0px 2px rgba($link, 0.6);
-		}
-	}
 
 	h1, h2, h3 {
 
@@ -66,7 +52,19 @@
 		letter-spacing: 1.5px;
 
 		+ p {
-			margin-top: 1.8rem;
+			margin-top: 1.2rem;
+		}
+	}
+
+	a:not(.button) {
+		color: $link;
+
+		transition: text-shadow 0.3s, filter 0.3s;
+
+		&:hover,
+		&:focus {
+			filter: hue-rotate(-30deg);
+			text-shadow: 0px 0px 2px rgba($link, 0.6);
 		}
 	}
 }
