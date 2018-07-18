@@ -1,0 +1,134 @@
+/*--------------------------------------------------------------
+>>> Introduction
+--------------------------------------------------------------*/
+
+.introduction {
+	height: 100%;
+	width: 50%;
+
+	display: flex;
+	align-items: center;
+
+	position: absolute;
+	top: 0;
+	left: 12%;
+
+	z-index: 1;
+
+	h1 {
+		text-transform: none;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+
+	> div {
+		padding-bottom: 20vh;
+
+		.button {
+			float: right;
+			margin-right: 34px;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+>>> Sun
+--------------------------------------------------------------*/
+
+.sun {
+	width: 100%;
+	height: 160vh;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	overflow: hidden;
+}
+
+.sun-inner {
+	width: 80vh;
+	height: 80vh;
+
+	position: absolute;
+	bottom: 40vh;
+	right: -20vh;
+
+	filter: drop-shadow(0px 0px 60px rgba($spaceLight, 0.6));
+}
+
+.sun-glow {
+	width: calc(80vh + 20vh);
+	height: calc(80vh + 20vh);
+
+	position: absolute;
+	bottom: calc(40vh - 10vh);
+	right: calc(-20vh - 10vh);
+
+	fill: rgba($sunGlow, 0.05);
+	filter: drop-shadow(0px 0px 5vh rgba($sunGlow, 0.6));
+
+	transform: rotate(40deg);
+	animation: sunAnim2 55s linear infinite, sunGlow1 3s infinite;
+}
+
+.sun-border {
+	width: calc(80vh + 4px);
+	height: calc(80vh + 4px);
+
+	border-radius: 9999px;
+
+	position: absolute;
+
+	bottom: calc(40vh - 2px);
+	right: calc(-20vh - 2px);
+
+	border: 3px solid $sunYellow;
+}
+
+@keyframes sunGlow1 {
+	0% {
+		filter: drop-shadow(0px 0px 10vh rgba($sunGlow, 0.6));
+	}
+
+	50% {
+		filter: drop-shadow(0px 0px 15vh rgba($sunGlow, 0.4));
+	}
+
+	100% {
+		filter: drop-shadow(0px 0px 10vh rgba($sunGlow, 0.6));
+	}
+}
+
+@keyframes sunAnim1 {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes sunAnim2 {
+	from {
+		transform: rotate(40deg);
+	}
+
+	to {
+		transform: rotate(400deg);
+	}
+}
+
+@keyframes sunAnim3 {
+	from {
+		transform: rotate(70deg);
+	}
+
+	to {
+		transform: rotate(430deg);
+	}
+}

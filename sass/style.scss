@@ -1,14 +1,18 @@
 
 $spaceDark: #1e253f;
-
 $spaceLight: #3d2448;
-$gradientStart: #322445;
-
-$spaceLighter: #5d2452;
 
 $accent: #ff417b;
 $textAccent: $accent;
 $link: $textAccent;
+
+$sunYellow: #ffb985;
+$sunOrange: #ff6e6e;
+$sunPink: #ff417b;
+$sunPinkShadow: #d83075;
+$sunPurple: #b3306e;
+
+$sunGlow: #ffc498;
 
 @mixin box_shadow ($level) {
 
@@ -36,8 +40,13 @@ $link: $textAccent;
 
 @import 'buttons.scss';
 
-//@import 'island.scss';
-//@import 'house.scss';
-//@import 'waterfall.scss';
 
-@import 'portals.scss';
+@import 'introduction.scss';
+
+@import 'skills.scss';
+
+@import 'portfolio.scss';
+
+@import 'about.scss';
+
+@import 'contact.scss';
