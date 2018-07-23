@@ -118,7 +118,7 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 .skewed-button:hover:before { left: 120%; }
 
-.skewed-button:before { content: ''; height: 155px; width: 50px; position: absolute; left: -75px; top: -50px; background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FFFFFF)); background: -webkit-linear-gradient(transparent, #FFFFFF); background: linear-gradient(transparent, #FFFFFF); opacity: 0.1; -webkit-transform: rotate(22.5deg); -ms-transform: rotate(22.5deg); transform: rotate(22.5deg); -webkit-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); z-index: -10; }
+.skewed-button:before { content: ''; height: 155px; width: 50px; position: absolute; left: -75px; top: -50px; background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FFFFFF)); background: -webkit-linear-gradient(transparent, #FFFFFF); background: linear-gradient(transparent, #FFFFFF); opacity: 0.1; -webkit-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); z-index: -10; }
 
 .github-button { padding-left: 16px; padding-right: 24px; margin-right: -14px; border-right-color: transparent; }
 
