@@ -58,7 +58,7 @@ body.scrolled header:before{width:100%;opacity:1}
 .view-my-work-button{font-size:.7rem}
 .view-my-work-button use{-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;-webkit-transform-origin:10px 10px;-ms-transform-origin:10px 10px;transform-origin:10px 10px}
 .view-my-work-button:hover use{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}
-.introduction{height:100%;width:50%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;left:12%;z-index:1}
+.introduction{height:100%;width:50%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;z-index:1}
 .introduction h1{text-transform:none}
 .introduction h1:before,.introduction h1:after{display:none}
 .introduction>div{padding-bottom:20vh}
@@ -95,12 +95,15 @@ body.scrolled header:before{width:100%;opacity:1}
 .project-footer .project-tech .logos{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
 .project-footer .project-tech .logos svg{display:inline-block;margin-right:12px;opacity:.8;-webkit-transition:opacity .3s;transition:opacity .3s}
 .project-footer .project-tech .logos svg:hover{opacity:1}
-.line{width:calc(88% - 200px - 144px);height:2px;position:absolute;top:55px;background:white;opacity:.1;pointer-events:none}
-.line:before{content:'';width:180px;height:2px;position:absolute;top:0;background:white}
+.line{width:calc(88% - 200px - 144px);height:2px;position:absolute;top:55px;background:white;pointer-events:none;opacity:.1}
+.line:before{content:'';width:120px;height:2px;position:absolute;top:0;background:white}
+.line:after{content:'';width:16px;height:16px;position:absolute;top:83px;background:white;border-radius:999px}
 .line.left{right:8%}
-.line.left:before{left:-180px;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:top right;-ms-transform-origin:top right;transform-origin:top right}
+.line.left:before{left:-120px;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:top right;-ms-transform-origin:top right;transform-origin:top right}
+.line.left:after{left:-97px}
 .line.right{left:8%}
-.line.right:before{right:-180px;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);-webkit-transform-origin:top left;-ms-transform-origin:top left;transform-origin:top left}
+.line.right:before{right:-120px;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);-webkit-transform-origin:top left;-ms-transform-origin:top left;transform-origin:top left}
+.line.right:after{right:-97px}
 .portal{width:400px;height:400px;position:relative;display:inline-block;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s}
 .portal:hover .portal-outer{-webkit-filter:hue-rotate(-30deg);filter:hue-rotate(-30deg)}
 .portal:hover .portal-outer-2{-webkit-filter:drop-shadow(0 0 16px rgba(216,48,117,0.6)) hue-rotate(-30deg);filter:drop-shadow(0 0 16px rgba(216,48,117,0.6)) hue-rotate(-30deg)}
