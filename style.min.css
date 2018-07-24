@@ -63,10 +63,13 @@ body.scrolled header:before{width:100%;opacity:1}
 .introduction h1:before,.introduction h1:after{display:none}
 .introduction>div{padding-bottom:20vh}
 .introduction>div .button{float:right;margin-right:34px}
-.sun{width:100%;height:160vh;position:absolute;top:0;left:0;overflow:hidden}
-.sun-inner{width:80vh;height:80vh;position:absolute;bottom:40vh;right:-20vh;-webkit-filter:drop-shadow(0 0 60px rgba(61,36,72,0.6));filter:drop-shadow(0 0 60px rgba(61,36,72,0.6))}
-.sun-glow{width:calc(80vh + 20vh);height:calc(80vh + 20vh);position:absolute;bottom:calc(40vh - 10vh);right:calc(-20vh - 10vh);fill:rgba(255,196,152,0.05);-webkit-filter:drop-shadow(0 0 5vh rgba(255,196,152,0.6));filter:drop-shadow(0 0 5vh rgba(255,196,152,0.6));-webkit-transform:rotate(40deg);-ms-transform:rotate(40deg);transform:rotate(40deg);-webkit-animation:sunAnim2 55s linear infinite,sunGlow1 3s infinite;animation:sunAnim2 55s linear infinite,sunGlow1 3s infinite}
-.sun-border{width:calc(80vh + 4px);height:calc(80vh + 4px);border-radius:9999px;position:absolute;bottom:calc(40vh - 2px);right:calc(-20vh - 2px);border:3px solid #ffb985}
+.purple-planet-container{width:100%;height:160vh;position:absolute;top:0;left:0;overflow:hidden}
+.purple-planet-inner{width:80vh;height:80vh;position:absolute;bottom:40vh;right:-20vh;background:#ff417b;overflow:hidden;border-radius:999px;-webkit-transform:rotate(22.5deg);-ms-transform:rotate(22.5deg);transform:rotate(22.5deg)}
+.purple-planet-inner:after{content:'';width:50%;height:150%;position:absolute;top:0;right:0;background:rgba(0,0,0,0.1)}
+.purple-planet-atmosphere{width:90vh;height:90vh;position:absolute;bottom:35vh;right:-25vh;background:rgba(37,34,63,0.6);border-radius:999px}
+.purple-planet-glow{width:120vh;height:120vh;position:absolute;bottom:20vh;right:-40vh;background:rgba(255,255,255,0.005);border-radius:999px}
+.purple-planet-land{height:100%;position:absolute;top:0;left:0;fill:#ffb985;-webkit-animation:planetLand 70s infinite linear;animation:planetLand 70s infinite linear}
+.purple-planet-clouds{height:100%;position:absolute;top:0;left:0;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-animation:planetLand 55s infinite linear;animation:planetLand 55s infinite linear;fill:white;opacity:.9;-webkit-filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05));filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05))}
 body.scrolled header:before{width:100%;opacity:1}
 .skills-categories{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-content:space-between;-ms-flex-line-pack:justify;align-content:space-between}
 .skill-category{-webkit-box-flex:0;-webkit-flex:0 50%;-ms-flex:0 50%;flex:0 50%;max-width:700px;margin-left:auto;margin-right:auto;letter-spacing:1.5px}
@@ -113,24 +116,10 @@ body.scrolled header:before{width:100%;opacity:1}
 .portal-outer-2{fill:#d83075;-webkit-animation:portalAnim2 18s linear infinite;animation:portalAnim2 18s linear infinite;-webkit-filter:drop-shadow(0 0 16px rgba(216,48,117,0.6));filter:drop-shadow(0 0 16px rgba(216,48,117,0.6))}
 .portal-inner{width:600px;height:600px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale(0.48);-ms-transform:translate(-50%,-50%) scale(0.48);transform:translate(-50%,-50%) scale(0.48);-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip);opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s}
 .portal-inner img{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
-@-webkit-keyframes sunGlow1{0%{-webkit-filter:drop-shadow(0 0 10vh rgba(255,196,152,0.6));filter:drop-shadow(0 0 10vh rgba(255,196,152,0.6))}
-50%{-webkit-filter:drop-shadow(0 0 15vh rgba(255,196,152,0.4));filter:drop-shadow(0 0 15vh rgba(255,196,152,0.4))}
-100%{-webkit-filter:drop-shadow(0 0 10vh rgba(255,196,152,0.6));filter:drop-shadow(0 0 10vh rgba(255,196,152,0.6))}
-}@keyframes sunGlow1{0%{-webkit-filter:drop-shadow(0 0 10vh rgba(255,196,152,0.6));filter:drop-shadow(0 0 10vh rgba(255,196,152,0.6))}
-50%{-webkit-filter:drop-shadow(0 0 15vh rgba(255,196,152,0.4));filter:drop-shadow(0 0 15vh rgba(255,196,152,0.4))}
-100%{-webkit-filter:drop-shadow(0 0 10vh rgba(255,196,152,0.6));filter:drop-shadow(0 0 10vh rgba(255,196,152,0.6))}
-}@-webkit-keyframes sunAnim1{from{-webkit-transform:rotate(0);transform:rotate(0)}
-to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
-}@keyframes sunAnim1{from{-webkit-transform:rotate(0);transform:rotate(0)}
-to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
-}@-webkit-keyframes sunAnim2{from{-webkit-transform:rotate(40deg);transform:rotate(40deg)}
-to{-webkit-transform:rotate(400deg);transform:rotate(400deg)}
-}@keyframes sunAnim2{from{-webkit-transform:rotate(40deg);transform:rotate(40deg)}
-to{-webkit-transform:rotate(400deg);transform:rotate(400deg)}
-}@-webkit-keyframes sunAnim3{from{-webkit-transform:rotate(70deg);transform:rotate(70deg)}
-to{-webkit-transform:rotate(430deg);transform:rotate(430deg)}
-}@keyframes sunAnim3{from{-webkit-transform:rotate(70deg);transform:rotate(70deg)}
-to{-webkit-transform:rotate(430deg);transform:rotate(430deg)}
+@-webkit-keyframes planetLand{from{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
+}@keyframes planetLand{from{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
 }@-webkit-keyframes portalAnim1{from{-webkit-transform:rotate(0);transform:rotate(0)}
 to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 }@keyframes portalAnim1{from{-webkit-transform:rotate(0);transform:rotate(0)}
