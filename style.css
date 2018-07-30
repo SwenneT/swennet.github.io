@@ -1,3 +1,13 @@
+.ship { position: absolute; right: 50vh; bottom: 30vh; height: 200px; z-index: 1; -webkit-animation: shipShake 2s infinite; animation: shipShake 2s infinite; -webkit-transform: rotate(-22.5deg); -ms-transform: rotate(-22.5deg); transform: rotate(-22.5deg); }
+
+@-webkit-keyframes shipShake { 0% { -webkit-transform: translate(0px, 0px) rotate(-22.5deg); transform: translate(0px, 0px) rotate(-22.5deg); }
+  50% { -webkit-transform: translate(0px, 10px) rotate(-22.5deg); transform: translate(0px, 10px) rotate(-22.5deg); }
+  100% { -webkit-transform: translate(0px, 0px) rotate(-22.5deg); transform: translate(0px, 0px) rotate(-22.5deg); } }
+
+@keyframes shipShake { 0% { -webkit-transform: translate(0px, 0px) rotate(-22.5deg); transform: translate(0px, 0px) rotate(-22.5deg); }
+  50% { -webkit-transform: translate(0px, 10px) rotate(-22.5deg); transform: translate(0px, 10px) rotate(-22.5deg); }
+  100% { -webkit-transform: translate(0px, 0px) rotate(-22.5deg); transform: translate(0px, 0px) rotate(-22.5deg); } }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -36,10 +46,6 @@ main { min-height: 2000px; }
 .page-section { min-height: 100vh; width: 100%; padding: 0 8%; padding-top: 60px !important; position: relative; }
 
 .page-section h1 { color: white; font-size: 2.4rem; text-transform: uppercase; position: relative; margin: 4rem 0; }
-
-.page-section h1:before { content: ''; width: 16px; height: 28px; display: inline-block; border: 4px solid white; border-top: 0; border-bottom: 0; -webkit-transform: skew(-22.5deg); -ms-transform: skew(-22.5deg); transform: skew(-22.5deg); }
-
-.page-section h1:before { margin-right: 16px; }
 
 /*--------------------------------------------------------------
 >>> Text Styles
@@ -90,9 +96,35 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 .navigation .button { margin-left: 8px; }
 
-.button { height: 36px; line-height: 36px; position: relative; }
+.field { margin-top: 24px; margin-bottom: 32px; }
 
-.skewed-button { line-height: 34px; padding: 0 16px; display: inline-block; color: rgba(255, 255, 255, 0.9); font-size: 0.6rem; letter-spacing: 0.1rem; text-decoration: none; text-transform: uppercase; border: 1px solid rgba(255, 255, 255, 0.1); border-right-width: 4px; border-left-width: 4px; border-radius: 1px; -webkit-transform: skew(-22.5deg); -ms-transform: skew(-22.5deg); transform: skew(-22.5deg); -webkit-transition: color 0.3s, border 0.3s, background 0.2s, -webkit-box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, -webkit-box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, box-shadow 0.3s, -webkit-box-shadow 0.3s; overflow: hidden; }
+.field > div { width: 100%; height: 100%; position: relative; }
+
+.field label { height: 100%; font-size: 0.8rem; letter-spacing: 0.1rem; text-transform: uppercase; line-height: 38px; position: absolute; top: -32px; left: 0px; }
+
+.field input, .field textarea { width: 100%; height: 100%; background: transparent; border: 0; outline: 0; font-family: monospace; letter-spacing: 0.05rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1px; background: rgba(0, 0, 0, 0.1); -webkit-transition: border-color 0.2s, color 0.2s; transition: border-color 0.2s, color 0.2s; }
+
+.field input:focus, .field textarea:focus { color: white; border-color: rgba(255, 255, 255, 0.2); }
+
+.field input { padding: 0 16px; }
+
+.field textarea { padding: 12px 16px; }
+
+.fields-container { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+
+.fields-container > * { margin-right: 16px; }
+
+.fields-container > *:last-child { margin-right: 0; }
+
+.input-field { height: 40px; min-width: 300px; display: block; }
+
+.textarea-field { min-width: 300px; display: block; }
+
+.textarea-field textarea { min-width: 100%; min-height: 120px; }
+
+.button { height: 36px; line-height: 36px; position: relative; background: transparent; cursor: pointer; }
+
+.skewed-button { line-height: 34px; padding: 0 16px; display: inline-block; font-family: 'Orbitron', sans-serif; color: rgba(255, 255, 255, 0.9); font-size: 0.6rem; letter-spacing: 0.1rem; text-decoration: none; text-transform: uppercase; border: 1px solid rgba(255, 255, 255, 0.1); border-right-width: 4px; border-left-width: 4px; border-radius: 1px; -webkit-transform: skew(-22.5deg); -ms-transform: skew(-22.5deg); transform: skew(-22.5deg); -webkit-transition: color 0.3s, border 0.3s, background 0.2s, -webkit-box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, -webkit-box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, box-shadow 0.3s, -webkit-box-shadow 0.3s; overflow: hidden; }
 
 .skewed-button span { width: 100%; height: 100%; display: inline-block; -webkit-transform: skew(22.5deg); -ms-transform: skew(22.5deg); transform: skew(22.5deg); }
 
@@ -145,14 +177,12 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 .introduction h1 { text-transform: none; }
 
-.introduction h1:before, .introduction h1:after { display: none; }
-
 .introduction > div { padding-bottom: 20vh; }
 
 .introduction > div .button { float: right; margin-right: 34px; }
 
 /*--------------------------------------------------------------
->>> Sun
+>>> Purple Planet
 --------------------------------------------------------------*/
 .purple-planet-container { width: 100%; height: 160vh; position: absolute; top: 0; left: 0; overflow: hidden; }
 
@@ -173,6 +203,17 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 @keyframes planetLand { from { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
   to { -webkit-transform: translateX(0%); transform: translateX(0%); } }
+
+/*--------------------------------------------------------------
+>>> Moon Container
+--------------------------------------------------------------*/
+.moon-container { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; overflow: hidden; }
+
+.moon-inner { width: 20vh; height: 20vh; position: absolute; top: 26vh; right: 50vh; background: #8d8f9e; overflow: hidden; border-radius: 999px; -webkit-transform: rotate(22.5deg); -ms-transform: rotate(22.5deg); transform: rotate(22.5deg); -webkit-box-shadow: 0px 0px 12vh rgba(255, 255, 255, 0.1); box-shadow: 0px 0px 12vh rgba(255, 255, 255, 0.1); }
+
+.moon-inner:after { content: ''; width: 50%; height: 150%; position: absolute; top: 0; right: 0; background: rgba(0, 0, 0, 0.1); }
+
+.moon-craters { height: 100%; position: absolute; top: 0; left: 0; fill: rgba(0, 0, 0, 0.2); -webkit-animation: planetLand 70s infinite linear; animation: planetLand 70s infinite linear; }
 
 /*--------------------------------------------------------------
 >>> Skills
@@ -289,3 +330,5 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 @keyframes portalAnim2 { from { -webkit-transform: rotate(50deg) scale(0.85); transform: rotate(50deg) scale(0.85); }
   to { -webkit-transform: rotate(410deg) scale(0.85); transform: rotate(410deg) scale(0.85); } }
+
+.contact-form { max-width: 40vw; min-width: 400px; }

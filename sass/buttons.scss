@@ -3,6 +3,10 @@
 	line-height: 36px;
 
 	position: relative;
+
+	background: transparent;
+
+	cursor: pointer;
 }
 
 .skewed-button, {
@@ -11,7 +15,8 @@
 	padding: 0 16px;
 
 	display: inline-block;
-
+	
+	font-family: 'Orbitron', sans-serif;
 	color: rgba(#FFFFFF, 0.9);
 	font-size: 0.6rem;
 	letter-spacing: 0.1rem;

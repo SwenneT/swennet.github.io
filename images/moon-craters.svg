@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 1000">
+  <circle cx="80.4" cy="84.1" r="80.4"/>
+  <circle cx="213" cy="188" r="41"/>
+  <circle cx="242" cy="665.3" r="104.5"/>
+  <circle cx="678.9" cy="290" r="82"/>
+  <circle cx="892.8" cy="408.9" r="119"/>
+  <circle cx="794.9" cy="142.5" r="45.8"/>
+  <circle cx="1381.8" cy="560.8" r="77.2"/>
+  <circle cx="1311.9" cy="713" r="47.4"/>
+  <circle cx="1260" cy="54.7" r="109.7"/>
+  <circle cx="393" cy="810" r="40"/>
+  <circle cx="254.5" cy="886.5" r="74.5"/>
+  <circle cx="1008" cy="974" r="133"/>
+  <circle cx="1739" cy="229" r="69"/>
+  <circle cx="1826" cy="468" r="139"/>
+  <circle cx="1589.5" cy="943.5" r="56.5"/>
+  <g>
+    <circle cx="2078.4" cy="84.1" r="80.4"/>
+    <circle cx="2211" cy="188" r="41"/>
+    <circle cx="2240" cy="665.3" r="104.5"/>
+    <circle cx="2676.9" cy="290" r="82"/>
+    <circle cx="2890.8" cy="408.9" r="119"/>
+    <circle cx="2792.9" cy="142.5" r="45.8"/>
+    <circle cx="3379.8" cy="560.8" r="77.2"/>
+    <circle cx="3309.9" cy="713" r="47.4"/>
+    <circle cx="3258" cy="54.7" r="109.7"/>
+    <circle cx="2391" cy="810" r="40"/>
+    <circle cx="2252.5" cy="886.5" r="74.5"/>
+    <circle cx="3006" cy="974" r="133"/>
+    <circle cx="3737" cy="229" r="69"/>
+    <circle cx="3824" cy="468" r="139"/>
+    <circle cx="3587.5" cy="943.5" r="56.5"/>
+  </g>
+</svg>

@@ -60,6 +60,18 @@
 					</div>
 				</div>
 
+				<div class="moon-container">
+					<div class="moon">
+						<div class="moon-glow"></div>
+
+						<div class="moon-inner">
+
+							<img src="images/moon-craters.svg" class="moon-craters svg">
+
+						</div>
+					</div>
+				</div>
+
 				<div class="purple-planet-container">
 
 					<div class="purple-planet">
@@ -81,6 +93,8 @@
 
 			<section id="skills" class="page-section skills">
 				<h1>Skills</h1>
+
+				<!--<img src="images/ship.svg" class="ship svg">-->
 
 
 				<!--
@@ -286,6 +300,41 @@
 			<section id="contact" class="page-section contact">
 
 				<h1>Contact</h1>
+
+				<form id="content-form" class="contact-form" action="#" method="POST" >
+
+					<fieldset>
+
+						<div class="fields-container">
+							<div class="field input-field">
+								<div>
+									<label for="name">Name</label>
+	
+									<input name="name" type="text" maxlength="64" placeholder="Your name">
+								</div>
+							</div>
+	
+							<div class="field input-field">
+								<div>
+									<label for="name">Email</label>
+	
+									<input name="email" type="email" maxlength="256" placeholder="Your email address">
+								</div>
+							</div>
+						</div>
+
+						<div class="field textarea-field">
+							<div>
+								<label>Message</label>
+
+								<textarea></textarea>
+							</div>
+						</div>
+
+						<button type="submit" class="button skewed-button loading-button"><span>Send Message</span></button>
+					</fieldset>
+
+				</form>
 
 			</section>
 

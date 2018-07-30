@@ -1,3 +1,4 @@
+.ship{position:absolute;right:50vh;bottom:30vh;height:200px;z-index:1;-webkit-animation:shipShake 2s infinite;animation:shipShake 2s infinite;-webkit-transform:rotate(-22.5deg);-ms-transform:rotate(-22.5deg);transform:rotate(-22.5deg)}
 *,*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
@@ -15,8 +16,6 @@ body{font-family:'Orbitron',sans-serif;font-size:16px;color:rgba(255,255,255,0.9
 main{min-height:2000px}
 .page-section{min-height:100vh;width:100%;padding:0 8%;padding-top:60px !important;position:relative}
 .page-section h1{color:white;font-size:2.4rem;text-transform:uppercase;position:relative;margin:4rem 0}
-.page-section h1:before{content:'';width:16px;height:28px;display:inline-block;border:4px solid white;border-top:0;border-bottom:0;-webkit-transform:skew(-22.5deg);-ms-transform:skew(-22.5deg);transform:skew(-22.5deg)}
-.page-section h1:before{margin-right:16px}
 .text{color:rgba(255,255,255,0.9)}
 .text h1 .highlight,.text h2 .highlight,.text h3 .highlight{color:#ff417b;text-shadow:0 0 15px rgba(255,65,123,0.3)}
 .text h1 .subtitle,.text h2 .subtitle,.text h3 .subtitle{position:relative;font-size:1.8rem}
@@ -34,8 +33,21 @@ header:before{content:'';width:100%;height:100%;position:absolute;top:0;left:0;r
 body.scrolled header:before{width:100%;opacity:1}
 .navigation{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
 .navigation .button{margin-left:8px}
-.button{height:36px;line-height:36px;position:relative}
-.skewed-button{line-height:34px;padding:0 16px;display:inline-block;color:rgba(255,255,255,0.9);font-size:.6rem;letter-spacing:.1rem;text-decoration:none;text-transform:uppercase;border:1px solid rgba(255,255,255,0.1);border-right-width:4px;border-left-width:4px;border-radius:1px;-webkit-transform:skew(-22.5deg);-ms-transform:skew(-22.5deg);transform:skew(-22.5deg);-webkit-transition:color .3s,border .3s,background .2s,-webkit-box-shadow .3s;transition:color .3s,border .3s,background .2s,-webkit-box-shadow .3s;transition:color .3s,border .3s,background .2s,box-shadow .3s;transition:color .3s,border .3s,background .2s,box-shadow .3s,-webkit-box-shadow .3s;overflow:hidden}
+.field{margin-top:24px;margin-bottom:32px}
+.field>div{width:100%;height:100%;position:relative}
+.field label{height:100%;font-size:.8rem;letter-spacing:.1rem;text-transform:uppercase;line-height:38px;position:absolute;top:-32px;left:0}
+.field input,.field textarea{width:100%;height:100%;background:transparent;border:0;outline:0;font-family:monospace;letter-spacing:.05rem;font-size:.9rem;color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.1);border-radius:1px;background:rgba(0,0,0,0.1);-webkit-transition:border-color .2s,color .2s;transition:border-color .2s,color .2s}
+.field input:focus,.field textarea:focus{color:white;border-color:rgba(255,255,255,0.2)}
+.field input{padding:0 16px}
+.field textarea{padding:12px 16px}
+.fields-container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.fields-container>*{margin-right:16px}
+.fields-container>*:last-child{margin-right:0}
+.input-field{height:40px;min-width:300px;display:block}
+.textarea-field{min-width:300px;display:block}
+.textarea-field textarea{min-width:100%;min-height:120px}
+.button{height:36px;line-height:36px;position:relative;background:transparent;cursor:pointer}
+.skewed-button{line-height:34px;padding:0 16px;display:inline-block;font-family:'Orbitron',sans-serif;color:rgba(255,255,255,0.9);font-size:.6rem;letter-spacing:.1rem;text-decoration:none;text-transform:uppercase;border:1px solid rgba(255,255,255,0.1);border-right-width:4px;border-left-width:4px;border-radius:1px;-webkit-transform:skew(-22.5deg);-ms-transform:skew(-22.5deg);transform:skew(-22.5deg);-webkit-transition:color .3s,border .3s,background .2s,-webkit-box-shadow .3s;transition:color .3s,border .3s,background .2s,-webkit-box-shadow .3s;transition:color .3s,border .3s,background .2s,box-shadow .3s;transition:color .3s,border .3s,background .2s,box-shadow .3s,-webkit-box-shadow .3s;overflow:hidden}
 .skewed-button span{width:100%;height:100%;display:inline-block;-webkit-transform:skew(22.5deg);-ms-transform:skew(22.5deg);transform:skew(22.5deg)}
 .skewed-button.icon-button svg{position:absolute;top:50%;fill:rgba(255,255,255,0.8);-webkit-transform:translateY(-50%) skew(22.5deg);-ms-transform:translateY(-50%) skew(22.5deg);transform:translateY(-50%) skew(22.5deg);-webkit-transition:fill .3s;transition:fill .3s}
 .skewed-button.icon-button:hover svg{fill:#fff}
@@ -60,7 +72,6 @@ body.scrolled header:before{width:100%;opacity:1}
 .view-my-work-button:hover use{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}
 .introduction{height:100%;width:50%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;z-index:1}
 .introduction h1{text-transform:none}
-.introduction h1:before,.introduction h1:after{display:none}
 .introduction>div{padding-bottom:20vh}
 .introduction>div .button{float:right;margin-right:34px}
 .purple-planet-container{width:100%;height:160vh;position:absolute;top:0;left:0;overflow:hidden}
@@ -70,6 +81,10 @@ body.scrolled header:before{width:100%;opacity:1}
 .purple-planet-glow{width:120vh;height:120vh;position:absolute;bottom:20vh;right:-40vh;background:rgba(255,255,255,0.005);border-radius:999px}
 .purple-planet-land{height:100%;position:absolute;top:0;left:0;fill:#ffb985;-webkit-animation:planetLand 70s infinite linear;animation:planetLand 70s infinite linear}
 .purple-planet-clouds{height:100%;position:absolute;top:0;left:0;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-animation:planetLand 55s infinite linear;animation:planetLand 55s infinite linear;fill:white;opacity:.9;-webkit-filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05));filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05))}
+.moon-container{width:100%;height:100vh;position:absolute;top:0;left:0;overflow:hidden}
+.moon-inner{width:20vh;height:20vh;position:absolute;top:26vh;right:50vh;background:#8d8f9e;overflow:hidden;border-radius:999px;-webkit-transform:rotate(22.5deg);-ms-transform:rotate(22.5deg);transform:rotate(22.5deg);-webkit-box-shadow:0 0 12vh rgba(255,255,255,0.1);box-shadow:0 0 12vh rgba(255,255,255,0.1)}
+.moon-inner:after{content:'';width:50%;height:150%;position:absolute;top:0;right:0;background:rgba(0,0,0,0.1)}
+.moon-craters{height:100%;position:absolute;top:0;left:0;fill:rgba(0,0,0,0.2);-webkit-animation:planetLand 70s infinite linear;animation:planetLand 70s infinite linear}
 body.scrolled header:before{width:100%;opacity:1}
 .skills-categories{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-content:space-between;-ms-flex-line-pack:justify;align-content:space-between}
 .skill-category{-webkit-box-flex:0;-webkit-flex:0 50%;-ms-flex:0 50%;flex:0 50%;max-width:700px;margin-left:auto;margin-right:auto;letter-spacing:1.5px}
@@ -116,7 +131,14 @@ body.scrolled header:before{width:100%;opacity:1}
 .portal-outer-2{fill:#d83075;-webkit-animation:portalAnim2 18s linear infinite;animation:portalAnim2 18s linear infinite;-webkit-filter:drop-shadow(0 0 16px rgba(216,48,117,0.6));filter:drop-shadow(0 0 16px rgba(216,48,117,0.6))}
 .portal-inner{width:600px;height:600px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale(0.48);-ms-transform:translate(-50%,-50%) scale(0.48);transform:translate(-50%,-50%) scale(0.48);-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip);opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s}
 .portal-inner img{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
-@-webkit-keyframes planetLand{from{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+.contact-form{max-width:40vw;min-width:400px}
+@-webkit-keyframes shipShake{0%{-webkit-transform:translate(0,0) rotate(-22.5deg);transform:translate(0,0) rotate(-22.5deg)}
+50%{-webkit-transform:translate(0,10px) rotate(-22.5deg);transform:translate(0,10px) rotate(-22.5deg)}
+100%{-webkit-transform:translate(0,0) rotate(-22.5deg);transform:translate(0,0) rotate(-22.5deg)}
+}@keyframes shipShake{0%{-webkit-transform:translate(0,0) rotate(-22.5deg);transform:translate(0,0) rotate(-22.5deg)}
+50%{-webkit-transform:translate(0,10px) rotate(-22.5deg);transform:translate(0,10px) rotate(-22.5deg)}
+100%{-webkit-transform:translate(0,0) rotate(-22.5deg);transform:translate(0,0) rotate(-22.5deg)}
+}@-webkit-keyframes planetLand{from{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
 to{-webkit-transform:translateX(0);transform:translateX(0)}
 }@keyframes planetLand{from{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
 to{-webkit-transform:translateX(0);transform:translateX(0)}

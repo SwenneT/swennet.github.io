@@ -16,11 +16,6 @@
 
 	h1 {
 		text-transform: none;
-
-		&:before,
-		&:after {
-			display: none;
-		}
 	}
 
 	> div {
@@ -34,7 +29,7 @@
 }
 
 /*--------------------------------------------------------------
->>> Sun
+>>> Purple Planet
 --------------------------------------------------------------*/
 
 .purple-planet-container {
@@ -47,6 +42,7 @@
 
 	overflow: hidden;
 }
+
 
 .purple-planet-inner {
 	width: 80vh;
@@ -140,5 +136,63 @@
 	to {
 		transform: translateX(0%);
 	}
+}
+
+/*--------------------------------------------------------------
+>>> Moon Container
+--------------------------------------------------------------*/
+
+.moon-container {
+	width: 100%;
+	height: 100vh;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	overflow: hidden;
+}
+
+.moon-inner {
+	width: 20vh;
+	height: 20vh;
+
+	position: absolute;
+	top: 26vh;
+	right: 50vh;
+
+	background: #8d8f9e;
+
+	overflow: hidden;
+
+	border-radius: 999px;
+	transform: rotate(22.5deg);
+
+	box-shadow: 0px 0px 12vh rgba(white, 0.1);
+
+	&:after {
+		content: '';
+
+		width: 50%;
+		height: 150%;
+
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		background: rgba(black, 0.1);
+	}
+}
+
+.moon-craters {
+	height: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	fill: rgba(black, 0.2);
+	
+	animation: planetLand 70s infinite linear;
 }
 

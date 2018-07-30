@@ -72,24 +72,5 @@ main {
 		position: relative;
 
 		margin: 4rem 0;
-
-		&:before {
-			content: '';
-
-			width: 16px;
-			height: 28px;
-
-			display: inline-block;
-
-			border: 4px solid white;
-			border-top: 0;
-			border-bottom: 0;
-
-			transform: skew(-22.5deg);
-		}
-
-		&:before {
-			margin-right: 16px;
-		}
 	}
 }
