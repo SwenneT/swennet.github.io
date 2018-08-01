@@ -357,7 +357,7 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 --------------------------------------------------------------*/
 .earth-container { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; overflow: hidden; }
 
-.earth-inner { width: 80vh; height: 80vh; position: absolute; bottom: -26.6666666667vh; right: -26.6666666667vh; background: #3569b6; overflow: hidden; border-radius: 999px; }
+.earth-inner { width: 80vh; height: 80vh; position: absolute; bottom: -26.6666666667vh; right: -26.6666666667vh; background: #358bb6; overflow: hidden; border-radius: 999px; }
 
 .earth-inner:after { content: ''; width: 50%; height: 150%; position: absolute; top: 0; right: 0; background: rgba(0, 0, 0, 0.1); }
 
@@ -365,7 +365,7 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 .earth-glow { width: 120vh; height: 120vh; position: absolute; bottom: -46.6666666667vh; right: -46.6666666667vh; background: rgba(255, 255, 255, 0.005); border-radius: 999px; }
 
-.earth-land { height: 100%; position: absolute; top: 0; left: 0; fill: #69b139; -webkit-animation: planetSpin 70s infinite linear; animation: planetSpin 70s infinite linear; }
+.earth-land { height: 100%; position: absolute; top: 0; left: 0; fill: #73d43e; -webkit-animation: planetSpin 70s infinite linear; animation: planetSpin 70s infinite linear; }
 
 .earth-clouds { height: 100%; position: absolute; top: 0; left: 0; -webkit-transform: translateX(0%); -ms-transform: translateX(0%); transform: translateX(0%); -webkit-animation: planetSpin 55s infinite linear; animation: planetSpin 55s infinite linear; fill: white; opacity: 0.9; -webkit-filter: drop-shadow(1vh 2vh 0 rgba(0, 0, 0, 0.05)); filter: drop-shadow(1vh 2vh 0 rgba(0, 0, 0, 0.05)); }
 
@@ -374,7 +374,7 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 --------------------------------------------------------------*/
 .moon-container { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; overflow: hidden; }
 
-.moon-inner { width: 16vh; height: 16vh; position: absolute; bottom: 54vh; right: 36vh; background: #b6b8c4; overflow: hidden; border-radius: 999px; -webkit-box-shadow: 0px 0px 12vh rgba(255, 255, 255, 0.1); box-shadow: 0px 0px 12vh rgba(255, 255, 255, 0.1); }
+.moon-inner { width: 16vh; height: 16vh; position: absolute; bottom: 54vh; right: 36vh; background: #cdd1d6; overflow: hidden; border-radius: 999px; -webkit-box-shadow: 0px 0px 12vh rgba(255, 255, 255, 0.2); box-shadow: 0px 0px 12vh rgba(255, 255, 255, 0.2); }
 
 .moon-inner:after { content: ''; width: 50%; height: 150%; position: absolute; top: 0; right: 0; background: rgba(0, 0, 0, 0.07); }
 
