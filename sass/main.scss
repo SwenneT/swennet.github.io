@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------
+>>> Main
+--------------------------------------------------------------*/
+
 body {
 	font-family: 'Orbitron', sans-serif;
 	font-size: 16px;
@@ -7,7 +11,7 @@ body {
 	text-shadow: 2px 2px 0px rgba(black, 0.2);
 
 	background: $spaceLight;
-	background: linear-gradient($spaceDark, $spaceLight 200vh);
+	background: linear-gradient($spaceDark, $spaceLight 150vh);
 }
 
 .svg-icon {
@@ -40,7 +44,7 @@ body {
 	&:after {
 		content: '';
 
-		height: 50vh;
+		height: 200vh;
 		width: 100%;
 
 		position: absolute;
@@ -48,7 +52,7 @@ body {
 		right: 0;
 		bottom: 0;
 
-		background: linear-gradient(transparent, $spaceLight);
+		background: url($starGradient) repeat;
 	}
 }
 

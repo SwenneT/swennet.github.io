@@ -1,4 +1,3 @@
-.ship{position:absolute;right:50vh;bottom:30vh;height:200px;z-index:1;-webkit-animation:shipShake 2s infinite;animation:shipShake 2s infinite;-webkit-transform:rotate(-22.5deg);-ms-transform:rotate(-22.5deg);transform:rotate(-22.5deg)}
 *,*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
@@ -7,12 +6,12 @@ ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
-body{font-family:'Orbitron',sans-serif;font-size:16px;color:rgba(255,255,255,0.9);text-shadow:2px 2px 0 rgba(0,0,0,0.2);background:#3d2448;background:-webkit-gradient(linear,left top,left bottom,from(#1e253f),color-stop(200vh,#3d2448));background:-webkit-linear-gradient(#1e253f,#3d2448 200vh);background:linear-gradient(#1e253f,#3d2448 200vh)}
+body{font-family:'Orbitron',sans-serif;font-size:16px;color:rgba(255,255,255,0.9);text-shadow:2px 2px 0 rgba(0,0,0,0.2);background:#3d2448;background:-webkit-gradient(linear,left top,left bottom,from(#1e253f),color-stop(150vh,#3d2448));background:-webkit-linear-gradient(#1e253f,#3d2448 150vh);background:linear-gradient(#1e253f,#3d2448 150vh)}
 .svg-icon{fill:white}
 .separator{margin:0 12px}
 #particles-js{height:500vh;position:absolute;top:0;left:0;right:0;z-index:-1;background:transparent}
 #particles-js canvas{width:100%;height:100%;background:transparent}
-#particles-js:after{content:'';height:50vh;width:100%;position:absolute;left:0;right:0;bottom:0;background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(#3d2448));background:-webkit-linear-gradient(transparent,#3d2448);background:linear-gradient(transparent,#3d2448)}
+#particles-js:after{content:'';height:200vh;width:100%;position:absolute;left:0;right:0;bottom:0;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1000" preserveAspectRatio="none">\a<linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".5" y1="1000" x2=".5">\a <stop offset="0" stop-color="#3d2448"/>\a <stop offset="1" stop-color="#3d2448" stop-opacity="0"/>\a</linearGradient>\a<path fill="url(#a)" d="M0 0h1v1000H0z"/>\a</svg>') repeat}
 main{min-height:2000px}
 .page-section{min-height:100vh;width:100%;padding:0 8%;padding-top:60px !important;position:relative}
 .page-section h1{color:white;font-size:2.4rem;text-transform:uppercase;position:relative;margin:4rem 0}
@@ -74,17 +73,6 @@ body.scrolled header:before{width:100%;opacity:1}
 .introduction h1{text-transform:none}
 .introduction>div{padding-bottom:20vh}
 .introduction>div .button{float:right;margin-right:34px}
-.purple-planet-container{width:100%;height:160vh;position:absolute;top:0;left:0;overflow:hidden}
-.purple-planet-inner{width:80vh;height:80vh;position:absolute;bottom:40vh;right:-20vh;background:#ff417b;overflow:hidden;border-radius:999px;-webkit-transform:rotate(22.5deg);-ms-transform:rotate(22.5deg);transform:rotate(22.5deg)}
-.purple-planet-inner:after{content:'';width:50%;height:150%;position:absolute;top:0;right:0;background:rgba(0,0,0,0.1)}
-.purple-planet-atmosphere{width:90vh;height:90vh;position:absolute;bottom:35vh;right:-25vh;background:rgba(37,34,63,0.6);border-radius:999px}
-.purple-planet-glow{width:120vh;height:120vh;position:absolute;bottom:20vh;right:-40vh;background:rgba(255,255,255,0.005);border-radius:999px}
-.purple-planet-land{height:100%;position:absolute;top:0;left:0;fill:#ffb985;-webkit-animation:planetLand 70s infinite linear;animation:planetLand 70s infinite linear}
-.purple-planet-clouds{height:100%;position:absolute;top:0;left:0;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-animation:planetLand 55s infinite linear;animation:planetLand 55s infinite linear;fill:white;opacity:.9;-webkit-filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05));filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05))}
-.moon-container{width:100%;height:100vh;position:absolute;top:0;left:0;overflow:hidden}
-.moon-inner{width:20vh;height:20vh;position:absolute;top:26vh;right:50vh;background:#8d8f9e;overflow:hidden;border-radius:999px;-webkit-transform:rotate(22.5deg);-ms-transform:rotate(22.5deg);transform:rotate(22.5deg);-webkit-box-shadow:0 0 12vh rgba(255,255,255,0.1);box-shadow:0 0 12vh rgba(255,255,255,0.1)}
-.moon-inner:after{content:'';width:50%;height:150%;position:absolute;top:0;right:0;background:rgba(0,0,0,0.1)}
-.moon-craters{height:100%;position:absolute;top:0;left:0;fill:rgba(0,0,0,0.2);-webkit-animation:planetLand 70s infinite linear;animation:planetLand 70s infinite linear}
 body.scrolled header:before{width:100%;opacity:1}
 .skills-categories{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-content:space-between;-ms-flex-line-pack:justify;align-content:space-between}
 .skill-category{-webkit-box-flex:0;-webkit-flex:0 50%;-ms-flex:0 50%;flex:0 50%;max-width:700px;margin-left:auto;margin-right:auto;letter-spacing:1.5px}
@@ -132,17 +120,22 @@ body.scrolled header:before{width:100%;opacity:1}
 .portal-inner{width:600px;height:600px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale(0.48);-ms-transform:translate(-50%,-50%) scale(0.48);transform:translate(-50%,-50%) scale(0.48);-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip);opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s}
 .portal-inner img{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
 .contact-form{max-width:40vw;min-width:400px}
-@-webkit-keyframes shipShake{0%{-webkit-transform:translate(0,0) rotate(-22.5deg);transform:translate(0,0) rotate(-22.5deg)}
-50%{-webkit-transform:translate(0,10px) rotate(-22.5deg);transform:translate(0,10px) rotate(-22.5deg)}
-100%{-webkit-transform:translate(0,0) rotate(-22.5deg);transform:translate(0,0) rotate(-22.5deg)}
-}@keyframes shipShake{0%{-webkit-transform:translate(0,0) rotate(-22.5deg);transform:translate(0,0) rotate(-22.5deg)}
-50%{-webkit-transform:translate(0,10px) rotate(-22.5deg);transform:translate(0,10px) rotate(-22.5deg)}
-100%{-webkit-transform:translate(0,0) rotate(-22.5deg);transform:translate(0,0) rotate(-22.5deg)}
-}@-webkit-keyframes planetLand{from{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
-to{-webkit-transform:translateX(0);transform:translateX(0)}
-}@keyframes planetLand{from{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
-to{-webkit-transform:translateX(0);transform:translateX(0)}
-}@-webkit-keyframes portalAnim1{from{-webkit-transform:rotate(0);transform:rotate(0)}
+.island-container{width:100%;height:100vh;position:absolute;top:0;left:0;overflow:hidden;pointer-events:none}
+.island-main{height:66vh;position:absolute;bottom:6vh;right:3vw;-webkit-animation:islandMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);animation:islandMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);-webkit-animation-delay:-.5s;animation-delay:-.5s}
+#crystal1{-webkit-animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95)}
+#crystal2{-webkit-animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);-webkit-animation-delay:-1s;animation-delay:-1s}
+.earth-container{width:100%;height:100vh;position:absolute;top:0;left:0;overflow:hidden}
+.earth-inner{width:80vh;height:80vh;position:absolute;bottom:-26.6666666667vh;right:-26.6666666667vh;background:#3569b6;overflow:hidden;border-radius:999px}
+.earth-inner:after{content:'';width:50%;height:150%;position:absolute;top:0;right:0;background:rgba(0,0,0,0.1)}
+.earth-atmosphere{width:90vh;height:90vh;position:absolute;bottom:-31.6666666667vh;right:-31.6666666667vh;background:rgba(32,19,38,0.2);border-radius:999px}
+.earth-glow{width:120vh;height:120vh;position:absolute;bottom:-46.6666666667vh;right:-46.6666666667vh;background:rgba(255,255,255,0.005);border-radius:999px}
+.earth-land{height:100%;position:absolute;top:0;left:0;fill:#69b139;-webkit-animation:planetSpin 70s infinite linear;animation:planetSpin 70s infinite linear}
+.earth-clouds{height:100%;position:absolute;top:0;left:0;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-animation:planetSpin 55s infinite linear;animation:planetSpin 55s infinite linear;fill:white;opacity:.9;-webkit-filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05));filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05))}
+.moon-container{width:100%;height:100vh;position:absolute;top:0;left:0;overflow:hidden}
+.moon-inner{width:16vh;height:16vh;position:absolute;bottom:54vh;right:36vh;background:#b6b8c4;overflow:hidden;border-radius:999px;-webkit-box-shadow:0 0 12vh rgba(255,255,255,0.1);box-shadow:0 0 12vh rgba(255,255,255,0.1)}
+.moon-inner:after{content:'';width:50%;height:150%;position:absolute;top:0;right:0;background:rgba(0,0,0,0.07)}
+.moon-craters{height:100%;position:absolute;top:0;left:0;fill:rgba(0,0,0,0.2);-webkit-animation:planetSpin 70s infinite linear;animation:planetSpin 70s infinite linear}
+@-webkit-keyframes portalAnim1{from{-webkit-transform:rotate(0);transform:rotate(0)}
 to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 }@keyframes portalAnim1{from{-webkit-transform:rotate(0);transform:rotate(0)}
 to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
@@ -150,4 +143,20 @@ to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 to{-webkit-transform:rotate(410deg) scale(0.85);transform:rotate(410deg) scale(0.85)}
 }@keyframes portalAnim2{from{-webkit-transform:rotate(50deg) scale(0.85);transform:rotate(50deg) scale(0.85)}
 to{-webkit-transform:rotate(410deg) scale(0.85);transform:rotate(410deg) scale(0.85)}
+}@-webkit-keyframes islandMove{0%{-webkit-transform:translateY(0);transform:translateY(0)}
+50%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}
+100%{-webkit-transform:translateY(0);transform:translateY(0)}
+}@keyframes islandMove{0%{-webkit-transform:translateY(0);transform:translateY(0)}
+50%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}
+100%{-webkit-transform:translateY(0);transform:translateY(0)}
+}@-webkit-keyframes crystalMove{0%{-webkit-transform:translateY(0);transform:translateY(0)}
+50%{-webkit-transform:translateY(-60px);transform:translateY(-60px)}
+100%{-webkit-transform:translateY(0);transform:translateY(0)}
+}@keyframes crystalMove{0%{-webkit-transform:translateY(0);transform:translateY(0)}
+50%{-webkit-transform:translateY(-60px);transform:translateY(-60px)}
+100%{-webkit-transform:translateY(0);transform:translateY(0)}
+}@-webkit-keyframes planetSpin{from{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
+}@keyframes planetSpin{from{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
 }

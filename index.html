@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
 	<div id="particles-js"></div>
 
 	<div id="app">
@@ -41,6 +40,12 @@
 
 			<section id="home" class="page-section home">
 
+				<div class="island-container">
+					<div class="island">
+						<img class="island-main svg" src="images/island.svg">
+					</div>
+				</div>
+
 				<div class="introduction">
 					<div>
 						<div class="text">
@@ -57,35 +62,6 @@
 								<use xlink:href="images/svg-sprite.svg#arrow"></use>
 							</svg>
 						</a>
-					</div>
-				</div>
-
-				<div class="moon-container">
-					<div class="moon">
-						<div class="moon-glow"></div>
-
-						<div class="moon-inner">
-
-							<img src="images/moon-craters.svg" class="moon-craters svg">
-
-						</div>
-					</div>
-				</div>
-
-				<div class="purple-planet-container">
-
-					<div class="purple-planet">
-						<div class="purple-planet-glow"></div>
-
-						<div class="purple-planet-atmosphere"></div>
-
-						<div class="purple-planet-inner">
-
-							<img src="images/purple-planet-land.svg" class="purple-planet-land svg">
-
-							<img src="images/purple-planet-clouds.svg" class="purple-planet-clouds svg">
-
-						</div>
 					</div>
 				</div>
 
@@ -181,10 +157,10 @@
 
 						<div class="project-portal">
 							<a href="https://nightscribe.net" class="portal" target="_blank" rel="noopener noreferrer">
-								<img class="portal-outer portal-outer-1 svg" src="images/portal-shape.svg">
-								<img class="portal-outer portal-outer-2 svg" src="images/portal-shape.svg">
+								<img class="portal-outer portal-outer-1 svg" src="images/shapes/portal-shape.svg">
+								<img class="portal-outer portal-outer-2 svg" src="images/shapes/portal-shape.svg">
 								<div class="portal-inner">
-									<img src="images/swennet.jpg">
+									<img src="images/projects/swennet.jpg">
 								</div>
 							</a>
 						</div>
@@ -276,10 +252,10 @@
 
 						<div class="project-portal">
 							<a href="https://nightscribe.net" class="portal" target="_blank" rel="noopener noreferrer">
-								<img class="portal-outer portal-outer-1 svg" src="images/portal-shape.svg">
-								<img class="portal-outer portal-outer-2 svg" src="images/portal-shape.svg">
+								<img class="portal-outer portal-outer-1 svg" src="images/shapes/portal-shape.svg">
+								<img class="portal-outer portal-outer-2 svg" src="images/shapes/portal-shape.svg">
 								<div class="portal-inner">
-									<img src="images/nightscribe.jpg">
+									<img src="images/projects/nightscribe.jpg">
 								</div>
 							</a>
 						</div>
@@ -298,9 +274,33 @@
 
 			<section id="contact" class="page-section contact">
 
-				<h1>Contact</h1>
+				<h1>Contact</h1>				
 
-				<form id="content-form" class="contact-form" action="#" method="POST" >
+				<div class="moon-container">
+					<div class="moon">
+						<div class="moon-glow"></div>
+
+						<div class="moon-inner">
+							<img src="images/moon/moon-craters.svg" class="moon-craters svg">
+						</div>
+					</div>
+				</div>
+
+				<div class="earth-container">
+
+					<div class="earth">
+						<div class="earth-glow"></div>
+
+						<div class="earth-atmosphere"></div>
+
+						<div class="earth-inner">
+							<img src="images/earth/earth-land.svg" class="earth-land svg">
+							<img src="images/earth/earth-clouds.svg" class="earth-clouds svg">
+						</div>
+					</div>
+				</div>
+
+				<form id="content-form" class="contact-form" action="#" method="POST">
 
 					<fieldset>
 
@@ -356,22 +356,23 @@
 		});
 	</script>
 
-	<svg width="0" height="0">
-		<defs>	
-			<clipPath id="portal-clip">
-					<path d="M600,300c0,38.7-35.2,70.2-49.2,103.9c-14.5,34.9-12.4,81.9-38.7,108.2c-26.3,26.3-73.3,24.2-108.2,38.7
-					c-33.7,14-65.2,49.2-103.9,49.2c-38.7,0-70.2-35.2-103.9-49.2c-34.9-14.5-81.9-12.4-108.2-38.7c-26.3-26.3-24.2-73.3-38.7-108.2
-					C35.2,370.2,0,338.7,0,300c0-38.7,35.2-70.2,49.2-103.9c14.5-34.9,12.4-81.9,38.7-108.2c26.3-26.3,73.3-24.2,108.2-38.7
-					C229.8,35.2,261.3,0,300,0c38.7,0,70.2,35.2,103.9,49.2c34.9,14.5,81.9,12.4,108.2,38.7c26.3,26.3,24.2,73.3,38.7,108.2
-					C564.8,229.8,600,261.3,600,300z"/>
-			</clipPath>		
-
-			<clipPath id="planet-clip">
-				<circle cx="500.5" cy="500.5" r="500"/>
-			</clipPath>		
-		</defs>
-	</svg>
-
+	<div style="height: 0px;">
+		<svg width="0" height="0">
+			<defs>	
+				<clipPath id="portal-clip">
+						<path d="M600,300c0,38.7-35.2,70.2-49.2,103.9c-14.5,34.9-12.4,81.9-38.7,108.2c-26.3,26.3-73.3,24.2-108.2,38.7
+						c-33.7,14-65.2,49.2-103.9,49.2c-38.7,0-70.2-35.2-103.9-49.2c-34.9-14.5-81.9-12.4-108.2-38.7c-26.3-26.3-24.2-73.3-38.7-108.2
+						C35.2,370.2,0,338.7,0,300c0-38.7,35.2-70.2,49.2-103.9c14.5-34.9,12.4-81.9,38.7-108.2c26.3-26.3,73.3-24.2,108.2-38.7
+						C229.8,35.2,261.3,0,300,0c38.7,0,70.2,35.2,103.9,49.2c34.9,14.5,81.9,12.4,108.2,38.7c26.3,26.3,24.2,73.3,38.7,108.2
+						C564.8,229.8,600,261.3,600,300z"/>
+				</clipPath>		
+	
+				<clipPath id="planet-clip">
+					<circle cx="500.5" cy="500.5" r="500"/>
+				</clipPath>		
+			</defs>
+		</svg>
+	</div>
 </body>
 
 </html>

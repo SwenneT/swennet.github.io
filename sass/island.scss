@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+>>> Island
+--------------------------------------------------------------*/
+
+.island-container {
+	width: 100%;
+	height: 100vh;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	overflow: hidden;
+
+	pointer-events: none;
+}
+
+.island-main {
+	height: 66vh;
+
+	position: absolute;
+	bottom: 6vh;
+	right: 3vw;
+
+	animation: islandMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	animation-delay: -.5s;	
+}
+
+#crystal1 {
+	animation: crystalMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+#crystal2 {
+	animation: crystalMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	animation-delay: -1s;
+}
+
+@keyframes islandMove {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes crystalMove {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-60px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
