@@ -37,28 +37,28 @@
 
 @keyframes islandMove {
 	0% {
-		transform: translateY(0);
+		transform: translateY(0) rotate(0.001deg);
 	}
 
 	50% {
-		transform: translateY(-10px);
+		transform: translateY(-10px) rotate(0.001deg);
 	}
 
 	100% {
-		transform: translateY(0);
+		transform: translateY(0) rotate(0.001deg);
 	}
 }
 
 @keyframes crystalMove {
 	0% {
-		transform: translateY(0);
+		transform: translateY(0) rotate(0.001deg);
 	}
 
 	50% {
-		transform: translateY(-60px);
+		transform: translateY(-60px) rotate(0.001deg);
 	}
 
 	100% {
-		transform: translateY(0);
+		transform: translateY(0) rotate(0.001deg);
 	}
 }

@@ -143,20 +143,20 @@ to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 to{-webkit-transform:rotate(410deg) scale(0.85);transform:rotate(410deg) scale(0.85)}
 }@keyframes portalAnim2{from{-webkit-transform:rotate(50deg) scale(0.85);transform:rotate(50deg) scale(0.85)}
 to{-webkit-transform:rotate(410deg) scale(0.85);transform:rotate(410deg) scale(0.85)}
-}@-webkit-keyframes islandMove{0%{-webkit-transform:translateY(0);transform:translateY(0)}
-50%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}
-100%{-webkit-transform:translateY(0);transform:translateY(0)}
-}@keyframes islandMove{0%{-webkit-transform:translateY(0);transform:translateY(0)}
-50%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}
-100%{-webkit-transform:translateY(0);transform:translateY(0)}
-}@-webkit-keyframes crystalMove{0%{-webkit-transform:translateY(0);transform:translateY(0)}
-50%{-webkit-transform:translateY(-60px);transform:translateY(-60px)}
-100%{-webkit-transform:translateY(0);transform:translateY(0)}
-}@keyframes crystalMove{0%{-webkit-transform:translateY(0);transform:translateY(0)}
-50%{-webkit-transform:translateY(-60px);transform:translateY(-60px)}
-100%{-webkit-transform:translateY(0);transform:translateY(0)}
-}@-webkit-keyframes planetSpin{from{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
-to{-webkit-transform:translateX(0);transform:translateX(0)}
-}@keyframes planetSpin{from{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
-to{-webkit-transform:translateX(0);transform:translateX(0)}
+}@-webkit-keyframes islandMove{0%{-webkit-transform:translateY(0) rotate(0.001deg);transform:translateY(0) rotate(0.001deg)}
+50%{-webkit-transform:translateY(-10px) rotate(0.001deg);transform:translateY(-10px) rotate(0.001deg)}
+100%{-webkit-transform:translateY(0) rotate(0.001deg);transform:translateY(0) rotate(0.001deg)}
+}@keyframes islandMove{0%{-webkit-transform:translateY(0) rotate(0.001deg);transform:translateY(0) rotate(0.001deg)}
+50%{-webkit-transform:translateY(-10px) rotate(0.001deg);transform:translateY(-10px) rotate(0.001deg)}
+100%{-webkit-transform:translateY(0) rotate(0.001deg);transform:translateY(0) rotate(0.001deg)}
+}@-webkit-keyframes crystalMove{0%{-webkit-transform:translateY(0) rotate(0.001deg);transform:translateY(0) rotate(0.001deg)}
+50%{-webkit-transform:translateY(-60px) rotate(0.001deg);transform:translateY(-60px) rotate(0.001deg)}
+100%{-webkit-transform:translateY(0) rotate(0.001deg);transform:translateY(0) rotate(0.001deg)}
+}@keyframes crystalMove{0%{-webkit-transform:translateY(0) rotate(0.001deg);transform:translateY(0) rotate(0.001deg)}
+50%{-webkit-transform:translateY(-60px) rotate(0.001deg);transform:translateY(-60px) rotate(0.001deg)}
+100%{-webkit-transform:translateY(0) rotate(0.001deg);transform:translateY(0) rotate(0.001deg)}
+}@-webkit-keyframes planetSpin{from{-webkit-transform:translateX(-50%) rotate(0.001deg);transform:translateX(-50%) rotate(0.001deg)}
+to{-webkit-transform:translateX(0) rotate(0.001deg);transform:translateX(0) rotate(0.001deg)}
+}@keyframes planetSpin{from{-webkit-transform:translateX(-50%) rotate(0.001deg);transform:translateX(-50%) rotate(0.001deg)}
+to{-webkit-transform:translateX(0) rotate(0.001deg);transform:translateX(0) rotate(0.001deg)}
 }

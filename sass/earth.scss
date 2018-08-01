@@ -1,10 +1,15 @@
+/*--------------------------------------------------------------
+>>> Animation
+--------------------------------------------------------------*/
+
+// Rotate for firefox smoothing fix
 @keyframes planetSpin {
 	from {
-		transform: translateX(-50%);
+		transform: translateX(-50%) rotate(0.001deg);
 	}
 
 	to {
-		transform: translateX(0%);
+		transform: translateX(0%) rotate(0.001deg);
 	}
 }
 
