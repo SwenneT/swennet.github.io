@@ -2,7 +2,7 @@
 >>> Animation
 --------------------------------------------------------------*/
 
-// Rotate for firefox smoothing fix
+// Firefox smoothing fix: added rotate
 @keyframes planetSpin {
 	from {
 		transform: translateX(-50%) rotate(0.001deg);
