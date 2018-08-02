@@ -64,3 +64,252 @@
 		transform: translateY(0) rotate(0.001deg);
 	}
 }
+
+
+/*--------------------------------------------------------------
+>>> Island Impact
+--------------------------------------------------------------*/
+
+$meteorSpeed: 0.7s;
+$impactSpeed: $meteorSpeed - 0.2s;
+
+.island-impact {
+	width: 77vh;
+	height: 37.5vh;
+
+	position: absolute;
+	bottom: 34.54vh;
+	right: 3vw;
+
+	animation: islandMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	animation-delay: -.5s;
+
+	&.impact {
+		.island-meteor-impact {
+			animation: meteorImpact $meteorSpeed ease-out forwards;
+
+			&:after {
+				animation: meteorExplode $meteorSpeed ease forwards;
+			}
+
+			&:before {				
+				animation: meteorTail $meteorSpeed ease-out forwards;
+			}
+
+			&.impact-1 {
+				width: 2vh;
+				height: 2vh;
+		
+				top: 8vh;
+				left: 13vh;
+			}
+
+			&.impact-2 {
+				width: 2vh;
+				height: 2vh;
+		
+				top: 0vh;
+				left: 28.8vh;
+
+				animation-delay: 0.6s;
+
+				&:after {
+					animation-delay: 0.6s
+				}
+
+				&:before {
+					animation-delay: 0.6s
+				}
+			}
+
+			&.impact-3 {
+				width: 2vh;
+				height: 2vh;
+		
+				top: 7.6vh;
+				left: 20vh;
+
+				animation-delay: 1s;
+
+				&:after {
+					animation-delay: 1s
+				}
+
+				&:before {
+					animation-delay: 1s
+				}
+			}
+		}
+
+		.island-shield-impact {
+			animation: shieldImpact 2.5s ease-out forwards;
+		
+			&.impact-1 {
+				top: -60vh;
+				left: -55vh;
+
+				animation-delay: $impactSpeed;
+			}
+		
+			&.impact-2 {
+				top: -68vh; 
+				left: -40vh;
+		
+				animation-delay: 0.6s + $impactSpeed;
+			}
+		
+			&.impact-3 { 
+				top: -61vh;
+				left: -48vh;
+		
+				animation-delay: 1s + $impactSpeed;
+			}
+		}
+	}
+}
+
+.island-meteor-impact {
+	position: absolute;
+
+	border-radius: 999px;
+
+	z-index: 2;
+
+	opacity: 0;
+
+	&:after {
+		content: '';
+
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		border-radius: 999px;
+
+		background: #63dbff;
+	}
+
+	&:before {
+		content: '';
+
+		width: 140%;
+		height: 100vh;
+
+		position: absolute;
+		bottom: 0;
+
+		background: linear-gradient(transparent, #60cdff);
+
+		box-shadow: 0 0 100px #60cdff;
+
+		border-radius: 0px 0px 999px 999px;
+
+		transform: rotate(-30deg);
+		
+		transform-origin: 50% 99.6%;
+	}
+}
+
+@keyframes meteorImpact {
+	0% {
+		transform: translate(-30vh, -50vh);
+		opacity: 1;
+	}
+
+	70% {
+		transform: translate(0, 0);
+	}	
+
+	85% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+}
+
+@keyframes meteorExplode {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	60% {
+		transform: rotate(-30deg) scaleX(1) scaleY(1);
+		opacity: 0.4;
+	}
+
+	100% {
+		transform: rotate(-30deg) scaleX(4) scaleY(1);
+		opacity: 0;
+		background: white;
+	}
+}
+
+@keyframes meteorTail {
+	0% {
+		opacity: 1;
+		transform: rotate(-30deg) scaleX(1);
+	}
+
+	50% {
+		opacity: 0.5;
+		transform: rotate(-30deg)  scaleX(0.7);
+	}
+
+	100% {
+		opacity: 0;
+		transform: rotate(-30deg) scaleX(0.1);
+		background: white;
+	}
+}
+
+
+.island-shield {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	border-radius: 9999px 9999px 0 0;
+
+	overflow: hidden;
+}
+
+.island-shield-impact {
+	width: 140vh;
+	height: 140vh;
+
+	position: absolute;
+
+	border-radius: 9999px;
+
+	box-shadow: inset 0px 0px 300px rgb(210, 220, 255);
+
+	opacity: 0;
+
+	transform: scale(0.01);
+	transform-origin: center;
+}
+
+@keyframes shieldImpact {
+	from {
+		transform: scale(0);
+		opacity: 0.3;
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 0;
+	}
+}

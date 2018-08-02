@@ -93,4 +93,25 @@
 
 	});
 
+	(function loop() {
+		var min = 10000,
+			max = 30000,
+			rand = Math.floor(Math.random() * (max - min) + min);
+
+		var thisShield = $('#island-impact');
+
+		setTimeout(function() {
+	
+			thisShield.removeClass('impact');
+	
+			setTimeout( function() {
+				thisShield.addClass('impact');
+			}, 100);
+
+			loop();  
+
+		}, rand);
+
+	}());
+
 } )( jQuery );
