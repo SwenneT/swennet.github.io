@@ -106,7 +106,7 @@
 	
 			setTimeout( function() {
 				thisShield.addClass('impact');
-			}, 100);
+			}, 2000);
 
 			loop();  
 
