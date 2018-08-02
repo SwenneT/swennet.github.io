@@ -67,11 +67,130 @@
 
 
 /*--------------------------------------------------------------
+>>> Island Meteor
+--------------------------------------------------------------*/
+
+$meteorSpeed: 2.4s;
+
+.meteors {
+	width: 100%;
+	height: 300vh;
+
+	position: absolute;
+
+	overflow: hidden;
+
+	opacity: 0.6;
+}
+
+.island-meteor {
+	width: 1vh;
+	height: 1vh;
+
+	position: absolute;
+
+	opacity: 0;
+
+	animation-delay: 5s;
+
+	&:after {
+		content: '';
+
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		border-radius: 999px;
+		
+		transform: rotate(-30deg) scaleX(1) scaleY(3);
+
+		background: linear-gradient(transparent, white);
+		box-shadow: 0 0 20px white;
+	}
+
+	&:before {
+		content: '';
+
+		width: 140%;
+		height: 200vh;
+
+		position: absolute;
+		bottom: 0;
+
+		background: linear-gradient(transparent, #60cdff);
+
+		box-shadow: 0 0 100px #60cdff;
+
+		border-radius: 0px 0px 999px 999px;
+
+		transform: rotate(-30deg);
+		
+		transform-origin: 50% 99.94%;
+
+		animation-delay: 5s;
+	}
+
+	&.meteor-1 {
+		top: 200vh;
+		right: -30vw;
+
+		&.fall {
+			animation: meteorFall $meteorSpeed ease-out forwards;
+
+			&:before {
+				animation: meteorFallTail $meteorSpeed ease-out forwards;
+			}
+		}
+	}
+
+	&.meteor-2 {
+		top: 150vh;
+		right: -25vw;		
+
+		&.fall {
+			animation: meteorFall $meteorSpeed ease-out forwards;
+	
+			&:before {
+				animation: meteorFallTail $meteorSpeed ease-out forwards;
+			}
+		}
+	}
+}
+
+@keyframes meteorFall {
+	0% {
+		transform: translate(-116vh, -200vh);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+}
+
+@keyframes meteorFallTail {
+	0% {
+		opacity: 1;
+		transform: rotate(-30deg) scaleX(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: rotate(-30deg) scaleX(0.1);
+		background: white;
+	}
+}
+
+/*--------------------------------------------------------------
 >>> Island Impact
 --------------------------------------------------------------*/
 
-$meteorSpeed: 0.9s;
-$impactSpeed: $meteorSpeed - 0.2s;
+$impactMeteorSpeed: 0.5s;
+$impactSpeed: $impactMeteorSpeed - 0.2s;
 
 .island-impact {
 	width: 77vh;
@@ -86,58 +205,14 @@ $impactSpeed: $meteorSpeed - 0.2s;
 
 	&.impact {
 		.island-meteor-impact {
-			animation: meteorImpact $meteorSpeed ease-out forwards;
+			animation: meteorImpact $impactMeteorSpeed ease-out forwards;
 
 			&:after {
-				animation: meteorExplode $meteorSpeed ease forwards;
+				animation: meteorExplode $impactMeteorSpeed ease forwards;
 			}
 
 			&:before {				
-				animation: meteorTail $meteorSpeed ease-out forwards;
-			}
-
-			&.impact-1 {
-				width: 2vh;
-				height: 2vh;
-		
-				top: 8vh;
-				left: 13vh;
-			}
-
-			&.impact-2 {
-				width: 2vh;
-				height: 2vh;
-		
-				top: 0vh;
-				left: 28.8vh;
-
-				animation-delay: 0.6s;
-
-				&:after {
-					animation-delay: 0.6s
-				}
-
-				&:before {
-					animation-delay: 0.6s
-				}
-			}
-
-			&.impact-3 {
-				width: 2vh;
-				height: 2vh;
-		
-				top: 7.6vh;
-				left: 20vh;
-
-				animation-delay: 1s;
-
-				&:after {
-					animation-delay: 1s
-				}
-
-				&:before {
-					animation-delay: 1s
-				}
+				animation: meteorTail $impactMeteorSpeed ease-out forwards;
 			}
 		}
 
@@ -145,35 +220,22 @@ $impactSpeed: $meteorSpeed - 0.2s;
 			animation: shieldImpact 2.5s ease-out forwards;
 		
 			&.impact-1 {
-				top: -60vh;
+				top: -67vh;
 				left: -55vh;
 
 				animation-delay: $impactSpeed;
-			}
-		
-			&.impact-2 {
-				top: -68vh; 
-				left: -40vh;
-		
-				animation-delay: 0.6s + $impactSpeed;
-			}
-		
-			&.impact-3 { 
-				top: -61vh;
-				left: -48vh;
-		
-				animation-delay: 1s + $impactSpeed;
 			}
 		}
 	}
 }
 
 .island-meteor-impact {
+	width: 2vh;
+	height: 2vh;
+
 	position: absolute;
-
-	border-radius: 999px;
-
-	z-index: 2;
+	top: 7vh;
+	left: 16vh;
 
 	opacity: 0;
 
@@ -188,8 +250,10 @@ $impactSpeed: $meteorSpeed - 0.2s;
 		left: 0;
 		
 		border-radius: 999px;
+		
+		transform: rotate(-30deg) scaleX(1) scaleY(3);
 
-		background: #63dbff;
+		background: linear-gradient(transparent, white);
 	}
 
 	&:before {
@@ -215,42 +279,13 @@ $impactSpeed: $meteorSpeed - 0.2s;
 
 @keyframes meteorImpact {
 	0% {
-		transform: translate(-30vh, -50vh);
+		transform: translate(-28vh, -50vh);
 		opacity: 1;
 	}
 
-	70% {
-		transform: translate(0, 0);
-	}	
-
-	85% {
-		transform: translate(0, 0);
-	}
-
 	100% {
 		transform: translate(0, 0);
 		opacity: 0;
-	}
-}
-
-@keyframes meteorExplode {
-	0% {
-		opacity: 0;
-	}
-
-	50% {
-		opacity: 0;
-	}
-
-	60% {
-		transform: rotate(-30deg) scaleX(1) scaleY(1);
-		opacity: 0.4;
-	}
-
-	100% {
-		transform: rotate(-30deg) scaleX(4) scaleY(1);
-		opacity: 0;
-		background: white;
 	}
 }
 
@@ -258,11 +293,13 @@ $impactSpeed: $meteorSpeed - 0.2s;
 	0% {
 		opacity: 1;
 		transform: rotate(-30deg) scaleX(1);
+		background: linear-gradient(transparent, #60cdff)
 	}
 
 	50% {
-		opacity: 0.5;
-		transform: rotate(-30deg)  scaleX(0.7);
+		opacity: 1;
+		transform: rotate(-30deg) scaleX(1);
+		background: linear-gradient(transparent, #60cdff)
 	}
 
 	100% {
@@ -272,6 +309,19 @@ $impactSpeed: $meteorSpeed - 0.2s;
 	}
 }
 
+@keyframes meteorExplode {
+	0% {
+		transform: rotate(-30deg) scaleX(1) scaleY(3);
+	}
+
+	70% {
+		transform: rotate(-30deg) scaleX(1) scaleY(3);
+	}
+
+	100% {		
+		transform: rotate(-30deg) scaleX(5) scaleY(1);
+	}
+}
 
 .island-shield {
 	width: 100%;

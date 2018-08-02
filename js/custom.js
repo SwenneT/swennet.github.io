@@ -114,4 +114,46 @@
 
 	}());
 
+	(function loop2() {
+		var min = 10000,
+			max = 30000,
+			rand = Math.floor(Math.random() * (max - min) + min);
+
+		var thisShield = $('#meteor-1');
+
+		setTimeout(function() {
+	
+			thisShield.removeClass('fall');
+	
+			setTimeout( function() {
+				thisShield.addClass('fall');
+			}, 2000);
+
+			loop2();  
+
+		}, rand);
+
+	}());
+
+	(function loop3() {
+		var min = 10000,
+			max = 30000,
+			rand = Math.floor(Math.random() * (max - min) + min);
+
+		var thisShield = $('#meteor-2');
+
+		setTimeout(function() {
+	
+			thisShield.removeClass('fall');
+	
+			setTimeout( function() {
+				thisShield.addClass('fall');
+			}, 2000);
+
+			loop3();  
+
+		}, rand);
+
+	}());
+
 } )( jQuery );
