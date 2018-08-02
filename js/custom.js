@@ -136,7 +136,7 @@
 	}());
 
 	(function loop3() {
-		var min = 10000,
+		var min = 5000,
 			max = 30000,
 			rand = Math.floor(Math.random() * (max - min) + min);
 
