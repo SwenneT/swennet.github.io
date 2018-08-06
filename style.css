@@ -223,11 +223,11 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 .skill-bar .level { font-size: 0.6rem; }
 
 /*--------------------------------------------------------------
->>> Portfolio
+>>> Projects
 --------------------------------------------------------------*/
-.portfolio { padding-left: 0; padding-right: 0; }
+.projects { padding-left: 0; padding-right: 0; }
 
-.portfolio h1 { padding: 0 8%; }
+.projects h1 { padding: 0 8%; }
 
 .project { width: 100%; margin-bottom: 120px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: top; -webkit-align-items: top; -ms-flex-align: top; align-items: top; position: relative; overflow: hidden; }
 
