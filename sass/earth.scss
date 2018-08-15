@@ -46,7 +46,7 @@ $earthGlowSize: $earthSize + $earthGlowBigger;
 	bottom: -$earthSize / $earthOffScreen;
 	right: -$earthSize / $earthOffScreen;
 
-	background: #358bb6;
+	background: #3755b4;
 
 	overflow: hidden;
 
@@ -99,7 +99,7 @@ $earthGlowSize: $earthSize + $earthGlowBigger;
 	top: 0;
 	left: 0;
 
-	fill: #73d43e;
+	fill: #7eb730;
 	
 	animation: planetSpin 70s infinite linear;
 }
