@@ -515,15 +515,15 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 --------------------------------------------------------------*/
 .earth-container { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; overflow: hidden; }
 
-.earth-inner { width: 80vh; height: 80vh; position: absolute; bottom: -26.6666666667vh; right: -26.6666666667vh; background: #358bb6; overflow: hidden; border-radius: 999px; }
+.earth-inner { width: 80vh; height: 80vh; position: absolute; bottom: -26.6666666667vh; right: -26.6666666667vh; background: #4861b2; overflow: hidden; border-radius: 999px; -webkit-transform: rotate(23.5deg); -ms-transform: rotate(23.5deg); transform: rotate(23.5deg); }
 
-.earth-inner:after { content: ''; width: 50%; height: 150%; position: absolute; top: 0; right: 0; background: rgba(0, 0, 0, 0.1); }
+.earth-inner:after { content: ''; width: 60%; height: 200%; position: absolute; top: 0; right: 0; background: rgba(0, 0, 0, 0.1); -webkit-filter: blur(20px); filter: blur(20px); }
 
 .earth-atmosphere { width: 90vh; height: 90vh; position: absolute; bottom: -31.6666666667vh; right: -31.6666666667vh; background: rgba(32, 19, 38, 0.2); border-radius: 999px; }
 
 .earth-glow { width: 120vh; height: 120vh; position: absolute; bottom: -46.6666666667vh; right: -46.6666666667vh; background: rgba(255, 255, 255, 0.005); border-radius: 999px; }
 
-.earth-land { height: 100%; position: absolute; top: 0; left: 0; fill: #73d43e; -webkit-animation: planetSpin 70s infinite linear; animation: planetSpin 70s infinite linear; }
+.earth-land { height: 100%; position: absolute; top: 0; left: 0; fill: #7dab3e; -webkit-animation: planetSpin 70s infinite linear; animation: planetSpin 70s infinite linear; }
 
 .earth-clouds { height: 100%; position: absolute; top: 0; left: 0; -webkit-transform: translateX(0%); -ms-transform: translateX(0%); transform: translateX(0%); -webkit-animation: planetSpin 55s infinite linear; animation: planetSpin 55s infinite linear; fill: white; opacity: 0.9; -webkit-filter: drop-shadow(1vh 2vh 0 rgba(0, 0, 0, 0.05)); filter: drop-shadow(1vh 2vh 0 rgba(0, 0, 0, 0.05)); }
 

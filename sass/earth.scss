@@ -46,23 +46,27 @@ $earthGlowSize: $earthSize + $earthGlowBigger;
 	bottom: -$earthSize / $earthOffScreen;
 	right: -$earthSize / $earthOffScreen;
 
-	background: #3755b4;
+	background: #4861b2;
 
 	overflow: hidden;
 
 	border-radius: 999px;
 
+	transform: rotate(23.5deg);
+
 	&:after {
 		content: '';
 
-		width: 50%;
-		height: 150%;
+		width: 60%;
+		height: 200%;
 
 		position: absolute;
 		top: 0;
 		right: 0;
 
 		background: rgba(black, 0.1);
+
+		filter: blur(20px);
 	}
 }
 
@@ -99,7 +103,7 @@ $earthGlowSize: $earthSize + $earthGlowBigger;
 	top: 0;
 	left: 0;
 
-	fill: #7eb730;
+	fill: #7dab3e;
 	
 	animation: planetSpin 70s infinite linear;
 }
