@@ -89,7 +89,7 @@
 			}
 		}));
 
-		$(window).scroll( $.throttle( 250, checkCurrentSection ) );
+		$(window).scroll( $.debounce( 100, checkCurrentSection ) );
 
 	});
 
