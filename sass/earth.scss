@@ -57,8 +57,8 @@ $earthGlowSize: $earthSize + $earthGlowBigger;
 	&:after {
 		content: '';
 
-		width: 60%;
-		height: 200%;
+		width: 50%;
+		height: 100%;
 
 		position: absolute;
 		top: 0;
@@ -67,6 +67,8 @@ $earthGlowSize: $earthSize + $earthGlowBigger;
 		background: rgba(black, 0.1);
 
 		filter: blur(20px);
+
+		transform: rotate(-23.5deg);
 	}
 }
 

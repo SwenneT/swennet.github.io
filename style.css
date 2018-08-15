@@ -517,7 +517,7 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 .earth-inner { width: 80vh; height: 80vh; position: absolute; bottom: -26.6666666667vh; right: -26.6666666667vh; background: #4861b2; overflow: hidden; border-radius: 999px; -webkit-transform: rotate(23.5deg); -ms-transform: rotate(23.5deg); transform: rotate(23.5deg); }
 
-.earth-inner:after { content: ''; width: 60%; height: 200%; position: absolute; top: 0; right: 0; background: rgba(0, 0, 0, 0.1); -webkit-filter: blur(20px); filter: blur(20px); }
+.earth-inner:after { content: ''; width: 50%; height: 100%; position: absolute; top: 0; right: 0; background: rgba(0, 0, 0, 0.1); -webkit-filter: blur(20px); filter: blur(20px); -webkit-transform: rotate(-23.5deg); -ms-transform: rotate(-23.5deg); transform: rotate(-23.5deg); }
 
 .earth-atmosphere { width: 90vh; height: 90vh; position: absolute; bottom: -31.6666666667vh; right: -31.6666666667vh; background: rgba(32, 19, 38, 0.2); border-radius: 999px; }
 
@@ -534,6 +534,6 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 .moon-inner { width: 16vh; height: 16vh; position: absolute; bottom: 54vh; right: 36vh; background: #cdd1d6; overflow: hidden; border-radius: 999px; -webkit-box-shadow: 0px 0px 12vh rgba(255, 255, 255, 0.2); box-shadow: 0px 0px 12vh rgba(255, 255, 255, 0.2); }
 
-.moon-inner:after { content: ''; width: 50%; height: 150%; position: absolute; top: 0; right: 0; background: rgba(0, 0, 0, 0.07); }
+.moon-inner:after { content: ''; width: 50%; height: 150%; position: absolute; top: 0; right: 0; background: rgba(0, 0, 0, 0.1); -webkit-filter: blur(15px); filter: blur(15px); }
 
 .moon-craters { height: 100%; position: absolute; top: 0; left: 0; fill: rgba(0, 0, 0, 0.2); -webkit-animation: planetSpin 70s infinite linear; animation: planetSpin 70s infinite linear; }
