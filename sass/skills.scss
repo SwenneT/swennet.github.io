@@ -2,139 +2,42 @@
 >>> Skills
 --------------------------------------------------------------*/
 
-body.scrolled {
-	header {
-		&:before {
-			width: 100%;
-			opacity: 1;
-		}
-	}
+.tools {
+
 }
 
-.skills-categories {
+.tools-list {
 	display: flex;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 
-	flex-flow: column;
+	list-style: none;
 
-	justify-content: space-between;
-}
-
-.skill-category {
-	height: 100%;
-
-	flex: 0 50%;
-
-	margin-bottom: 6rem;
-
-	&:nth-child(odd) {
-		margin-left: 0;
-		margin-right: auto;
-	}
-
-	&:nth-child(even) {
-		.skill-content {
-			margin-left: auto;
-			margin-right: 0;
-		}
-	}
-}
-
-.skill-content {
-	width: 25vw;
-
-	position: relative;
-
-	h2 {
-		margin-top: 0.4rem;
-		margin-bottom: 2.4rem;
-	
-		font-size: 1.8rem;
-		line-height: 2.4rem;
-	}
-	
-	.line {
-		width: 110%;
-
-		top: 49px;
-	
-		&.right,
-		&.left {
-			left: 0;
-			right: 0;
-		}
-	
-		&.left {
-			left: -10%;
-		}
-	}	
-}
-
-.skill-category-code {
-
-}
-
-.skill-category-tools {
-	align-self: flex-end;
+	width: calc(140px * 5);
 
 	li {
-		margin-bottom: 1rem;
-	}
-}
+		width: calc(100% / 5);
+		max-width: 140px;
 
+		padding: 20px;
 
-/*--------------------------------------------------------------
->>> Code
---------------------------------------------------------------*/
+		display: flex;
+		flex-direction: column;
 
-.code-container {
-	width: 100%;
+		justify-content: space-between;
 
-	margin-bottom: 0.8rem;
+		text-align: center;
+	
+		svg {
+			margin: 0 auto 12px auto;
+			max-width: 50px;
+			max-height: 50px;
+		}
 
-	display: table;
-
-	h3 {
-		position: relative;
-
-		display: table-cell;
-
-		font-size: 0.9rem;
-		color: white;
-	}
-}
-
-.code-name,
-.code-level {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.code-name {
-	width: 40%;
-}
-
-.code-level {
-	width: 60%;
-}
-
-.level-bar {
-	width: 100%;
-	height: 28px;
-
-	border: 1px solid rgba(white, 0.1);
-	border-left-width: 4px;
-	border-right-width: 4px;
-
-	transform: skew(-20deg);
-
-	.level {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-
-		transform: translate(-50%, -50%) skew(20deg);
-
-		font-size: 0.9rem;
+		span {
+			font-size: 0.6rem;
+			letter-spacing: 0.1rem;
+			opacity: 0.8;
+		}
 	}
 }

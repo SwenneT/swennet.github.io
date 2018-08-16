@@ -9,7 +9,7 @@ table{border-collapse:collapse;border-spacing:0}
 body{font-family:'Orbitron',sans-serif;font-size:16px;color:rgba(255,255,255,0.9);text-shadow:2px 2px 0 rgba(0,0,0,0.2);background:#3d2448;background:-webkit-gradient(linear,left top,left bottom,from(#1e253f),color-stop(150vh,#3d2448));background:-webkit-linear-gradient(#1e253f,#3d2448 150vh);background:linear-gradient(#1e253f,#3d2448 150vh)}
 .svg-icon{fill:white}
 .separator{margin:0 12px}
-#particles-js{height:500vh;position:absolute;top:0;left:0;right:0;z-index:-1;background:transparent}
+#particles-js{height:400vh;position:absolute;top:0;left:0;right:0;z-index:-1;background:transparent}
 #particles-js canvas{width:100%;height:100%;background:transparent}
 #particles-js:after{content:'';height:200vh;width:100%;position:absolute;left:0;right:0;bottom:0;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1000" preserveAspectRatio="none">\a<linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".5" y1="1000" x2=".5">\a <stop offset="0" stop-color="#3d2448"/>\a <stop offset="1" stop-color="#3d2448" stop-opacity="0"/>\a</linearGradient>\a<path fill="url(#a)" d="M0 0h1v1000H0z"/>\a</svg>') repeat}
 main{min-height:2000px}
@@ -58,7 +58,7 @@ body.scrolled header:before{width:100%;opacity:1}
 .textarea-field textarea{min-width:100%;min-height:120px}
 .button{height:36px;line-height:36px;position:relative;background:transparent;cursor:pointer}
 .skewed-button{line-height:34px;padding:0 16px;display:inline-block;font-family:'Orbitron',sans-serif;color:rgba(255,255,255,0.9);font-size:.6rem;letter-spacing:.1rem;text-decoration:none;text-transform:uppercase;border:1px solid rgba(255,255,255,0.1);border-right-width:4px;border-left-width:4px;border-radius:1px;-webkit-transform:skew(-22.5deg);-ms-transform:skew(-22.5deg);transform:skew(-22.5deg);-webkit-transition:color .3s,border .3s,background .2s,-webkit-box-shadow .3s;transition:color .3s,border .3s,background .2s,-webkit-box-shadow .3s;transition:color .3s,border .3s,background .2s,box-shadow .3s;transition:color .3s,border .3s,background .2s,box-shadow .3s,-webkit-box-shadow .3s;overflow:hidden}
-.skewed-button span{width:100%;height:100%;display:inline-block;-webkit-transform:skew(22.5deg);-ms-transform:skew(22.5deg);transform:skew(22.5deg)}
+.skewed-button span{width:100%;height:100%;display:inline-block;white-space:nowrap;-webkit-transform:skew(22.5deg);-ms-transform:skew(22.5deg);transform:skew(22.5deg)}
 .skewed-button.icon-button svg{position:absolute;top:50%;fill:rgba(255,255,255,0.8);-webkit-transform:translateY(-50%) skew(22.5deg);-ms-transform:translateY(-50%) skew(22.5deg);transform:translateY(-50%) skew(22.5deg);-webkit-transition:fill .3s;transition:fill .3s}
 .skewed-button.icon-button:hover svg{fill:#fff}
 .skewed-button.icon-button-left{padding-left:48px !important}
@@ -84,25 +84,10 @@ body.scrolled header:before{width:100%;opacity:1}
 .introduction h1{text-transform:none}
 .introduction>div{padding-bottom:20vh}
 .introduction>div .button{float:right;margin-right:34px}
-body.scrolled header:before{width:100%;opacity:1}
-.skills-categories{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
-.skill-category{height:100%;-webkit-box-flex:0;-webkit-flex:0 50%;-ms-flex:0 50%;flex:0 50%;margin-bottom:6rem}
-.skill-category:nth-child(odd){margin-left:0;margin-right:auto}
-.skill-category:nth-child(even) .skill-content{margin-left:auto;margin-right:0}
-.skill-content{width:25vw;position:relative}
-.skill-content h2{margin-top:.4rem;margin-bottom:2.4rem;font-size:1.8rem;line-height:2.4rem}
-.skill-content .line{width:110%;top:49px}
-.skill-content .line.right,.skill-content .line.left{left:0;right:0}
-.skill-content .line.left{left:-10%}
-.skill-category-tools{-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
-.skill-category-tools li{margin-bottom:1rem}
-.code-container{width:100%;margin-bottom:.8rem;display:table}
-.code-container h3{position:relative;display:table-cell;font-size:.9rem;color:white}
-.code-name,.code-level{display:table-cell;vertical-align:middle}
-.code-name{width:40%}
-.code-level{width:60%}
-.level-bar{width:100%;height:28px;border:1px solid rgba(255,255,255,0.1);border-left-width:4px;border-right-width:4px;-webkit-transform:skew(-20deg);-ms-transform:skew(-20deg);transform:skew(-20deg)}
-.level-bar .level{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) skew(20deg);-ms-transform:translate(-50%,-50%) skew(20deg);transform:translate(-50%,-50%) skew(20deg);font-size:.9rem}
+.tools-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;list-style:none;width:calc(140px * 5)}
+.tools-list li{width:calc(100% / 5);max-width:140px;padding:20px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;text-align:center}
+.tools-list li svg{margin:0 auto 12px auto;max-width:50px;max-height:50px}
+.tools-list li span{font-size:.6rem;letter-spacing:.1rem;opacity:.8}
 .projects{padding-left:0;padding-right:0}
 .projects h1{padding:0 8%}
 .project{width:100%;margin-bottom:120px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:top;-webkit-align-items:top;-ms-flex-align:top;align-items:top;position:relative;overflow:hidden}
@@ -130,7 +115,7 @@ body.scrolled header:before{width:100%;opacity:1}
 .portal-inner img{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
 .contact-form{max-width:40vw;min-width:400px}
 .island-container{width:100%;height:100vh;position:absolute;top:0;left:0;overflow:hidden;pointer-events:none}
-.island-main{height:66vh;max-width:52vw;position:absolute;bottom:6vh;right:3vw;-webkit-animation:islandMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);animation:islandMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);-webkit-animation-delay:-.5s;animation-delay:-.5s}
+.island-main{height:66vh;position:absolute;bottom:6vh;right:3vw;-webkit-animation:islandMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);animation:islandMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);-webkit-animation-delay:-.5s;animation-delay:-.5s}
 #crystal1{-webkit-animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95)}
 #crystal2{-webkit-animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);-webkit-animation-delay:-1s;animation-delay:-1s}
 .meteors{width:100%;height:300vh;position:absolute;overflow:hidden;opacity:.6}

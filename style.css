@@ -40,7 +40,7 @@ body { font-family: 'Orbitron', sans-serif; font-size: 16px; color: rgba(255, 25
 
 .separator { margin: 0 12px; }
 
-#particles-js { height: 500vh; position: absolute; top: 0; left: 0; right: 0; z-index: -1; background: transparent; }
+#particles-js { height: 400vh; position: absolute; top: 0; left: 0; right: 0; z-index: -1; background: transparent; }
 
 #particles-js canvas { width: 100%; height: 100%; background: transparent; }
 
@@ -156,7 +156,7 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 
 .skewed-button { line-height: 34px; padding: 0 16px; display: inline-block; font-family: 'Orbitron', sans-serif; color: rgba(255, 255, 255, 0.9); font-size: 0.6rem; letter-spacing: 0.1rem; text-decoration: none; text-transform: uppercase; border: 1px solid rgba(255, 255, 255, 0.1); border-right-width: 4px; border-left-width: 4px; border-radius: 1px; -webkit-transform: skew(-22.5deg); -ms-transform: skew(-22.5deg); transform: skew(-22.5deg); -webkit-transition: color 0.3s, border 0.3s, background 0.2s, -webkit-box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, -webkit-box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, box-shadow 0.3s; transition: color 0.3s, border 0.3s, background 0.2s, box-shadow 0.3s, -webkit-box-shadow 0.3s; overflow: hidden; }
 
-.skewed-button span { width: 100%; height: 100%; display: inline-block; -webkit-transform: skew(22.5deg); -ms-transform: skew(22.5deg); transform: skew(22.5deg); }
+.skewed-button span { width: 100%; height: 100%; display: inline-block; white-space: nowrap; -webkit-transform: skew(22.5deg); -ms-transform: skew(22.5deg); transform: skew(22.5deg); }
 
 .skewed-button.icon-button svg { position: absolute; top: 50%; fill: rgba(255, 255, 255, 0.8); -webkit-transform: translateY(-50%) skew(22.5deg); -ms-transform: translateY(-50%) skew(22.5deg); transform: translateY(-50%) skew(22.5deg); -webkit-transition: fill 0.3s; transition: fill 0.3s; }
 
@@ -219,46 +219,13 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 /*--------------------------------------------------------------
 >>> Skills
 --------------------------------------------------------------*/
-body.scrolled header:before { width: 100%; opacity: 1; }
+.tools-list { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; width: calc(140px * 5); }
 
-.skills-categories { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-flow: column; -ms-flex-flow: column; flex-flow: column; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+.tools-list li { width: calc(100% / 5); max-width: 140px; padding: 20px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; text-align: center; }
 
-.skill-category { height: 100%; -webkit-box-flex: 0; -webkit-flex: 0 50%; -ms-flex: 0 50%; flex: 0 50%; margin-bottom: 6rem; }
+.tools-list li svg { margin: 0 auto 12px auto; max-width: 50px; max-height: 50px; }
 
-.skill-category:nth-child(odd) { margin-left: 0; margin-right: auto; }
-
-.skill-category:nth-child(even) .skill-content { margin-left: auto; margin-right: 0; }
-
-.skill-content { width: 25vw; position: relative; }
-
-.skill-content h2 { margin-top: 0.4rem; margin-bottom: 2.4rem; font-size: 1.8rem; line-height: 2.4rem; }
-
-.skill-content .line { width: 110%; top: 49px; }
-
-.skill-content .line.right, .skill-content .line.left { left: 0; right: 0; }
-
-.skill-content .line.left { left: -10%; }
-
-.skill-category-tools { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; }
-
-.skill-category-tools li { margin-bottom: 1rem; }
-
-/*--------------------------------------------------------------
->>> Code
---------------------------------------------------------------*/
-.code-container { width: 100%; margin-bottom: 0.8rem; display: table; }
-
-.code-container h3 { position: relative; display: table-cell; font-size: 0.9rem; color: white; }
-
-.code-name, .code-level { display: table-cell; vertical-align: middle; }
-
-.code-name { width: 40%; }
-
-.code-level { width: 60%; }
-
-.level-bar { width: 100%; height: 28px; border: 1px solid rgba(255, 255, 255, 0.1); border-left-width: 4px; border-right-width: 4px; -webkit-transform: skew(-20deg); -ms-transform: skew(-20deg); transform: skew(-20deg); }
-
-.level-bar .level { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%) skew(20deg); -ms-transform: translate(-50%, -50%) skew(20deg); transform: translate(-50%, -50%) skew(20deg); font-size: 0.9rem; }
+.tools-list li span { font-size: 0.6rem; letter-spacing: 0.1rem; opacity: 0.8; }
 
 /*--------------------------------------------------------------
 >>> Projects
@@ -344,7 +311,7 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 --------------------------------------------------------------*/
 .island-container { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; overflow: hidden; pointer-events: none; }
 
-.island-main { height: 66vh; max-width: 52vw; position: absolute; bottom: 6vh; right: 3vw; -webkit-animation: islandMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95); animation: islandMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95); -webkit-animation-delay: -.5s; animation-delay: -.5s; }
+.island-main { height: 66vh; position: absolute; bottom: 6vh; right: 3vw; -webkit-animation: islandMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95); animation: islandMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95); -webkit-animation-delay: -.5s; animation-delay: -.5s; }
 
 #crystal1 { -webkit-animation: crystalMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95); animation: crystalMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95); }
 
