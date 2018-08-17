@@ -13,10 +13,10 @@
 
 	list-style: none;
 
-	width: calc(140px * 5);
+	width: calc(140px * 4);
 
 	li {
-		width: calc(100% / 5);
+		width: calc(100% / 4);
 		max-width: 140px;
 
 		padding: 20px;
@@ -29,14 +29,16 @@
 		text-align: center;
 	
 		svg {
-			margin: 0 auto 12px auto;
 			max-width: 50px;
 			max-height: 50px;
+			
+			margin: 0 auto 12px auto;
 		}
 
 		span {
 			font-size: 0.6rem;
 			letter-spacing: 0.1rem;
+
 			opacity: 0.8;
 		}
 	}

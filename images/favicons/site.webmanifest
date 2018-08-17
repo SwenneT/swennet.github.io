@@ -1,0 +1,14 @@
+{
+    "name": "s\u1d21\u1d07\u0274\u0274\u1d07\u1d1b",
+    "short_name": "s\u1d21\u1d07\u0274\u0274\u1d07\u1d1b",
+    "icons": [
+        {
+            "src": "/favicons/android-chrome-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#3d2448",
+    "background_color": "#3d2448",
+    "display": "standalone"
+}
