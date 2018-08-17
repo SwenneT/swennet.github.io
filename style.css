@@ -217,50 +217,39 @@ body.scrolled header:before { width: 100%; opacity: 1; }
 .introduction > div .button { float: right; margin-right: 34px; }
 
 /*--------------------------------------------------------------
->>> Skills
+>>> Websites
 --------------------------------------------------------------*/
-.tools-list { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; width: calc(140px * 4); }
+.websites { padding-left: 0; padding-right: 0; }
 
-.tools-list li { width: calc(100% / 4); max-width: 140px; padding: 20px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; text-align: center; }
+.websites h1 { padding: 0 8%; }
 
-.tools-list li svg { max-width: 50px; max-height: 50px; margin: 0 auto 12px auto; }
+.website { width: 100%; margin-bottom: 120px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: top; -webkit-align-items: top; -ms-flex-align: top; align-items: top; position: relative; overflow: hidden; }
 
-.tools-list li span { font-size: 0.6rem; letter-spacing: 0.1rem; opacity: 0.8; }
+.website:nth-child(odd) { padding: 0 8% 0 4%; }
 
-/*--------------------------------------------------------------
->>> Projects
---------------------------------------------------------------*/
-.projects { padding-left: 0; padding-right: 0; }
+.website:nth-child(even) { padding: 0 4% 0 8%; }
 
-.projects h1 { padding: 0 8%; }
+.website > div:first-child { margin-right: 5vw; }
 
-.project { width: 100%; margin-bottom: 120px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: top; -webkit-align-items: top; -ms-flex-align: top; align-items: top; position: relative; overflow: hidden; }
+.website-info { position: relative; font-size: 0.8rem; }
 
-.project:nth-child(odd) { padding: 0 8% 0 4%; }
+.website-info h2 { font-size: 1.8rem !important; margin-top: 0.4rem; margin-bottom: 2.4rem !important; }
 
-.project:nth-child(even) { padding: 0 4% 0 8%; }
+.website-description { margin-bottom: 2rem; color: rgba(255, 255, 255, 0.75); }
 
-.project > div:first-child { margin-right: 5vw; }
+.website-footer { width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 
-.project-info { position: relative; font-size: 0.8rem; }
+.website-footer .website-links .button { margin-right: 24px; }
 
-.project-info h2 { font-size: 1.8rem !important; margin-top: 0.4rem; margin-bottom: 2.4rem !important; }
+.website-footer .website-tech { margin-right: auto; }
 
-.project-description { margin-bottom: 2rem; color: rgba(255, 255, 255, 0.75); }
+.website-footer .website-tech h4 { margin-bottom: 1rem; letter-spacing: 1.5px; color: white; font-size: 0.6rem; }
 
-.project-footer { width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
+.website-footer .website-tech .logos { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 
-.project-footer .project-links .button { margin-right: 24px; }
+.website-footer .website-tech .logos svg { display: inline-block; margin-right: 12px; opacity: 0.8; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
 
-.project-footer .project-tech { margin-right: auto; }
-
-.project-footer .project-tech h4 { margin-bottom: 1rem; letter-spacing: 1.5px; color: white; font-size: 0.6rem; }
-
-.project-footer .project-tech .logos { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
-
-.project-footer .project-tech .logos svg { display: inline-block; margin-right: 12px; opacity: 0.8; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
-
-.project-footer .project-tech .logos svg:hover { opacity: 1; }
+.website-footer .website-tech .logos svg:hover { opacity: 1; }
 
 /*--------------------------------------------------------------
 >>> SVG Portals
@@ -296,8 +285,16 @@ body.scrolled header:before { width: 100%; opacity: 1; }
   to { -webkit-transform: rotate(410deg) scale(0.85); transform: rotate(410deg) scale(0.85); } }
 
 /*--------------------------------------------------------------
->>> About
+>>> About Me
 --------------------------------------------------------------*/
+.tools-list { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; width: calc(140px * 4); }
+
+.tools-list li { width: calc(100% / 4); max-width: 140px; padding: 20px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; text-align: center; }
+
+.tools-list li svg { max-width: 50px; max-height: 50px; margin: 0 auto 12px auto; }
+
+.tools-list li span { font-size: 0.6rem; letter-spacing: 0.1rem; opacity: 0.8; }
+
 /*--------------------------------------------------------------
 >>> Contact
 --------------------------------------------------------------*/

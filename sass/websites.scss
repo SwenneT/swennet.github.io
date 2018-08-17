@@ -1,8 +1,8 @@
 /*--------------------------------------------------------------
->>> Projects
+>>> Websites
 --------------------------------------------------------------*/
 
-.projects {
+.websites {
 	padding-left: 0;
 	padding-right: 0;
 
@@ -11,7 +11,7 @@
 	}
 }
 
-.project {
+.website {
 	width: 100%;
 	margin-bottom: 120px;
 
@@ -35,7 +35,7 @@
 	}
 }
 
-.project-info {
+.website-info {
 	position: relative;
 
 	font-size: 0.8rem;
@@ -48,26 +48,26 @@
 	}
 }
 
-.project-description {
+.website-description {
 	margin-bottom: 2rem;
 
 	color: rgba(white, 0.75);
 }
 
-.project-footer {
+.website-footer {
 	width: 100%;
 
 	display: flex;
 	align-content: space-between;
 	align-items: flex-end;
 
-	.project-links {
+	.website-links {
 		.button {
 			margin-right: 24px;
 		}
 	}
 
-	.project-tech {
+	.website-tech {
 		margin-right: auto;
 
 		h4 {			
