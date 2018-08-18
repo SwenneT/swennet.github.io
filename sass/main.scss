@@ -69,17 +69,29 @@ main {
 
 	position: relative;
 
+	display: flex;
+
 	h1 {
 		color: white;
 		font-size: 2.6rem;
 		text-transform: uppercase;
 		position: relative;
+		left: -1px;
 
 		margin: 4rem 0 6rem 0;
 	}
 }
 
+.section-wrap {
+	width: 100%;
+	height: 100%;
 
+	max-width: $maxWidth;
+
+	margin: 0 auto;
+
+	position: relative;
+}
 
 .line {
 	width: calc(88% - 200px - 144px);
@@ -133,12 +145,6 @@ main {
 		&:after {
 			left: -97px;
 		}
-
-		&.up {
-			&:before {
-				transform: rotate(45deg);
-			}
-		}
 	}
 
 	&.right {
@@ -153,6 +159,12 @@ main {
 
 		&:after {
 			right: -97px;
+		}
+
+		&.up {
+			&:before {
+				transform: rotate(-45deg);
+			}
 		}
 	}
 

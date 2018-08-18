@@ -2,19 +2,24 @@
 >>> Introduction
 --------------------------------------------------------------*/
 
+.home {
+	.section-wrap {
+		margin: auto;
+	}
+}
+
+
 .introduction {
 	height: 100%;
-	width: 50%;
+	width: 100%;
 
 	display: flex;
 	align-items: center;
 
-	position: absolute;
-	top: 0;
-
 	z-index: 1;
 
 	h1 {
+		margin-top: 0;
 		text-transform: none;
 	}
 

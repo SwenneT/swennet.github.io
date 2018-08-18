@@ -3,12 +3,6 @@
 --------------------------------------------------------------*/
 
 .websites {
-	padding-left: 0;
-	padding-right: 0;
-
-	h1 {
-		padding: 0 8%;
-	}
 }
 
 .website {
@@ -23,11 +17,11 @@
 	overflow: hidden;
 
 	&:nth-child(odd) {
-		padding: 0 8% 0 4%;
+		
 	}
 
 	&:nth-child(even) {
-		padding: 0 4% 0 8%;
+
 	}
 	
 	> div:first-child {

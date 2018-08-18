@@ -9,15 +9,17 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="style.min.css" />	
 	<link href="https://fonts.googleapis.com/css?family=Orbitron:400,500" rel="stylesheet">
 
-	<link rel="apple-touch-icon" sizes="152x152" href="images//favicons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
 	<link rel="manifest" href="images/favicons/site.webmanifest">
 	<link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#3d2448">
 	<link rel="shortcut icon" href="images/favicons/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="sᴡᴇɴɴᴇᴛ">
+	<meta name="application-name" content="sᴡᴇɴɴᴇᴛ">
 	<meta name="msapplication-TileColor" content="#3d2448">
 	<meta name="msapplication-config" content="images/favicons/browserconfig.xml">
-	<meta name="theme-color" content="#3d2448">	
+	<meta name="theme-color" content="#3d2448">
 </head>
 
 <body>
@@ -34,8 +36,8 @@
 
 			<nav id="navigation" class="navigation">
 				<a class="button skewed-button header-button active" href="#home"><span>Home</span></a>
+				<a class="button skewed-button header-button" href="#about"><span>About</span></a>
 				<a class="button skewed-button header-button" href="#websites"><span>Websites</span></a>
-				<a class="button skewed-button header-button" href="#about-me"><span>About Me</span></a>
 				<a class="button skewed-button header-button" href="#contact"><span>Contact</span></a>
 
 				<div class="github-button-container">		
@@ -57,280 +59,349 @@
 				<div class="island-container">
 					<div class="island">
 						<img class="island-main svg" src="images/island.svg">
+					</div>
 
-						<div class="island-impact-container">
-							<div id="island-impact" class="island-impact">
-								<div class="island-meteor-impact impact-1"></div>
+					<div class="island-impact-container">
+						<div id="island-impact" class="island-impact">
+							<div class="island-meteor-impact impact-1"></div>
 
-								<div class="island-shield">	
-									<div class="island-shield-impact impact-1"></div>
-								</div>
+							<div class="island-shield">	
+								<div class="island-shield-impact impact-1"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="introduction">
-					<div>
-						<div class="text">
-							<h1>
-								Hi, I'm <span class="highlight">Swen</span><br>
-								<span class="subtitle">This is my creative home</span>
-							</h1>
-						</div>
-							
-						<a class="button skewed-button icon-button icon-button-right large view-my-work-button" href="#websites">
-							<span>View my work</span>
+				<div class="section-wrap">
+					
+					<div class="introduction">
+						<div>
+							<div class="text">
+								<h1>
+									Hi, I'm <span class="highlight">Swen</span><br>
+									<span class="subtitle">This is my creative home</span>
+								</h1>
+							</div>
+								
+							<a class="button skewed-button icon-button icon-button-right large view-my-work-button" href="#about">
+								<span>View my work</span>
 
-							<svg class="svg-icon" role="img" width="20" height="20">
-								<use xlink:href="images/svg-sprite.svg#arrow"></use>
-							</svg>
-						</a>
+								<svg class="svg-icon" role="img" width="20" height="20">
+									<use xlink:href="images/svg-sprite.svg#arrow"></use>
+								</svg>
+							</a>
+						</div>
 					</div>
+
+				</div>
+
+			</section>
+
+			<section id="about" class="page-section about">
+
+				<div class="section-wrap">
+
+					<h1>About</h1>
+
+					<div class="about-content">
+
+						<div class="about-info">
+							<div class="info text">
+								<h3>Info</h3>
+			
+								<ul>
+									<li>
+										<span>Name: </span>
+										<span>Swen</span>
+									</li>
+
+									<li>
+										<span>Age: </span>
+										<span>25</span>
+									</li>
+
+									<li>
+										<span>Gender: </span>
+										<span>Male</span>
+									</li>
+
+									<li>
+										<span>Born: </span>
+										<span>Netherlands</span>
+									</li>
+
+									<li>
+										<span>Languages: </span>
+										<span>English, Dutch</span>
+									</li>
+								</ul>
+
+								<div class="line right"></div>	
+							</div>
+							
+							<div class="likes text">
+								<h3>Likes</h3>
+			
+								<ul>
+									<li>Web Development</li>
+									<li>Music Production</li>
+									<li>Video Games</li>
+									<li>Manga</li>
+									<li>History</li>
+								</ul>
+
+								<div class="line right up"></div>	
+							</div>
+						</div>
+
+						<div class="about-tools text">
+							<h3>Tools</h3>
+
+							<ul class="tools-list text">
+								<li>
+									<svg class="svg-icon" role="img" title="HTML5">
+										<use xlink:href="images/svg-sprite.svg#html5-simple"></use>
+									</svg>
+									<span>HTML5</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="CSS3">
+										<use xlink:href="images/svg-sprite.svg#css3-simple"></use>
+									</svg>
+									<span>CSS3</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="Sass">
+										<use xlink:href="images/svg-sprite.svg#sass-simple"></use>
+									</svg>
+									<span>Sass</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="JavaScript">
+										<use xlink:href="images/svg-sprite.svg#javascript-simple"></use>
+									</svg>
+									<span>JavaScript</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="jQuery">
+										<use xlink:href="images/svg-sprite.svg#jquery-simple"></use>
+									</svg>
+									<span>jQuery</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="PHP">
+										<use xlink:href="images/svg-sprite.svg#php-simple"></use>
+									</svg>
+									<span>PHP</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="MySQL">
+										<use xlink:href="images/svg-sprite.svg#mysql-simple"></use>
+									</svg>
+									<span>MySQL</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="WordPress">
+										<use xlink:href="images/svg-sprite.svg#wordpress-simple"></use>
+									</svg>
+									<span>WordPress</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="Ubuntu">
+										<use xlink:href="images/svg-sprite.svg#ubuntu-simple"></use>
+									</svg>
+									<span>Ubuntu</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="Apache">
+										<use xlink:href="images/svg-sprite.svg#apache-simple"></use>
+									</svg>
+									<span>Apache</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="Git">
+										<use xlink:href="images/svg-sprite.svg#git-simple"></use>
+									</svg>
+									<span>Git</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="Gulp">
+										<use xlink:href="images/svg-sprite.svg#gulp-simple"></use>
+									</svg>
+									<span>Gulp</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="VSCode">
+										<use xlink:href="images/svg-sprite.svg#vscode-simple"></use>
+									</svg>
+									<span>VSCode</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="Photoshop">
+										<use xlink:href="images/svg-sprite.svg#photoshop-simple"></use>
+									</svg>
+									<span>Photoshop</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="Illustrator">
+										<use xlink:href="images/svg-sprite.svg#illustrator-simple"></use>
+									</svg>
+									<span>Illustrator</span>
+								</li>
+
+								<li>
+									<svg class="svg-icon" role="img" title="Ableton Live">
+										<use xlink:href="images/svg-sprite.svg#ableton-simple"></use>
+									</svg>
+									<span>Ableton Live</span>
+								</li>
+							</ul>				
+							
+							<div class="line left"></div>	
+
+						</div>	
+					</div>		
 				</div>
 
 			</section>
 
 			<section id="websites" class="page-section websites">
 
-				<h1>Websites</h1>
+				<div class="section-wrap">
 
-				<div class="webites-list">
+					<h1>Websites</h1>
 
-					<article class="website">	
+					<div class="webites-list">
 
-						<div class="website-portal">
-							<a href="https://nightscribe.net" class="portal" target="_blank" rel="noopener noreferrer">
-								<img class="portal-outer portal-outer-1 svg" src="images/shapes/portal-shape.svg">
-								<img class="portal-outer portal-outer-2 svg" src="images/shapes/portal-shape.svg">
-								<div class="portal-inner">
-									<img src="images/websites/swennet.jpg">
-								</div>
-							</a>
-						</div>
+						<article class="website">	
 
-						<div class="text website-info">
-							<h2>Swennet <span class="separator">&middot;</span> <small><a href="http://swennet.io">swennet.io</a></small></h2>
-	
-							<div class="website-description">
-								<p>You are here right now! This is my personal website, and it's where I show off my work and my skills. It's hosted on Github Pages, so feel free to check out my code on Github by clicking the button below.</p>
-							</div>
-	
-							<footer class="website-footer">
-								<div class="website-tech">
-									<h4>Technologies:</h4>
-
-									<div class="logos">
-										<svg class="svg-icon" role="img" width="28.3" height="40" title="HTML5">
-											<use xlink:href="images/svg-sprite.svg#html5"></use>
-										</svg>
-
-										<svg class="svg-icon" role="img" width="28.3" height="40" title="CSS3">
-											<use xlink:href="images/svg-sprite.svg#css3"></use>
-										</svg>
-
-										<svg class="svg-icon" role="img" width="28.3" height="40" title="JavaScript">
-											<use xlink:href="images/svg-sprite.svg#javascript"></use>
-										</svg>
+							<div class="website-portal">
+								<a href="https://nightscribe.net" class="portal" target="_blank" rel="noopener noreferrer">
+									<img class="portal-outer portal-outer-1 svg" src="images/shapes/portal-shape.svg">
+									<img class="portal-outer portal-outer-2 svg" src="images/shapes/portal-shape.svg">
+									<div class="portal-inner">
+										<img src="images/websites/swennet.jpg">
 									</div>
-								</div>
-
-								<div class="website-links">
-									<a href="https://github.com/Swennet/swennet.github.io" class="button skewed-button icon-button icon-button-left" target="_blank" rel="noopener noreferrer">
-										<span>View on Github</span>
-		
-										<svg class="svg-icon" role="img" width="18" height="18">
-											<use xlink:href="images/svg-sprite.svg#github"></use>
-										</svg>
-									</a>
-								</div>
-							</footer>
-						</div>
-
-						<div class="line left"></div>
-					</article>
-
-					<article class="website">
-						<div class="text website-info">
-							<h2>Nightscribe <span class="separator">&middot;</span> <small><a href="https://nightscribe.net">nightscribe.net</a></small></h2>
-	
-							<div class="website-description">
-								<p>Nightscribe is a community platform for authors and readers. Its focus is on "night" themed fiction, covering various genres such as horror, thriller, mystery, sci-fi and fantasy.</p>
-								<p>Users can sign up and publish their stories, or simply browse the catalog for a good read. Nightscribe's features are very similar to YouTube, in the way that users can rate, favorite, comment and share on stories published by other authors.</p>
+								</a>
 							</div>
-	
-							<footer class="website-footer">
-								<div class="website-tech">
-									<h4>Technologies:</h4>
 
-									<div class="logos">
-										<svg class="svg-icon" role="img" width="28.3" height="40" title="HTML5">
-											<use xlink:href="images/svg-sprite.svg#html5"></use>
-										</svg>
-
-										<svg class="svg-icon" role="img" width="28.3" height="40" title="CSS3">
-											<use xlink:href="images/svg-sprite.svg#css3"></use>
-										</svg>
-
-										<svg class="svg-icon" role="img" width="28.3" height="40" title="JavaScript">
-											<use xlink:href="images/svg-sprite.svg#javascript"></use>
-										</svg>
-
-										<svg class="svg-icon" role="img" width="32" height="32" title="WordPress">
-											<use xlink:href="images/svg-sprite.svg#wordpress"></use>
-										</svg>
-									</div>
-								</div>
-
-								<div class="website-links">
-									<a href="https://nightscribe.net" class="button skewed-button icon-button icon-button-right" target="_blank" rel="noopener noreferrer">
-										<span>Visit website</span>
+							<div class="text website-info">
+								<h2>Swennet <span class="separator">&middot;</span> <small><a href="http://swennet.io">swennet.io</a></small></h2>
 		
-										<svg class="svg-icon" role="img" width="18" height="18">
-											<use xlink:href="images/svg-sprite.svg#arrow"></use>
-										</svg>
-									</a>
+								<div class="website-description">
+									<p>You are here right now! This is my personal website, and it's where I show off my work and my skills. It's hosted on Github Pages, so feel free to check out my code on Github by clicking the button below.</p>
 								</div>
-							</footer>
-						</div>
+		
+								<footer class="website-footer">
+									<div class="website-tech">
+										<h4>Technologies:</h4>
 
-						<div class="website-portal">
-							<a href="https://nightscribe.net" class="portal" target="_blank" rel="noopener noreferrer">
-								<img class="portal-outer portal-outer-1 svg" src="images/shapes/portal-shape.svg">
-								<img class="portal-outer portal-outer-2 svg" src="images/shapes/portal-shape.svg">
-								<div class="portal-inner">
-									<img src="images/websites/nightscribe.jpg">
+										<div class="logos">
+											<svg class="svg-icon" role="img" width="28.3" height="40" title="HTML5">
+												<use xlink:href="images/svg-sprite.svg#html5"></use>
+											</svg>
+
+											<svg class="svg-icon" role="img" width="28.3" height="40" title="CSS3">
+												<use xlink:href="images/svg-sprite.svg#css3"></use>
+											</svg>
+
+											<svg class="svg-icon" role="img" width="28.3" height="40" title="JavaScript">
+												<use xlink:href="images/svg-sprite.svg#javascript"></use>
+											</svg>
+										</div>
+									</div>
+
+									<div class="website-links">
+										<a href="https://github.com/Swennet/swennet.github.io" class="button skewed-button icon-button icon-button-left" target="_blank" rel="noopener noreferrer">
+											<span>View on Github</span>
+			
+											<svg class="svg-icon" role="img" width="18" height="18">
+												<use xlink:href="images/svg-sprite.svg#github"></use>
+											</svg>
+										</a>
+									</div>
+								</footer>
+							</div>
+
+							<div class="line left"></div>
+						</article>
+
+						<article class="website">
+							<div class="text website-info">
+								<h2>Nightscribe <span class="separator">&middot;</span> <small><a href="https://nightscribe.net">nightscribe.net</a></small></h2>
+		
+								<div class="website-description">
+									<p>Nightscribe is a community platform for authors and readers. Its focus is on "night" themed fiction, covering various genres such as horror, thriller, mystery, sci-fi and fantasy.</p>
+									<p>Users can sign up and publish their stories, or simply browse the catalog for a good read. Nightscribe's features are very similar to YouTube, in the way that users can rate, favorite, comment and share on stories published by other authors.</p>
 								</div>
-							</a>
-						</div>
+		
+								<footer class="website-footer">
+									<div class="website-tech">
+										<h4>Technologies:</h4>
 
-						<div class="line right"></div>
-					</article>
-				</div>
+										<div class="logos">
+											<svg class="svg-icon" role="img" width="28.3" height="40" title="HTML5">
+												<use xlink:href="images/svg-sprite.svg#html5"></use>
+											</svg>
 
-			</section>
+											<svg class="svg-icon" role="img" width="28.3" height="40" title="CSS3">
+												<use xlink:href="images/svg-sprite.svg#css3"></use>
+											</svg>
 
-			<section id="about-me" class="page-section about-me">
+											<svg class="svg-icon" role="img" width="28.3" height="40" title="JavaScript">
+												<use xlink:href="images/svg-sprite.svg#javascript"></use>
+											</svg>
 
-				<h1>About Me</h1>
+											<svg class="svg-icon" role="img" width="32" height="32" title="WordPress">
+												<use xlink:href="images/svg-sprite.svg#wordpress"></use>
+											</svg>
+										</div>
+									</div>
 
-				<div class="tools">
+									<div class="website-links">
+										<a href="https://nightscribe.net" class="button skewed-button icon-button icon-button-right" target="_blank" rel="noopener noreferrer">
+											<span>Visit website</span>
+			
+											<svg class="svg-icon" role="img" width="18" height="18">
+												<use xlink:href="images/svg-sprite.svg#arrow"></use>
+											</svg>
+										</a>
+									</div>
+								</footer>
+							</div>
 
-					<h3>Tools</h3>
+							<div class="website-portal">
+								<a href="https://nightscribe.net" class="portal" target="_blank" rel="noopener noreferrer">
+									<img class="portal-outer portal-outer-1 svg" src="images/shapes/portal-shape.svg">
+									<img class="portal-outer portal-outer-2 svg" src="images/shapes/portal-shape.svg">
+									<div class="portal-inner">
+										<img src="images/websites/nightscribe.jpg">
+									</div>
+								</a>
+							</div>
 
-					<ul class="tools-list">
-						<li>
-							<svg class="svg-icon" role="img" title="HTML5">
-								<use xlink:href="images/svg-sprite.svg#html5-simple"></use>
-							</svg>
-							<span>HTML5</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="CSS3">
-								<use xlink:href="images/svg-sprite.svg#css3-simple"></use>
-							</svg>
-							<span>CSS3</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="Sass">
-								<use xlink:href="images/svg-sprite.svg#sass-simple"></use>
-							</svg>
-							<span>Sass</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="JavaScript">
-								<use xlink:href="images/svg-sprite.svg#javascript-simple"></use>
-							</svg>
-							<span>JavaScript</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="jQuery">
-								<use xlink:href="images/svg-sprite.svg#jquery-simple"></use>
-							</svg>
-							<span>jQuery</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="PHP">
-								<use xlink:href="images/svg-sprite.svg#php-simple"></use>
-							</svg>
-							<span>PHP</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="MySQL">
-								<use xlink:href="images/svg-sprite.svg#mysql-simple"></use>
-							</svg>
-							<span>MySQL</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="WordPress">
-								<use xlink:href="images/svg-sprite.svg#wordpress-simple"></use>
-							</svg>
-							<span>WordPress</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="Ubuntu">
-								<use xlink:href="images/svg-sprite.svg#ubuntu-simple"></use>
-							</svg>
-							<span>Ubuntu</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="Apache">
-								<use xlink:href="images/svg-sprite.svg#apache-simple"></use>
-							</svg>
-							<span>Apache</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="Git">
-								<use xlink:href="images/svg-sprite.svg#git-simple"></use>
-							</svg>
-							<span>Git</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="Gulp">
-								<use xlink:href="images/svg-sprite.svg#gulp-simple"></use>
-							</svg>
-							<span>Gulp</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="VSCode">
-								<use xlink:href="images/svg-sprite.svg#vscode-simple"></use>
-							</svg>
-							<span>VSCode</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="Photoshop">
-								<use xlink:href="images/svg-sprite.svg#photoshop-simple"></use>
-							</svg>
-							<span>Photoshop</span>
-						</li>
-
-						<li>
-							<svg class="svg-icon" role="img" title="Illustrator">
-								<use xlink:href="images/svg-sprite.svg#illustrator-simple"></use>
-							</svg>
-							<span>Illustrator</span>
-						</li>
-					</ul>
+							<div class="line right"></div>
+						</article>
+					</div>
 				</div>
 
 			</section>
 
 			<section id="contact" class="page-section contact">
-
-				<h1>Contact</h1>
 
 				<div class="moon-container">
 					<div class="moon">
@@ -356,40 +427,46 @@
 					</div>
 				</div>
 
-				<form id="content-form" class="contact-form" action="#" method="POST">
+				<div class="section-wrap">
 
-					<fieldset>
+					<h1>Contact</h1>
 
-						<div class="fields-container">
-							<div class="field input-field">
-								<div>
-									<label for="name">Name</label>
-	
-									<input name="name" type="text" maxlength="64" placeholder="Your name">
+					<form id="content-form" class="contact-form" action="#" method="POST">
+
+						<fieldset>
+
+							<div class="fields-container">
+								<div class="field input-field">
+									<div>
+										<label for="name">Name</label>
+		
+										<input name="name" type="text" maxlength="64" placeholder="Your name">
+									</div>
+								</div>
+		
+								<div class="field input-field">
+									<div>
+										<label for="name">Email</label>
+		
+										<input name="email" type="email" maxlength="256" placeholder="Your email address">
+									</div>
 								</div>
 							</div>
-	
-							<div class="field input-field">
+
+							<div class="field textarea-field">
 								<div>
-									<label for="name">Email</label>
-	
-									<input name="email" type="email" maxlength="256" placeholder="Your email address">
+									<label>Message</label>
+
+									<textarea></textarea>
 								</div>
 							</div>
-						</div>
 
-						<div class="field textarea-field">
-							<div>
-								<label>Message</label>
+							<button type="submit" class="button skewed-button loading-button"><span>Send Message</span></button>
+						</fieldset>
 
-								<textarea></textarea>
-							</div>
-						</div>
-
-						<button type="submit" class="button skewed-button loading-button"><span>Send Message</span></button>
-					</fieldset>
-
-				</form>
+					</form>
+					
+				</div>
 
 			</section>
 

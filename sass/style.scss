@@ -11,6 +11,11 @@ $link: $textAccent;
 
 $portalColor: #d83075;
 
+/*--------------------------------------------------------------
+>>> Sizes
+--------------------------------------------------------------*/
+
+$maxWidth: 1400px;
 
 /*--------------------------------------------------------------
 >>> Importants
@@ -42,11 +47,11 @@ $portalColor: #d83075;
 >>> Sections
 --------------------------------------------------------------*/
 
-@import 'introduction.scss';
+@import 'home.scss';
+
+@import 'about.scss';
 
 @import 'websites.scss';
-
-@import 'about-me.scss';
 
 @import 'contact.scss';
 

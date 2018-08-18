@@ -1,0 +1,174 @@
+/*--------------------------------------------------------------
+>>> About
+--------------------------------------------------------------*/
+
+.about {
+	margin-bottom: 80px;
+}
+
+.about-content {
+	display: flex;
+	
+	justify-content: space-between;
+
+	.line {
+		width: 110%;
+
+		top: 47px;
+		left: 0;
+
+		&.left {
+			left: auto;
+			right: 0;
+		}
+	}
+}
+
+.about-info {
+	display: flex;
+
+	flex-direction: column;
+
+	min-width: 300px;
+	max-width: 30vw;
+
+	>div {
+		width: 100%;
+
+		position: relative;
+	}
+
+	h3 {
+		margin-left: 2px;
+		margin-bottom: 2rem;
+	}
+
+	li {
+		height: 36px;
+		line-height: 36px;
+
+		padding-left: 3px;
+
+		color: rgba(white, 0.75);
+		font-size: 0.8rem;
+
+		border-bottom: 1px solid rgba(white, 0.1);
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+
+	.info {
+		margin-bottom: 40px;
+
+		li {
+			display: flex;
+
+			span {
+				width: 50%;
+
+				display: inline-block;
+				text-align: left;
+			}
+		}
+	}
+
+	.likes {
+		margin-top: auto;
+		align-self: flex-end;
+
+		li {
+			padding-left: 28px;
+
+			position: relative;
+
+			&:before {
+				content: '';
+
+				position: absolute;
+				top: 52%;
+				left: 6px;
+
+				transform: translateY(-50%) rotate(45deg);
+
+				width: 6px;
+				height: 6px;
+
+				background: rgba(white, 0.6);;
+			}
+		}
+	}
+
+}
+
+
+/*--------------------------------------------------------------
+>>> Tools
+--------------------------------------------------------------*/
+
+.about-tools {
+	width: 352px;
+	
+	position: relative;
+	
+	h3 {
+		margin-left: 46px;
+		margin-bottom: 1.4rem;
+	}
+
+	.line {
+		width: calc(110% - 57px);
+	}
+}
+
+.tools-list {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+
+	list-style: none;
+
+	width: 100%;
+
+	position: relative;
+	right: -30px;
+
+	li {
+		flex: 1 0 33.333%;
+
+		padding: 20px 0;
+
+		display: flex;
+		flex-direction: column;
+
+		text-align: center;
+
+		opacity: 0.75;
+
+		transition: opacity 0.3s;
+	
+		svg {
+			max-width: 40px;
+			max-height: 40px;
+			
+			margin: 0 auto 12px auto;
+
+			filter: drop-shadow(0px 0px 3px rgba(white, 0));
+
+			transition: filter 0.3s;
+		}
+
+		span {
+			font-size: 0.6rem;
+		}
+
+		&:hover {
+			opacity: 1;
+
+			svg {
+				filter: drop-shadow(0px 0px 3px rgba(white, 0.25));
+			}
+		}
+	}
+}

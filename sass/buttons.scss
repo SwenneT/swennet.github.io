@@ -23,7 +23,7 @@
 	font-family: 'Orbitron', sans-serif;
 	color: rgba(#FFFFFF, 0.9);
 	font-size: 0.6rem;
-	letter-spacing: 0.1rem;
+	letter-spacing: 0.12rem;
 
 	text-decoration: none;
 	text-transform: uppercase;
@@ -201,8 +201,6 @@
 }
 
 .view-my-work-button {
-	font-size: 0.7rem;
-
 	use {
 		transition: transform 0.3s;
 		transform-origin: 10px 10px;
