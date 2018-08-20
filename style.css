@@ -37,7 +37,9 @@ table { border-collapse: collapse; border-spacing: 0; }
 /*--------------------------------------------------------------
 >>> Main
 --------------------------------------------------------------*/
-body { font-family: 'Orbitron', sans-serif; font-size: 16px; color: rgba(255, 255, 255, 0.9); text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2); background: #3d2448; background: -webkit-gradient(linear, left top, left bottom, from(#1e253f), color-stop(150vh, #3d2448)); background: -webkit-linear-gradient(#1e253f, #3d2448 150vh); background: linear-gradient(#1e253f, #3d2448 150vh); }
+body { font-family: 'Orbitron', sans-serif; font-size: 16px; color: rgba(255, 255, 255, 0.9); text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2); background: #3d2448; }
+
+body.scrolling { background: white; }
 
 .svg-icon { fill: white; }
 
@@ -53,7 +55,7 @@ main { min-height: 2000px; }
 
 .page-section { min-height: 100vh; width: 100%; padding: 0 8%; padding-top: 60px !important; position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 
-.page-section h1 { color: white; font-size: 2.6rem; text-transform: uppercase; position: relative; left: -1px; margin: 4rem 0 6rem 0; }
+.page-section h1 { margin: 4rem 0 6rem 0; position: relative; left: -1px; color: white; font-size: 2.6rem; text-transform: uppercase; }
 
 .section-wrap { width: 100%; height: 100%; max-width: 1400px; margin: 0 auto; position: relative; }
 
@@ -111,14 +113,12 @@ main { min-height: 2000px; }
 /*--------------------------------------------------------------
 >>> Header
 --------------------------------------------------------------*/
-header { width: 100%; height: 60px; padding: 0 24px; position: fixed; top: 0; left: 0; right: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; z-index: 1000; }
-
-header:before { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.05)), to(rgba(30, 37, 63, 0.1))); background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.05), rgba(30, 37, 63, 0.1)); background: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(30, 37, 63, 0.1)); border-bottom: 1px solid rgba(255, 255, 255, 0.1); opacity: 0; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; z-index: -1; }
+header { width: 100%; height: 60px; padding: 0 24px; position: fixed; top: 0; left: 0; right: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; z-index: 1000; background: transparent; }
 
 /*--------------------------------------------------------------
 >>> Header Scrolled
 --------------------------------------------------------------*/
-body.scrolled header:before { width: 100%; opacity: 1; }
+body.scrolled header { background: #1e253f; }
 
 /*--------------------------------------------------------------
 >>> Logo

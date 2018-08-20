@@ -11,7 +11,11 @@ body {
 	text-shadow: 2px 2px 0px rgba(black, 0.2);
 
 	background: $spaceLight;
-	background: linear-gradient($spaceDark, $spaceLight 150vh);
+	//background: linear-gradient($spaceDark, $spaceLight 150vh);
+
+	&.scrolling {
+		background: white;
+	}
 }
 
 .svg-icon {
@@ -72,13 +76,15 @@ main {
 	display: flex;
 
 	h1 {
-		color: white;
-		font-size: 2.6rem;
-		text-transform: uppercase;
+		margin: 4rem 0 6rem 0;
+		
 		position: relative;
 		left: -1px;
 
-		margin: 4rem 0 6rem 0;
+		color: white;
+		font-size: 2.6rem;
+
+		text-transform: uppercase;
 	}
 }
 
