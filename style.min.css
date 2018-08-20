@@ -7,7 +7,7 @@ blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
 body{font-family:'Orbitron',sans-serif;font-size:16px;color:rgba(255,255,255,0.9);text-shadow:2px 2px 0 rgba(0,0,0,0.2);background:#3d2448}
-body.scrolling{background:white}
+body.scrolling *{-webkit-animation-play-state:paused !important;animation-play-state:paused !important}
 .svg-icon{fill:white}
 .separator{margin:0 12px}
 #particles-js{height:400vh;position:absolute;top:0;left:0;right:0;z-index:-1;background:transparent}

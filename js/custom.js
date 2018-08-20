@@ -150,10 +150,10 @@
 
 	}());
 
-	$.fn.scrollStopped = function(callback) {
+	$.fn.scrollStopped = function( callback) {
 		var that = this, $this = $(that);
 		
-		$this.scroll( $.debounce( 50, function(ev) {
+		$this.scroll( $.debounce( 100, function(ev) {
 			clearTimeout($this.data('scrollTimeout'));
 			$this.data('scrollTimeout', setTimeout(callback.bind(that), 50, ev));
 			console.log('testest');
@@ -166,7 +166,7 @@
 		//window.pJSDom[0].pJS.particles.move.enable = false;
 	}));
 
-	$(window).scrollStopped( $.debounce( 100, function() {
+	$(window).scrollStopped( $.throttle( 100, function() {
 		$('body').removeClass('scrolling');
 
 		console.log('test');

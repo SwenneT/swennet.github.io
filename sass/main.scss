@@ -14,7 +14,9 @@ body {
 	//background: linear-gradient($spaceDark, $spaceLight 150vh);
 
 	&.scrolling {
-		background: white;
+		* {
+			animation-play-state: paused !important;
+		}
 	}
 }
 
