@@ -119,7 +119,7 @@
 	( function fallingMeteors() {
 
 		var	numMeteors = 5,
-			maxTime = 1000,
+			maxTime = 10000,
 			minTime = 500,
 			randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);
 
