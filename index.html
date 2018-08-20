@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="mobile">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,7 +56,7 @@
 
 			<section id="home" class="page-section home">
 
-				<div class="island-container">
+				<div class="island-container animation paused">
 					<div class="island">
 						<img class="island-main svg" src="images/island.svg">
 					</div>
@@ -289,7 +289,7 @@
 
 						<article class="website">	
 
-							<div class="website-portal">
+							<div class="website-portal animation paused">
 								<a href="https://nightscribe.net" class="portal" target="_blank" rel="noopener noreferrer">
 									<img class="portal-outer portal-outer-1 svg" src="images/shapes/portal-shape.svg">
 									<img class="portal-outer portal-outer-2 svg" src="images/shapes/portal-shape.svg">
@@ -384,7 +384,7 @@
 								</footer>
 							</div>
 
-							<div class="website-portal">
+							<div class="website-portal animation paused">
 								<a href="https://nightscribe.net" class="portal" target="_blank" rel="noopener noreferrer">
 									<img class="portal-outer portal-outer-1 svg" src="images/shapes/portal-shape.svg">
 									<img class="portal-outer portal-outer-2 svg" src="images/shapes/portal-shape.svg">
@@ -403,7 +403,7 @@
 
 			<section id="contact" class="page-section contact">
 
-				<div class="moon-container">
+				<div class="moon-container animation paused">
 					<div class="moon">
 						<div class="moon-glow"></div>
 
@@ -413,8 +413,7 @@
 					</div>
 				</div>
 
-				<div class="earth-container">
-
+				<div class="earth-container animation paused">
 					<div class="earth">
 						<div class="earth-glow"></div>
 
@@ -480,14 +479,11 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/jquery.ba-throttle-debounce.js"></script>
-	<script src="js/custom.js"></script>
 	<script src="js/particles.js"></script>
+	<script src="js/custom.js"></script>
 
 	<script>
-		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-		particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {
-			console.log('callback - particles.js config loaded');
-		});
+	
 	</script>
 
 	<div style="height: 0px;">

@@ -12,8 +12,19 @@ body {
 
 	background: $spaceLight;
 	//background: linear-gradient($spaceDark, $spaceLight 150vh);
+	background-image: url($backgroundGradient);
+	background-size: auto 150vh;
+	background-repeat: repeat-x;
 
 	&.scrolling {
+		* {
+			animation-play-state: paused !important;
+		}
+	}
+}
+
+.animation {
+	&.paused {
 		* {
 			animation-play-state: paused !important;
 		}
@@ -40,6 +51,9 @@ body {
 
 	background: transparent;
 
+	opacity: 0;
+	animation: fadeIn 2s linear forwards;
+
 	canvas {
 		width: 100%;
 		height: 100%;
@@ -59,6 +73,16 @@ body {
 		bottom: 0;
 
 		background: url($starGradient) repeat;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
 	}
 }
 
