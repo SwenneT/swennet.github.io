@@ -1,15 +1,15 @@
 $starGradient: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1000" preserveAspectRatio="none">
 <linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".5" y1="1000" x2=".5">
-  <stop offset="0" stop-color="#3d2448"/>
-  <stop offset="1" stop-color="#3d2448" stop-opacity="0"/>
+  <stop offset="0" stop-color="%233d2448"/>
+  <stop offset="1" stop-color="%233d2448" stop-opacity="0"/>
 </linearGradient>
 <path fill="url(#a)" d="M0 0h1v1000H0z"/>
 </svg>';
 
 $backgroundGradient: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1000" preserveAspectRatio="none">
 <linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".5" y1="1000" x2=".5">
-  <stop offset="0" stop-color="#3d2448"/>
-  <stop offset="1" stop-color="#1e253f"/>
+  <stop offset="0" stop-color="%233d2448"/>
+  <stop offset="1" stop-color="%231e253f"/>
 </linearGradient>
-<path fill="url(#a)" d="M0 0h1v1000H0z"/>
+<path fill="url(%23a)" d="M0 0h1v1000H0z"/>
 </svg>';
