@@ -16,6 +16,8 @@
 	align-items: center;
 
 	pointer-events: none;
+
+	z-index: -1;
 }
 
 .island,
@@ -270,125 +272,5 @@ $impactSpeed: $impactMeteorSpeed - 0.2s;
 	to {
 		transform: scale(1);
 		opacity: 0;
-	}
-}
-
-
-/*--------------------------------------------------------------
->>> Meteors
---------------------------------------------------------------*/
-
-$meteorSpeed: 2.4s;
-
-.meteors {
-	width: 100%;
-	height: 300vh;
-
-	position: absolute;
-
-	overflow: hidden;
-
-	opacity: 0.6;
-}
-
-.island-meteor {
-	width: 1vh;
-	height: 1vh;
-
-	position: absolute;
-
-	opacity: 0;
-
-	animation-delay: 5s;
-
-	&:after {
-		content: '';
-
-		width: 100%;
-		height: 100%;
-
-		position: absolute;
-		top: 0;
-		left: 0;
-		
-		border-radius: 999px;
-		
-		transform: rotate(-30deg) scaleX(1) scaleY(3);
-
-		background: linear-gradient(transparent, white);
-		box-shadow: 0 0 20px white;
-	}
-
-	&:before {
-		content: '';
-
-		width: 140%;
-		height: 200vh;
-
-		position: absolute;
-		bottom: 0;
-
-		background: linear-gradient(transparent, #60cdff);
-
-		box-shadow: 0 0 100px #60cdff;
-
-		border-radius: 0px 0px 999px 999px;
-
-		transform: rotate(-30deg);
-		
-		transform-origin: 50% 99.94%;
-
-		animation-delay: 5s;
-	}
-
-	&.meteor-1 {
-		top: 200vh;
-		right: -30vw;
-
-		&.fall {
-			animation: meteorFall $meteorSpeed ease-out forwards;
-
-			&:before {
-				animation: meteorFallTail $meteorSpeed ease-out forwards;
-			}
-		}
-	}
-
-	&.meteor-2 {
-		top: 150vh;
-		right: -25vw;		
-
-		&.fall {
-			animation: meteorFall $meteorSpeed ease-out forwards;
-	
-			&:before {
-				animation: meteorFallTail $meteorSpeed ease-out forwards;
-			}
-		}
-	}
-}
-
-@keyframes meteorFall {
-	0% {
-		transform: translate(-116vh, -200vh);
-		opacity: 1;
-	}
-
-	100% {
-		transform: translate(0, 0);
-		opacity: 0;
-	}
-}
-
-@keyframes meteorFallTail {
-	0% {
-		opacity: 1;
-		transform: rotate(-30deg) scaleX(1);
-	}
-
-	100% {
-		opacity: 0;
-		transform: rotate(-30deg) scaleX(0.1);
-		background: white;
 	}
 }

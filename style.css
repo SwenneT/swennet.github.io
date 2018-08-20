@@ -356,9 +356,86 @@ body.scrolled header { background: #1e253f; }
 >>> Illustrations
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+>>> Meteors
+--------------------------------------------------------------*/
+.meteors { width: 100%; height: 300vh; position: absolute; overflow: hidden; opacity: 0.6; z-index: -1; }
+
+.meteors.front { z-index: 0; }
+
+.island-meteor { width: 1vh; height: 1vh; position: absolute; opacity: 0; }
+
+.island-meteor:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; border-radius: 999px; -webkit-transform: rotate(-30deg) scaleX(1) scaleY(3); -ms-transform: rotate(-30deg) scaleX(1) scaleY(3); transform: rotate(-30deg) scaleX(1) scaleY(3); background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white)); background: -webkit-linear-gradient(transparent, white); background: linear-gradient(transparent, white); -webkit-box-shadow: 0 0 20px white; box-shadow: 0 0 20px white; }
+
+.island-meteor:before { content: ''; width: 140%; height: 200vh; position: absolute; bottom: 0; background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#60cdff)); background: -webkit-linear-gradient(transparent, #60cdff); background: linear-gradient(transparent, #60cdff); -webkit-box-shadow: 0 0 100px #60cdff; box-shadow: 0 0 100px #60cdff; border-radius: 0px 0px 999px 999px; -webkit-transform: rotate(-30deg); -ms-transform: rotate(-30deg); transform: rotate(-30deg); -webkit-transform-origin: 50% 99.94%; -ms-transform-origin: 50% 99.94%; transform-origin: 50% 99.94%; -webkit-animation-delay: 5s; animation-delay: 5s; }
+
+.island-meteor.fall { -webkit-animation: meteorFall 2.4s ease-out forwards; animation: meteorFall 2.4s ease-out forwards; }
+
+.island-meteor.fall:before { -webkit-animation: meteorFallTail 2.4s ease-out forwards; animation: meteorFallTail 2.4s ease-out forwards; }
+
+.island-meteor.meteor-1 { top: 150vh; right: -25vw; }
+
+.island-meteor.meteor-2 { top: 200vh; right: -30vw; }
+
+.island-meteor.meteor-3 { top: 100vh; right: -30vw; }
+
+.island-meteor.meteor-4 { top: 300vh; right: -40vw; }
+
+.island-meteor.meteor-4.fall { -webkit-animation-name: meteorFall2; animation-name: meteorFall2; -webkit-animation-duration: 3.6s; animation-duration: 3.6s; }
+
+.island-meteor.meteor-5 { top: 400vh; right: -45vw; }
+
+.island-meteor.meteor-5.fall { -webkit-animation-name: meteorFall3; animation-name: meteorFall3; -webkit-animation-duration: 4.8s; animation-duration: 4.8s; }
+
+@-webkit-keyframes meteorFall { 0% { -webkit-transform: translate(-116vh, -200vh); transform: translate(-116vh, -200vh);
+    opacity: 1; }
+  100% { -webkit-transform: translate(0, 0); transform: translate(0, 0);
+    opacity: 0; } }
+
+@keyframes meteorFall { 0% { -webkit-transform: translate(-116vh, -200vh); transform: translate(-116vh, -200vh);
+    opacity: 1; }
+  100% { -webkit-transform: translate(0, 0); transform: translate(0, 0);
+    opacity: 0; } }
+
+@-webkit-keyframes meteorFall2 { 0% { -webkit-transform: translate(-174vh, -300vh); transform: translate(-174vh, -300vh);
+    opacity: 1; }
+  100% { -webkit-transform: translate(0, 0); transform: translate(0, 0);
+    opacity: 0; } }
+
+@keyframes meteorFall2 { 0% { -webkit-transform: translate(-174vh, -300vh); transform: translate(-174vh, -300vh);
+    opacity: 1; }
+  100% { -webkit-transform: translate(0, 0); transform: translate(0, 0);
+    opacity: 0; } }
+
+@-webkit-keyframes meteorFall3 { 0% { -webkit-transform: translate(-232vh, -400vh); transform: translate(-232vh, -400vh);
+    opacity: 1; }
+  100% { -webkit-transform: translate(0, 0); transform: translate(0, 0);
+    opacity: 0; } }
+
+@keyframes meteorFall3 { 0% { -webkit-transform: translate(-232vh, -400vh); transform: translate(-232vh, -400vh);
+    opacity: 1; }
+  100% { -webkit-transform: translate(0, 0); transform: translate(0, 0);
+    opacity: 0; } }
+
+@-webkit-keyframes meteorFallTail { 0% { opacity: 1;
+    -webkit-transform: rotate(-30deg) scaleX(1);
+            transform: rotate(-30deg) scaleX(1); }
+  100% { opacity: 0;
+    -webkit-transform: rotate(-30deg) scaleX(0.1);
+            transform: rotate(-30deg) scaleX(0.1);
+    background: white; } }
+
+@keyframes meteorFallTail { 0% { opacity: 1;
+    -webkit-transform: rotate(-30deg) scaleX(1);
+            transform: rotate(-30deg) scaleX(1); }
+  100% { opacity: 0;
+    -webkit-transform: rotate(-30deg) scaleX(0.1);
+            transform: rotate(-30deg) scaleX(0.1);
+    background: white; } }
+
+/*--------------------------------------------------------------
 >>> Island
 --------------------------------------------------------------*/
-.island-container { width: 100%; height: 100vh; position: absolute; top: 0; right: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; overflow: hidden; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; pointer-events: none; }
+.island-container { width: 100%; height: 100vh; position: absolute; top: 0; right: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; overflow: hidden; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; pointer-events: none; z-index: -1; }
 
 .island, .island-impact-container { width: 100%; height: 100%; position: absolute; max-width: 1400px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; margin-left: auto; margin-right: auto; left: 0; right: 0; }
 
@@ -472,55 +549,6 @@ body.scrolled header { background: #1e253f; }
     opacity: 0.3; }
   to { -webkit-transform: scale(1); transform: scale(1);
     opacity: 0; } }
-
-/*--------------------------------------------------------------
->>> Meteors
---------------------------------------------------------------*/
-.meteors { width: 100%; height: 300vh; position: absolute; overflow: hidden; opacity: 0.6; }
-
-.island-meteor { width: 1vh; height: 1vh; position: absolute; opacity: 0; -webkit-animation-delay: 5s; animation-delay: 5s; }
-
-.island-meteor:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; border-radius: 999px; -webkit-transform: rotate(-30deg) scaleX(1) scaleY(3); -ms-transform: rotate(-30deg) scaleX(1) scaleY(3); transform: rotate(-30deg) scaleX(1) scaleY(3); background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white)); background: -webkit-linear-gradient(transparent, white); background: linear-gradient(transparent, white); -webkit-box-shadow: 0 0 20px white; box-shadow: 0 0 20px white; }
-
-.island-meteor:before { content: ''; width: 140%; height: 200vh; position: absolute; bottom: 0; background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#60cdff)); background: -webkit-linear-gradient(transparent, #60cdff); background: linear-gradient(transparent, #60cdff); -webkit-box-shadow: 0 0 100px #60cdff; box-shadow: 0 0 100px #60cdff; border-radius: 0px 0px 999px 999px; -webkit-transform: rotate(-30deg); -ms-transform: rotate(-30deg); transform: rotate(-30deg); -webkit-transform-origin: 50% 99.94%; -ms-transform-origin: 50% 99.94%; transform-origin: 50% 99.94%; -webkit-animation-delay: 5s; animation-delay: 5s; }
-
-.island-meteor.meteor-1 { top: 200vh; right: -30vw; }
-
-.island-meteor.meteor-1.fall { -webkit-animation: meteorFall 2.4s ease-out forwards; animation: meteorFall 2.4s ease-out forwards; }
-
-.island-meteor.meteor-1.fall:before { -webkit-animation: meteorFallTail 2.4s ease-out forwards; animation: meteorFallTail 2.4s ease-out forwards; }
-
-.island-meteor.meteor-2 { top: 150vh; right: -25vw; }
-
-.island-meteor.meteor-2.fall { -webkit-animation: meteorFall 2.4s ease-out forwards; animation: meteorFall 2.4s ease-out forwards; }
-
-.island-meteor.meteor-2.fall:before { -webkit-animation: meteorFallTail 2.4s ease-out forwards; animation: meteorFallTail 2.4s ease-out forwards; }
-
-@-webkit-keyframes meteorFall { 0% { -webkit-transform: translate(-116vh, -200vh); transform: translate(-116vh, -200vh);
-    opacity: 1; }
-  100% { -webkit-transform: translate(0, 0); transform: translate(0, 0);
-    opacity: 0; } }
-
-@keyframes meteorFall { 0% { -webkit-transform: translate(-116vh, -200vh); transform: translate(-116vh, -200vh);
-    opacity: 1; }
-  100% { -webkit-transform: translate(0, 0); transform: translate(0, 0);
-    opacity: 0; } }
-
-@-webkit-keyframes meteorFallTail { 0% { opacity: 1;
-    -webkit-transform: rotate(-30deg) scaleX(1);
-            transform: rotate(-30deg) scaleX(1); }
-  100% { opacity: 0;
-    -webkit-transform: rotate(-30deg) scaleX(0.1);
-            transform: rotate(-30deg) scaleX(0.1);
-    background: white; } }
-
-@keyframes meteorFallTail { 0% { opacity: 1;
-    -webkit-transform: rotate(-30deg) scaleX(1);
-            transform: rotate(-30deg) scaleX(1); }
-  100% { opacity: 0;
-    -webkit-transform: rotate(-30deg) scaleX(0.1);
-            transform: rotate(-30deg) scaleX(0.1);
-    background: white; } }
 
 /*--------------------------------------------------------------
 >>> Animation

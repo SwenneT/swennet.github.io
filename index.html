@@ -25,9 +25,15 @@
 <body>
 	<div id="particles-js"></div>
 
-	<div id="meteors" class="meteors">		
+	<div class="meteors">
 		<div id="meteor-1" class="island-meteor meteor-1"></div>
 		<div id="meteor-2" class="island-meteor meteor-2"></div>
+		<div id="meteor-3" class="island-meteor meteor-3"></div>
+	</div>
+
+	<div class="meteors front">
+		<div id="meteor-4" class="island-meteor meteor-4"></div>
+		<div id="meteor-5" class="island-meteor meteor-5"></div>
 	</div>
 
 	<div id="app">
@@ -53,7 +59,6 @@
 		</header>
 
 		<main id="main">
-
 			<section id="home" class="page-section home">
 
 				<div class="island-container animation paused">
@@ -478,8 +483,12 @@
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/jquery.ba-throttle-debounce.js"></script>
+	<script src="js/jquery-ba-throttle-debounce.js"></script>
+	<script src="js/jquery-detect-mobile-browser.js"></script>
+	<script src="js/jquery-near-viewport.min.js"></script>
+
 	<script src="js/particles.js"></script>
+
 	<script src="js/custom.js"></script>
 
 	<script>
