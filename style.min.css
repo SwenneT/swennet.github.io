@@ -14,10 +14,10 @@ body.scrolling *{-webkit-animation-play-state:paused !important;animation-play-s
 #particles-js{height:100%;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background:transparent;opacity:0;-webkit-animation:fadeIn 2s linear forwards;animation:fadeIn 2s linear forwards}
 #particles-js canvas{width:100%;height:100%;background:transparent}
 #particles-js:after{content:'';height:300vh;width:100%;position:absolute;left:0;right:0;bottom:0;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1000" preserveAspectRatio="none">\a<linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".5" y1="1000" x2=".5">\a <stop offset="0" stop-color="%233d2448"/>\a <stop offset="1" stop-color="%233d2448" stop-opacity="0"/>\a</linearGradient>\a<path fill="url(#a)" d="M0 0h1v1000H0z"/>\a</svg>') repeat}
-html.mobile #particles-js{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);background:url(images/stars.svg) repeat !important;opacity:.2}
+html.mobile #particles-js{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);background:url(images/stars.svg) repeat !important;-webkit-animation-name:fadeInMobile;animation-name:fadeInMobile}
 .page-section{width:100%;min-height:100vh;padding:0 8%;padding-bottom:60px !important;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .page-section h1{margin:2rem 0 3rem 0;position:relative;left:-1px;font-size:2.2rem;color:white;text-transform:uppercase}
-.section-wrap{width:100%;height:100%;max-width:1400px;margin:0 auto;position:relative}
+.section-wrap{width:100%;max-width:1400px;margin:0 auto;position:relative}
 .line{width:100%;height:2px;position:absolute;top:55px;background:white;pointer-events:none;opacity:.1}
 .text{color:rgba(255,255,255,0.9);letter-spacing:.09rem}
 .text h1,.text h2,.text h3{letter-spacing:normal !important}
@@ -30,7 +30,7 @@ html.mobile #particles-js{-webkit-transform:translate3d(0,0,0);transform:transla
 .text p+p{margin-top:1.2rem}
 .text a:not(.button){color:#ff417b;-webkit-transition:text-shadow .3s,-webkit-filter .3s;transition:text-shadow .3s,-webkit-filter .3s;transition:text-shadow .3s,filter .3s;transition:text-shadow .3s,filter .3s,-webkit-filter .3s}
 .text a:not(.button):hover,.text a:not(.button):focus{-webkit-filter:hue-rotate(-30deg);filter:hue-rotate(-30deg);text-shadow:0 0 2px rgba(255,65,123,0.6)}
-header{width:100%;padding:12px 0;position:fixed;bottom:0;left:0;right:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;z-index:1000;background:#1e253f}
+header{width:100%;padding:10px 0;position:fixed;bottom:0;left:0;right:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;z-index:1000;background:#1e253f}
 body.scrolled header{background:#1e253f}
 .logo{display:none}
 .navigation{height:100%;width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
@@ -89,7 +89,7 @@ body.scrolled header{background:#1e253f}
 #crystal1{-webkit-animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95)}
 #crystal2{-webkit-animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);animation:crystalMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);-webkit-animation-delay:-1s;animation-delay:-1s}
 .island-impact-container{margin-left:auto;margin-right:auto;left:0;right:0}
-.island-impact{width:77vh;height:66vh;position:relative;top:10vh;right:0;-webkit-animation:islandMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);animation:islandMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);-webkit-animation-delay:-.5s;animation-delay:-.5s}
+.island-impact{width:46.667vh;height:40vh;position:relative;bottom:calc(60px + 5vh);right:4vw;-webkit-animation:islandMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);animation:islandMove 8s infinite cubic-bezier(0.445,0.05,0.55,0.95);-webkit-animation-delay:-.5s;animation-delay:-.5s}
 .island-impact.impact .island-meteor-impact{-webkit-animation:meteorImpact .5s ease-out forwards;animation:meteorImpact .5s ease-out forwards}
 .island-impact.impact .island-meteor-impact:after{-webkit-animation:meteorExplode .5s ease forwards;animation:meteorExplode .5s ease forwards}
 .island-impact.impact .island-meteor-impact:before{-webkit-animation:meteorTail .5s ease-out forwards;animation:meteorTail .5s ease-out forwards}
@@ -98,7 +98,7 @@ body.scrolled header{background:#1e253f}
 .island-meteor-impact{width:2vh;height:2vh;position:absolute;top:7vh;left:16vh;opacity:0}
 .island-meteor-impact:after{content:'';width:100%;height:100%;position:absolute;top:0;left:0;border-radius:999px;-webkit-transform:rotate(-30deg) scaleX(1) scaleY(3);-ms-transform:rotate(-30deg) scaleX(1) scaleY(3);transform:rotate(-30deg) scaleX(1) scaleY(3);background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(white));background:-webkit-linear-gradient(transparent,white);background:linear-gradient(transparent,white)}
 .island-meteor-impact:before{content:'';width:140%;height:100vh;position:absolute;bottom:0;background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(#60cdff));background:-webkit-linear-gradient(transparent,#60cdff);background:linear-gradient(transparent,#60cdff);-webkit-box-shadow:0 0 100px #60cdff;box-shadow:0 0 100px #60cdff;border-radius:0 0 999px 999px;-webkit-transform:rotate(-30deg);-ms-transform:rotate(-30deg);transform:rotate(-30deg);-webkit-transform-origin:50% 99.6%;-ms-transform-origin:50% 99.6%;transform-origin:50% 99.6%}
-.island-shield{width:100%;height:37.5vh;position:absolute;top:0;left:0;border-radius:9999px 9999px 0 0;overflow:hidden}
+.island-shield{width:100%;height:22.7273vh;position:absolute;top:0;left:0;border-radius:9999px 9999px 0 0;overflow:hidden}
 .island-shield-impact{width:140vh;height:140vh;position:absolute;border-radius:9999px;-webkit-box-shadow:inset 0 0 300px #d2dcff;box-shadow:inset 0 0 300px #d2dcff;opacity:0;-webkit-transform:scale(0.01);-ms-transform:scale(0.01);transform:scale(0.01);-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center}
 html.mobile .meteor-1,html.mobile .meteor-3,html.mobile .meteor-5{display:none}
 .meteors{width:100%;height:300vh;position:absolute;overflow:hidden;opacity:.6;z-index:-1}
@@ -207,7 +207,9 @@ header{height:60px;padding:0 24px;top:0;background:transparent}
 .introduction>div .button{margin-right:34px}
 .introduction h1 .subtitle{font-size:1.8rem}
 .island,.island-impact-container{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
-.island-main{height:66vh;top:10vh}
+.island-main{height:66vh;top:10vh;bottom:auto}
+.island-impact{width:77vh;height:66vh;top:10vh;botttom:auto}
+.island-shield{height:37.5vh}
 .about-content .line{width:110%;left:0}
 .about-content .line.left{left:auto;right:0}
 .about-content{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
@@ -223,6 +225,10 @@ header{height:60px;padding:0 24px;top:0;background:transparent}
 to{opacity:1}
 }@keyframes fadeIn{from{opacity:0}
 to{opacity:1}
+}@-webkit-keyframes fadeInMobile{from{opacity:0}
+to{opacity:.5}
+}@keyframes fadeInMobile{from{opacity:0}
+to{opacity:.5}
 }@-webkit-keyframes islandMove{0%{-webkit-transform:translateY(0) rotate(0.001deg);transform:translateY(0) rotate(0.001deg)}
 50%{-webkit-transform:translateY(-1vh) rotate(0.001deg);transform:translateY(-1vh) rotate(0.001deg)}
 100%{-webkit-transform:translateY(0) rotate(0.001deg);transform:translateY(0) rotate(0.001deg)}

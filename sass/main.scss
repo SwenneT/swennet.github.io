@@ -83,7 +83,7 @@ html.mobile {
 		transform: translate3d(0,0,0);
 		background: url(images/stars.svg) repeat !important;
 
-		opacity: 0.2;
+		animation-name: fadeInMobile;
 	}
 }
 
@@ -94,6 +94,16 @@ html.mobile {
 
 	to {
 		opacity: 1;
+	}
+}
+
+@keyframes fadeInMobile {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 0.5;
 	}
 }
 
@@ -133,7 +143,6 @@ html.mobile {
 
 .section-wrap {
 	width: 100%;
-	height: 100%;
 
 	max-width: $maxWidth;
 
