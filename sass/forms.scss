@@ -63,7 +63,7 @@
 }
 
 .fields-container {
-	display: flex;
+	display: block;
 
 	> * {
 		margin-right: 16px;
@@ -72,22 +72,35 @@
 			margin-right: 0;
 		}
 	}
+
+	@include for-size(tablet-landscape-up) {
+		display: flex;
+	}
 }
 
 .input-field {
-	height: 40px;
-	min-width: 300px;
+	width: 100%;
 
-	display: block;
+	height: 40px;
+
+	display: block;	
+
+	@include for-size(tablet-landscape-up) {
+		min-width: 300px;
+	}
 }
 
 .textarea-field {
-	min-width: 300px;
+	width: 100%;
 
 	display: block;
 
 	textarea {
 		min-width: 100%;
 		min-height: 120px;
+	}
+
+	@include for-size(tablet-landscape-up) {
+		min-width: 300px;
 	}
 }

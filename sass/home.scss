@@ -3,33 +3,527 @@
 --------------------------------------------------------------*/
 
 .home {
+	height: 100vh;
+	
 	.section-wrap {
-		margin: auto;
+		margin-top: 15vh;
+		
+		@include for-size(tablet-landscape-up) {
+			margin: auto;
+		}
 	}
 }
-
 
 .introduction {
 	height: 100%;
 	width: 100%;
 
 	display: flex;
-	align-items: center;
 
 	z-index: 1;
 
-	h1 {
-		margin-top: 0;
-		text-transform: none;
-	}
-
 	> div {
-		padding-bottom: 20vh;
+
+		@include for-size(tablet-landscape-up) {
+			padding-bottom: 20vh;
+		}
 
 		.button {
 			float: right;
-			margin-right: 34px;
+			margin-right: 24px;
+
+			@include for-size(tablet-landscape-up) {
+				margin-right: 34px;
+			}
+		}
+	}
+
+	h1 {
+		margin-top: 0;
+		margin-bottom: 1.6rem;
+		
+		text-transform: none;
+
+		.subtitle {
+			position: relative;
+			font-size: 1.3rem;
+
+			@include for-size(tablet-landscape-up) {
+				font-size: 1.8rem;
+			}
 		}
 	}
 }
 
+
+
+.view-my-work-button {
+	use {
+		transition: transform 0.3s;
+		transform-origin: 10px 10px;
+	}
+
+	&:hover {
+		use {
+			transform: rotate(90deg);
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+>>> Island
+--------------------------------------------------------------*/
+
+.island-container {
+	width: 100%;
+	height: 100vh;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	display: flex;
+	
+	overflow: hidden;
+	align-items: center;
+
+	pointer-events: none;
+
+	z-index: -1;
+}
+
+.island,
+.island-impact-container {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+
+	max-width: $maxWidth;
+	
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+
+
+	@include for-size(tablet-landscape-up) {
+		align-items: center;
+	}
+}
+
+.island-main {
+	height: 40vh;
+
+	position: relative;
+	right: 4vw;
+	bottom: calc(60px + 5vh);
+
+	animation: islandMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	animation-delay: -.5s;	
+
+	@include for-size(tablet-landscape-up) {
+		height: 66vh;
+		top: 10vh;
+	}
+}
+
+#crystal1 {
+	animation: crystalMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+#crystal2 {
+	animation: crystalMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	animation-delay: -1s;
+}
+
+// Firefox smoothing fix: added rotate
+@keyframes islandMove {
+	0% {
+		transform: translateY(0) rotate(0.001deg);
+	}
+
+	50% {
+		transform: translateY(-1vh) rotate(0.001deg);
+	}
+
+	100% {
+		transform: translateY(0) rotate(0.001deg);
+	}
+}
+
+// Firefox smoothing fix: added rotate
+@keyframes crystalMove {
+	0% {
+		transform: translateY(0) rotate(0.001deg);
+	}
+
+	50% {
+		transform: translateY(-60px) rotate(0.001deg);
+	}
+
+	100% {
+		transform: translateY(0) rotate(0.001deg);
+	}
+}
+
+/*--------------------------------------------------------------
+>>> Island Impact
+--------------------------------------------------------------*/
+
+$impactMeteorSpeed: 0.5s;
+$impactSpeed: $impactMeteorSpeed - 0.2s;
+
+.island-impact-container {	
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+.island-impact {
+	width: 77vh;
+	height: 66vh;
+
+	position: relative;
+	top: 10vh;
+	right: 0;
+
+	animation: islandMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	animation-delay: -.5s;
+
+	&.impact {
+		.island-meteor-impact {
+			animation: meteorImpact $impactMeteorSpeed ease-out forwards;
+
+			&:after {
+				animation: meteorExplode $impactMeteorSpeed ease forwards;
+			}
+
+			&:before {				
+				animation: meteorTail $impactMeteorSpeed ease-out forwards;
+			}
+		}
+
+		.island-shield-impact {
+			animation: shieldImpact 2.5s ease-out forwards;
+		
+			&.impact-1 {
+				top: -67vh;
+				left: -55vh;
+
+				animation-delay: $impactSpeed;
+			}
+		}
+	}
+}
+
+.island-meteor-impact {
+	width: 2vh;
+	height: 2vh;
+
+	position: absolute;
+	top: 7vh;
+	left: 16vh;
+
+	opacity: 0;
+
+	&:after {
+		content: '';
+
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		border-radius: 999px;
+		
+		transform: rotate(-30deg) scaleX(1) scaleY(3);
+
+		background: linear-gradient(transparent, white);
+	}
+
+	&:before {
+		content: '';
+
+		width: 140%;
+		height: 100vh;
+
+		position: absolute;
+		bottom: 0;
+
+		background: linear-gradient(transparent, #60cdff);
+
+		box-shadow: 0 0 100px #60cdff;
+
+		border-radius: 0px 0px 999px 999px;
+
+		transform: rotate(-30deg);
+		
+		transform-origin: 50% 99.6%;
+	}
+}
+
+@keyframes meteorImpact {
+	0% {
+		transform: translate(-28vh, -50vh);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+}
+
+@keyframes meteorTail {
+	0% {
+		opacity: 1;
+		transform: rotate(-30deg) scaleX(1);
+		background: linear-gradient(transparent, #60cdff)
+	}
+
+	50% {
+		opacity: 1;
+		transform: rotate(-30deg) scaleX(1);
+		background: linear-gradient(transparent, #60cdff)
+	}
+
+	100% {
+		opacity: 0;
+		transform: rotate(-30deg) scaleX(0.1);
+		background: white;
+	}
+}
+
+@keyframes meteorExplode {
+	0% {
+		transform: rotate(-30deg) scaleX(1) scaleY(3);
+	}
+
+	70% {
+		transform: rotate(-30deg) scaleX(1) scaleY(3);
+	}
+
+	100% {		
+		transform: rotate(-30deg) scaleX(5) scaleY(1);
+	}
+}
+
+.island-shield {
+	width: 100%;
+	height: 37.5vh;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	border-radius: 9999px 9999px 0 0;
+
+	overflow: hidden;
+}
+
+.island-shield-impact {
+	width: 140vh;
+	height: 140vh;
+
+	position: absolute;
+
+	border-radius: 9999px;
+
+	box-shadow: inset 0px 0px 300px rgb(210, 220, 255);
+
+	opacity: 0;
+
+	transform: scale(0.01);
+	transform-origin: center;
+}
+
+@keyframes shieldImpact {
+	from {
+		transform: scale(0);
+		opacity: 0.3;
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+>>> Meteors
+--------------------------------------------------------------*/
+
+$meteorSpeed: 2.4s;
+
+html.mobile {
+	.meteor-1,
+	.meteor-3,
+	.meteor-5 {
+		display: none;
+	}
+}
+
+.meteors {
+	width: 100%;
+	height: 300vh;
+
+	position: absolute;
+
+	overflow: hidden;
+
+	opacity: 0.6;
+
+	z-index: -1;
+
+	&.front {
+		z-index: 0;
+	}
+}
+
+.island-meteor {
+	width: 1vh;
+	height: 1vh;
+
+	position: absolute;
+
+	opacity: 0;
+
+	&:after {
+		content: '';
+
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		border-radius: 999px;
+		
+		transform: rotate(-30deg) scaleX(1) scaleY(3);
+
+		background: linear-gradient(transparent, white);
+		box-shadow: 0 0 20px white;
+	}
+
+	&:before {
+		content: '';
+
+		width: 140%;
+		height: 200vh;
+
+		position: absolute;
+		bottom: 0;
+
+		background: linear-gradient(white, #60cdff);
+
+		box-shadow: 0 0 100px #60cdff;
+
+		border-radius: 0px 0px 999px 999px;
+
+		transform: rotate(-30deg);
+		
+		transform-origin: 50% 99.94%;
+
+		animation-delay: 5s;
+	}		
+
+	&.fall {
+		animation: meteorFall $meteorSpeed ease-out forwards;
+
+		&:before {
+			animation: meteorFallTail $meteorSpeed ease-out forwards;
+		}
+	}
+
+	&.meteor-1 {
+		top: 150vh;
+		right: -25vw;
+	}
+
+	&.meteor-2 {
+		top: 200vh;
+		right: -30vw;
+	}
+
+	&.meteor-3 {
+		top: 100vh;
+		right: -30vw;
+	}
+
+	&.meteor-4 {
+		top: 300vh;
+		right: -40vw;
+
+		&.fall {
+			animation-name: meteorFall2;
+			animation-duration: $meteorSpeed * 1.5;
+		}
+	}
+
+	&.meteor-5 {
+		top: 400vh;
+		right: -45vw;
+
+		&.fall {
+			animation-name: meteorFall3;
+			animation-duration: $meteorSpeed * 2;
+		}
+	}
+}
+
+@keyframes meteorFall {
+	0% {
+		transform: translate(-116vh, -200vh);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+}
+
+@keyframes meteorFall2 {
+	0% {
+		transform: translate(-174vh, -300vh);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+}
+
+@keyframes meteorFall3 {
+	0% {
+		transform: translate(-232vh, -400vh);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+}
+
+@keyframes meteorFallTail {
+	0% {
+		opacity: 1;
+		transform: rotate(-30deg) scaleX(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: rotate(-30deg) scaleX(0);
+	}
+}

@@ -32,6 +32,19 @@
 
 	});
 
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+	
+			document.querySelector(this.getAttribute('href')).scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+
+		});
+	});
+
 	var checkCurrentSection = function() {
 		var sections = $('#main').children('section'),
 			currentSection;
@@ -61,21 +74,7 @@
 		})
 	}
 
-	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-		anchor.addEventListener('click', function (e) {
-			e.preventDefault();
-	
-			document.querySelector(this.getAttribute('href')).scrollIntoView({
-				behavior: 'smooth',
-				block: 'start'
-			});
-
-		});
-	});
-
 	$(document).ready( function() {
-
 		if ( !$.browser.mobile ) {
 			$('html').removeClass('mobile');
 		}
@@ -99,18 +98,14 @@
 		$(window).scroll( $.debounce( 100, checkAnimationState ) );
 		$(window).scroll( $.debounce( 100, checkCurrentSection ) );
 
-		// ParticlesJS mobile or desktop config
-		if ( $.browser.mobile ) {
-			var particlesConfig = 'js/particlesjs-config-mobile.json';
-		} else {
-			var particlesConfig = 'js/particlesjs-config.json';
+		console.log($.browser.mobile);
+
+		// ParticlesJS Desktop Only
+		if ( $.browser.mobile == false ) {
+			particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {
+				console.log('callback - particles.js config loaded');
+			});
 		}
-
-		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-		particlesJS.load('particles-js', particlesConfig, function() {
-			console.log('callback - particles.js config loaded');
-		});
-
 	});
 
 	// Random Meteors
@@ -168,35 +163,5 @@
 		}, randTime);
 
 	}());
-
-	/**
-	 * scrollStopped function (https://stackoverflow.com/a/14035162/849987)
-	 *
-	 * Detects when scrolling stops.
-	 *
-	 **/
-	/*
-	$.fn.scrollStopped = function( callback) {
-		var that = this, $this = $(that);
-		
-		$this.scroll( $.debounce( 100, function(ev) {
-			clearTimeout($this.data('scrollTimeout'));
-			$this.data('scrollTimeout', setTimeout(callback.bind(that), 50, ev));
-			console.log('testest');
-		}));
-
-	};
-
-	$(window).on('scroll', $.throttle( 100, function() {
-		$('body').addClass('scrolling');
-		//window.pJSDom[0].pJS.particles.move.enable = false;
-	}));
-
-	$(window).scrollStopped( $.throttle( 100, function() {
-		$('body').removeClass('scrolling');
-		window.pJSDom[0].pJS.particles.move.enable = true;
-		//pJSDom[0].pJS.fn.particlesRefresh();
-	}));
-	*/		
 
 } )( jQuery );

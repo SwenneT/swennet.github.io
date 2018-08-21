@@ -64,7 +64,7 @@ html.mobile {
 		position: absolute;
 		bottom: 0;
 
-		background: linear-gradient(transparent, #60cdff);
+		background: linear-gradient(white, #60cdff);
 
 		box-shadow: 0 0 100px #60cdff;
 
@@ -165,7 +165,6 @@ html.mobile {
 
 	100% {
 		opacity: 0;
-		transform: rotate(-30deg) scaleX(0.1);
-		background: white;
+		transform: rotate(-30deg) scaleX(0);
 	}
 }

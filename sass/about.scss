@@ -7,30 +7,30 @@
 }
 
 .about-content {
-	display: flex;
-	
-	justify-content: space-between;
 
 	.line {
-		width: 110%;
-
 		top: 47px;
-		left: 0;
 
-		&.left {
-			left: auto;
-			right: 0;
+		@include for-size(tablet-landscape-up) {
+			width: 110%;
+
+			left: 0;
+
+			&.left {
+				left: auto;
+				right: 0;
+			}
 		}
+	}
+
+	@include for-size(tablet-landscape-up) {
+		display: flex;
+		
+		justify-content: space-between;
 	}
 }
 
 .about-info {
-	display: flex;
-
-	flex-direction: column;
-
-	min-width: 300px;
-	max-width: 30vw;
 
 	>div {
 		width: 100%;
@@ -100,6 +100,14 @@
 		}
 	}
 
+	@include for-size(tablet-landscape-up) {
+		display: flex;
+	
+		flex-direction: column;
+	
+		min-width: 300px;
+		max-width: 30vw;
+	}
 }
 
 
@@ -108,17 +116,24 @@
 --------------------------------------------------------------*/
 
 .about-tools {
-	width: 352px;
+	width: 100%;
 	
 	position: relative;
 	
 	h3 {
-		margin-left: 46px;
 		margin-bottom: 1.4rem;
 	}
 
-	.line {
-		width: calc(110% - 57px);
+	@include for-size(tablet-landscape-up) {
+		width: 352px;
+
+		h3 {			
+			margin-left: 46px;
+		}
+
+		.line {
+			width: calc(110% - 57px);
+		}
 	}
 }
 
@@ -132,7 +147,6 @@
 	width: 100%;
 
 	position: relative;
-	right: -30px;
 
 	li {
 		flex: 1 0 33.333%;
@@ -170,5 +184,9 @@
 				filter: drop-shadow(0px 0px 3px rgba(white, 0.25));
 			}
 		}
+	}
+
+	@include for-size(tablet-landscape-up) {
+		right: -30px;
 	}
 }
