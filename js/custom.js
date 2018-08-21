@@ -36,11 +36,17 @@
 
 		anchor.addEventListener('click', function (e) {
 			e.preventDefault();
+
+			$('body').addClass('scrolling');
 	
 			document.querySelector(this.getAttribute('href')).scrollIntoView({
 				behavior: 'smooth',
 				block: 'start'
 			});
+
+			setTimeout( function() {				
+				$('body').removeClass('scrolling');
+			}, 1000);
 
 		});
 	});

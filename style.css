@@ -56,7 +56,7 @@ body.scrolling * { -webkit-animation-play-state: paused !important; animation-pl
 
 #particles-js:after { content: ''; height: 300vh; width: 100%; position: absolute; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1000" preserveAspectRatio="none">\a<linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".5" y1="1000" x2=".5">\a   <stop offset="0" stop-color="%233d2448"/>\a   <stop offset="1" stop-color="%233d2448" stop-opacity="0"/>\a</linearGradient>\a<path fill="url(#a)" d="M0 0h1v1000H0z"/>\a</svg>') repeat; }
 
-html.mobile #particles-js { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); background: url(images/stars.svg) repeat !important; -webkit-animation-name: fadeInMobile; animation-name: fadeInMobile; }
+html.mobile #particles-js { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); background: url(images/stars.png) repeat !important; -webkit-animation-name: fadeInMobile; animation-name: fadeInMobile; }
 
 @-webkit-keyframes fadeIn { from { opacity: 0; }
   to { opacity: 1; } }
