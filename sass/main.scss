@@ -17,6 +17,8 @@ body {
 	background-size: auto 150vh;
 	background-repeat: repeat-x;
 
+	overflow-x: hidden;
+
 	&.scrolling {
 		* {
 		//	animation-play-state: paused !important;
@@ -157,7 +159,6 @@ html.mobile {
 	height: 2px;
 
 	position: absolute;
-	top: 55px;
 
 	background: white;
 
@@ -166,8 +167,6 @@ html.mobile {
 	opacity: 0.1;
 
 	@include for-size(tablet-landscape-up) {
-		width: calc(88% - 200px - 144px);
-
 		&:before {
 			content: '';
 	

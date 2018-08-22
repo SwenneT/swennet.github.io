@@ -7,9 +7,8 @@
 }
 
 .about-content {
-
 	.line {
-		top: 47px;
+		top: 48px;
 
 		@include for-size(tablet-landscape-up) {
 			width: 110%;
@@ -40,7 +39,7 @@
 
 	h3 {
 		margin-left: 2px;
-		margin-bottom: 2rem;
+		margin-bottom: 2.3rem;
 	}
 
 	li {
@@ -60,7 +59,7 @@
 	}
 
 	.info {
-		margin-bottom: 40px;
+		margin-bottom: 80px;
 
 		li {
 			display: flex;
@@ -76,7 +75,12 @@
 
 	.likes {
 		margin-top: auto;
+		margin-bottom: 80px;
 		align-self: flex-end;
+
+		@include for-size(tablet-landscape-up) {
+			margin-bottom: auto;
+		}
 
 		li {
 			padding-left: 28px;
@@ -112,16 +116,16 @@
 
 
 /*--------------------------------------------------------------
->>> Tools
+>>> Toolset
 --------------------------------------------------------------*/
 
-.about-tools {
+.about-toolset {
 	width: 100%;
 	
 	position: relative;
 	
 	h3 {
-		margin-bottom: 1.4rem;
+		margin-bottom: 1.9rem;
 	}
 
 	@include for-size(tablet-landscape-up) {
@@ -137,7 +141,7 @@
 	}
 }
 
-.tools-list {
+.toolset-list {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;

@@ -6,7 +6,7 @@ ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
-body{font-family:'Orbitron',sans-serif;font-size:16px;position:relative;color:rgba(255,255,255,0.9);text-shadow:2px 2px 0 rgba(0,0,0,0.2);background:#3d2448;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1000" preserveAspectRatio="none">\a<linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".5" y1="1000" x2=".5">\a <stop offset="0" stop-color="%233d2448"/>\a <stop offset="1" stop-color="%231e253f"/>\a</linearGradient>\a<path fill="url(%23a)" d="M0 0h1v1000H0z"/>\a</svg>');background-size:auto 150vh;background-repeat:repeat-x}
+body{font-family:'Orbitron',sans-serif;font-size:16px;position:relative;color:rgba(255,255,255,0.9);text-shadow:2px 2px 0 rgba(0,0,0,0.2);background:#3d2448;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1000" preserveAspectRatio="none">\a<linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".5" y1="1000" x2=".5">\a <stop offset="0" stop-color="%233d2448"/>\a <stop offset="1" stop-color="%231e253f"/>\a</linearGradient>\a<path fill="url(%23a)" d="M0 0h1v1000H0z"/>\a</svg>');background-size:auto 150vh;background-repeat:repeat-x;overflow-x:hidden}
 .animation.paused *{-webkit-animation-play-state:paused !important;animation-play-state:paused !important}
 .svg-icon{fill:white}
 .separator{margin:0 12px}
@@ -17,7 +17,7 @@ html.mobile #particles-js{-webkit-transform:translate3d(0,0,0);transform:transla
 .page-section{width:100%;min-height:100vh;padding:0 8%;padding-bottom:60px !important;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .page-section h1{margin:2rem 0 3rem 0;position:relative;left:-1px;font-size:2.2rem;color:white;text-transform:uppercase}
 .section-wrap{width:100%;max-width:1400px;margin:0 auto;position:relative}
-.line{width:100%;height:2px;position:absolute;top:55px;background:white;pointer-events:none;opacity:.1}
+.line{width:100%;height:2px;position:absolute;background:white;pointer-events:none;opacity:.1}
 .text{color:rgba(255,255,255,0.9);letter-spacing:.09rem}
 .text h1,.text h2,.text h3{letter-spacing:normal !important}
 .text h1 .highlight,.text h2 .highlight,.text h3 .highlight{color:#ff417b;text-shadow:0 0 15px rgba(255,65,123,0.3)}
@@ -115,46 +115,50 @@ html.mobile .meteors{display:none}
 .island-meteor.meteor-5{top:400vh;right:-45vw}
 .island-meteor.meteor-5.fall{-webkit-animation-name:meteorFall3;animation-name:meteorFall3;-webkit-animation-duration:4.8s;animation-duration:4.8s}
 .about{margin-bottom:80px}
-.about-content .line{top:47px}
+.about-content .line{top:48px}
 .about-info>div{width:100%;position:relative}
-.about-info h3{margin-left:2px;margin-bottom:2rem}
+.about-info h3{margin-left:2px;margin-bottom:2.3rem}
 .about-info li{height:36px;line-height:36px;padding-left:3px;color:rgba(255,255,255,0.75);font-size:.8rem;border-bottom:1px solid rgba(255,255,255,0.1)}
 .about-info li:last-child{border-bottom:0}
-.about-info .info{margin-bottom:40px}
+.about-info .info{margin-bottom:80px}
 .about-info .info li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .about-info .info li span{width:50%;display:inline-block;text-align:left}
-.about-info .likes{margin-top:auto;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
+.about-info .likes{margin-top:auto;margin-bottom:80px;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
 .about-info .likes li{padding-left:28px;position:relative}
 .about-info .likes li:before{content:'';position:absolute;top:52%;left:6px;-webkit-transform:translateY(-50%) rotate(45deg);-ms-transform:translateY(-50%) rotate(45deg);transform:translateY(-50%) rotate(45deg);width:6px;height:6px;background:rgba(255,255,255,0.6)}
-.about-tools{width:100%;position:relative}
-.about-tools h3{margin-bottom:1.4rem}
-.tools-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;list-style:none;width:100%;position:relative}
-.tools-list li{-webkit-box-flex:1;-webkit-flex:1 0 33.333%;-ms-flex:1 0 33.333%;flex:1 0 33.333%;padding:20px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;text-align:center;opacity:.75;-webkit-transition:opacity .3s;transition:opacity .3s}
-.tools-list li svg{max-width:40px;max-height:40px;margin:0 auto 12px auto;-webkit-filter:drop-shadow(0 0 3px rgba(255,255,255,0));filter:drop-shadow(0 0 3px rgba(255,255,255,0));-webkit-transition:-webkit-filter .3s;transition:-webkit-filter .3s;transition:filter .3s;transition:filter .3s,-webkit-filter .3s}
-.tools-list li span{font-size:.6rem}
-.tools-list li:hover{opacity:1}
-.tools-list li:hover svg{-webkit-filter:drop-shadow(0 0 3px rgba(255,255,255,0.25));filter:drop-shadow(0 0 3px rgba(255,255,255,0.25))}
-.website{width:100%;margin-bottom:120px;display:block;position:relative;overflow:hidden}
-.website>div:first-child{margin-right:5vw}
+.about-toolset{width:100%;position:relative}
+.about-toolset h3{margin-bottom:1.9rem}
+.toolset-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;list-style:none;width:100%;position:relative}
+.toolset-list li{-webkit-box-flex:1;-webkit-flex:1 0 33.333%;-ms-flex:1 0 33.333%;flex:1 0 33.333%;padding:20px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;text-align:center;opacity:.75;-webkit-transition:opacity .3s;transition:opacity .3s}
+.toolset-list li svg{max-width:40px;max-height:40px;margin:0 auto 12px auto;-webkit-filter:drop-shadow(0 0 3px rgba(255,255,255,0));filter:drop-shadow(0 0 3px rgba(255,255,255,0));-webkit-transition:-webkit-filter .3s;transition:-webkit-filter .3s;transition:filter .3s;transition:filter .3s,-webkit-filter .3s}
+.toolset-list li span{font-size:.6rem}
+.toolset-list li:hover{opacity:1}
+.toolset-list li:hover svg{-webkit-filter:drop-shadow(0 0 3px rgba(255,255,255,0.25));filter:drop-shadow(0 0 3px rgba(255,255,255,0.25))}
+.website{width:100%;margin-bottom:120px;display:block;position:relative}
+.website .line{top:85px}
 .website-info{position:relative;font-size:.8rem}
 .website-info h2{font-size:1.8rem !important;margin-top:.4rem;margin-bottom:2.4rem !important}
+.website-info h2 .separator{display:none}
+.website-info h2 small{display:block}
 .website-description{margin-bottom:2rem;color:rgba(255,255,255,0.75)}
 .website-footer{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-content:space-between;-ms-flex-line-pack:justify;align-content:space-between;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
-.website-footer .website-links .button{margin-right:24px}
-.website-footer .website-tech{margin-right:auto}
-.website-footer .website-tech h4{margin-bottom:1rem;letter-spacing:1.5px;color:white;font-size:.6rem}
-.website-footer .website-tech .logos{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
-.website-footer .website-tech .logos svg{display:inline-block;margin-right:12px;opacity:.8;-webkit-transition:opacity .3s;transition:opacity .3s}
-.website-footer .website-tech .logos svg:hover{opacity:1}
-.portal{width:90vw;height:90vw;position:relative;display:inline-block;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s}
+.website-links{display:none}
+.website-links .button{margin-right:24px}
+.website-tech{margin-right:auto}
+.website-tech h4{margin-bottom:1rem;letter-spacing:1.5px;color:white;font-size:.6rem}
+.website-tech .logos{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
+.website-tech .logos svg{display:inline-block;margin-right:12px;opacity:.8;-webkit-transition:opacity .3s;transition:opacity .3s}
+.website-tech .logos svg:hover{opacity:1}
+.website-portal{position:absolute;top:-8px;right:0}
+.portal{width:80px;height:80px;position:relative;display:inline-block;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s}
 .portal:hover .portal-outer{-webkit-filter:hue-rotate(-30deg);filter:hue-rotate(-30deg)}
 .portal:hover .portal-outer-2{-webkit-filter:drop-shadow(0 0 16px rgba(216,48,117,0.6)) hue-rotate(-30deg);filter:drop-shadow(0 0 16px rgba(216,48,117,0.6)) hue-rotate(-30deg)}
 .portal:hover .portal-inner img{-webkit-transform:scale(1.3);-ms-transform:scale(1.3);transform:scale(1.3)}
-.portal-outer{width:400px;height:400px;position:absolute;-webkit-transition:-webkit-filter .6s;transition:-webkit-filter .6s;transition:filter .6s;transition:filter .6s,-webkit-filter .6s;-webkit-filter:hue-rotate(-30deg);filter:hue-rotate(-30deg)}
+.portal-outer{width:80px;height:80px;position:absolute;-webkit-transition:-webkit-filter .6s;transition:-webkit-filter .6s;transition:filter .6s;transition:filter .6s,-webkit-filter .6s;-webkit-filter:hue-rotate(-30deg);filter:hue-rotate(-30deg)}
 .portal-outer-1{fill:rgba(216,48,117,0.1);-webkit-animation:portalAnim1 24s linear infinite;animation:portalAnim1 24s linear infinite}
 .portal-outer-2{fill:#d83075;-webkit-animation:portalAnim2 18s linear infinite;animation:portalAnim2 18s linear infinite;-webkit-filter:drop-shadow(0 0 16px rgba(216,48,117,0.6));filter:drop-shadow(0 0 16px rgba(216,48,117,0.6))}
-.portal-inner{width:600px;height:600px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale(0.48);-ms-transform:translate(-50%,-50%) scale(0.48);transform:translate(-50%,-50%) scale(0.48);-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip);opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s}
-.portal-inner img{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
+.portal-inner{width:120px;height:120px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale(0.48);-ms-transform:translate(-50%,-50%) scale(0.48);transform:translate(-50%,-50%) scale(0.48);-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip);opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s}
+.portal-inner img{width:120px;height:120px;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
 .contact-form{width:100%;max-width:40vw}
 .earth-container{width:100%;height:100vh;position:absolute;top:0;left:0;overflow:hidden}
 .earth-inner{width:80vh;height:80vh;position:absolute;bottom:-26.6666666667vh;right:-26.6666666667vh;background:#4861b2;overflow:hidden;border-radius:999px;-webkit-transform:rotate(23.5deg);-ms-transform:rotate(23.5deg);transform:rotate(23.5deg)}
@@ -169,7 +173,6 @@ html.mobile .meteors{display:none}
 .moon-craters{height:100%;position:absolute;top:0;left:0;fill:rgba(0,0,0,0.2);-webkit-animation:planetSpin 70s infinite linear;animation:planetSpin 70s infinite linear}
 @media(min-width:900px){.page-section{padding-top:60px !important}
 .page-section h1{font-size:2.6rem;margin:4rem 0 6rem 0}
-.line{width:calc(88% - 200px - 144px)}
 .line:before{content:'';width:120px;height:2px;position:absolute;top:0;background:white}
 .line:after{content:'';width:16px;height:16px;position:absolute;top:83px;background:white;border-radius:999px}
 .line.left{right:8%}
@@ -212,13 +215,27 @@ header{height:60px;padding:0 24px;top:0;background:transparent}
 .about-content .line{width:110%;left:0}
 .about-content .line.left{left:auto;right:0}
 .about-content{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
+.about-info .likes{margin-bottom:auto}
 .about-info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;min-width:300px;max-width:30vw}
-.about-tools{width:352px}
-.about-tools h3{margin-left:46px}
-.about-tools .line{width:calc(110% - 57px)}
-.tools-list{right:-30px}
+.about-toolset{width:352px}
+.about-toolset h3{margin-left:46px}
+.about-toolset .line{width:calc(110% - 57px)}
+.toolset-list{right:-30px}
 .website{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:top;-webkit-align-items:top;-ms-flex-align:top;align-items:top}
+.website>div:first-child{margin-right:5vw}
+.website:nth-child(odd) .portal{left:-40px}
+.website:nth-child(odd) .line{right:0;left:auto}
+.website:nth-child(even) .portal{right:-40px}
+.website:nth-child(even) .line{left:0;right:auto}
+.website .line{width:calc(100% - 200px - 144px);top:55px}
+.website-info h2 .separator{display:inline-block}
+.website-info h2 small{margin-top:auto;display:inline-block}
+.website-links{display:inline-block}
+.website-portal{position:relative;top:auto}
 .portal{width:400px;height:400px}
+.portal-outer{width:400px;height:400px}
+.portal-inner{width:600px;height:600px}
+.portal-inner img{width:600px;height:600px}
 .contact-form{min-width:400px}
 }@-webkit-keyframes fadeIn{from{opacity:0}
 to{opacity:1}

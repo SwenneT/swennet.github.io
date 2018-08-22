@@ -1,8 +1,10 @@
 ( function( $ ) {
 
 	/*
-	* Replace all SVG images with inline SVG
-	*/
+	 * Replace all SVG images with inline SVG
+	 * 
+	 * Remove on release.
+	 */
 	$('img.svg').each(function(){
 		var $img = jQuery(this);
 		var imgID = $img.attr('id');
@@ -29,28 +31,46 @@
 			$img.replaceWith($svg);
 
 		}, 'xml');
-
 	});
 
-	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-		anchor.addEventListener('click', function (e) {
-			e.preventDefault();
+	/* 
+	 * Scrolled Class
+	 * 
+	 * Adds the scrolled class to the BODY element when the page is scrolled.
+	 */
+	var checkScrollState = function() {
+		if ( $(window).scrollTop() > 0 ) {
+			$('body').addClass('scrolled');
+		} else {
+			$('body').removeClass('scrolled');
+		}
+	}
 
-			$('body').addClass('scrolling');
-	
-			document.querySelector(this.getAttribute('href')).scrollIntoView({
-				behavior: 'smooth',
-				block: 'start'
-			});
 
-			setTimeout( function() {				
-				$('body').removeClass('scrolling');
-			}, 1000);
+	/* 
+	 * Pause Animations when View
+	 * 
+	 * Pauses animations when not in view.
+	 */
+	var checkAnimationState = function() {
+		var animations = $('.animation');
 
-		});
-	});
+		animations.each( function() {
+			if ( $(this).is(':near-viewport') ) {
+				$(this).removeClass('paused');
+			} else {
+				$(this).addClass('paused');
+			}
+		})
+	}
 
+
+	/* 
+	 * Check page section
+	 * 
+	 * Changes the current active navigation item when section is scrolled in view.
+	 */
 	var checkCurrentSection = function() {
 		var sections = $('#main').children('section'),
 			currentSection;
@@ -68,45 +88,96 @@
 		$('#navigation').find('[href="#' + currentSection.attr('id') + '"]').addClass('active');
 	}
 
-	var checkAnimationState = function() {
-		var animations = $('.animation');
 
-		animations.each( function() {
-			if ( $(this).is(':near-viewport') ) {
-				$(this).removeClass('paused');
-			} else {
-				$(this).addClass('paused');
-			}
-		})
-	}
-
+	/* 
+	 * Run after page is loaded.
+	 */
 	$(document).ready( function() {
+
+		/* 
+		 * Remove Mobile Class
+		 * 
+		 * Removes the default mobile class from the HTML element.
+		 */
 		if ( !$.browser.mobile ) {
 			$('html').removeClass('mobile');
 		}
 
-		checkAnimationState();
-		checkCurrentSection();
 
-		$('a[href^="#"]').on('click', function(event) {
+		/* 
+		 * Set Active Navigation
+		 * 
+		 * Adds the active class to a navigation item when clicked on.
+		 */
+		$('#navigation a[href^="#"]').on('click', function(e) {
+			e.preventDefault();
+
 			$('#navigation .active').removeClass('active');
 			$('#navigation').find('a[href="' + $(this).attr('href') + '"]').addClass('active');
 		});
 
-		$(window).on('scroll', $.throttle( 250, function() {
-			if ( $(window).scrollTop() > 0 ) {
-				$('body').addClass('scrolled');
-			} else {
-				$('body').removeClass('scrolled');
-			}
-		}));
 
-		$(window).scroll( $.debounce( 100, checkAnimationState ) );
-		$(window).scroll( $.debounce( 100, checkCurrentSection ) );
+		/* 
+		 * Scroll to Element
+		 * 
+		 * Scroll to an element when button is clicked.
+		 */
+		$('a[href^="#"]').on('click', function(e) {
+			e.preventDefault();
+			
+			$('body').addClass('scrolling');
+			
+		
+			$($(this).attr('href'))[0].scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+	
+			setTimeout( function() {				
+				$('body').removeClass('scrolling');
+			}, 1000);
+		});
 
-		console.log($.browser.mobile);
+		
+		/* 
+		 * Fire States
+		 * 
+		 * Checks which page states should be fired on page load.
+		 */
+		checkScrollState();
+		checkAnimationState();
+		checkCurrentSection();
 
-		// ParticlesJS Desktop Only
+
+		/* 
+		 * Scrolled Class
+		 * 
+		 * Adds the scrolled class to the BODY element when the page is scrolled.
+		 */
+		$(window).on('scroll', $.throttle( 250, checkScrollState ) );
+
+
+		/* 
+		 * Pause Animations when View
+		 * 
+		 * Pauses animations when not in view.
+		 */
+		$(window).on('scroll', $.debounce( 100, checkAnimationState ) );
+
+
+		/* 
+		 * Check page section
+		 * 
+		 * Changes the current active navigation item when section is scrolled in view.
+		 */
+		$(window).on('scroll', $.debounce( 100, checkCurrentSection ) );
+
+
+		/* 
+		 * Load ParticlesJS (Stars)
+		 * 
+		 * Disbled while on mobile.
+		 */
 		if ( $.browser.mobile == false ) {
 			particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {
 				console.log('callback - particles.js config loaded');
@@ -114,63 +185,70 @@
 		}
 
 
-	// Random Meteors
-	if ( !$.browser.mobile ) {
-		var meteors = [false, false, false, false, false];
+		/* 
+		 * Random Meteors
+		 * 
+		 * Disbled while on mobile. Drops meteors randomly on island.
+		 */
+		if ( !$.browser.mobile ) {
+			var meteors = [false, false, false, false, false];
 
-		( function fallingMeteors() {
+			/* 
+			 * Random Meteors
+			 */
+			( function fallingMeteors() {
 
-			var	numMeteors = 5,
-				maxTime = 10000,
-				minTime = 500,
-				randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);
+				var	numMeteors = 5,
+					maxTime = 10000,
+					minTime = 500,
+					randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);
 
-			setTimeout(function() {
+				setTimeout(function() {
 
-				var randMeteor = Math.floor(Math.random() * meteors.length),
-					randMeteorValue = meteors[randMeteor];
+					var randMeteor = Math.floor(Math.random() * meteors.length),
+						randMeteorValue = meteors[randMeteor];
 
-				if ( meteors[randMeteor] ) {
+					if ( meteors[randMeteor] ) {
+						fallingMeteors();
+						return;
+					}
+					meteors[randMeteor] = true;
+
+					$('#meteor-' + (randMeteor + 1)).removeClass('fall');
+
+					setTimeout( function() {
+						$('#meteor-' + (randMeteor + 1)).addClass('fall');
+					}, 2000);
+
+					setTimeout( function() {
+						meteors[randMeteor] = false;
+					}, 5000);
+
 					fallingMeteors();
-					return;
-				}
-				meteors[randMeteor] = true;
 
-				$('#meteor-' + (randMeteor + 1)).removeClass('fall');
+				}, randTime);
+			}());
 
-				setTimeout( function() {
-					$('#meteor-' + (randMeteor + 1)).addClass('fall');
-				}, 2000);
-
-				setTimeout( function() {
-					meteors[randMeteor] = false;
-				}, 5000);
-
-				fallingMeteors();
-
-			}, randTime);
-
-		}());
-
-		// Random meteor impact
-		( function impactMeteor() {
-			var maxTime = 15000,
-				minTime = 10000,
-				randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);;
-
-			setTimeout( function() {
-				$('#island-impact').removeClass('impact');
+			/* 
+			 * Meteor on Shield
+			 */
+			( function impactMeteor() {
+				var maxTime = 15000,
+					minTime = 10000,
+					randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);;
 
 				setTimeout( function() {
-					$('#island-impact').addClass('impact');
-				})
+					$('#island-impact').removeClass('impact');
 
-				impactMeteor();
+					setTimeout( function() {
+						$('#island-impact').addClass('impact');
+					})
 
-			}, randTime);
+					impactMeteor();
 
-		}());
-	}
+				}, randTime);
+			}());
+		}
 
 	});
 

@@ -13,23 +13,53 @@
 
 	position: relative;
 
-	overflow: hidden;
-
-	&:nth-child(odd) {
-		
-	}
-
-	&:nth-child(even) {
-
-	}
-	
-	> div:first-child {
-		margin-right: 5vw;
-	}	
-
 	@include for-size(tablet-landscape-up) {
 		display: flex;
 		align-items: top;
+	
+		> div:first-child {
+			margin-right: 5vw;
+		}
+	}
+
+	&:nth-child(odd) {
+		.portal {
+			@include for-size(tablet-landscape-up) {
+				left: -40px;
+			}
+		}
+
+		.line {
+			@include for-size(tablet-landscape-up) {
+				right: 0;
+				left: auto;
+			}
+		}
+	}
+
+	&:nth-child(even) {
+		.portal {
+			@include for-size(tablet-landscape-up) {
+				right: -40px;
+			}
+		}
+
+		.line {
+			@include for-size(tablet-landscape-up) {
+				left: 0;
+				right: auto;			
+			}
+		}
+	}
+
+	.line {
+		top: 85px;
+
+		@include for-size(tablet-landscape-up) {
+			width: calc(100% - 200px - 144px);
+			
+			top: 55px;
+		}
 	}
 }
 
@@ -43,6 +73,25 @@
 
 		margin-top: 0.4rem;
 		margin-bottom: 2.4rem !important;
+
+		.separator {
+			display: none;
+
+			@include for-size(tablet-landscape-up) {
+				display: inline-block;
+			}
+		}
+
+		small {
+			display: block;
+
+			@include for-size(tablet-landscape-up) {
+				margin-top: auto;
+
+				display: inline-block;
+			}
+		}
+
 	}
 }
 
@@ -58,40 +107,46 @@
 	display: flex;
 	align-content: space-between;
 	align-items: flex-end;
+}
 
-	.website-links {
-		.button {
-			margin-right: 24px;
-		}
+.website-links {
+	display: none;
+
+	@include for-size(tablet-landscape-up) {
+		display: inline-block;
 	}
 
-	.website-tech {
-		margin-right: auto;
+	.button {
+		margin-right: 24px;
+	}
+}
 
-		h4 {			
-			margin-bottom: 1rem;
+.website-tech {
+	margin-right: auto;
 
-			letter-spacing: 1.5px;
-			color: white;
-			font-size: 0.6rem;
-		}
+	h4 {			
+		margin-bottom: 1rem;
 
-		.logos {
-			display: flex;
-			align-items: flex-end;
+		letter-spacing: 1.5px;
+		color: white;
+		font-size: 0.6rem;
+	}
 
-			svg {
-				display: inline-block;
-				
-				margin-right: 12px;
-	
-				opacity: 0.8;
-	
-				transition: opacity 0.3s;
-	
-				&:hover {
-					opacity: 1;
-				}
+	.logos {
+		display: flex;
+		align-items: flex-end;
+
+		svg {
+			display: inline-block;
+			
+			margin-right: 12px;
+
+			opacity: 0.8;
+
+			transition: opacity 0.3s;
+
+			&:hover {
+				opacity: 1;
 			}
 		}
 	}
@@ -101,9 +156,20 @@
 >>> SVG Portals
 --------------------------------------------------------------*/
 
+.website-portal {
+	position: absolute;
+	top: -8px;
+	right: 0;
+
+	@include for-size(tablet-landscape-up) {
+		position: relative;
+		top: auto;
+	}
+}
+
 .portal {
-	width: 90vw;
-	height: 90vw;
+	width: 80px;
+	height: 80px;
 
 	position: relative;
 
@@ -139,14 +205,19 @@
 }
 
 .portal-outer {
-	width: 400px;
-	height: 400px;
+	width: 80px;
+	height: 80px;
 
 	position: absolute;
 
 	transition: filter 0.6s;
 	
 	filter: hue-rotate(-30deg);
+
+	@include for-size(tablet-landscape-up) {
+		width: 400px;
+		height: 400px;
+	}
 }
 
 .portal-outer-1 {
@@ -164,8 +235,8 @@
 }
 
 .portal-inner {
-	width: 600px;
-	height: 600px;
+	width: 120px;
+	height: 120px;
 
 	position: absolute;
 	top: 50%;
@@ -179,11 +250,24 @@
 
 	transition: opacity 0.3s;
 
+	@include for-size(tablet-landscape-up) {
+		width: 600px;
+		height: 600px;
+	}
+
 	img {
+		width: 120px;
+		height: 120px;
+
 		transform: scale(1);
 		transition: transform 0.3s;
 
 		pointer-events: none;
+
+		@include for-size(tablet-landscape-up) {
+			width: 600px;
+			height: 600px;
+		}
 	}
 }
 
