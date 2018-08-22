@@ -100,7 +100,7 @@ body.scrolled header{background:#1e253f}
 .island-meteor-impact:before{content:'';width:140%;height:100vh;position:absolute;bottom:0;background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(#60cdff));background:-webkit-linear-gradient(transparent,#60cdff);background:linear-gradient(transparent,#60cdff);-webkit-box-shadow:0 0 100px #60cdff;box-shadow:0 0 100px #60cdff;border-radius:0 0 999px 999px;-webkit-transform:rotate(-30deg);-ms-transform:rotate(-30deg);transform:rotate(-30deg);-webkit-transform-origin:50% 99.6%;-ms-transform-origin:50% 99.6%;transform-origin:50% 99.6%}
 .island-shield{width:100%;height:22.7273vh;position:absolute;top:0;left:0;border-radius:9999px 9999px 0 0;overflow:hidden}
 .island-shield-impact{width:140vh;height:140vh;position:absolute;border-radius:9999px;-webkit-box-shadow:inset 0 0 300px #d2dcff;box-shadow:inset 0 0 300px #d2dcff;opacity:0;-webkit-transform:scale(0.01);-ms-transform:scale(0.01);transform:scale(0.01);-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center}
-html.mobile .meteor-1,html.mobile .meteor-3,html.mobile .meteor-5{display:none}
+html.mobile .meteors{display:none}
 .meteors{width:100%;height:300vh;position:absolute;overflow:hidden;opacity:.6;z-index:-1}
 .meteors.front{z-index:0}
 .island-meteor{width:1vh;height:1vh;position:absolute;opacity:0}

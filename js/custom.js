@@ -112,62 +112,66 @@
 				console.log('callback - particles.js config loaded');
 			});
 		}
-	});
+
 
 	// Random Meteors
-	var meteors = [false, false, false, false, false];
+	if ( !$.browser.mobile ) {
+		var meteors = [false, false, false, false, false];
 
-	( function fallingMeteors() {
+		( function fallingMeteors() {
 
-		var	numMeteors = 5,
-			maxTime = 10000,
-			minTime = 500,
-			randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);
+			var	numMeteors = 5,
+				maxTime = 10000,
+				minTime = 500,
+				randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);
 
-		setTimeout(function() {
+			setTimeout(function() {
 
-			var randMeteor = Math.floor(Math.random() * meteors.length),
-				randMeteorValue = meteors[randMeteor];
+				var randMeteor = Math.floor(Math.random() * meteors.length),
+					randMeteorValue = meteors[randMeteor];
 
-			if ( meteors[randMeteor] ) {
+				if ( meteors[randMeteor] ) {
+					fallingMeteors();
+					return;
+				}
+				meteors[randMeteor] = true;
+
+				$('#meteor-' + (randMeteor + 1)).removeClass('fall');
+
+				setTimeout( function() {
+					$('#meteor-' + (randMeteor + 1)).addClass('fall');
+				}, 2000);
+
+				setTimeout( function() {
+					meteors[randMeteor] = false;
+				}, 5000);
+
 				fallingMeteors();
-				return;
-			}
-			meteors[randMeteor] = true;
 
-			$('#meteor-' + (randMeteor + 1)).removeClass('fall');
+			}, randTime);
 
-			setTimeout( function() {
-				$('#meteor-' + (randMeteor + 1)).addClass('fall');
-			}, 2000);
+		}());
 
-			setTimeout( function() {
-				meteors[randMeteor] = false;
-			}, 5000);
-
-			fallingMeteors();
-
-		}, randTime);
-
-	}());
-
-	// Random meteor impact
-	( function impactMeteor() {
-		var maxTime = 15000,
-			minTime = 10000,
-			randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);;
-
-		setTimeout( function() {
-			$('#island-impact').removeClass('impact');
+		// Random meteor impact
+		( function impactMeteor() {
+			var maxTime = 15000,
+				minTime = 10000,
+				randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);;
 
 			setTimeout( function() {
-				$('#island-impact').addClass('impact');
-			})
+				$('#island-impact').removeClass('impact');
 
-			impactMeteor();
+				setTimeout( function() {
+					$('#island-impact').addClass('impact');
+				})
 
-		}, randTime);
+				impactMeteor();
 
-	}());
+			}, randTime);
+
+		}());
+	}
+
+	});
 
 } )( jQuery );

@@ -376,9 +376,7 @@ $impactSpeed: $impactMeteorSpeed - 0.2s;
 $meteorSpeed: 2.4s;
 
 html.mobile {
-	.meteor-1,
-	.meteor-3,
-	.meteor-5 {
+	.meteors {
 		display: none;
 	}
 }
