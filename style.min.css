@@ -160,16 +160,17 @@ html.mobile .meteors{display:none}
 .portal-inner{width:120px;height:120px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale(0.48);-ms-transform:translate(-50%,-50%) scale(0.48);transform:translate(-50%,-50%) scale(0.48);-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip);opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s}
 .portal-inner img{width:120px;height:120px;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
 .contact-form{width:100%;max-width:40vw}
-.earth-container{width:100%;height:100vh;position:absolute;top:0;left:0;overflow:hidden}
+.earth-container{width:100%;height:100%;position:absolute;top:0;left:0;overflow:hidden}
+.earth{width:100%;height:100%;position:absolute;bottom:60px;right:0;-webkit-transform:scale(0.5);-ms-transform:scale(0.5);transform:scale(0.5);-webkit-transform-origin:bottom right;-ms-transform-origin:bottom right;transform-origin:bottom right}
 .earth-inner{width:80vh;height:80vh;position:absolute;bottom:-26.6666666667vh;right:-26.6666666667vh;background:#4861b2;overflow:hidden;border-radius:999px;-webkit-transform:rotate(23.5deg);-ms-transform:rotate(23.5deg);transform:rotate(23.5deg)}
-.earth-inner:after{content:'';width:50%;height:100%;position:absolute;top:0;right:0;background:rgba(0,0,0,0.1);-webkit-filter:blur(20px);filter:blur(20px);-webkit-transform:rotate(-23.5deg);-ms-transform:rotate(-23.5deg);transform:rotate(-23.5deg)}
+.earth-inner:after{content:'';width:100%;height:120%;position:absolute;top:-10%;left:0;border-radius:50%;-webkit-box-shadow:inset -40vh 0 rgba(0,0,0,0.2);box-shadow:inset -40vh 0 rgba(0,0,0,0.2);-webkit-filter:blur(20px);filter:blur(20px)}
 .earth-atmosphere{width:90vh;height:90vh;position:absolute;bottom:-31.6666666667vh;right:-31.6666666667vh;background:rgba(32,19,38,0.2);border-radius:999px}
 .earth-glow{width:120vh;height:120vh;position:absolute;bottom:-46.6666666667vh;right:-46.6666666667vh;background:rgba(255,255,255,0.005);border-radius:999px}
 .earth-land{height:100%;position:absolute;top:0;left:0;fill:#7dab3e;-webkit-animation:planetSpin 70s infinite linear;animation:planetSpin 70s infinite linear}
 .earth-clouds{height:100%;position:absolute;top:0;left:0;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-animation:planetSpin 55s infinite linear;animation:planetSpin 55s infinite linear;fill:white;opacity:.9;-webkit-filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05));filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05))}
 .moon-container{width:100%;height:100vh;position:absolute;top:0;left:0;overflow:hidden}
-.moon-inner{width:16vh;height:16vh;position:absolute;bottom:54vh;right:36vh;background:#cdd1d6;overflow:hidden;border-radius:999px;-webkit-box-shadow:0 0 12vh rgba(255,255,255,0.2);box-shadow:0 0 12vh rgba(255,255,255,0.2)}
-.moon-inner:after{content:'';width:50%;height:150%;position:absolute;top:0;right:0;background:rgba(0,0,0,0.1);-webkit-filter:blur(15px);filter:blur(15px)}
+.moon-inner{width:16vh;height:16vh;position:absolute;bottom:54vh;right:36vh;background:#cdd1d6;overflow:hidden;border-radius:999px;-webkit-box-shadow:0 0 12vh rgba(255,255,255,0.2);box-shadow:0 0 12vh rgba(255,255,255,0.2);-webkit-transform:rotate(23.5deg);-ms-transform:rotate(23.5deg);transform:rotate(23.5deg)}
+.moon-inner:after{content:'';width:100%;height:120%;position:absolute;top:-10%;right:-15%;border-radius:50%;-webkit-box-shadow:inset -8vh 0 rgba(0,0,0,0.15);box-shadow:inset -8vh 0 rgba(0,0,0,0.15);-webkit-filter:blur(7px);filter:blur(7px)}
 .moon-craters{height:100%;position:absolute;top:0;left:0;fill:rgba(0,0,0,0.2);-webkit-animation:planetSpin 70s infinite linear;animation:planetSpin 70s infinite linear}
 @media(min-width:900px){.page-section{padding-top:60px !important}
 .page-section h1{font-size:2.6rem;margin:4rem 0 6rem 0}
@@ -237,6 +238,7 @@ header{height:60px;padding:0 24px;top:0;background:transparent}
 .portal-inner{width:600px;height:600px}
 .portal-inner img{width:600px;height:600px}
 .contact-form{min-width:400px}
+.earth{bottom:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
 }@-webkit-keyframes fadeIn{from{opacity:0}
 to{opacity:1}
 }@keyframes fadeIn{from{opacity:0}
