@@ -250,6 +250,60 @@
 			}());
 		}
 
+
+		/* 
+		 * Open modal when Github button is clicked on mobile
+		 */
+		$('#github-button').on('click', function(e) {
+			if ( $.browser.mobile ) {
+				e.preventDefault();
+	
+				$('#modal-container').show();
+	
+				setTimeout( function() {
+					$('html').addClass('modal-active');
+				}, 0);
+			}		
+		});
+
+
+		/* 
+		 * Go to URL when clicked continue and close modal
+		 */
+		$('#modal-continue').on('click', function(e) {
+			e.preventDefault();
+
+			window.open($('#github-button').attr('href'), "_blank ");
+
+			$('#modal-cancel').click();
+		});
+
+
+		/* 
+		 * Close Modal when clicked on cancel
+		 */
+		$('#modal-cancel').on('click', function(e) {
+			e.preventDefault();
+			$('html').removeClass('modal-active');
+
+			setTimeout( function() {
+				$('#modal-container').hide();
+			}, 200);
+		});
+
+
+		/* 
+		 * Close Modal when clicked outside
+		 */
+		$('#modal-container').on('mousedown', function(e) {
+			e.preventDefault();
+			
+			if ( $(e.target).is('.modal-container') ) {
+				$('#modal-cancel').click();
+			}
+		});
+		
+
 	});
 
 } )( jQuery );

@@ -140,6 +140,16 @@ html.mobile {
 
 			margin: 4rem 0 6rem 0;
 		}
+		
+		background: repeating-linear-gradient(
+			-67.5deg,
+			rgba(white, 0.1),
+			rgba(white, 0.1) 4px,
+			transparent 4px,
+			transparent 12px
+		);
+
+		background-position: 0px 0px;
 	}
 }
 
@@ -235,5 +245,90 @@ html.mobile {
 				bottom: 83px;
 			}
 		}
+	}
+}
+
+.modal-container {
+	width: 100%;
+	height: 100%;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	background: rgba(black, 0.5);
+
+	z-index: 1001;
+
+	display: none;
+	opacity: 0;
+
+	transition: opacity 0.2s;
+}
+
+.modal {
+	width: 92%;
+	max-width: 400px;
+
+	min-height: 15vh;
+
+	padding: 24px 16px 16px 16px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	display: flex;
+	align-content: center;
+
+	background: $spaceLight;
+	background: linear-gradient(-45deg, rgba($spaceLight, 0.9) 0%, rgba($spaceDark, 0.9) 100%);
+
+	border-radius: 3px;
+
+	transform: translate(-50%, -50%) scale(0);
+	transition: translate 0.3s;
+
+	z-index: 1002;
+
+	> div {
+		margin: auto;
+		display: inline-block;
+	}
+
+	h4 {
+		margin-bottom: 1.4rem;
+
+		text-align: center;
+	}
+}
+
+.modal-buttons {
+	text-align: center;
+
+	.button {
+		margin: 0 4px;
+	}
+
+	.modal-continue {
+		background: rgba(white, 0.05);
+	}
+}
+
+html.modal-active {
+	overflow: hidden;
+
+	body {
+		overflow: hidden;
+	}
+
+	.modal-container {
+		opacity: 1;
+	}
+
+	.modal {
+		transform: translate(-50%, -50%) scale(1);
 	}
 }

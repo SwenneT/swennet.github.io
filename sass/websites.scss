@@ -7,6 +7,7 @@
 
 .website {
 	width: 100%;
+
 	margin-bottom: 120px;
 
 	display: block;
@@ -127,9 +128,9 @@
 	h4 {			
 		margin-bottom: 1rem;
 
-		letter-spacing: 1.5px;
+		letter-spacing: 0.07rem !important;
 		color: white;
-		font-size: 0.6rem;
+		font-size: 0.7rem;
 	}
 
 	.logos {
@@ -141,13 +142,9 @@
 			
 			margin-right: 12px;
 
-			opacity: 0.8;
+			opacity: 0.9;
 
 			transition: opacity 0.3s;
-
-			&:hover {
-				opacity: 1;
-			}
 		}
 	}
 }
@@ -158,8 +155,8 @@
 
 .website-portal {
 	position: absolute;
-	top: -8px;
-	right: 0;
+	top: -12px;
+	right: -8px;
 
 	@include for-size(tablet-landscape-up) {
 		position: relative;
@@ -168,8 +165,8 @@
 }
 
 .portal {
-	width: 80px;
-	height: 80px;
+	width: 94px;
+	height: 94px;
 
 	position: relative;
 
@@ -205,8 +202,8 @@
 }
 
 .portal-outer {
-	width: 80px;
-	height: 80px;
+	width: 94px;
+	height: 94px;
 
 	position: absolute;
 
@@ -235,8 +232,8 @@
 }
 
 .portal-inner {
-	width: 120px;
-	height: 120px;
+	width: 140px;
+	height: 140px;
 
 	position: absolute;
 	top: 50%;
@@ -244,11 +241,11 @@
 
 	transform: translate(-50%, -50%) scale(0.48);
 
-	clip-path: url(#portal-clip);
-
 	opacity: 0.9;
 
 	transition: opacity 0.3s;
+
+	clip-path: url(#portal-clip);
 
 	@include for-size(tablet-landscape-up) {
 		width: 600px;
@@ -256,8 +253,8 @@
 	}
 
 	img {
-		width: 120px;
-		height: 120px;
+		width: 140px;
+		height: 140px;
 
 		transform: scale(1);
 		transition: transform 0.3s;

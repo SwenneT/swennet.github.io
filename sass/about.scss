@@ -142,18 +142,19 @@
 }
 
 .toolset-list {
+	width: 110%;
+
+	position: relative;
+	left: -6%;
+
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 
 	list-style: none;
 
-	width: 100%;
-
-	position: relative;
-
 	li {
-		flex: 1 0 33.333%;
+		flex: 1 0 25%;
 
 		padding: 20px 0;
 
@@ -165,6 +166,10 @@
 		opacity: 0.75;
 
 		transition: opacity 0.3s;
+
+		@include for-size(tablet-landscape-up) {
+			flex: 1 0 33.333%;
+		}
 	
 		svg {
 			max-width: 40px;

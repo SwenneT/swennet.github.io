@@ -72,11 +72,10 @@
 				</a>
 				
 				<div class="button-straight-right-container">
-					<a class="button github-button" href="https://github.com/Swennet/swennet.github.io" class="github-icon" title="View this website on Github" target="_blank" rel="noopener noreferrer">
+					<a id="github-button" class="button github-button" href="https://github.com/Swennet/swennet.github.io" class="github-icon" title="View this website on Github" target="_blank" rel="noopener noreferrer">
 						<svg class="svg-icon" role="img" width="24" height="24">
 							<use xlink:href="images/svg-sprite.svg#github"></use>
 						</svg>
-						<span>Github</span>
 					</a>
 				</div>
 			</nav>
@@ -112,7 +111,7 @@
 								</h1>
 							</div>
 								
-							<a class="button icon-button icon-button-right large view-my-work-button" href="#about">
+							<a class="button icon-button icon-button-right large view-my-work-button" href="#websites">
 								<span>View my work</span>
 
 								<svg class="svg-icon" role="img" width="20" height="20">
@@ -474,7 +473,7 @@
 									<div>
 										<label for="name">Email</label>
 		
-										<input name="email" type="email" maxlength="256" placeholder="Your email address">
+										<input name="email" type="email" maxlength="256" placeholder="Email@example.com">
 									</div>
 								</div>
 							</div>
@@ -504,6 +503,18 @@
 
 	</div>
 
+	<menu id="modal-container" class="modal-container">
+		<div id="modal" class="modal text">
+			<div>
+				<h4 class="modal-message">Open Github in a new tab?</h4>
+				<div class="modal-buttons">
+					<button type="button" id="modal-continue" class="button modal-continue"><span>Continue</span></button>
+					<button type="button" id="modal-cancel" class="button modal-cancel"><span>Cancel</span></button>
+				</div>
+			</div>
+		</div>
+	</menu>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/jquery-detect-mobile-browser.js"></script>
 	<script src="js/jquery-ba-throttle-debounce.js"></script>
@@ -518,21 +529,23 @@
 	</script>
 
 	<div style="height: 0px;">
+		
 		<svg width="0" height="0">
 			<defs>	
-				<clipPath id="portal-clip">
-						<path d="M600,300c0,38.7-35.2,70.2-49.2,103.9c-14.5,34.9-12.4,81.9-38.7,108.2c-26.3,26.3-73.3,24.2-108.2,38.7
+				<clipPath id="portal-clip" clipPathUnits="objectBoundingBox" transform="scale(0.001667)">
+					<path d="M600,300c0,38.7-35.2,70.2-49.2,103.9c-14.5,34.9-12.4,81.9-38.7,108.2c-26.3,26.3-73.3,24.2-108.2,38.7
 						c-33.7,14-65.2,49.2-103.9,49.2c-38.7,0-70.2-35.2-103.9-49.2c-34.9-14.5-81.9-12.4-108.2-38.7c-26.3-26.3-24.2-73.3-38.7-108.2
 						C35.2,370.2,0,338.7,0,300c0-38.7,35.2-70.2,49.2-103.9c14.5-34.9,12.4-81.9,38.7-108.2c26.3-26.3,73.3-24.2,108.2-38.7
 						C229.8,35.2,261.3,0,300,0c38.7,0,70.2,35.2,103.9,49.2c34.9,14.5,81.9,12.4,108.2,38.7c26.3,26.3,24.2,73.3,38.7,108.2
 						C564.8,229.8,600,261.3,600,300z"/>
-				</clipPath>		
-	
+				</clipPath>
+
 				<clipPath id="planet-clip">
 					<circle cx="500.5" cy="500.5" r="500"/>
 				</clipPath>
 			</defs>
 		</svg>
+
 	</div>
 </body>
 

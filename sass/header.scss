@@ -28,7 +28,6 @@ header {
 		top: 0;
 
 		background: transparent;	
-	
 	}
 }
 
@@ -72,6 +71,9 @@ body.scrolled {
 		width: auto;
 
 		padding: 12px 0;
+		position: relative;
+
+		right: -17px;
 	}
 
 	> .button {
@@ -190,26 +192,45 @@ body.scrolled {
 	}
 
 	> .button-straight-right-container {
-		left: -8px;
+		left: -9px;
 
 		@include for-size(tablet-landscape-up) {
-			left: auto;
+			overflow: hidden;
 		}
 
 		&:before {			
 			right: 0;
+
+			@include for-size(tablet-landscape-up) {
+				display: block;
+			}
 		}
 
 		.button {
 			left: 9px;
 
 			@include for-size(tablet-landscape-up) {
-				left: auto;
+				position: relative;
 			}
 
 			svg {
 				transform: translate(-70%, -50%) skew(22.5deg);
+
+				@include for-size(tablet-landscape-up) {
+					transform: translate(-75%, -50%) skew(22.5deg);
+				}
 			}
 		}
+	}
+}
+
+#github-button {
+	@include for-size(tablet-landscape-up) {
+		width: 70px !important;
+		border-right: 0;
+	}
+
+	svg {
+		display: block !important;
 	}
 }
