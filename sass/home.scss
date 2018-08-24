@@ -390,12 +390,6 @@ html.mobile {
 	overflow: hidden;
 
 	opacity: 0.6;
-
-	z-index: -1;
-
-	&.front {
-		z-index: 0;
-	}
 }
 
 .island-meteor {
