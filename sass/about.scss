@@ -37,7 +37,7 @@
 		position: relative;
 	}
 
-	h3 {
+	h2 {
 		margin-left: 2px;
 		margin-bottom: 2.3rem;
 	}
@@ -124,14 +124,14 @@
 	
 	position: relative;
 	
-	h3 {
+	h2 {
 		margin-bottom: 1.9rem;
 	}
 
 	@include for-size(tablet-landscape-up) {
 		width: 352px;
 
-		h3 {			
+		h2 {			
 			margin-left: 46px;
 		}
 
@@ -154,7 +154,7 @@
 	list-style: none;
 
 	li {
-		flex: 1 0 25%;
+		flex: 1 0 33.333%;
 
 		padding: 20px 0;
 

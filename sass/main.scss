@@ -124,32 +124,54 @@ html.mobile {
 	@include for-size(tablet-landscape-up) {		
 		padding-top: 60px !important;
 	}
+}
+
+.section-heading {
+	width: 100%;
+		
+	margin: 2rem 0 3rem 0;
+
+	display: table;
+
+	@include for-size(tablet-landscape-up) {
+		margin: 4rem 0 6rem 0 !important;
+	}
+
+	> h1,
+	&:after {
+		display: table-cell;
+	}
 
 	h1 {
-		margin: 2rem 0 3rem 0;
+		width: 1%;
+
+		padding: 0 16px 0 0;
+
 		position: relative;
 		left: -1px;
 
-		font-size: 2.2rem;
+		font-size: 2rem;
 		color: white;
 
 		text-transform: uppercase;
 
 		@include for-size(tablet-landscape-up) {
 			font-size: 2.6rem;
-
-			margin: 4rem 0 6rem 0;
 		}
-		
+	}
+
+	&:after {		
+		content: '';
+
 		background: repeating-linear-gradient(
-			-67.5deg,
+			90deg,
 			rgba(white, 0.1),
 			rgba(white, 0.1) 4px,
 			transparent 4px,
 			transparent 12px
 		);
 
-		background-position: 0px 0px;
+		transform: scaleY(0.9) skew(-22.5deg);
 	}
 }
 

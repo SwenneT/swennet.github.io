@@ -3,6 +3,9 @@
 --------------------------------------------------------------*/
 
 .websites {
+	.section-heading {
+		margin-bottom: 4rem;
+	}
 }
 
 .website {
@@ -10,95 +13,184 @@
 
 	margin-bottom: 120px;
 
-	display: block;
-
 	position: relative;
 
-	@include for-size(tablet-landscape-up) {
-		display: flex;
-		align-items: top;
-	
-		> div:first-child {
-			margin-right: 5vw;
-		}
+	display: block;
+
+	@include for-size(phone-landscape-up) {
+		margin-bottom: 80px !important;
 	}
 
-	&:nth-child(odd) {
-		.portal {
-			@include for-size(tablet-landscape-up) {
+	@include for-size(tablet-landscape-up) {
+		min-height: 400px;
+
+		margin-bottom: 120px;
+
+		&:nth-child(odd) {
+			.website-portal {
 				left: -40px;
 			}
-		}
 
-		.line {
-			@include for-size(tablet-landscape-up) {
-				right: 0;
-				left: auto;
+			.website-info {
+				margin-left: 300px;
+			}
+
+			.website-title,
+			.website-description,
+			.website-footer {
+				padding-left: 6rem;
+			}
+
+			.website-title {
+				&:before {
+					left: -81px;
+
+					transform: rotate(-45deg);
+					transform-origin: top right;
+				}
+
+				&:after {
+					left: -70px;
+				}
 			}
 		}
-	}
 
-	&:nth-child(even) {
-		.portal {
-			@include for-size(tablet-landscape-up) {
+		&:nth-child(even) {
+			.website-portal {
 				right: -40px;
 			}
-		}
-
-		.line {
-			@include for-size(tablet-landscape-up) {
-				left: 0;
-				right: auto;			
-			}
-		}
-	}
-
-	.line {
-		top: 85px;
-
-		@include for-size(tablet-landscape-up) {
-			width: calc(100% - 200px - 144px);
 			
-			top: 55px;
+			.website-info {
+				margin-right: 300px;
+			}
+
+			.website-title,
+			.website-description,
+			.website-footer {
+				padding-right: 6rem;
+			}
+
+			.website-title {				
+				&:before {
+					right: -81px;
+
+					transform: rotate(45deg);
+					transform-origin: top left;
+				}
+
+				&:after {
+					right: -70px;
+				}
+			}
 		}
 	}
 }
 
-.website-info {
+.website-title {
+	margin: 0 110px 1.8rem 0;
+
+	padding-bottom: 1.2rem;
+
 	position: relative;
 
-	font-size: 0.8rem;
+	border-bottom: 2px solid rgba(white, 0.1);
+
+	@include for-size(tablet-landscape-up) {
+		margin: 0 0 1.8rem 0;
+		padding-bottom: 0.6rem;
+
+		font-size: 1.8rem;
+	}
+
+	&:before,
+	&:after {
+		content: '';
+
+		position: absolute;
+		
+		background: white;
+	
+		pointer-events: none;
+	}
+
+	&:before {
+		width: 32px;
+		height: 2px;
+		
+		bottom: -2px;
+		right: -33px;
+
+		transform: rotate(-45deg);
+		transform-origin: bottom left;
+	
+		opacity: 0.1;
+
+		@include for-size(tablet-landscape-up) {
+			width: 80px;
+		}
+	}
+
+	&:after {	
+		width: 12px;
+		height: 12px;
+
+		bottom: 20px;
+		right: -33px;
+
+		border-radius: 999px;
+
+		opacity: 0.2;
+
+		@include for-size(tablet-landscape-up) {	
+			width: 16px;
+			height: 16px;
+		
+			bottom: -71px;
+		}
+	}
 
 	h2 {
-		font-size: 1.8rem !important;
+		display: block;
 
-		margin-top: 0.4rem;
-		margin-bottom: 2.4rem !important;
+		font-size: 1.6rem;
 
-		.separator {
-			display: none;
+		margin-bottom: 0;
 
-			@include for-size(tablet-landscape-up) {
-				display: inline-block;
-			}
+		@include for-size(tablet-landscape-up) {
+			display: inline-block;
+
+			font-size: 1.8rem;
 		}
+	}
 
-		small {
-			display: block;
+	.separator {
+		display: none;
 
-			@include for-size(tablet-landscape-up) {
-				margin-top: auto;
-
-				display: inline-block;
-			}
+		@include for-size(tablet-landscape-up) {
+			display: inline-block;
 		}
+	}
 
+	small {
+		display: block;
+
+		font-size: 1rem !important;
+
+		@include for-size(tablet-landscape-up) {
+			top: -5px;
+			position: relative;
+
+			display: inline-block;
+
+			font-size: 1.2rem !important;
+		}
 	}
 }
 
 .website-description {
 	margin-bottom: 2rem;
 
+	font-size: 0.8rem;
 	color: rgba(white, 0.75);
 }
 
@@ -155,18 +247,19 @@
 
 .website-portal {
 	position: absolute;
-	top: -12px;
-	right: -8px;
+
+	top: -24px;
+	right: -4px;
 
 	@include for-size(tablet-landscape-up) {
-		position: relative;
-		top: auto;
+		position: absolute;
+		top: -20px;
 	}
 }
 
 .portal {
-	width: 94px;
-	height: 94px;
+	width: 120px;
+	height: 120px;
 
 	position: relative;
 
@@ -202,8 +295,8 @@
 }
 
 .portal-outer {
-	width: 94px;
-	height: 94px;
+	width: 120px;
+	height: 120px;
 
 	position: absolute;
 
@@ -232,8 +325,8 @@
 }
 
 .portal-inner {
-	width: 140px;
-	height: 140px;
+	width: 180px;
+	height: 180px;
 
 	position: absolute;
 	top: 50%;
@@ -253,8 +346,8 @@
 	}
 
 	img {
-		width: 140px;
-		height: 140px;
+		width: 180px;
+		height: 180px;
 
 		transform: scale(1);
 		transition: transform 0.3s;

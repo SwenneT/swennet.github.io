@@ -72,9 +72,17 @@ html.mobile #particles-js { -webkit-transform: translate3d(0, 0, 0); transform: 
 
 @media (min-width: 900px) { .page-section { padding-top: 60px !important; } }
 
-.page-section h1 { margin: 2rem 0 3rem 0; position: relative; left: -1px; font-size: 2.2rem; color: white; text-transform: uppercase; background: -webkit-repeating-linear-gradient(157.5deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 4px, transparent 4px, transparent 12px); background: repeating-linear-gradient(-67.5deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 4px, transparent 4px, transparent 12px); background-position: 0px 0px; }
+.section-heading { width: 100%; margin: 2rem 0 3rem 0; display: table; }
 
-@media (min-width: 900px) { .page-section h1 { font-size: 2.6rem; margin: 4rem 0 6rem 0; } }
+@media (min-width: 900px) { .section-heading { margin: 4rem 0 6rem 0 !important; } }
+
+.section-heading > h1, .section-heading:after { display: table-cell; }
+
+.section-heading h1 { width: 1%; padding: 0 16px 0 0; position: relative; left: -1px; font-size: 2rem; color: white; text-transform: uppercase; }
+
+@media (min-width: 900px) { .section-heading h1 { font-size: 2.6rem; } }
+
+.section-heading:after { content: ''; background: -webkit-repeating-linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 4px, transparent 4px, transparent 12px); background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 4px, transparent 4px, transparent 12px); -webkit-transform: scaleY(0.9) skew(-22.5deg); -ms-transform: scaleY(0.9) skew(-22.5deg); transform: scaleY(0.9) skew(-22.5deg); }
 
 .section-wrap { width: 100%; max-width: 1400px; margin: 0 auto; position: relative; }
 
@@ -125,8 +133,6 @@ html.modal-active .modal { -webkit-transform: translate(-50%, -50%) scale(1); -m
 .text h1 small, .text h2 small, .text h3 small, .text h4 small { font-size: 1.2rem; top: -5px; position: relative; }
 
 .text h1 div, .text h2 div, .text h3 div, .text h4 div { font-size: 1.2rem; padding-right: 16px; }
-
-@media (min-width: 900px) { .text h1 { font-size: 2.8rem; line-height: 3rem; margin-bottom: 1.4rem; } }
 
 .text h2 { font-size: 2.0rem; line-height: 2.4rem; margin-bottom: 1rem; }
 
@@ -312,7 +318,9 @@ body.scrolled header { background: #1e253f; }
 
 @media (min-width: 900px) { .introduction > div .button { margin-right: 34px; } }
 
-.introduction h1 { margin-top: 0; margin-bottom: 1.6rem; text-transform: none; }
+.introduction h1 { margin-top: 0; margin-bottom: 1.6rem; position: relative; left: -1px; font-size: 2.2rem; color: white; text-transform: none; }
+
+@media (min-width: 900px) { .introduction h1 { font-size: 2.6rem; } }
 
 .introduction h1 .subtitle { position: relative; font-size: 1.3rem; }
 
@@ -537,7 +545,7 @@ html.mobile .meteors { display: none; }
 
 .about-info > div { width: 100%; position: relative; }
 
-.about-info h3 { margin-left: 2px; margin-bottom: 2.3rem; }
+.about-info h2 { margin-left: 2px; margin-bottom: 2.3rem; }
 
 .about-info li { height: 36px; line-height: 36px; padding-left: 3px; color: rgba(255, 255, 255, 0.75); font-size: 0.8rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
 
@@ -564,15 +572,15 @@ html.mobile .meteors { display: none; }
 --------------------------------------------------------------*/
 .about-toolset { width: 100%; position: relative; }
 
-.about-toolset h3 { margin-bottom: 1.9rem; }
+.about-toolset h2 { margin-bottom: 1.9rem; }
 
 @media (min-width: 900px) { .about-toolset { width: 352px; }
-  .about-toolset h3 { margin-left: 46px; }
+  .about-toolset h2 { margin-left: 46px; }
   .about-toolset .line { width: calc(110% - 57px); } }
 
 .toolset-list { width: 110%; position: relative; left: -6%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; }
 
-.toolset-list li { -webkit-box-flex: 1; -webkit-flex: 1 0 25%; -ms-flex: 1 0 25%; flex: 1 0 25%; padding: 20px 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; text-align: center; opacity: 0.75; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
+.toolset-list li { -webkit-box-flex: 1; -webkit-flex: 1 0 33.333%; -ms-flex: 1 0 33.333%; flex: 1 0 33.333%; padding: 20px 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; text-align: center; opacity: 0.75; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
 
 @media (min-width: 900px) { .toolset-list li { -webkit-box-flex: 1; -webkit-flex: 1 0 33.333%; -ms-flex: 1 0 33.333%; flex: 1 0 33.333%; } }
 
@@ -589,36 +597,51 @@ html.mobile .meteors { display: none; }
 /*--------------------------------------------------------------
 >>> Websites
 --------------------------------------------------------------*/
-.website { width: 100%; margin-bottom: 120px; display: block; position: relative; }
+.websites .section-heading { margin-bottom: 4rem; }
 
-@media (min-width: 900px) { .website { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: top; -webkit-align-items: top; -ms-flex-align: top; align-items: top; }
-  .website > div:first-child { margin-right: 5vw; } }
+.website { width: 100%; margin-bottom: 120px; position: relative; display: block; }
 
-@media (min-width: 900px) { .website:nth-child(odd) .portal { left: -40px; } }
+@media (min-width: 660px) { .website { margin-bottom: 80px !important; } }
 
-@media (min-width: 900px) { .website:nth-child(odd) .line { right: 0; left: auto; } }
+@media (min-width: 900px) { .website { min-height: 400px; margin-bottom: 120px; }
+  .website:nth-child(odd) .website-portal { left: -40px; }
+  .website:nth-child(odd) .website-info { margin-left: 300px; }
+  .website:nth-child(odd) .website-title, .website:nth-child(odd) .website-description, .website:nth-child(odd) .website-footer { padding-left: 6rem; }
+  .website:nth-child(odd) .website-title:before { left: -81px; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-transform-origin: top right; -ms-transform-origin: top right; transform-origin: top right; }
+  .website:nth-child(odd) .website-title:after { left: -70px; }
+  .website:nth-child(even) .website-portal { right: -40px; }
+  .website:nth-child(even) .website-info { margin-right: 300px; }
+  .website:nth-child(even) .website-title, .website:nth-child(even) .website-description, .website:nth-child(even) .website-footer { padding-right: 6rem; }
+  .website:nth-child(even) .website-title:before { right: -81px; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); -webkit-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left; }
+  .website:nth-child(even) .website-title:after { right: -70px; } }
 
-@media (min-width: 900px) { .website:nth-child(even) .portal { right: -40px; } }
+.website-title { margin: 0 110px 1.8rem 0; padding-bottom: 1.2rem; position: relative; border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
 
-@media (min-width: 900px) { .website:nth-child(even) .line { left: 0; right: auto; } }
+@media (min-width: 900px) { .website-title { margin: 0 0 1.8rem 0; padding-bottom: 0.6rem; font-size: 1.8rem; } }
 
-.website .line { top: 85px; }
+.website-title:before, .website-title:after { content: ''; position: absolute; background: white; pointer-events: none; }
 
-@media (min-width: 900px) { .website .line { width: calc(100% - 200px - 144px); top: 55px; } }
+.website-title:before { width: 32px; height: 2px; bottom: -2px; right: -33px; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-transform-origin: bottom left; -ms-transform-origin: bottom left; transform-origin: bottom left; opacity: 0.1; }
 
-.website-info { position: relative; font-size: 0.8rem; }
+@media (min-width: 900px) { .website-title:before { width: 80px; } }
 
-.website-info h2 { font-size: 1.8rem !important; margin-top: 0.4rem; margin-bottom: 2.4rem !important; }
+.website-title:after { width: 12px; height: 12px; bottom: 20px; right: -33px; border-radius: 999px; opacity: 0.2; }
 
-.website-info h2 .separator { display: none; }
+@media (min-width: 900px) { .website-title:after { width: 16px; height: 16px; bottom: -71px; } }
 
-@media (min-width: 900px) { .website-info h2 .separator { display: inline-block; } }
+.website-title h2 { display: block; font-size: 1.6rem; margin-bottom: 0; }
 
-.website-info h2 small { display: block; }
+@media (min-width: 900px) { .website-title h2 { display: inline-block; font-size: 1.8rem; } }
 
-@media (min-width: 900px) { .website-info h2 small { margin-top: auto; display: inline-block; } }
+.website-title .separator { display: none; }
 
-.website-description { margin-bottom: 2rem; color: rgba(255, 255, 255, 0.75); }
+@media (min-width: 900px) { .website-title .separator { display: inline-block; } }
+
+.website-title small { display: block; font-size: 1rem !important; }
+
+@media (min-width: 900px) { .website-title small { top: -5px; position: relative; display: inline-block; font-size: 1.2rem !important; } }
+
+.website-description { margin-bottom: 2rem; font-size: 0.8rem; color: rgba(255, 255, 255, 0.75); }
 
 .website-footer { width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 
@@ -639,11 +662,11 @@ html.mobile .meteors { display: none; }
 /*--------------------------------------------------------------
 >>> SVG Portals
 --------------------------------------------------------------*/
-.website-portal { position: absolute; top: -12px; right: -8px; }
+.website-portal { position: absolute; top: -24px; right: -4px; }
 
-@media (min-width: 900px) { .website-portal { position: relative; top: auto; } }
+@media (min-width: 900px) { .website-portal { position: absolute; top: -20px; } }
 
-.portal { width: 94px; height: 94px; position: relative; display: inline-block; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; -webkit-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; }
+.portal { width: 120px; height: 120px; position: relative; display: inline-block; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; -webkit-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; }
 
 .portal:hover .portal-outer { -webkit-filter: hue-rotate(-30deg); filter: hue-rotate(-30deg); }
 
@@ -653,7 +676,7 @@ html.mobile .meteors { display: none; }
 
 @media (min-width: 900px) { .portal { width: 400px; height: 400px; } }
 
-.portal-outer { width: 94px; height: 94px; position: absolute; -webkit-transition: -webkit-filter 0.6s; transition: -webkit-filter 0.6s; transition: filter 0.6s; transition: filter 0.6s, -webkit-filter 0.6s; -webkit-filter: hue-rotate(-30deg); filter: hue-rotate(-30deg); }
+.portal-outer { width: 120px; height: 120px; position: absolute; -webkit-transition: -webkit-filter 0.6s; transition: -webkit-filter 0.6s; transition: filter 0.6s; transition: filter 0.6s, -webkit-filter 0.6s; -webkit-filter: hue-rotate(-30deg); filter: hue-rotate(-30deg); }
 
 @media (min-width: 900px) { .portal-outer { width: 400px; height: 400px; } }
 
@@ -661,11 +684,11 @@ html.mobile .meteors { display: none; }
 
 .portal-outer-2 { fill: #d83075; -webkit-animation: portalAnim2 18s linear infinite; animation: portalAnim2 18s linear infinite; -webkit-filter: drop-shadow(0px 0px 16px rgba(216, 48, 117, 0.6)); filter: drop-shadow(0px 0px 16px rgba(216, 48, 117, 0.6)); }
 
-.portal-inner { width: 140px; height: 140px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%) scale(0.48); -ms-transform: translate(-50%, -50%) scale(0.48); transform: translate(-50%, -50%) scale(0.48); opacity: 0.9; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; -webkit-clip-path: url(#portal-clip); clip-path: url(#portal-clip); }
+.portal-inner { width: 180px; height: 180px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%) scale(0.48); -ms-transform: translate(-50%, -50%) scale(0.48); transform: translate(-50%, -50%) scale(0.48); opacity: 0.9; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; -webkit-clip-path: url(#portal-clip); clip-path: url(#portal-clip); }
 
 @media (min-width: 900px) { .portal-inner { width: 600px; height: 600px; } }
 
-.portal-inner img { width: 140px; height: 140px; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; pointer-events: none; }
+.portal-inner img { width: 180px; height: 180px; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; pointer-events: none; }
 
 @media (min-width: 900px) { .portal-inner img { width: 600px; height: 600px; } }
 
