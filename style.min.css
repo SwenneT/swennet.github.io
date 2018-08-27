@@ -6,12 +6,11 @@ ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
-html,body{height:100%}
 body{font-family:'Orbitron',sans-serif;font-size:16px;position:relative;color:rgba(255,255,255,0.9);text-shadow:2px 2px 0 rgba(0,0,0,0.2);background:#3d2448;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1000" preserveAspectRatio="none">\a<linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".5" y1="1000" x2=".5">\a <stop offset="0" stop-color="%233d2448"/>\a <stop offset="1" stop-color="%231e253f"/>\a</linearGradient>\a<path fill="url(%23a)" d="M0 0h1v1000H0z"/>\a</svg>');background-size:auto 150vh;background-repeat:repeat-x;overflow-x:hidden}
 .animation.paused *{-webkit-animation-play-state:paused !important;animation-play-state:paused !important}
 .svg-icon{fill:white}
 .separator{margin:0 12px}
-#particles-js{height:100%;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background:transparent;opacity:0;-webkit-animation:fadeIn 2s linear forwards;animation:fadeIn 2s linear forwards}
+#particles-js{height:99%;position:absolute;top:0;left:0;right:0;z-index:-1;background:transparent;opacity:0;-webkit-animation:fadeIn 2s linear forwards;animation:fadeIn 2s linear forwards}
 #particles-js canvas{width:100%;height:100%;background:transparent}
 #particles-js:after{content:'';height:300vh;width:100%;position:absolute;left:0;right:0;bottom:0;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1000" preserveAspectRatio="none">\a<linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".5" y1="1000" x2=".5">\a <stop offset="0" stop-color="%233d2448"/>\a <stop offset="1" stop-color="%233d2448" stop-opacity="0"/>\a</linearGradient>\a<path fill="url(#a)" d="M0 0h1v1000H0z"/>\a</svg>') repeat}
 html.mobile #particles-js{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);background:url(images/stars.png) repeat !important;-webkit-animation-name:fadeInMobile;animation-name:fadeInMobile}
@@ -181,6 +180,7 @@ html.mobile .meteors{display:none}
 .portal-outer-2{fill:#d83075;-webkit-animation:portalAnim2 18s linear infinite;animation:portalAnim2 18s linear infinite;-webkit-filter:drop-shadow(0 0 16px rgba(216,48,117,0.6));filter:drop-shadow(0 0 16px rgba(216,48,117,0.6))}
 .portal-inner{width:180px;height:180px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale(0.48);-ms-transform:translate(-50%,-50%) scale(0.48);transform:translate(-50%,-50%) scale(0.48);opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s;-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip);overflow:hidden}
 .portal-inner img{width:180px;height:180px;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
+footer{overflow:hidden}
 .contact-text{margin-bottom:4rem}
 .contact-info{margin-bottom:60px}
 .contact-info ul{width:100%}

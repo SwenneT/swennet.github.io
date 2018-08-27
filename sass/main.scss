@@ -2,11 +2,6 @@
 >>> Main
 --------------------------------------------------------------*/
 
-html,
-body {
-	height: 100%;
-}
-
 body {
 	font-family: 'Orbitron', sans-serif;
 	font-size: 16px;
@@ -48,13 +43,12 @@ body {
 }
 
 #particles-js {
-	height: 100%;
+	height: 99%; // Remove extra padding at bottom
 
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
 
 	z-index: -1;
 
