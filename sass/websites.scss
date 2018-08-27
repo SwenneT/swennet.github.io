@@ -242,13 +242,14 @@
 }
 
 .under-construction {
-
 	small {
 		color: $textAccentUnderConstruction;
 		font-size: 1rem !important;
 	}
 
 	.portal {
+		cursor: default;
+
 		&:hover {
 			.portal-outer-2 {
 				filter: drop-shadow(0px 0px 16px rgba($portalColorUnderConstruction, 0.6)) hue-rotate(-30deg);

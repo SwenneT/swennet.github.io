@@ -78,7 +78,7 @@ html.mobile #particles-js { -webkit-transform: translate3d(0, 0, 0); transform: 
 
 .section-heading > h1, .section-heading:after { display: table-cell; }
 
-.section-heading h1 { width: 1%; padding: 0 16px 0 0; position: relative; left: -1px; font-size: 2rem; color: white; text-transform: uppercase; }
+.section-heading h1 { width: 1%; padding: 0 24px 0 0; position: relative; left: -1px; font-size: 2rem; color: white; text-transform: uppercase; }
 
 @media (min-width: 900px) { .section-heading h1 { font-size: 2.6rem; } }
 
@@ -574,31 +574,31 @@ html.mobile .meteors { display: none; }
 @media (min-width: 900px) { .about-info { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; min-width: 300px; max-width: 30vw; } }
 
 /*--------------------------------------------------------------
->>> Toolset
+>>> Skillset
 --------------------------------------------------------------*/
-.about-toolset { width: 100%; position: relative; }
+.about-skillset { width: 100%; position: relative; }
 
-.about-toolset h2 { margin-bottom: 1.9rem; }
+.about-skillset h2 { margin-bottom: 1.9rem; }
 
-@media (min-width: 900px) { .about-toolset { width: 352px; }
-  .about-toolset h2 { margin-left: 46px; }
-  .about-toolset .line { width: calc(110% - 57px); } }
+@media (min-width: 900px) { .about-skillset { width: 352px; }
+  .about-skillset h2 { margin-left: 66px; }
+  .about-skillset .line { width: calc(110% - 57px); } }
 
-.toolset-list { width: 110%; position: relative; left: -6%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; }
+.skillset-list { width: 110%; position: relative; left: -6%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; }
 
-.toolset-list li { -webkit-box-flex: 1; -webkit-flex: 1 0 33.333%; -ms-flex: 1 0 33.333%; flex: 1 0 33.333%; padding: 20px 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; text-align: center; opacity: 0.75; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
+@media (min-width: 900px) { .skillset-list { width: 100%; left: auto; right: -30px; } }
 
-@media (min-width: 900px) { .toolset-list li { -webkit-box-flex: 1; -webkit-flex: 1 0 33.333%; -ms-flex: 1 0 33.333%; flex: 1 0 33.333%; } }
+.skillset-list li { -webkit-box-flex: 1; -webkit-flex: 1 0 33.333%; -ms-flex: 1 0 33.333%; flex: 1 0 33.333%; padding: 20px 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; text-align: center; opacity: 0.75; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
 
-.toolset-list li svg { max-width: 40px; max-height: 40px; margin: 0 auto 12px auto; -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0)); filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0)); -webkit-transition: -webkit-filter 0.3s; transition: -webkit-filter 0.3s; transition: filter 0.3s; transition: filter 0.3s, -webkit-filter 0.3s; }
+@media (min-width: 900px) { .skillset-list li { -webkit-box-flex: 1; -webkit-flex: 1 0 33.333%; -ms-flex: 1 0 33.333%; flex: 1 0 33.333%; } }
 
-.toolset-list li span { font-size: 0.6rem; }
+.skillset-list li svg { max-width: 40px; max-height: 40px; margin: 0 auto 12px auto; -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0)); filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0)); -webkit-transition: -webkit-filter 0.3s; transition: -webkit-filter 0.3s; transition: filter 0.3s; transition: filter 0.3s, -webkit-filter 0.3s; }
 
-.toolset-list li:hover { opacity: 1; }
+.skillset-list li span { font-size: 0.6rem; }
 
-.toolset-list li:hover svg { -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.25)); filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.25)); }
+.skillset-list li:hover { opacity: 1; }
 
-@media (min-width: 900px) { .toolset-list { right: -30px; } }
+.skillset-list li:hover svg { -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.25)); filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.25)); }
 
 /*--------------------------------------------------------------
 >>> Websites
@@ -666,6 +666,8 @@ html.mobile .meteors { display: none; }
 .website-tech .logos svg { display: inline-block; margin-right: 12px; opacity: 0.9; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
 
 .under-construction small { color: #ff5f79; font-size: 1rem !important; }
+
+.under-construction .portal { cursor: default; }
 
 .under-construction .portal:hover .portal-outer-2 { -webkit-filter: drop-shadow(0px 0px 16px rgba(239, 86, 106, 0.6)) hue-rotate(-30deg); filter: drop-shadow(0px 0px 16px rgba(239, 86, 106, 0.6)) hue-rotate(-30deg); }
 

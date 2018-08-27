@@ -17,7 +17,7 @@ html.mobile #particles-js{-webkit-transform:translate3d(0,0,0);transform:transla
 .page-section{width:100%;min-height:100vh;padding:0 8%;padding-bottom:60px !important;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .section-heading{width:100%;margin:2rem 0 3rem 0;display:table}
 .section-heading>h1,.section-heading:after{display:table-cell}
-.section-heading h1{width:1%;padding:0 16px 0 0;position:relative;left:-1px;font-size:2rem;color:white;text-transform:uppercase}
+.section-heading h1{width:1%;padding:0 24px 0 0;position:relative;left:-1px;font-size:2rem;color:white;text-transform:uppercase}
 .section-heading:after{content:'';background:-webkit-repeating-linear-gradient(left,rgba(255,255,255,0.1),rgba(255,255,255,0.1) 4px,transparent 4px,transparent 12px);background:repeating-linear-gradient(90deg,rgba(255,255,255,0.1),rgba(255,255,255,0.1) 4px,transparent 4px,transparent 12px);-webkit-transform:scaleY(0.9) skew(-22.5deg);-ms-transform:scaleY(0.9) skew(-22.5deg);transform:scaleY(0.9) skew(-22.5deg)}
 .section-wrap{width:100%;max-width:1400px;margin:0 auto;position:relative}
 .line{width:100%;height:2px;position:absolute;background:white;pointer-events:none;opacity:.1}
@@ -141,14 +141,14 @@ html.mobile .meteors{display:none}
 .about-info .likes{margin-top:auto;margin-bottom:80px;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
 .about-info .likes li{padding-left:28px;position:relative}
 .about-info .likes li:before{content:'';position:absolute;top:52%;left:6px;-webkit-transform:translateY(-50%) rotate(45deg);-ms-transform:translateY(-50%) rotate(45deg);transform:translateY(-50%) rotate(45deg);width:6px;height:6px;background:rgba(255,255,255,0.6)}
-.about-toolset{width:100%;position:relative}
-.about-toolset h2{margin-bottom:1.9rem}
-.toolset-list{width:110%;position:relative;left:-6%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;list-style:none}
-.toolset-list li{-webkit-box-flex:1;-webkit-flex:1 0 33.333%;-ms-flex:1 0 33.333%;flex:1 0 33.333%;padding:20px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;text-align:center;opacity:.75;-webkit-transition:opacity .3s;transition:opacity .3s}
-.toolset-list li svg{max-width:40px;max-height:40px;margin:0 auto 12px auto;-webkit-filter:drop-shadow(0 0 3px rgba(255,255,255,0));filter:drop-shadow(0 0 3px rgba(255,255,255,0));-webkit-transition:-webkit-filter .3s;transition:-webkit-filter .3s;transition:filter .3s;transition:filter .3s,-webkit-filter .3s}
-.toolset-list li span{font-size:.6rem}
-.toolset-list li:hover{opacity:1}
-.toolset-list li:hover svg{-webkit-filter:drop-shadow(0 0 3px rgba(255,255,255,0.25));filter:drop-shadow(0 0 3px rgba(255,255,255,0.25))}
+.about-skillset{width:100%;position:relative}
+.about-skillset h2{margin-bottom:1.9rem}
+.skillset-list{width:110%;position:relative;left:-6%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;list-style:none}
+.skillset-list li{-webkit-box-flex:1;-webkit-flex:1 0 33.333%;-ms-flex:1 0 33.333%;flex:1 0 33.333%;padding:20px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;text-align:center;opacity:.75;-webkit-transition:opacity .3s;transition:opacity .3s}
+.skillset-list li svg{max-width:40px;max-height:40px;margin:0 auto 12px auto;-webkit-filter:drop-shadow(0 0 3px rgba(255,255,255,0));filter:drop-shadow(0 0 3px rgba(255,255,255,0));-webkit-transition:-webkit-filter .3s;transition:-webkit-filter .3s;transition:filter .3s;transition:filter .3s,-webkit-filter .3s}
+.skillset-list li span{font-size:.6rem}
+.skillset-list li:hover{opacity:1}
+.skillset-list li:hover svg{-webkit-filter:drop-shadow(0 0 3px rgba(255,255,255,0.25));filter:drop-shadow(0 0 3px rgba(255,255,255,0.25))}
 .websites .section-heading{margin-bottom:4rem}
 .website{width:100%;margin-bottom:120px;position:relative;display:block}
 .website-title{margin:0 110px 1.8rem 0;padding-bottom:1.2rem;position:relative;border-bottom:2px solid rgba(255,255,255,0.1)}
@@ -167,6 +167,7 @@ html.mobile .meteors{display:none}
 .website-tech .logos{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
 .website-tech .logos svg{display:inline-block;margin-right:12px;opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s}
 .under-construction small{color:#ff5f79;font-size:1rem !important}
+.under-construction .portal{cursor:default}
 .under-construction .portal:hover .portal-outer-2{-webkit-filter:drop-shadow(0 0 16px rgba(239,86,106,0.6)) hue-rotate(-30deg);filter:drop-shadow(0 0 16px rgba(239,86,106,0.6)) hue-rotate(-30deg)}
 .under-construction .portal-outer-1{fill:rgba(239,86,106,0.1)}
 .under-construction .portal-outer-2{fill:#ef566a;-webkit-filter:drop-shadow(0 0 16px rgba(239,86,106,0.6));filter:drop-shadow(0 0 16px rgba(239,86,106,0.6))}
@@ -253,11 +254,11 @@ header{height:60px;padding:0 24px;top:0;background:transparent}
 .about-content{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
 .about-info .likes{margin-bottom:auto}
 .about-info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;min-width:300px;max-width:30vw}
-.about-toolset{width:352px}
-.about-toolset h2{margin-left:46px}
-.about-toolset .line{width:calc(110% - 57px)}
-.toolset-list li{-webkit-box-flex:1;-webkit-flex:1 0 33.333%;-ms-flex:1 0 33.333%;flex:1 0 33.333%}
-.toolset-list{right:-30px}
+.about-skillset{width:352px}
+.about-skillset h2{margin-left:66px}
+.about-skillset .line{width:calc(110% - 57px)}
+.skillset-list{width:100%;left:auto;right:-30px}
+.skillset-list li{-webkit-box-flex:1;-webkit-flex:1 0 33.333%;-ms-flex:1 0 33.333%;flex:1 0 33.333%}
 .website{min-height:400px;margin-bottom:120px}
 .website:nth-child(odd) .website-portal{left:-40px}
 .website:nth-child(odd) .website-info{margin-left:300px}
