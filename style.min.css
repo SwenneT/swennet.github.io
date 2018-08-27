@@ -283,8 +283,8 @@ header{height:60px;padding:0 24px;top:0;background:transparent}
 .contact-text{max-width:50vw}
 .contact-info ul{max-width:320px}
 .contact-form{min-width:400px}
-.earth{bottom:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
-.moon{bottom:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+.earth{bottom:-1px;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+.moon{bottom:-1px;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
 }@media(orientation:landscape) and (max-width:900px){.island-main{height:60vh}
 .island-impact{width:70vh;height:60vh}
 .island-shield{height:34.09vh}
