@@ -124,7 +124,7 @@ $earthGlowSizeVW: $earthSizeVW + $earthGlowBiggerVW;
 	transform-origin: bottom right;
 
 	@include for-size(tablet-landscape-up) {
-		bottom: -1px;
+		bottom: 0;
 
 		transform: scale(1);
 	}
@@ -273,7 +273,7 @@ $moonSizeVW: 20vw;
 	transform-origin: bottom right;
 
 	@include for-size(tablet-landscape-up) {
-		bottom: -1px;
+		bottom: 0;
 
 		transform: scale(1);
 	}

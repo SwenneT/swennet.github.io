@@ -6,6 +6,7 @@ ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
+html,body{height:100%}
 body{font-family:'Orbitron',sans-serif;font-size:16px;position:relative;color:rgba(255,255,255,0.9);text-shadow:2px 2px 0 rgba(0,0,0,0.2);background:#3d2448;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1000" preserveAspectRatio="none">\a<linearGradient id="a" gradientUnits="userSpaceOnUse" x1=".5" y1="1000" x2=".5">\a <stop offset="0" stop-color="%233d2448"/>\a <stop offset="1" stop-color="%231e253f"/>\a</linearGradient>\a<path fill="url(%23a)" d="M0 0h1v1000H0z"/>\a</svg>');background-size:auto 150vh;background-repeat:repeat-x;overflow-x:hidden}
 .animation.paused *{-webkit-animation-play-state:paused !important;animation-play-state:paused !important}
 .svg-icon{fill:white}
@@ -283,8 +284,8 @@ header{height:60px;padding:0 24px;top:0;background:transparent}
 .contact-text{max-width:50vw}
 .contact-info ul{max-width:320px}
 .contact-form{min-width:400px}
-.earth{bottom:-1px;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
-.moon{bottom:-1px;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+.earth{bottom:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+.moon{bottom:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
 }@media(orientation:landscape) and (max-width:900px){.island-main{height:60vh}
 .island-impact{width:70vh;height:60vh}
 .island-shield{height:34.09vh}
