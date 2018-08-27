@@ -369,6 +369,8 @@
 
 	clip-path: url(#portal-clip);
 
+	overflow: hidden;
+
 	@include for-size(tablet-landscape-up) {
 		width: 600px;
 		height: 600px;

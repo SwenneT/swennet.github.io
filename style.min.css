@@ -178,7 +178,7 @@ html.mobile .meteors{display:none}
 .portal-outer{width:120px;height:120px;position:absolute;-webkit-transition:-webkit-filter .6s;transition:-webkit-filter .6s;transition:filter .6s;transition:filter .6s,-webkit-filter .6s;-webkit-filter:hue-rotate(-30deg);filter:hue-rotate(-30deg)}
 .portal-outer-1{fill:rgba(216,48,117,0.1);-webkit-animation:portalAnim1 24s linear infinite;animation:portalAnim1 24s linear infinite}
 .portal-outer-2{fill:#d83075;-webkit-animation:portalAnim2 18s linear infinite;animation:portalAnim2 18s linear infinite;-webkit-filter:drop-shadow(0 0 16px rgba(216,48,117,0.6));filter:drop-shadow(0 0 16px rgba(216,48,117,0.6))}
-.portal-inner{width:180px;height:180px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale(0.48);-ms-transform:translate(-50%,-50%) scale(0.48);transform:translate(-50%,-50%) scale(0.48);opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s;-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip)}
+.portal-inner{width:180px;height:180px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale(0.48);-ms-transform:translate(-50%,-50%) scale(0.48);transform:translate(-50%,-50%) scale(0.48);opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s;-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip);overflow:hidden}
 .portal-inner img{width:180px;height:180px;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
 .contact-text{margin-bottom:4rem}
 .contact-info{margin-bottom:60px}
