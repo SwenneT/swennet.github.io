@@ -235,8 +235,8 @@
 		 * Meteor on Shield
 		 */
 		( function impactMeteor() {
-			var minTime = 100,
-				maxTime = 2000,
+			var minTime = 10000,
+				maxTime = 15000,
 				randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);;
 
 			setTimeout( function() {
