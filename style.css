@@ -707,6 +707,8 @@ html.mobile .meteors { display: none; }
 /*--------------------------------------------------------------
 >>> Contact
 --------------------------------------------------------------*/
+.contact-info { margin-bottom: 80px; font-size: 0.8rem; color: rgba(255, 255, 255, 0.75); }
+
 .contact-form { width: 100%; max-width: 40vw; }
 
 @media (min-width: 900px) { .contact-form { min-width: 400px; } }

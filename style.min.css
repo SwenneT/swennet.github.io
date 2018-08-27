@@ -176,6 +176,7 @@ html.mobile .meteors{display:none}
 .portal-outer-2{fill:#d83075;-webkit-animation:portalAnim2 18s linear infinite;animation:portalAnim2 18s linear infinite;-webkit-filter:drop-shadow(0 0 16px rgba(216,48,117,0.6));filter:drop-shadow(0 0 16px rgba(216,48,117,0.6))}
 .portal-inner{width:180px;height:180px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale(0.48);-ms-transform:translate(-50%,-50%) scale(0.48);transform:translate(-50%,-50%) scale(0.48);opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s;-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip)}
 .portal-inner img{width:180px;height:180px;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
+.contact-info{margin-bottom:80px;font-size:.8rem;color:rgba(255,255,255,0.75)}
 .contact-form{width:100%;max-width:40vw}
 .earth-container{width:100%;height:100%;position:absolute;top:0;left:0;overflow:hidden}
 .earth{width:100%;height:100%;position:absolute;bottom:60px;right:0;-webkit-transform:scale(0.5);-ms-transform:scale(0.5);transform:scale(0.5);-webkit-transform-origin:bottom right;-ms-transform-origin:bottom right;transform-origin:bottom right}
