@@ -11,6 +11,9 @@ $link: $textAccent;
 
 $portalColor: #d83075;
 
+$textAccentUnderConstruction: #ff5f79;
+$portalColorUnderConstruction: #ef566a;
+
 /*--------------------------------------------------------------
 >>> Sizes
 --------------------------------------------------------------*/
@@ -42,8 +45,10 @@ $maxWidth: 1400px;
 	 	@media (min-width: $tablet-landscape-upper-boundary) { @content; }
 	} @else if $range == big-desktop-up {
 	  	@media (min-width: $desktop-upper-boundary) { @content; }
+	} @else if $range == phone-landscape-only {
+		@media (orientation: landscape) and (max-width: $tablet-portrait-upper-boundary) { @content }
 	}
-  }
+}
 
 
 /*--------------------------------------------------------------

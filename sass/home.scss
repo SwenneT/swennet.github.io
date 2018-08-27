@@ -135,6 +135,10 @@
 	animation: islandMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
 	animation-delay: -.5s;	
 
+	@include for-size(phone-landscape-only) {
+		height: 60vh;
+	}
+
 	@include for-size(tablet-landscape-up) {
 		height: 66vh;
 		top: 10vh;
@@ -206,12 +210,17 @@ $impactSpeed: $impactMeteorSpeed - 0.2s;
 	animation: islandMove 8s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
 	animation-delay: -.5s;
 
+	@include for-size(phone-landscape-only) {
+		width: 70vh;
+		height: 60vh;
+	}
+
 	@include for-size(tablet-landscape-up) {
 		width: 77vh;
 		height: 66vh;
 
 		top: 10vh;
-		botttom: auto;
+		bottom: auto;
 	}
 
 	&.impact {
@@ -345,6 +354,10 @@ $impactSpeed: $impactMeteorSpeed - 0.2s;
 	border-radius: 9999px 9999px 0 0;
 
 	overflow: hidden;
+
+	@include for-size(phone-landscape-only) {
+		height: 34.09vh;
+	}
 
 	@include for-size(tablet-landscape-up) {
 		height: 37.5vh;

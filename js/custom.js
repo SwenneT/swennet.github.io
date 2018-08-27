@@ -199,8 +199,8 @@
 			( function fallingMeteors() {
 
 				var	numMeteors = 5,
-					maxTime = 10000,
 					minTime = 500,
+					maxTime = 10000,
 					randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);
 
 				setTimeout(function() {
@@ -228,27 +228,28 @@
 
 				}, randTime);
 			}());
+		}
 
-			/* 
-			 * Meteor on Shield
-			 */
-			( function impactMeteor() {
-				var maxTime = 15000,
-					minTime = 10000,
-					randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);;
+
+		/* 
+		 * Meteor on Shield
+		 */
+		( function impactMeteor() {
+			var minTime = 100,
+				maxTime = 2000,
+				randTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);;
+
+			setTimeout( function() {
+				$('#island-impact').removeClass('impact');
 
 				setTimeout( function() {
-					$('#island-impact').removeClass('impact');
+					$('#island-impact').addClass('impact');
+				})
 
-					setTimeout( function() {
-						$('#island-impact').addClass('impact');
-					})
+				impactMeteor();
 
-					impactMeteor();
-
-				}, randTime);
-			}());
-		}
+			}, randTime);
+		}());
 
 
 		/* 

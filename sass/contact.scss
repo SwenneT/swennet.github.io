@@ -1,12 +1,53 @@
 /*--------------------------------------------------------------
 >>> Contact
 --------------------------------------------------------------*/
+.contact-text {
+	margin-bottom: 4rem;
+
+	@include for-size(phone-landscape-only) {		
+		max-width: 50vw;
+	}
+
+	@include for-size(tablet-landscape-up) {		
+		max-width: 50vw;
+	}
+}
 
 .contact-info {
-	margin-bottom: 80px;
+	margin-bottom: 60px;
 
-	font-size: 0.8rem;
-	color: rgba(white, 0.75);
+	ul {
+		width: 100%;
+
+		@include for-size(tablet-landscape-up) {
+			max-width: 320px;
+		}
+	}
+
+	li {
+		
+		height: 36px;
+		line-height: 36px;
+
+		display: flex;
+		align-content: flex-end;
+
+		border-bottom: 1px solid rgba(white, 0.1);
+
+		&:last-child {
+			border-bottom: 0;
+		}
+		
+		span {
+			&:first-child {
+				width: 40%;
+			}
+
+			&:last-child {
+				width: 60%;
+			}
+		}
+	}
 }
 
 .contact-form {
@@ -38,15 +79,28 @@
 >>> Earth
 --------------------------------------------------------------*/
 
-$earthSize: 80vh;
+// Portrait & Normal
+$earthSizeVH: 80vh;
 
-$earthOffScreen: 3;
+$earthOffScreenVH: 3;
 
-$earthAtmosphereBigger: $earthSize / 8;
-$earthAtmosphereSize: $earthSize + $earthAtmosphereBigger;
+$earthAtmosphereBiggerVH: $earthSizeVH / 8;
+$earthAtmosphereSizeVH: $earthSizeVH + $earthAtmosphereBiggerVH;
 
-$earthGlowBigger: $earthSize / 2;
-$earthGlowSize: $earthSize + $earthGlowBigger;
+$earthGlowBiggerVH: $earthSizeVH / 2;
+$earthGlowSizeVH: $earthSizeVH + $earthGlowBiggerVH;
+
+// Landscape Only
+$earthSizeVW: 100vw;
+
+$earthOffScreenVW: 3;
+
+$earthAtmosphereBiggerVW: $earthSizeVW / 8;
+$earthAtmosphereSizeVW: $earthSizeVW + $earthAtmosphereBiggerVW;
+
+$earthGlowBiggerVW: $earthSizeVW / 2;
+$earthGlowSizeVW: $earthSizeVW + $earthGlowBiggerVW;
+
 
 .earth-container {
 	width: 100%;
@@ -78,12 +132,12 @@ $earthGlowSize: $earthSize + $earthGlowBigger;
 }
 
 .earth-inner {
-	width: $earthSize;
-	height: $earthSize;
+	width: $earthSizeVH;
+	height: $earthSizeVH;
 
 	position: absolute;
-	bottom: -$earthSize / $earthOffScreen;
-	right: -$earthSize / $earthOffScreen;
+	bottom: -$earthSizeVH / $earthOffScreenVH;
+	right: -$earthSizeVH / $earthOffScreenVH;
 
 	background: #4861b2;
 
@@ -91,7 +145,15 @@ $earthGlowSize: $earthSize + $earthGlowBigger;
 
 	border-radius: 999px;
 
-	transform: rotate(23.5deg);
+	transform: rotate(22.5deg);
+
+	@include for-size(phone-landscape-only) {
+		width: $earthSizeVW;
+		height: $earthSizeVW;
+
+		bottom: -$earthSizeVW / $earthOffScreenVW;
+		right: -$earthSizeVW / $earthOffScreenVW;
+	}
 
 	&:after {
 		content: '';
@@ -111,29 +173,45 @@ $earthGlowSize: $earthSize + $earthGlowBigger;
 }
 
 .earth-atmosphere {
-	width: $earthAtmosphereSize;
-	height: $earthAtmosphereSize;
+	width: $earthAtmosphereSizeVH;
+	height: $earthAtmosphereSizeVH;
 
 	position: absolute;
-	bottom: ( -$earthSize / $earthOffScreen ) - ( $earthAtmosphereBigger / 2 );
-	right: ( -$earthSize / $earthOffScreen ) - ( $earthAtmosphereBigger / 2 );
+	bottom: ( -$earthSizeVH / $earthOffScreenVH ) - ( $earthAtmosphereBiggerVH / 2 );
+	right: ( -$earthSizeVH / $earthOffScreenVH ) - ( $earthAtmosphereBiggerVH / 2 );
 
 	background: rgba(darken(#3d2448, 10%), 0.2);
 
 	border-radius: 999px;
+
+	@include for-size(phone-landscape-only) {
+		width: $earthAtmosphereSizeVW;
+		height: $earthAtmosphereSizeVW;
+		
+		bottom: ( -$earthSizeVW / $earthOffScreenVW ) - ( $earthAtmosphereBiggerVW / 2 );
+		right: ( -$earthSizeVW / $earthOffScreenVW ) - ( $earthAtmosphereBiggerVW / 2 );
+	}
 }
 
 .earth-glow {
-	width: $earthGlowSize;
-	height: $earthGlowSize;
+	width: $earthGlowSizeVH;
+	height: $earthGlowSizeVH;
 
 	position: absolute;
-	bottom: ( -$earthSize / $earthOffScreen ) - ( $earthGlowBigger / 2 );
-	right: ( -$earthSize / $earthOffScreen ) - ( $earthGlowBigger / 2 );
+	bottom: ( -$earthSizeVH / $earthOffScreenVH ) - ( $earthGlowBiggerVH / 2 );
+	right: ( -$earthSizeVH / $earthOffScreenVH ) - ( $earthGlowBiggerVH / 2 );
 
 	background: rgba(#ffffff, 0.005);
 
 	border-radius: 999px;
+
+	@include for-size(phone-landscape-only) {
+		width: $earthGlowSizeVW;
+		height: $earthGlowSizeVW;	
+		
+		bottom: ( -$earthSizeVW / $earthOffScreenVW ) - ( $earthGlowBiggerVW / 2 );
+		right: ( -$earthSizeVW / $earthOffScreenVW ) - ( $earthGlowBiggerVW / 2 );
+	}
 }
 
 .earth-land {
@@ -169,7 +247,9 @@ $earthGlowSize: $earthSize + $earthGlowBigger;
 >>> Moon
 --------------------------------------------------------------*/
 
-$moonSize: 16vh;
+$moonSizeVH: 16vh;
+
+$moonSizeVW: 20vw;
 
 .moon-container {
 	width: 100%;
@@ -182,9 +262,27 @@ $moonSize: 16vh;
 	overflow: hidden;
 }
 
+.moon {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	bottom: 60px;
+	right: 0;
+		
+	transform: scale(0.5);
+	transform-origin: bottom right;
+
+	@include for-size(tablet-landscape-up) {
+		bottom: 0;
+
+		transform: scale(1);
+	}
+}
+
 .moon-inner {
-	width: $moonSize;
-	height: $moonSize;
+	width: $moonSizeVH;
+	height: $moonSizeVH;
 
 	position: absolute;
 	bottom: 54vh;
@@ -198,7 +296,15 @@ $moonSize: 16vh;
 
 	box-shadow: 0px 0px 12vh rgba(white, 0.2);
 
-	transform: rotate(23.5deg);
+	transform: rotate(22.5deg);
+
+	@include for-size(phone-landscape-only) {
+		width: $moonSizeVW;
+		height: $moonSizeVW;
+
+		bottom: 45vw;
+		right: 45vw;
+	}
 
 	&:after {
 		content: '';

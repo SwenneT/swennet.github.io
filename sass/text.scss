@@ -3,10 +3,13 @@
 --------------------------------------------------------------*/
 
 .text {
-	color: rgba(#FFFFFF, 0.9);
+	color: rgba(white, 0.75);
 	letter-spacing: 0.09rem;
 
+	font-size: 0.8rem;
+
 	h1, h2, h3, h4 {
+		color: rgba(white, 0.9);
 		letter-spacing: normal !important;
 
 		.highlight {

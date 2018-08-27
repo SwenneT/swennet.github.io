@@ -32,8 +32,8 @@ html.modal-active{overflow:hidden}
 html.modal-active body{overflow:hidden}
 html.modal-active .modal-container{opacity:1}
 html.modal-active .modal{-webkit-transform:translate(-50%,-50%) scale(1);-ms-transform:translate(-50%,-50%) scale(1);transform:translate(-50%,-50%) scale(1)}
-.text{color:rgba(255,255,255,0.9);letter-spacing:.09rem}
-.text h1,.text h2,.text h3,.text h4{letter-spacing:normal !important}
+.text{color:rgba(255,255,255,0.75);letter-spacing:.09rem;font-size:.8rem}
+.text h1,.text h2,.text h3,.text h4{color:rgba(255,255,255,0.9);letter-spacing:normal !important}
 .text h1 .highlight,.text h2 .highlight,.text h3 .highlight,.text h4 .highlight{color:#ff417b;text-shadow:0 0 15px rgba(255,65,123,0.3)}
 .text h1 small,.text h2 small,.text h3 small,.text h4 small{font-size:1.2rem;top:-5px;position:relative}
 .text h1 div,.text h2 div,.text h3 div,.text h4 div{font-size:1.2rem;padding-right:16px}
@@ -157,7 +157,7 @@ html.mobile .meteors{display:none}
 .website-title:after{width:12px;height:12px;bottom:20px;right:-33px;border-radius:999px;opacity:.2}
 .website-title h2{display:block;font-size:1.6rem;margin-bottom:0}
 .website-title .separator{display:none}
-.website-title small{display:block;font-size:1rem !important}
+.website-title small{display:block;font-size:1rem}
 .website-description{margin-bottom:2rem;font-size:.8rem;color:rgba(255,255,255,0.75)}
 .website-footer{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-content:space-between;-ms-flex-line-pack:justify;align-content:space-between;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
 .website-links{display:none}
@@ -166,6 +166,10 @@ html.mobile .meteors{display:none}
 .website-tech h4{margin-bottom:1rem;letter-spacing:.07rem !important;color:white;font-size:.7rem}
 .website-tech .logos{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
 .website-tech .logos svg{display:inline-block;margin-right:12px;opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s}
+.under-construction small{color:#ff5f79;font-size:1rem !important}
+.under-construction .portal:hover .portal-outer-2{-webkit-filter:drop-shadow(0 0 16px rgba(239,86,106,0.6)) hue-rotate(-30deg);filter:drop-shadow(0 0 16px rgba(239,86,106,0.6)) hue-rotate(-30deg)}
+.under-construction .portal-outer-1{fill:rgba(239,86,106,0.1)}
+.under-construction .portal-outer-2{fill:#ef566a;-webkit-filter:drop-shadow(0 0 16px rgba(239,86,106,0.6));filter:drop-shadow(0 0 16px rgba(239,86,106,0.6))}
 .website-portal{position:absolute;top:-24px;right:-4px}
 .portal{width:120px;height:120px;position:relative;display:inline-block;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s}
 .portal:hover .portal-outer{-webkit-filter:hue-rotate(-30deg);filter:hue-rotate(-30deg)}
@@ -176,18 +180,25 @@ html.mobile .meteors{display:none}
 .portal-outer-2{fill:#d83075;-webkit-animation:portalAnim2 18s linear infinite;animation:portalAnim2 18s linear infinite;-webkit-filter:drop-shadow(0 0 16px rgba(216,48,117,0.6));filter:drop-shadow(0 0 16px rgba(216,48,117,0.6))}
 .portal-inner{width:180px;height:180px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%) scale(0.48);-ms-transform:translate(-50%,-50%) scale(0.48);transform:translate(-50%,-50%) scale(0.48);opacity:.9;-webkit-transition:opacity .3s;transition:opacity .3s;-webkit-clip-path:url(#portal-clip);clip-path:url(#portal-clip)}
 .portal-inner img{width:180px;height:180px;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;pointer-events:none}
-.contact-info{margin-bottom:80px;font-size:.8rem;color:rgba(255,255,255,0.75)}
+.contact-text{margin-bottom:4rem}
+.contact-info{margin-bottom:60px}
+.contact-info ul{width:100%}
+.contact-info li{height:36px;line-height:36px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-content:flex-end;-ms-flex-line-pack:end;align-content:flex-end;border-bottom:1px solid rgba(255,255,255,0.1)}
+.contact-info li:last-child{border-bottom:0}
+.contact-info li span:first-child{width:40%}
+.contact-info li span:last-child{width:60%}
 .contact-form{width:100%;max-width:40vw}
 .earth-container{width:100%;height:100%;position:absolute;top:0;left:0;overflow:hidden}
 .earth{width:100%;height:100%;position:absolute;bottom:60px;right:0;-webkit-transform:scale(0.5);-ms-transform:scale(0.5);transform:scale(0.5);-webkit-transform-origin:bottom right;-ms-transform-origin:bottom right;transform-origin:bottom right}
-.earth-inner{width:80vh;height:80vh;position:absolute;bottom:-26.6666666667vh;right:-26.6666666667vh;background:#4861b2;overflow:hidden;border-radius:999px;-webkit-transform:rotate(23.5deg);-ms-transform:rotate(23.5deg);transform:rotate(23.5deg)}
+.earth-inner{width:80vh;height:80vh;position:absolute;bottom:-26.6666666667vh;right:-26.6666666667vh;background:#4861b2;overflow:hidden;border-radius:999px;-webkit-transform:rotate(22.5deg);-ms-transform:rotate(22.5deg);transform:rotate(22.5deg)}
 .earth-inner:after{content:'';width:100%;height:120%;position:absolute;top:-10%;left:0;border-radius:50%;-webkit-box-shadow:inset -40vh 0 rgba(0,0,0,0.1);box-shadow:inset -40vh 0 rgba(0,0,0,0.1);-webkit-filter:blur(20px);filter:blur(20px)}
 .earth-atmosphere{width:90vh;height:90vh;position:absolute;bottom:-31.6666666667vh;right:-31.6666666667vh;background:rgba(32,19,38,0.2);border-radius:999px}
 .earth-glow{width:120vh;height:120vh;position:absolute;bottom:-46.6666666667vh;right:-46.6666666667vh;background:rgba(255,255,255,0.005);border-radius:999px}
 .earth-land{height:100%;position:absolute;top:0;left:0;fill:#7dab3e;-webkit-animation:planetSpin 70s infinite linear;animation:planetSpin 70s infinite linear}
 .earth-clouds{height:100%;position:absolute;top:0;left:0;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-animation:planetSpin 55s infinite linear;animation:planetSpin 55s infinite linear;fill:white;opacity:.9;-webkit-filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05));filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05))}
 .moon-container{width:100%;height:100vh;position:absolute;top:0;left:0;overflow:hidden}
-.moon-inner{width:16vh;height:16vh;position:absolute;bottom:54vh;right:36vh;background:#cdd1d6;overflow:hidden;border-radius:999px;-webkit-box-shadow:0 0 12vh rgba(255,255,255,0.2);box-shadow:0 0 12vh rgba(255,255,255,0.2);-webkit-transform:rotate(23.5deg);-ms-transform:rotate(23.5deg);transform:rotate(23.5deg)}
+.moon{width:100%;height:100%;position:absolute;bottom:60px;right:0;-webkit-transform:scale(0.5);-ms-transform:scale(0.5);transform:scale(0.5);-webkit-transform-origin:bottom right;-ms-transform-origin:bottom right;transform-origin:bottom right}
+.moon-inner{width:16vh;height:16vh;position:absolute;bottom:54vh;right:36vh;background:#cdd1d6;overflow:hidden;border-radius:999px;-webkit-box-shadow:0 0 12vh rgba(255,255,255,0.2);box-shadow:0 0 12vh rgba(255,255,255,0.2);-webkit-transform:rotate(22.5deg);-ms-transform:rotate(22.5deg);transform:rotate(22.5deg)}
 .moon-inner:after{content:'';width:100%;height:120%;position:absolute;top:-10%;right:-15%;border-radius:50%;-webkit-box-shadow:inset -8vh 0 rgba(0,0,0,0.1);box-shadow:inset -8vh 0 rgba(0,0,0,0.1);-webkit-filter:blur(7px);filter:blur(7px)}
 .moon-craters{height:100%;position:absolute;top:0;left:0;fill:rgba(0,0,0,0.2);-webkit-animation:planetSpin 70s infinite linear;animation:planetSpin 70s infinite linear}
 @media(min-width:660px){.website{margin-bottom:80px !important}
@@ -234,7 +245,7 @@ header{height:60px;padding:0 24px;top:0;background:transparent}
 .introduction h1 .subtitle{font-size:1.8rem}
 .island,.island-impact-container{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
 .island-main{height:66vh;top:10vh;bottom:auto}
-.island-impact{width:77vh;height:66vh;top:10vh;botttom:auto}
+.island-impact{width:77vh;height:66vh;top:10vh;bottom:auto}
 .island-shield{height:37.5vh}
 .about-content .line{width:110%;left:0}
 .about-content .line.left{left:auto;right:0}
@@ -262,15 +273,26 @@ header{height:60px;padding:0 24px;top:0;background:transparent}
 .website-title:after{width:16px;height:16px;bottom:-71px}
 .website-title h2{display:inline-block;font-size:1.8rem}
 .website-title .separator{display:inline-block}
-.website-title small{top:-5px;position:relative;display:inline-block;font-size:1.2rem !important}
+.website-title small{top:-5px;position:relative;display:inline-block;font-size:1.2rem}
 .website-links{display:inline-block}
 .website-portal{position:absolute;top:-20px}
 .portal{width:400px;height:400px}
 .portal-outer{width:400px;height:400px}
 .portal-inner{width:600px;height:600px}
 .portal-inner img{width:600px;height:600px}
+.contact-text{max-width:50vw}
+.contact-info ul{max-width:320px}
 .contact-form{min-width:400px}
 .earth{bottom:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+.moon{bottom:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+}@media(orientation:landscape) and (max-width:900px){.island-main{height:60vh}
+.island-impact{width:70vh;height:60vh}
+.island-shield{height:34.09vh}
+.contact-text{max-width:50vw}
+.earth-inner{width:100vw;height:100vw;bottom:-33.3333333333vw;right:-33.3333333333vw}
+.earth-atmosphere{width:112.5vw;height:112.5vw;bottom:-39.5833333333vw;right:-39.5833333333vw}
+.earth-glow{width:150vw;height:150vw;bottom:-58.3333333333vw;right:-58.3333333333vw}
+.moon-inner{width:20vw;height:20vw;bottom:45vw;right:45vw}
 }@-webkit-keyframes fadeIn{from{opacity:0}
 to{opacity:1}
 }@keyframes fadeIn{from{opacity:0}
