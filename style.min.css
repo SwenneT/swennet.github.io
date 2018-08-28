@@ -149,7 +149,8 @@ html.mobile .meteors{display:none}
 .skillset-list li span{font-size:.6rem}
 .skillset-list li:hover{opacity:1}
 .skillset-list li:hover svg{-webkit-filter:drop-shadow(0 0 3px rgba(255,255,255,0.25));filter:drop-shadow(0 0 3px rgba(255,255,255,0.25))}
-.astronaut{width:80px;position:absolute;top:10%;right:0;z-index:0;-webkit-animation:floatingAstronaut 40s ease-in-out infinite;animation:floatingAstronaut 40s ease-in-out infinite;opacity:.9}
+.astronaut-container{width:100%;height:100%;position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;-webkit-animation:floatingAstronaut2 8s cubic-bezier(0.445,0.05,0.55,0.95) infinite;animation:floatingAstronaut2 8s cubic-bezier(0.445,0.05,0.55,0.95) infinite;pointer-events:none}
+.astronaut{width:90px;position:absolute;top:10%;right:0;z-index:0;-webkit-animation:floatingAstronaut 70s linear infinite;animation:floatingAstronaut 70s linear infinite;opacity:.9}
 .websites .section-heading{margin-bottom:4rem}
 .website{width:100%;margin-bottom:120px;position:relative;display:block}
 .website-title{margin:0 110px 1.8rem 0;padding-bottom:1.2rem;position:relative;border-bottom:2px solid rgba(255,255,255,0.1)}
@@ -197,13 +198,13 @@ footer{overflow:hidden}
 .earth-inner:after{content:'';width:100%;height:120%;position:absolute;top:-10%;left:0;border-radius:50%;-webkit-box-shadow:inset -40vh 0 rgba(0,0,0,0.1);box-shadow:inset -40vh 0 rgba(0,0,0,0.1);-webkit-filter:blur(20px);filter:blur(20px)}
 .earth-atmosphere{width:90vh;height:90vh;position:absolute;bottom:-31.6666666667vh;right:-31.6666666667vh;background:rgba(32,19,38,0.2);border-radius:999px}
 .earth-glow{width:120vh;height:120vh;position:absolute;bottom:-46.6666666667vh;right:-46.6666666667vh;background:rgba(255,255,255,0.005);border-radius:999px}
-.earth-land{height:100%;position:absolute;top:0;left:0;fill:#7dab3e;-webkit-animation:planetSpin 70s infinite linear;animation:planetSpin 70s infinite linear}
+.earth-land{height:100%;position:absolute;top:0;left:0;fill:#7dab3e;-webkit-animation:planetSpin 90s infinite linear;animation:planetSpin 90s infinite linear}
 .earth-clouds{height:100%;position:absolute;top:0;left:0;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-animation:planetSpin 55s infinite linear;animation:planetSpin 55s infinite linear;fill:white;opacity:.9;-webkit-filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05));filter:drop-shadow(1vh 2vh 0 rgba(0,0,0,0.05))}
 .moon-container{width:100%;height:100vh;position:absolute;top:0;left:0;overflow:hidden}
 .moon{width:100%;height:100%;position:absolute;bottom:60px;right:0;-webkit-transform:scale(0.5);-ms-transform:scale(0.5);transform:scale(0.5);-webkit-transform-origin:bottom right;-ms-transform-origin:bottom right;transform-origin:bottom right}
 .moon-inner{width:16vh;height:16vh;position:absolute;bottom:54vh;right:36vh;background:#cdd1d6;overflow:hidden;border-radius:999px;-webkit-box-shadow:0 0 12vh rgba(255,255,255,0.2);box-shadow:0 0 12vh rgba(255,255,255,0.2);-webkit-transform:rotate(22.5deg);-ms-transform:rotate(22.5deg);transform:rotate(22.5deg)}
 .moon-inner:after{content:'';width:100%;height:120%;position:absolute;top:-10%;right:-15%;border-radius:50%;-webkit-box-shadow:inset -8vh 0 rgba(0,0,0,0.1);box-shadow:inset -8vh 0 rgba(0,0,0,0.1);-webkit-filter:blur(7px);filter:blur(7px)}
-.moon-craters{height:100%;position:absolute;top:0;left:0;fill:rgba(0,0,0,0.2);-webkit-animation:planetSpin 70s infinite linear;animation:planetSpin 70s infinite linear}
+.moon-craters{height:100%;position:absolute;top:0;left:0;fill:rgba(0,0,0,0.2);-webkit-animation:planetSpin 55s infinite linear;animation:planetSpin 55s infinite linear}
 @media(min-width:660px){.website{margin-bottom:80px !important}
 }@media(min-width:900px){.page-section{padding-top:60px !important}
 .section-heading{margin:4rem 0 6rem 0 !important}
@@ -260,7 +261,7 @@ header{height:60px;padding:0 24px;top:0;background:transparent}
 .about-skillset .line{width:calc(110% - 57px)}
 .skillset-list{width:100%;left:auto;right:-30px}
 .skillset-list li{-webkit-box-flex:1;-webkit-flex:1 0 33.333%;-ms-flex:1 0 33.333%;flex:1 0 33.333%}
-.astronaut{width:250px;top:52%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
+.astronaut{width:270px;top:52%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 .website{min-height:400px;margin-bottom:120px}
 .website:nth-child(odd) .website-portal{left:-40px}
 .website:nth-child(odd) .website-info{margin-left:300px}
@@ -354,11 +355,15 @@ to{-webkit-transform:scale(1);transform:scale(1);opacity:0}
 }@keyframes meteorFallTail{0%{opacity:1;-webkit-transform:rotate(-30deg) scaleX(1);transform:rotate(-30deg) scaleX(1)}
 100%{opacity:0;-webkit-transform:rotate(-30deg) scaleX(0);transform:rotate(-30deg) scaleX(0)}
 }@-webkit-keyframes floatingAstronaut{0%{-webkit-transform:translate(-50%,-50%) rotate(0);transform:translate(-50%,-50%) rotate(0)}
-50%{-webkit-transform:translate(-50%,-50%) rotate(35deg);transform:translate(-50%,-50%) rotate(35deg)}
-100%{-webkit-transform:translate(-50%,-50%) rotate(0);transform:translate(-50%,-50%) rotate(0)}
+100%{-webkit-transform:translate(-50%,-50%) rotate(360deg);transform:translate(-50%,-50%) rotate(360deg)}
 }@keyframes floatingAstronaut{0%{-webkit-transform:translate(-50%,-50%) rotate(0);transform:translate(-50%,-50%) rotate(0)}
-50%{-webkit-transform:translate(-50%,-50%) rotate(35deg);transform:translate(-50%,-50%) rotate(35deg)}
-100%{-webkit-transform:translate(-50%,-50%) rotate(0);transform:translate(-50%,-50%) rotate(0)}
+100%{-webkit-transform:translate(-50%,-50%) rotate(360deg);transform:translate(-50%,-50%) rotate(360deg)}
+}@-webkit-keyframes floatingAstronaut2{0%{-webkit-transform:translateY(0);transform:translateY(0)}
+50%{-webkit-transform:translateY(2vh);transform:translateY(2vh)}
+100%{-webkit-transform:translateY(0);transform:translateY(0)}
+}@keyframes floatingAstronaut2{0%{-webkit-transform:translateY(0);transform:translateY(0)}
+50%{-webkit-transform:translateY(2vh);transform:translateY(2vh)}
+100%{-webkit-transform:translateY(0);transform:translateY(0)}
 }@-webkit-keyframes portalAnim1{from{-webkit-transform:rotate(0);transform:rotate(0)}
 to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 }@keyframes portalAnim1{from{-webkit-transform:rotate(0);transform:rotate(0)}

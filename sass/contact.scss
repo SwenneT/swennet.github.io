@@ -225,7 +225,7 @@ $earthGlowSizeVW: $earthSizeVW + $earthGlowBiggerVW;
 
 	fill: #7dab3e;
 	
-	animation: planetSpin 70s infinite linear;
+	animation: planetSpin 90s infinite linear;
 }
 
 .earth-clouds {
@@ -333,5 +333,5 @@ $moonSizeVW: 20vw;
 
 	fill: rgba(black, 0.2);
 	
-	animation: planetSpin 70s infinite linear;
+	animation: planetSpin 55s infinite linear;
 }

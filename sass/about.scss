@@ -203,8 +203,30 @@
 	}
 }
 
+/*--------------------------------------------------------------
+>>> Astronaut
+--------------------------------------------------------------*/
+
+.astronaut-container {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	overflow: hidden;
+
+	animation: floatingAstronaut2 8s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+
+	pointer-events: none;
+}
+
+
 .astronaut {
-	width: 80px;
+	width: 90px;
 
 	position: absolute;
 	top: 10%;
@@ -212,13 +234,13 @@
 
 	z-index: 0;
 
-	animation: floatingAstronaut 40s ease-in-out infinite;
+	animation: floatingAstronaut 70s linear infinite;
 
 	opacity: 0.9;
 
-	@include for-size(tablet-landscape-up) {
-		width: 250px;
-	
+	@include for-size(tablet-landscape-up) {	
+		width: 270px;
+
 		top: 52%;
 		left: 50%;
 	
@@ -231,11 +253,21 @@
 		transform: translate(-50%, -50%) rotate(0deg);
 	}
 
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes floatingAstronaut2 {
+	0% {
+		transform: translateY(0);;
+	}
+
 	50% {
-		transform: translate(-50%, -50%) rotate(35deg);
+		transform: translateY(2vh);
 	}
 
 	100% {
-		transform: translate(-50%, -50%) rotate(0);
+		transform: translateY(0);
 	}
 }
