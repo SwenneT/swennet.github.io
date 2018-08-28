@@ -600,6 +600,18 @@ html.mobile .meteors { display: none; }
 
 .skillset-list li:hover svg { -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.25)); filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.25)); }
 
+.astronaut { width: 80px; position: absolute; top: 10%; right: 0; z-index: 0; -webkit-animation: floatingAstronaut 40s ease-in-out infinite; animation: floatingAstronaut 40s ease-in-out infinite; opacity: 0.9; }
+
+@media (min-width: 900px) { .astronaut { width: 250px; top: 52%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); } }
+
+@-webkit-keyframes floatingAstronaut { 0% { -webkit-transform: translate(-50%, -50%) rotate(0deg); transform: translate(-50%, -50%) rotate(0deg); }
+  50% { -webkit-transform: translate(-50%, -50%) rotate(35deg); transform: translate(-50%, -50%) rotate(35deg); }
+  100% { -webkit-transform: translate(-50%, -50%) rotate(0); transform: translate(-50%, -50%) rotate(0); } }
+
+@keyframes floatingAstronaut { 0% { -webkit-transform: translate(-50%, -50%) rotate(0deg); transform: translate(-50%, -50%) rotate(0deg); }
+  50% { -webkit-transform: translate(-50%, -50%) rotate(35deg); transform: translate(-50%, -50%) rotate(35deg); }
+  100% { -webkit-transform: translate(-50%, -50%) rotate(0); transform: translate(-50%, -50%) rotate(0); } }
+
 /*--------------------------------------------------------------
 >>> Websites
 --------------------------------------------------------------*/

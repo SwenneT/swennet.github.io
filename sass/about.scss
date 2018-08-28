@@ -202,3 +202,40 @@
 		}
 	}
 }
+
+.astronaut {
+	width: 80px;
+
+	position: absolute;
+	top: 10%;
+	right: 0;
+
+	z-index: 0;
+
+	animation: floatingAstronaut 40s ease-in-out infinite;
+
+	opacity: 0.9;
+
+	@include for-size(tablet-landscape-up) {
+		width: 250px;
+	
+		top: 52%;
+		left: 50%;
+	
+		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes floatingAstronaut {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+
+	50% {
+		transform: translate(-50%, -50%) rotate(35deg);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+}

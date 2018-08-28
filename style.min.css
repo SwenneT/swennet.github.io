@@ -149,6 +149,7 @@ html.mobile .meteors{display:none}
 .skillset-list li span{font-size:.6rem}
 .skillset-list li:hover{opacity:1}
 .skillset-list li:hover svg{-webkit-filter:drop-shadow(0 0 3px rgba(255,255,255,0.25));filter:drop-shadow(0 0 3px rgba(255,255,255,0.25))}
+.astronaut{width:80px;position:absolute;top:10%;right:0;z-index:0;-webkit-animation:floatingAstronaut 40s ease-in-out infinite;animation:floatingAstronaut 40s ease-in-out infinite;opacity:.9}
 .websites .section-heading{margin-bottom:4rem}
 .website{width:100%;margin-bottom:120px;position:relative;display:block}
 .website-title{margin:0 110px 1.8rem 0;padding-bottom:1.2rem;position:relative;border-bottom:2px solid rgba(255,255,255,0.1)}
@@ -259,6 +260,7 @@ header{height:60px;padding:0 24px;top:0;background:transparent}
 .about-skillset .line{width:calc(110% - 57px)}
 .skillset-list{width:100%;left:auto;right:-30px}
 .skillset-list li{-webkit-box-flex:1;-webkit-flex:1 0 33.333%;-ms-flex:1 0 33.333%;flex:1 0 33.333%}
+.astronaut{width:250px;top:52%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 .website{min-height:400px;margin-bottom:120px}
 .website:nth-child(odd) .website-portal{left:-40px}
 .website:nth-child(odd) .website-info{margin-left:300px}
@@ -351,6 +353,12 @@ to{-webkit-transform:scale(1);transform:scale(1);opacity:0}
 100%{opacity:0;-webkit-transform:rotate(-30deg) scaleX(0);transform:rotate(-30deg) scaleX(0)}
 }@keyframes meteorFallTail{0%{opacity:1;-webkit-transform:rotate(-30deg) scaleX(1);transform:rotate(-30deg) scaleX(1)}
 100%{opacity:0;-webkit-transform:rotate(-30deg) scaleX(0);transform:rotate(-30deg) scaleX(0)}
+}@-webkit-keyframes floatingAstronaut{0%{-webkit-transform:translate(-50%,-50%) rotate(0);transform:translate(-50%,-50%) rotate(0)}
+50%{-webkit-transform:translate(-50%,-50%) rotate(35deg);transform:translate(-50%,-50%) rotate(35deg)}
+100%{-webkit-transform:translate(-50%,-50%) rotate(0);transform:translate(-50%,-50%) rotate(0)}
+}@keyframes floatingAstronaut{0%{-webkit-transform:translate(-50%,-50%) rotate(0);transform:translate(-50%,-50%) rotate(0)}
+50%{-webkit-transform:translate(-50%,-50%) rotate(35deg);transform:translate(-50%,-50%) rotate(35deg)}
+100%{-webkit-transform:translate(-50%,-50%) rotate(0);transform:translate(-50%,-50%) rotate(0)}
 }@-webkit-keyframes portalAnim1{from{-webkit-transform:rotate(0);transform:rotate(0)}
 to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 }@keyframes portalAnim1{from{-webkit-transform:rotate(0);transform:rotate(0)}
